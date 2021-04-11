@@ -1,0 +1,7 @@
+/* CSS */
+/* Les mixin */
+
+@mixin bg_image($color) {
+  min-width: 100%;
+  background-color: $color;
+}

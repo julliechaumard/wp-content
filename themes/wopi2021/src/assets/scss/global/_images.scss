@@ -1,0 +1,6 @@
+/* CSS */
+/* Les images */
+
+.bg_image {
+  @include bg_image($rouge);
+}

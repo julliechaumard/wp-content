@@ -1,0 +1,38 @@
+@charset 'utf-8';
+
+//Bootstrap5 Required
+
+
+@import "global/bs4settings";
+@import "global/colors";
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+
+
+//base
+@import "base/reset";
+@import "base/grid_body";
+
+
+//Global
+@import "global/mixin";
+@import "global/fonts";
+@import "global/modal";
+@import "global/images";
+
+
+// Bootstrap4 Optional
+
+// vendors
+
+// Components
+
+@import "components/annonce";
+@import "components/menu_principal";
+// Modules
+
+// Templates
+@import "templates/header";
+@import "templates/footer";
+
+
+
