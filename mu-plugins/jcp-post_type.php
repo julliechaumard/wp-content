@@ -46,7 +46,7 @@ add_action( 'after_setup_theme', 'jcp_create_cpt' );
 function jcp_create_cpt() {
 
     /************************************************************************
-    * PROJETS
+    * CONCERT
     *************************************************************************/
 
     register_post_type( 'concert', array(

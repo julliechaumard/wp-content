@@ -44,32 +44,13 @@
 * HOOK
 *************************************************************************/
 
-add_action( 'add_meta_boxes', 'jcp_declare_metabox' );
+add_action( 'add_meta_boxes', 'jcp_declare_metabox_concert' );
 add_action( 'save_post', 'jcp_metabox_save_concert');
 
 
-/************************************************************************
-* Déclarer les box Metadata
-*************************************************************************/
 
-function jcp_declare_metabox() {
- 
-	add_meta_box(
-		'metabox_concert',
-		'Informations concert',
-		'metabox_concert',
-		'concert',
-		'normal',
-		'default'
-	);
- 
-}
 
-/************************************************************************
-* Ajouter les champs de saisie
-*************************************************************************/
-
-include 'jcp-meta_box_concert.php';
+include 'jcp-meta_box/jcp-meta_box_concert.php';
 
 
 

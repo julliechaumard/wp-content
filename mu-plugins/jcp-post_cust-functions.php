@@ -30,15 +30,14 @@
  */
 
 
-
-
-
 /* Your code goes below here. */
 
 add_action( 'init', 'jcp_remove_champs' );
 add_action( 'admin_menu', 'remove_default_post_type' );
 add_action( 'admin_bar_menu', 'remove_default_post_type_menu_bar', 999 );
 add_action( 'wp_dashboard_setup', 'remove_draft_widget', 999 );
+add_action( 'after_setup_theme', 'jcp_thumbnails' );
+add_action( 'after_setup_theme', 'jcp_title' );
 
 // Supprimer type d'article par défaut dans dashboard Brouillon rapide
 function remove_draft_widget(){
@@ -79,7 +78,15 @@ function remove_quick_edit( $actions ) {
 }
 add_filter('post_row_actions','remove_quick_edit',10,1);
 
+// ajouter la fonction d'avoir la meta "title" dans head
+function jcp_title() {
+    add_theme_support('title-tag');
+}
 
+// ajouter la fonction "ajouter image mmise en avant"
+function jcp_thumbnails() {
+    add_theme_support( 'post-thumbnails' );
+}
 
  /* Your code goes above here. */  
  
