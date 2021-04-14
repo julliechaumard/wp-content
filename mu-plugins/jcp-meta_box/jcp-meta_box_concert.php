@@ -10,32 +10,33 @@
 
 function metabox_concert($post) {
 
-//Variables pour récupérer les valeurs existantes (s'il y en a)
-$metadata_001 = get_post_meta( $post->ID, 'metadata_001', true );
-$metadata_002 = get_post_meta( $post->ID, 'metadata_002', true );
-$metadata_003 = get_post_meta( $post->ID, 'metadata_003', true );
-$metadata_004 = get_post_meta( $post->ID, 'metadata_004', true );
-$metadata_005 = get_post_meta( $post->ID, 'metadata_005', true );
+    //Variables pour récupérer les valeurs existantes (s'il y en a)
+    $metadata_001 = get_post_meta( $post->ID, 'metadata_001', true );
+    $metadata_002 = get_post_meta( $post->ID, 'metadata_002', true );
+    $metadata_003 = get_post_meta( $post->ID, 'metadata_003', true );
+    $metadata_004 = get_post_meta( $post->ID, 'metadata_004', true );
+    $metadata_005 = get_post_meta( $post->ID, 'metadata_005', true );
 
-//Afficher le numéro identifiant de l'article
-echo '<p class="identifiant"> Identifiant article : ', $post->ID, '</p>'
+    //Afficher le numéro identifiant de l'article
+    echo '<p class="identifiant"> Identifiant article : ', $post->ID, '</p>'
+    ?>
 
-// metadata_001
-?>
-<p class="pinput">
-  <label for="metadata_001" class="label">Information_1</label>
-  <input type="text" name="metadata_001" id="metadata_001" value="<?php echo $metadata_001; ?>" class="input"/>
-</p>
-<?php
+    <div class='metagroup'>
+        <!-- metadata_001 -->
+        <p class="pinput">
+            <label for="metadata_001">Information_1</label>
+            <input type="text" name="metadata_001" id="metadata_001" value="<?php echo $metadata_001; ?>"/>
+        </p>
+     
+        <!-- metadata_001 -->
+        <p class="pinput">
+            <label for="metadata_002">Information_2</label>
+            <input type="text" name="metadata_002" id="metadata_002" value="<?php echo $metadata_002; ?>"/>
+        </p>
+    </div>
 
-// metadata_002
-?>
-<p class="pinput">
-  <label for="metadata_002" class="label">Information_2</label>
-  <input type="text" name="metadata_002" id="metadata_002" value="<?php echo $metadata_002; ?>" class="input"/>
-</p>
 
-<?php
+    <?php
 
 
 }

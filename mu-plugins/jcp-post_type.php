@@ -34,8 +34,8 @@
 /************************************************************************
 * Custom post type 
 *
-* ARTISTE
-* PROJETS
+* CONCERT
+* 
 *
 *************************************************************************/
 
@@ -44,6 +44,60 @@
 add_action( 'after_setup_theme', 'jcp_create_cpt' );
 
 function jcp_create_cpt() {
+
+    /************************************************************************
+    * PROJETS
+    *************************************************************************/
+
+    register_post_type( 'concert', array(
+        'labels' => array(
+            'name' => __( 'Concerts' ),
+            'singular_name' => __( 'Concert' ),
+            'add_new' => __( 'Ajouter  un concert' ),
+            'add_new_item' => __( 'Ajouter un concert' ),
+            'edit_item' => __( 'Modifier un proconcertjet' ),
+            'new_item' => __( 'Nouveau concert' ),
+            'view_item' => __( 'Voir un concert' ),
+            'view_items' => __( 'Voir les concerts' ),
+            'search_items' => __( 'Chercher un concert' ),
+            'not_found_in_trash' => __( 'Concert non trouvé dans la corbeille' ),
+            'parent_item_colon' => __( 'Retour' ),
+            'all_items' => __( 'Tous les concerts' ),
+            'archives' => __( 'Archive concerts' ),
+            'attributes'  => __( 'Propriétés concert' ),
+            'insert_into_item' => __( 'Ajouter' ),
+            'uploaded_to_this_item' => __( 'Télécharger' ),
+            'featured_image' => __( 'Image mise en avant concert' ),
+            'set_featured_image' => __( 'Ajouter image mise en avant concert' ),
+            'remove_featured_image' => __( 'Supprimer image mise en avant concert' ),
+            'use_featured_image' => __( 'Utiliser image mise en avant concert' ),
+            'menu_name' => __( 'Concert' ),
+            'filter_items_list' => __( 'Concert' ),
+            'items_list_navigation' => __( 'Concert' ),
+            'items_list' => __( 'Concert' ),
+            'name_admin_bar' => __( 'Ajouter un concert' )
+        ),
+        'description' => 'Dossier des concerts',
+        'public' => true,
+        'has_archive' => true,
+        'rewrite' => array('slug' => 'concert'),
+        //The value of five puts it below Posts and 100 puts it below Settings. 
+        'show_in_menu' => true,
+        'menu_position'=> 5,
+        'menu_icon' => get_stylesheet_directory_uri() . '/dist/assets/images/icones/cpt_icone_concert.png',
+        'show_in_rest' => true,
+        'supports' => array( 'title', 'editor', 'thumbnail', 'revisions', 'page-attributes', 'excerpt' ),
+        'can_export' => true,
+        'delete_with_user' => false,
+        'show_in_admin_bar' => true,
+        'show_in_nav_menus' => true,
+        // supprimer les droits sur previeuw et permalien
+        'publicly_queryable' => true
+    ));
+
+
+
+
 
     /************************************************************************
     * ARTISTE
@@ -95,55 +149,6 @@ function jcp_create_cpt() {
         'publicly_queryable' => true
     ));
 
-    /************************************************************************
-    * PROJETS
-    *************************************************************************/
-
-    register_post_type( 'projet', array(
-        'labels' => array(
-            'name' => __( 'Projets' ),
-            'singular_name' => __( 'Projet' ),
-            'add_new' => __( 'Ajouter  un projet' ),
-            'add_new_item' => __( 'Ajouter un projet' ),
-            'edit_item' => __( 'Modifier un projet' ),
-            'new_item' => __( 'Nouveau projet' ),
-            'view_item' => __( 'Voir un projet' ),
-            'view_items' => __( 'Voir les projets' ),
-            'search_items' => __( 'Chercher un projet' ),
-            'not_found_in_trash' => __( 'Projet non trouvé dans la corbeille' ),
-            'parent_item_colon' => __( 'Retour' ),
-            'all_items' => __( 'Tous les projets' ),
-            'archives' => __( 'Archive projets' ),
-            'attributes'  => __( 'Propriétés projet' ),
-            'insert_into_item' => __( 'Ajouter' ),
-            'uploaded_to_this_item' => __( 'Télécharger' ),
-            'featured_image' => __( 'Image mise en avant projet' ),
-            'set_featured_image' => __( 'Ajouter image mise en avant projet' ),
-            'remove_featured_image' => __( 'Supprimer image mise en avant projet' ),
-            'use_featured_image' => __( 'Utiliser image mise en avant projet' ),
-            'menu_name' => __( 'Projet' ),
-            'filter_items_list' => __( 'Projet' ),
-            'items_list_navigation' => __( 'Projet' ),
-            'items_list' => __( 'Projet' ),
-            'name_admin_bar' => __( 'Ajouter un projet' )
-        ),
-        'description' => 'Dossier des projets',
-        'public' => true,
-        'has_archive' => true,
-        'rewrite' => array('slug' => 'projet'),
-        //The value of five puts it below Posts and 100 puts it below Settings. 
-        'show_in_menu' => true,
-        'menu_position'=> 5,
-        'menu_icon' => get_stylesheet_directory_uri() . '/dist/assets/images/icones/cpt_icone_project.png',
-        'show_in_rest' => true,
-        'supports' => array( 'title', 'editor', 'thumbnail', 'revisions', 'page-attributes', 'excerpt' ),
-        'can_export' => true,
-        'delete_with_user' => false,
-        'show_in_admin_bar' => true,
-        'show_in_nav_menus' => true,
-        // supprimer les droits sur previeuw et permalien
-        'publicly_queryable' => true
-    ));
 
 
 

@@ -69,7 +69,7 @@ function jcp_declare_metabox() {
 * Ajouter les champs de saisie
 *************************************************************************/
 
-include 'jcp-meta_box/jcp-meta_box_concert.php';
+include 'jcp-meta_box_concert.php';
 
 
 
