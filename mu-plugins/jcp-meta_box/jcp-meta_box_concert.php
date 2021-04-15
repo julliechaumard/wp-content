@@ -102,46 +102,47 @@ function metabox_concert($post) {
         <?php for ($i = 1; $i <= 10; $i++) { ?>
             <div class='metagroup_sub'>
                 <h3>REPRÉSENTATION <?php echo $i; ?></h3>
-                <!-- DATE -->
-                <p class="pinput">
-                    <label for="metadata_180_<?php echo $i; ?>">Date</label>
-                    <input type="date" name="metadata_180_<?php echo $i; ?>" id="metadata_180_<?php echo $i; ?>" value="<?php echo $metadata_180_[$i]; ?>"/>
-                </p>
-            
-                <!-- HEURE -->
-                <p class="pinput">
-                    <label for="metadata_181_<?php echo $i; ?>">Heure</label>
-                    <input type="text" name="metadata_181_<?php echo $i; ?>" id="metadata_181_<?php echo $i; ?>" value="<?php echo $metadata_181_[$i]; ?>"/>
-                </p>
+                <div class='metagroup_sub_items'>
+                    <!-- DATE -->
+                    <div class="date pinput">
+                        <label for="metadata_180_<?php echo $i; ?>">Date</label>
+                        <input type="date" name="metadata_180_<?php echo $i; ?>" id="metadata_180_<?php echo $i; ?>" value="<?php echo $metadata_180_[$i]; ?>"/>
+                    </div>
+                
+                    <!-- HEURE -->
+                    <div class="heure pinput">
+                        <label for="metadata_181_<?php echo $i; ?>">Heure</label>
+                        <input type="text" name="metadata_181_<?php echo $i; ?>" id="metadata_181_<?php echo $i; ?>" value="<?php echo $metadata_181_[$i]; ?>"/>
+                    </div>
 
-                <!-- VILLE -->
-                <p class="pinput">
-                    <label for="metadata_182_<?php echo $i; ?>">Choisir la salle de concert</label>
-                    <input type="text" name="metadata_182_<?php echo $i; ?>" id="metadata_182_<?php echo $i; ?>" value="<?php echo $metadata_182_[$i]; ?>"/>
-                </p>
+                    <!-- VILLE -->
+                    <div class="ville pinput">
+                        <label for="metadata_182_<?php echo $i; ?>">Choisir la salle de concert</label>
+                        <input type="text" name="metadata_182_<?php echo $i; ?>" id="metadata_182_<?php echo $i; ?>" value="<?php echo $metadata_182_[$i]; ?>"/>
+                    </div>
 
-                <!-- CONCERT ANNULÉ -->
-                <p class="pinput">
-                    <label for="metadata_183_<?php echo $i; ?>">Concert annulé (saisir "annul")</label>
-                    <input type="text" name="metadata_183_<?php echo $i; ?>" id="metadata_183_<?php echo $i; ?>" value="<?php echo $metadata_183_[$i]; ?>"/>
-                </p>
+                    <!-- CONCERT ANNULÉ -->
+                    <div class="pinput annule">
+                        <label for="metadata_183_<?php echo $i; ?>">Concert annulé (saisir "annul")</label>
+                        <input type="text" name="metadata_183_<?php echo $i; ?>" id="metadata_183_<?php echo $i; ?>" value="<?php echo $metadata_183_[$i]; ?>"/>
+                    </div>
 
-                <!-- CONCERT REPORTÉ -->
-                <p class="pinput">
-                    <label for="metadata_184_<?php echo $i; ?>">Concert reporté (saisir "report")</label>
-                    <input type="text" name="metadata_184_<?php echo $i; ?>" id="metadata_184_<?php echo $i; ?>" value="<?php echo $metadata_184_[$i]; ?>"/>
-                </p>
+                    <!-- CONCERT REPORTÉ -->
+                    <div class="pinput report">
+                        <label for="metadata_184_<?php echo $i; ?>">Concert reporté (saisir "report")</label>
+                        <input type="text" name="metadata_184_<?php echo $i; ?>" id="metadata_184_<?php echo $i; ?>" value="<?php echo $metadata_184_[$i]; ?>"/>
+                    </div>
 
-                <!-- TARIF-->
-                <div class='metagroup_sub_sub'>
-                    <?php for ($j = 1; $j <= 5; $j++) { ?>
-                        <p class="pinput">
-                            <label for="metadata_185_<?php echo $i; ?>_<?php echo $j; ?>">Tarif <?php echo $j; ?></label>
-                            <input type="text" name="metadata_185_<?php echo $i; ?>_<?php echo $j; ?>" id="metadata_185_<?php echo $i; ?>_<?php echo $j; ?>" value="<?php echo ${"metadata_185_[$i]_$j"}; ?>"/>
-                        </p>
-                    <?php } ?>
+                    <!-- TARIF-->
+                    <div class='metagroup_sub_sub tarif'>
+                        <?php for ($j = 1; $j <= 5; $j++) { ?>
+                            <p class=" tarif_item_<?php echo $j; ?> pinput">
+                                <label for="metadata_185_<?php echo $i; ?>_<?php echo $j; ?>">Tarif <?php echo $j; ?></label>
+                                <input type="text" name="metadata_185_<?php echo $i; ?>_<?php echo $j; ?>" id="metadata_185_<?php echo $i; ?>_<?php echo $j; ?>" value="<?php echo ${"metadata_185_[$i]_$j"}; ?>"/>
+                            </p>
+                        <?php } ?>
+                    </div>
                 </div>
-
             </div>
         <?php } ?>
 
