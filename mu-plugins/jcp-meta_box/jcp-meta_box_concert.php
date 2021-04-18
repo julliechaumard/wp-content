@@ -143,7 +143,26 @@ function metabox_concert($post) {
                     <!-- VILLE -->
                     <div class="ville pinput">
                         <label for="metadata_182_<?php echo $i; ?>">Choisir la salle de concert</label>
-                        <input type="text" name="metadata_182_<?php echo $i; ?>" id="metadata_182_<?php echo $i; ?>" value="<?php echo $metadata_182_[$i]; ?>"/>
+                      
+                        <!-- LISTE DÉROULANTE DES SALLES DU POST TYPE "SALLE" -->
+                        <select name="metadata_182_<?php echo $i; ?>" id="metadata_182_<?php echo $i; ?>">
+
+                        <!-- BOUCLE POUR ALLER CHERCHER LES POSTS DE TYPE "SALLE" ET LES LISTER EN <OPTION> DU <SELECT> -->
+                        <?php
+                        $args_boucle_salle = array(  'post_type' => 'salle',  'orderby' => 'title', 'order'=> 'ASC',);
+                        $listeoptions_salle = array();
+                        $listeoptions_salle[0] = '';
+                        $loop_salle = new WP_Query( $args_boucle_salle );
+                        if ( $loop_salle->have_posts() ) {
+                            while ( $loop_salle->have_posts() ) {
+                                $loop_salle->the_post();
+                                $listeoptions_salle[] = get_post_field( 'post_name', get_post() );
+                        }}
+                        foreach ($listeoptions_salle as $value) {
+                            echo '<option value="'.$value.'"' . selected($metadata_182_[$i], $value, false) .'>'.$value.'</option> ';
+                            unset($value);
+                        }?>
+                        </select>
                     </div>
 
                     <!-- CONCERT ANNULÉ -->
@@ -327,7 +346,7 @@ function metabox_concert($post) {
             <div class='metagroup_sub'>
 
                 <h3>PHOTOS</h3>
-                
+
                 <div class='metagroup_sub_items grid_3fr_simple'>
                     <?php for ($i = 1; $i <= 10; $i++) { ?>
                         <!-- PHOTO -->
@@ -419,6 +438,10 @@ function jcp_metabox_save_concert($post_id) {
     for ($i = 1; $i <= 10; $i++) {
         if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_181_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_181_'.$i.'', $_POST['metadata_181_'.$i.'']);};
         if (isset($_POST['metadata_181_'.$i.''])) {if (empty($_POST['metadata_181_'.$i.''])) {delete_post_meta($post_id, 'metadata_181_'.$i.'');}}
+    }
+    for ($i = 1; $i <= 10; $i++) {
+        if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_182_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_182_'.$i.'', $_POST['metadata_182_'.$i.'']);};
+        if (isset($_POST['metadata_182_'.$i.''])) {if (empty($_POST['metadata_182_'.$i.''])) {delete_post_meta($post_id, 'metadata_182_'.$i.'');}}
     }
     for ($i = 1; $i <= 10; $i++) {
         for ($j = 1; $j <=5; $j++) {  
