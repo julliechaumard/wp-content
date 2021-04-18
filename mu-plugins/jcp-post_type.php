@@ -35,7 +35,8 @@
 * Custom post type 
 *
 * CONCERT
-* 
+* SALLE
+* PARTENAIRES
 *
 *************************************************************************/
 
@@ -55,7 +56,7 @@ function jcp_create_cpt() {
             'singular_name' => __( 'Concert' ),
             'add_new' => __( 'Ajouter  un concert' ),
             'add_new_item' => __( 'Ajouter un concert' ),
-            'edit_item' => __( 'Modifier un proconcertjet' ),
+            'edit_item' => __( 'Modifier un concert' ),
             'new_item' => __( 'Nouveau concert' ),
             'view_item' => __( 'Voir un concert' ),
             'view_items' => __( 'Voir les concerts' ),
@@ -95,9 +96,105 @@ function jcp_create_cpt() {
         'publicly_queryable' => true
     ));
 
+    /************************************************************************
+    * SALLE
+    *************************************************************************/
 
+    register_post_type( 'salle', array(
+        'labels' => array(
+            'name' => __( 'Salles' ),
+            'singular_name' => __( 'Salle' ),
+            'add_new' => __( 'Ajouter  une salle' ),
+            'add_new_item' => __( 'Ajouter une salle' ),
+            'edit_item' => __( 'Modifier une salle' ),
+            'new_item' => __( 'Nouvelle salle' ),
+            'view_item' => __( 'Voir une salle' ),
+            'view_items' => __( 'Voir les salles' ),
+            'search_items' => __( 'Chercher une salle' ),
+            'not_found_in_trash' => __( 'Salle non trouvée dans la corbeille' ),
+            'parent_item_colon' => __( 'Retour' ),
+            'all_items' => __( 'Toutes les salles' ),
+            'archives' => __( 'Archive salles' ),
+            'attributes'  => __( 'Propriétés salle' ),
+            'insert_into_item' => __( 'Ajouter' ),
+            'uploaded_to_this_item' => __( 'Télécharger' ),
+            'featured_image' => __( 'Image mise en avant salle' ),
+            'set_featured_image' => __( 'Ajouter image mise en avant salle' ),
+            'remove_featured_image' => __( 'Supprimer image mise en avant salle' ),
+            'use_featured_image' => __( 'Utiliser image mise en avant salle' ),
+            'menu_name' => __( 'Salle' ),
+            'filter_items_list' => __( 'Salle' ),
+            'items_list_navigation' => __( 'Salle' ),
+            'items_list' => __( 'Salle' ),
+            'name_admin_bar' => __( 'Ajouter une salle' )
+        ),
+        'description' => 'Dossier des salles',
+        'public' => true,
+        'has_archive' => true,
+        'rewrite' => array('slug' => 'salle'),
+        //The value of five puts it below Posts and 100 puts it below Settings. 
+        'show_in_menu' => true,
+        'menu_position'=> 5,
+        'menu_icon' => get_stylesheet_directory_uri() . '/dist/assets/images/icones/cpt_icone_lieu.png',
+        'show_in_rest' => true,
+        'supports' => array( 'title', 'editor', 'thumbnail', 'revisions', 'page-attributes', 'excerpt' ),
+        'can_export' => true,
+        'delete_with_user' => false,
+        'show_in_admin_bar' => true,
+        'show_in_nav_menus' => true,
+        // supprimer les droits sur previeuw et permalien
+        'publicly_queryable' => true
+    ));
 
+    /************************************************************************
+    * PARTENAIRE
+    *************************************************************************/
 
+    register_post_type( 'partenaire', array(
+        'labels' => array(
+            'name' => __( 'Partenaires' ),
+            'singular_name' => __( 'Partenaire' ),
+            'add_new' => __( 'Ajouter  un partenaire' ),
+            'add_new_item' => __( 'Ajouter un partenaire' ),
+            'edit_item' => __( 'Modifier un partenaire' ),
+            'new_item' => __( 'Nouveau partenaire' ),
+            'view_item' => __( 'Voir un partenaire' ),
+            'view_items' => __( 'Voir les partenaires' ),
+            'search_items' => __( 'Chercher un partenaire' ),
+            'not_found_in_trash' => __( 'Partenaire non trouvé dans la corbeille' ),
+            'parent_item_colon' => __( 'Retour' ),
+            'all_items' => __( 'Tous les partenaires' ),
+            'archives' => __( 'Archive partenaires' ),
+            'attributes'  => __( 'Propriétés partenaire' ),
+            'insert_into_item' => __( 'Ajouter' ),
+            'uploaded_to_this_item' => __( 'Télécharger' ),
+            'featured_image' => __( 'Image mise en avant partenaire' ),
+            'set_featured_image' => __( 'Ajouter image mise en avant partenaire' ),
+            'remove_featured_image' => __( 'Supprimer image mise en avant partenaire' ),
+            'use_featured_image' => __( 'Utiliser image mise en avant partenaire' ),
+            'menu_name' => __( 'Partenaire' ),
+            'filter_items_list' => __( 'Partenaire' ),
+            'items_list_navigation' => __( 'Partenaire' ),
+            'items_list' => __( 'Partenaire' ),
+            'name_admin_bar' => __( 'Ajouter un partenaire' )
+        ),
+        'description' => 'Dossier des partenaires',
+        'public' => true,
+        'has_archive' => true,
+        'rewrite' => array('slug' => 'partenaire'),
+        //The value of five puts it below Posts and 100 puts it below Settings. 
+        'show_in_menu' => true,
+        'menu_position'=> 5,
+        'menu_icon' => get_stylesheet_directory_uri() . '/dist/assets/images/icones/cpt_icone_collaboration.png',
+        'show_in_rest' => true,
+        'supports' => array( 'title', 'editor', 'thumbnail', 'revisions', 'page-attributes', 'excerpt' ),
+        'can_export' => true,
+        'delete_with_user' => false,
+        'show_in_admin_bar' => true,
+        'show_in_nav_menus' => true,
+        // supprimer les droits sur previeuw et permalien
+        'publicly_queryable' => true
+    ));
 
     /************************************************************************
     * ARTISTE

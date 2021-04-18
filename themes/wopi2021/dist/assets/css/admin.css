@@ -1,12 +1,27 @@
+/******************************************
+*
+* NOM DE LA METABOX
+*
+*******************************************/
 .postbox-header h2 {
     text-transform: uppercase;
     font-size: 1.5em !important;
 }
+
+/******************************************
+*
+* METABOX TEMPLATE
+*
+*******************************************/
+
+/* L'identifiant du post ou de la page */
 .identifiant {
     font-size: 10px;
     font-style: italic;
     color: gray
 }
+
+/* INPUT CONTENAIR */
 .pinput {
     margin: 0px !important;
     padding: 2px 5px 2px 5px;
@@ -14,14 +29,27 @@
     color: aliceblue;
     font-weight: bold;
 }
-label {
-    display: block !important;
+
+.pinput label {
+    display: block;
+    width: 200px !important;
 }
+
 input {
+    width: 100%;
     font-weight: initial;
 }
+textarea:focus, input:focus {
+    color: #f24c8a;
+}
+input[type=date] {
+    background-color: #158498;
+    color: white;
+  }
 
-
+.metagroup {
+    margin-bottom: 50px;
+}
 .metagroup h2 {
     padding-left: 0px !important;
     font-size: 1.3em !important;
@@ -32,9 +60,50 @@ input {
     font-size: 1.2em !important;
     color: #626493;
 }
-
-
 .metagroup_sub_items {
+    background: #8f90bc;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.grid_3fr_simple {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 20px;
+    justify-items: stretch;
+}
+
+.grid_4fr_simple {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+    justify-items: stretch;
+}
+
+/******************************************
+*
+* METABOX REVUE DE PRESSE
+*
+*******************************************/
+.grid_revue_presse {
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr;
+    grid-column-gap: 10px;
+
+}
+
+/******************************************
+*
+* METABOX CONCERT REPRESENTATION
+*
+*******************************************/
+
+
+
+.grid_concert_representations {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-column-gap: 10px;
@@ -43,70 +112,63 @@ input {
     ". . annule report"  
     "tarif tarif tarif tarif" ;
     justify-items: stretch;
-    background: #8f90bc;
-    padding-top: 5px !important;
-    padding-bottom: 5px !important;
-    
 }
 
-.date {
+
+.grid_concert_representations .date {
     grid-area: date;
 }
-.date input {
+.grid_concert_representations .date input {
     width: 100%;
 }
 
-.heure {
+.grid_concert_representations .heure {
     grid-area: heure;
 }
-.heure input {
+.grid_concert_representations .heure input {
     width: 100%;
 }
 
-.ville {
+.grid_concert_representations .ville {
     grid-area: ville;
 }
-.ville input {
+.grid_concert_representations .ville input {
     width: 100%;
 }
 
-
-.annule {
+.grid_concert_representations .annule {
     grid-area: annule;
 }
-.annule label{
-    font-size: 11px !important;
-}
-.report label{
-    font-size: 11px !important;
-}
-.tarif label{
-    font-size: 11px !important;
-}
-
-.annule input{
-    min-height: 19px;
-    height: 19px !important;
-    width: 100%;
-}
-.report input{
-    min-height: 19px;
-    height: 19px !important;
-    width: 100%;
-}
-.tarif input{
-    min-height: 19px;
-    height: 19px !important;
-    width: 100%;
-}
-
-
-
-.report {
+.grid_concert_representations .report {
     grid-area: report;
 }
+.grid_concert_representations .annule label{
+    font-size: 11px !important;
+}
+.grid_concert_representations .report label{
+    font-size: 11px !important;
+}
+.grid_concert_representations .tarif label{
+    font-size: 11px !important;
+}
 
-.tarif {
+.grid_concert_representations .annule input{
+    min-height: 19px;
+    height: 19px !important;
+    width: 100%;
+}
+.grid_concert_representations .report input{
+    min-height: 19px;
+    height: 19px !important;
+    width: 100%;
+}
+.grid_concert_representations .tarif input{
+    min-height: 19px;
+    height: 19px !important;
+    width: 100%;
+}
+
+.grid_concert_representations .tarif {
     grid-area: tarif;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -116,22 +178,34 @@ input {
     ". . . tarif_item_5" ;
 }
 
-.tarif_item_1 {
+.grid_concert_representations .tarif_item_1 {
     grid-area: tarif_item_1;
 }
-.tarif_item_2 {
+.grid_concert_representations .tarif_item_2 {
     grid-area: tarif_item_2;
 }
 
-.tarif_item_3 {
+.grid_concert_representations .tarif_item_3 {
     grid-area: tarif_item_3;
 }
 
-.tarif_item_4 {
+.grid_concert_representations .tarif_item_4 {
     grid-area: tarif_item_4;
 }
 
-.tarif_item_5 {
+.grid_concert_representations .tarif_item_5 {
     grid-area: tarif_item_5;
 }
+
+/******************************************
+*
+* METABOX PHOTOS ET VIDEOS
+*
+*******************************************/
+
+
+
+
+
+
 

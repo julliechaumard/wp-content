@@ -22,8 +22,6 @@ function jcp_declare_metabox_concert() {
 *************************************************************************/
 
 
-
-
 function metabox_concert($post) {
     /************************************************************************
     //Variables pour récupérer les valeurs existantes (s'il y en a)
@@ -94,15 +92,42 @@ function metabox_concert($post) {
     echo '<p class="identifiant"> Identifiant article : ', $post->ID, '</p>';
     ?>
     
+
+    <!-- --------------------- -->
+    <!-- GROUPE TITRES -->
+    <section class='metagroup'>
+        <h2>LES TITRES</h2>
+        <div class='metagroup_sub'>
+            <div class='metagroup_sub_items grid_4fr_simple'>
+                <!-- TITRE DU CONCERT EN GRAS -->
+                <div class="pinput">
+                    <label for="metadata_199">Titre du concert en gras</label>
+                    <input type="text" name="metadata_199" id="metadata_199" value="<?php echo $metadata_199; ?>"/>
+                </div>
+                <!-- TITRE DU CONCERT EN LEGER -->
+                <div class="pinput">
+                    <label for="metadata_200">Titre du concert en léger</label>
+                    <input type="text" name="metadata_200" id="metadata_200" value="<?php echo $metadata_200; ?>"/>
+                </div>
+                <!-- SOUS-TITRE DU CONCERT -->
+                <div class="pinput">
+                    <label for="metadata_201">Sous-titre du concert</label>
+                    <input type="text" name="metadata_201" id="metadata_201" value="<?php echo $metadata_201; ?>"/>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
     <!-- --------------------- -->
     <!-- GROUPE DATES ET LIEUX -->
-    <div class='metagroup'>
+    <section class='metagroup'>
         <h2>DATES ET LIEUX</h2>
 
         <?php for ($i = 1; $i <= 10; $i++) { ?>
             <div class='metagroup_sub'>
                 <h3>REPRÉSENTATION <?php echo $i; ?></h3>
-                <div class='metagroup_sub_items'>
+                <div class='metagroup_sub_items grid_concert_representations'>
                     <!-- DATE -->
                     <div class="date pinput">
                         <label for="metadata_180_<?php echo $i; ?>">Date</label>
@@ -123,13 +148,13 @@ function metabox_concert($post) {
 
                     <!-- CONCERT ANNULÉ -->
                     <div class="pinput annule">
-                        <label for="metadata_183_<?php echo $i; ?>">Concert annulé (saisir "annul")</label>
+                        <label for="metadata_183_<?php echo $i; ?>">Annulé</label>
                         <input type="text" name="metadata_183_<?php echo $i; ?>" id="metadata_183_<?php echo $i; ?>" value="<?php echo $metadata_183_[$i]; ?>"/>
                     </div>
 
                     <!-- CONCERT REPORTÉ -->
                     <div class="pinput report">
-                        <label for="metadata_184_<?php echo $i; ?>">Concert reporté (saisir "report")</label>
+                        <label for="metadata_184_<?php echo $i; ?>">Reporté</label>
                         <input type="text" name="metadata_184_<?php echo $i; ?>" id="metadata_184_<?php echo $i; ?>" value="<?php echo $metadata_184_[$i]; ?>"/>
                     </div>
 
@@ -145,16 +170,228 @@ function metabox_concert($post) {
                 </div>
             </div>
         <?php } ?>
+    </section>
+
+    <!-- --------------------- -->
+    <!-- GROUPE ARTISTES -->
+    <section class='metagroup'>
+        <h2>LES ARTISTES ou ENTITÉS</h2>
+
+            <div class='metagroup_sub'>
+            
+                <div class='metagroup_sub_items grid_4fr_simple'>
+                <?php for ($i = 1; $i <= 30; $i++) { ?>
+                    <!-- NOM de L'ARTISTE -->
+                    <div class="pinput">
+                        <label for="metadata_186_<?php echo $i; ?>">Nom <?php echo $i; ?></label>
+                        <input type="text" name="metadata_186_<?php echo $i; ?>" id="metadata_186_<?php echo $i; ?>" value="<?php echo $metadata_186_[$i]; ?>"/>
+                    </div>
+
+                    <!-- POSTE de L'ARTISTE -->
+                    <div class="pinput">
+                        <label for="metadata_187_<?php echo $i; ?>">Poste <?php echo $i; ?></label>
+                        <input type="text" name="metadata_187_<?php echo $i; ?>" id="metadata_187_<?php echo $i; ?>" value="<?php echo $metadata_187_[$i]; ?>"/>
+                    </div>
+                <?php } ?>
+                </div>
+            
+            </div>
+        
+    </section>
+
+    <!-- --------------------- -->
+    <!-- GROUPE PROGRAMME -->
+    <section class='metagroup'>
+        <h2>LE PROGRAMME</h2>
+        
+        <!-- PDF A TÉLÉCHARGER -->
+        <div class='metagroup_sub'>
+            <h3>Programme PDF</h3>
+            <div class='metagroup_sub_items grid_4fr_simple'>
+                <div class="pinput">
+                <label for="metadata_193">PDF du programme</label>
+                <input type="text" name="metadata_193" id="metadata_193" class="pdf-url" value="<?php echo $metadata_193; ?>"/>
+                <input type="button" class="pdf-uploader" value="Sélectionner un PDF">
+            </div>
+
+            <!-- SCRIPT POUR TÉLÉCHARGER UN FICHIER PDF -->
+            <script>
+                jQuery(document).ready(function ($) {
+                    // Instantiates the variable that holds the media library frame.
+                    var meta_image_frame;
+                    // Runs when the image button is clicked.
+                    $('.pdf-uploader').click(function (e) {
+                        // Prevents the default action from occuring.
+                        e.preventDefault();
+                        var meta_image = $(this).parent().children('.pdf-url');
+                        // If the frame already exists, re-open it.
+                        if (meta_image_frame) {meta_image_frame.open(); return;}
+                        // Sets up the media library frame
+                        meta_image_frame = wp.media.frames.meta_image_frame = wp.media({
+                            title: meta_image.title,
+                            button: {text: meta_image.button}
+                        });
+                        // Runs when an image is selected.
+                        meta_image_frame.on('select', function () {
+                            // Grabs the attachment selection and creates a JSON representation of the model.
+                            var media_attachment = meta_image_frame.state().get('selection').first().toJSON();
+                            // Sends the attachment URL to our custom image input field.
+                            meta_image.val(media_attachment.url);
+                        });
+                        // Opens the media library frame.
+                        meta_image_frame.open();
+                    });
+                });
+            </script>
+
+        </div>
+
+        <!-- LES OEUVRES -->
+        <div class='metagroup_sub'>
+            <h3>LES OEUVRES</h3>
+            <div class='metagroup_sub_items grid_4fr_simple'>
+                <?php for ($i = 1; $i <= 20; $i++) { ?>
+
+                    <!-- NOM DU COMPOSITEUR -->
+                    <div class="pinput">
+                        <label for="metadata_194_<?php echo $i; ?>">Compositeur <?php echo $i; ?></label>
+                        <input type="text" name="metadata_194_<?php echo $i; ?>" id="metadata_194_<?php echo $i; ?>" value="<?php echo $metadata_194_[$i]; ?>"/>
+                    </div>
+
+                    <!-- NOM DE L'OEUVRE -->
+                    <div class="pinput">
+                        <label for="metadata_195_<?php echo $i; ?>">Oeuvre <?php echo $i; ?></label>
+                        <input type="text" name="metadata_195_<?php echo $i; ?>" id="metadata_195_<?php echo $i; ?>" value="<?php echo $metadata_195_[$i]; ?>"/>
+                    </div>
+                <?php } ?>
+            </div>
+        
+        </div>
+        
+    </section>
+
+
+    <!-- --------------------- -->
+    <!-- GROUPE REVUE DE PRESSE -->
+    <section class='metagroup'>
+        <h2>LA REVUE DE PRESSE</h2>
+
+            <div class='metagroup_sub'>
+            
+                <div class='metagroup_sub_items grid_revue_presse'>
+                <?php for ($i = 1; $i <= 3; $i++) { ?>
+                    <!-- NOM du JOURNAL -->
+                    <div class="pinput">
+                        <label for="metadata_196_<?php echo $i; ?>">Nom du journal <?php echo $i; ?></label>
+                        <input type="text" name="metadata_196_<?php echo $i; ?>" id="metadata_196_<?php echo $i; ?>" value="<?php echo $metadata_196_[$i]; ?>"/>
+                    </div>
+
+                    <!-- URL DU JOURNAL -->
+                    <div class="pinput">
+                        <label for="metadata_198_<?php echo $i; ?>">URL de l'article <?php echo $i; ?></label>
+                        <input type="url" name="metadata_198_<?php echo $i; ?>" id="metadata_198_<?php echo $i; ?>" value="<?php echo $metadata_198_[$i]; ?>"/>
+                    </div>
+
+                    <!-- TEXTE DE LA REVUE -->
+                    <div class="pinput">
+                        <label for="metadata_197_<?php echo $i; ?>">Extrait de l'article <?php echo $i; ?></label>
+                        <textarea name="metadata_197_<?php echo $i; ?>" id="metadata_197_<?php echo $i; ?>" cols="50" rows="4" placeholder="<?php echo $metadata_197_[$i]; ?>"></textarea>
+                    </div>
+                <?php } ?>
+                </div>
+            
+            </div>
+        
+    </section>
+
+        <!-- --------------------- -->
+    <!-- GROUPE PHOTOS ET VIDEOS -->
+    <section class='metagroup'>
+
+        <h2>PHOTOS & VIDÉOS</h2>
+
+            <div class='metagroup_sub'>
+                <h3>VIDÉOS</h3>
+                <div class='metagroup_sub_items grid_3fr_simple'>
+                <?php for ($i = 1; $i <= 3; $i++) { ?>
+                    <!-- CODE YOUTUBE -->
+                    <div class="pinput">
+                        <label for="metadata_191_<?php echo $i; ?>">Code vidéo YouTube <?php echo $i; ?></label>
+                        <input type="text" name="metadata_191_<?php echo $i; ?>" id="metadata_191_<?php echo $i; ?>" value="<?php echo $metadata_191_[$i]; ?>"/>
+                    </div>
+
+                <?php } ?>
+                </div>
+            </div>
+
+            <div class='metagroup_sub'>
+
+                <h3>PHOTOS</h3>
+                
+                <div class='metagroup_sub_items grid_3fr_simple'>
+                    <?php for ($i = 1; $i <= 10; $i++) { ?>
+                        <!-- PHOTO -->
+                        <div class="pinput">
+                            <label for="metadata_192_<?php echo $i; ?>">Photo <?php echo $i; ?></label>
+                            <input type="text" name="metadata_192_<?php echo $i; ?>" id="metadata_192_<?php echo $i; ?>" class="photo-url_<?php echo $i; ?>" value="<?php echo $metadata_192_[$i]; ?>"/>
+                            <input type="button" class="photo-uploader_<?php echo $i; ?>" value="Sélectionner une image">
+                        </div>
+                        <div class="photo-preview_<?php echo $i; ?>">
+                            <img src="<?php echo get_post_meta($post->ID, 'metadata_192_'.$i.'', true); ?>" style="max-width: 150px;">
+                        </div>
+
+                        <!-- SCRIPT POUR SÉLECTIONNER MÉDIA DANS LA BIBLIOTHÈQUE -->
+                        <script>
+                            jQuery(document).ready(function ($) {
+                                // Instantiates the variable that holds the media library frame.
+                                var meta_image_frame;
+                                // Runs when the image button is clicked.
+                                $('.photo-uploader_<?php echo $i; ?>').click(function (e) {
+                                    // Get preview pane
+                                    var meta_image_preview = $(this).parent().parent().children('.photo-preview_<?php echo $i; ?>');
+                                    // Prevents the default action from occuring.
+                                    e.preventDefault();
+                                    var meta_image = $(this).parent().children('.photo-url_<?php echo $i; ?>');
+                                    // If the frame already exists, re-open it.
+                                    if (meta_image_frame) {meta_image_frame.open(); return;}
+                                    // Sets up the media library frame
+                                    meta_image_frame = wp.media.frames.meta_image_frame = wp.media({
+                                        title: meta_image.title,
+                                        button: {text: meta_image.button}
+                                    });
+                                    // Runs when an image is selected.
+                                    meta_image_frame.on('select', function () {
+                                        // Grabs the attachment selection and creates a JSON representation of the model.
+                                        var media_attachment = meta_image_frame.state().get('selection').first().toJSON();
+                                        // Sends the attachment URL to our custom image input field.
+                                        meta_image.val(media_attachment.url);
+                                        meta_image_preview.children('img').attr('src', media_attachment.url);
+                                    });
+                                    // Opens the media library frame.
+                                    meta_image_frame.open();
+                                });
+                            });
+                        </script>
+
+                    <?php } ?>
+                </div>
+            </div>
+        
+    </section>
 
 
 
 
-    </div>
+
+
+
+
+
+
+
 
 
     <?php
-
-
 }
 
 
@@ -165,9 +402,15 @@ function metabox_concert($post) {
 
 function jcp_metabox_save_concert($post_id) {
 
-    // metadata_001
-    if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_001', $_POST)) { update_post_meta( $post_id, 'metadata_001', $_POST['metadata_001']);};
-    if (isset($_POST['metadata_001'])) {if (empty($_POST['metadata_001'])) {delete_post_meta($post_id, 'metadata_001');}}
+    // metadata
+    if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_199', $_POST)) { update_post_meta( $post_id, 'metadata_199', $_POST['metadata_199']);};
+    if (isset($_POST['metadata_199'])) {if (empty($_POST['metadata_199'])) {delete_post_meta($post_id, 'metadata_199');}}
+    // metadata
+    if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_200', $_POST)) { update_post_meta( $post_id, 'metadata_200', $_POST['metadata_200']);};
+    if (isset($_POST['metadata_200'])) {if (empty($_POST['metadata_200'])) {delete_post_meta($post_id, 'metadata_200');}}
+
+    if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_201', $_POST)) { update_post_meta( $post_id, 'metadata_201', $_POST['metadata_201']);};
+    if (isset($_POST['metadata_201'])) {if (empty($_POST['metadata_201'])) {delete_post_meta($post_id, 'metadata_201');}}
 
     for ($i = 1; $i <= 10; $i++) {
         if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_180_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_180_'.$i.'', $_POST['metadata_180_'.$i.'']);};
@@ -177,18 +420,51 @@ function jcp_metabox_save_concert($post_id) {
         if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_181_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_181_'.$i.'', $_POST['metadata_181_'.$i.'']);};
         if (isset($_POST['metadata_181_'.$i.''])) {if (empty($_POST['metadata_181_'.$i.''])) {delete_post_meta($post_id, 'metadata_181_'.$i.'');}}
     }
-
-
-
     for ($i = 1; $i <= 10; $i++) {
         for ($j = 1; $j <=5; $j++) {  
-
             if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_185_'.$i.'_'.$j.'', $_POST)) { update_post_meta( $post_id, 'metadata_185_'.$i.'_'.$j.'', $_POST['metadata_185_'.$i.'_'.$j.'']);};
             if (isset($_POST['metadata_185_'.$i.'_'.$j.''])) {if (empty($_POST['metadata_185_'.$i.'_'.$j.''])) {delete_post_meta($post_id, 'metadata_185_'.$i.'_'.$j.'');}}
-
-
         }
     }
+    for ($i = 1; $i <= 30; $i++) {
+        if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_186_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_186_'.$i.'', $_POST['metadata_186_'.$i.'']);};
+        if (isset($_POST['metadata_186_'.$i.''])) {if (empty($_POST['metadata_186_'.$i.''])) {delete_post_meta($post_id, 'metadata_186_'.$i.'');}}
+    }
+    for ($i = 1; $i <= 30; $i++) {
+        if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_187_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_187_'.$i.'', $_POST['metadata_187_'.$i.'']);};
+        if (isset($_POST['metadata_187_'.$i.''])) {if (empty($_POST['metadata_187_'.$i.''])) {delete_post_meta($post_id, 'metadata_187_'.$i.'');}}
+    }
+    for ($i = 1; $i <= 20; $i++) {
+        if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_194_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_194_'.$i.'', $_POST['metadata_194_'.$i.'']);};
+        if (isset($_POST['metadata_194_'.$i.''])) {if (empty($_POST['metadata_194_'.$i.''])) {delete_post_meta($post_id, 'metadata_194_'.$i.'');}}
+    }
+    for ($i = 1; $i <= 20; $i++) {
+        if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_195_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_195_'.$i.'', $_POST['metadata_195_'.$i.'']);};
+        if (isset($_POST['metadata_195_'.$i.''])) {if (empty($_POST['metadata_195_'.$i.''])) {delete_post_meta($post_id, 'metadata_195_'.$i.'');}}
+    }
+    for ($i = 1; $i <= 3; $i++) {
+        if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_196_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_196_'.$i.'', $_POST['metadata_196_'.$i.'']);};
+        if (isset($_POST['metadata_196_'.$i.''])) {if (empty($_POST['metadata_196_'.$i.''])) {delete_post_meta($post_id, 'metadata_196_'.$i.'');}}
+    }
+    for ($i = 1; $i <= 3; $i++) {
+        if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_197_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_197_'.$i.'', $_POST['metadata_197_'.$i.'']);};
+        if (isset($_POST['metadata_197_'.$i.''])) {if (empty($_POST['metadata_197_'.$i.''])) {delete_post_meta($post_id, 'metadata_197_'.$i.'');}}
+    }
+    for ($i = 1; $i <= 3; $i++) {
+        if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_198_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_198_'.$i.'', $_POST['metadata_198_'.$i.'']);};
+        if (isset($_POST['metadata_198_'.$i.''])) {if (empty($_POST['metadata_198_'.$i.''])) {delete_post_meta($post_id, 'metadata_198_'.$i.'');}}
+    }
+    for ($i = 1; $i <= 3; $i++) {
+        if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_191_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_191_'.$i.'', $_POST['metadata_191_'.$i.'']);};
+        if (isset($_POST['metadata_191_'.$i.''])) {if (empty($_POST['metadata_191_'.$i.''])) {delete_post_meta($post_id, 'metadata_191_'.$i.'');}}
+    }
+    for ($i = 1; $i <= 10; $i++) {
+        if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_192_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_192_'.$i.'', $_POST['metadata_192_'.$i.'']);};
+        if (isset($_POST['metadata_192_'.$i.''])) {if (empty($_POST['metadata_192_'.$i.''])) {delete_post_meta($post_id, 'metadata_192_'.$i.'');}}
+    }
+    if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_193', $_POST)) { update_post_meta( $post_id, 'metadata_193', $_POST['metadata_193']);};
+    if (isset($_POST['metadata_193'])) {if (empty($_POST['metadata_193'])) {delete_post_meta($post_id, 'metadata_193');}}
+    
 
 }
 
