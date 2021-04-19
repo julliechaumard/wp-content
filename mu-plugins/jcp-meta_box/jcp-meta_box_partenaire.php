@@ -85,7 +85,7 @@ function metabox_partenaire($post) {
                 <!-- MENTION DU PARTENAIRE POUR LOGO DE LA PAGE CONCERT -->
                 <div class="pinput">
                     <label for="metadata_253">Mention</label>
-                    <textarea name="metadata_253" id="metadata_253" cols="50" rows="4" placeholder="<?php echo $metadata_253; ?>"></textarea>
+                    <textarea name="metadata_253" id="metadata_253" cols="40" rows="4" placeholder="<?php echo $metadata_253; ?>"></textarea>
                 </div>
             
                 <!-- LOGO -->

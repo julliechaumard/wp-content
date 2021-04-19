@@ -176,9 +176,10 @@ function metabox_concert($post) {
                         <label for="metadata_184_<?php echo $i; ?>">Reporté</label>
                         <input type="text" name="metadata_184_<?php echo $i; ?>" id="metadata_184_<?php echo $i; ?>" value="<?php echo $metadata_184_[$i]; ?>"/>
                     </div>
+                </div>
 
-                    <!-- TARIF-->
-                    <div class='metagroup_sub_sub tarif'>
+                <!-- TARIF-->
+                    <div class='metagroup_sub_items grid_tarif'>
                         <?php for ($j = 1; $j <= 5; $j++) { ?>
                             <p class=" tarif_item_<?php echo $j; ?> pinput">
                                 <label for="metadata_185_<?php echo $i; ?>_<?php echo $j; ?>">Tarif <?php echo $j; ?></label>
@@ -186,7 +187,7 @@ function metabox_concert($post) {
                             </p>
                         <?php } ?>
                     </div>
-                </div>
+                
             </div>
         <?php } ?>
     </section>
@@ -347,7 +348,7 @@ function metabox_concert($post) {
 
                 <h3>PHOTOS</h3>
 
-                <div class='metagroup_sub_items grid_3fr_simple'>
+                <div class='metagroup_sub_items grid_4fr_simple'>
                     <?php for ($i = 1; $i <= 10; $i++) { ?>
                         <!-- PHOTO -->
                         <div class="pinput">
