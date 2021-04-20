@@ -54,7 +54,6 @@ function metabox_concert($post) {
         $metadata_187_[$i] = get_post_meta( $post->ID, 'metadata_187_'.$i.'', true );
     }
     $metadata_188 = get_post_meta( $post->ID, 'metadata_188', true );
-    $metadata_189 = get_post_meta( $post->ID, 'metadata_189', true );
     for ($i = 1; $i <= 15; $i++) {
         $metadata_190_[$i] = get_post_meta( $post->ID, 'metadata_190_'.$i.'', true );
     }
@@ -97,7 +96,7 @@ function metabox_concert($post) {
     <!-- GROUPE TITRES -->
     <section class='metagroup'>
         <h2>LES TITRES</h2>
-        <div class='metagroup_sub'>
+        <div class=''>
             <div class='metagroup_sub_items grid_4fr_simple'>
                 <!-- TITRE DU CONCERT EN GRAS -->
                 <div class="pinput">
@@ -125,23 +124,23 @@ function metabox_concert($post) {
         <h2>DATES ET LIEUX</h2>
 
         <?php for ($i = 1; $i <= 10; $i++) { ?>
-            <div class='metagroup_sub'>
+            <div class=''>
                 <h3>REPRÉSENTATION <?php echo $i; ?></h3>
                 <div class='metagroup_sub_items grid_concert_representations'>
                     <!-- DATE -->
-                    <div class="date pinput">
+                    <div class="pinput">
                         <label for="metadata_180_<?php echo $i; ?>">Date</label>
                         <input type="date" name="metadata_180_<?php echo $i; ?>" id="metadata_180_<?php echo $i; ?>" value="<?php echo $metadata_180_[$i]; ?>"/>
                     </div>
                 
                     <!-- HEURE -->
-                    <div class="heure pinput">
+                    <div class="pinput">
                         <label for="metadata_181_<?php echo $i; ?>">Heure</label>
                         <input type="text" name="metadata_181_<?php echo $i; ?>" id="metadata_181_<?php echo $i; ?>" value="<?php echo $metadata_181_[$i]; ?>"/>
                     </div>
 
                     <!-- VILLE -->
-                    <div class="ville pinput">
+                    <div class="pinput">
                         <label for="metadata_182_<?php echo $i; ?>">Choisir la salle de concert</label>
                       
                         <!-- LISTE DÉROULANTE DES SALLES DU POST TYPE "SALLE" -->
@@ -166,13 +165,13 @@ function metabox_concert($post) {
                     </div>
 
                     <!-- CONCERT ANNULÉ -->
-                    <div class="pinput annule">
+                    <div class="pinput">
                         <label for="metadata_183_<?php echo $i; ?>">Annulé</label>
                         <input type="text" name="metadata_183_<?php echo $i; ?>" id="metadata_183_<?php echo $i; ?>" value="<?php echo $metadata_183_[$i]; ?>"/>
                     </div>
 
                     <!-- CONCERT REPORTÉ -->
-                    <div class="pinput report">
+                    <div class="pinput">
                         <label for="metadata_184_<?php echo $i; ?>">Reporté</label>
                         <input type="text" name="metadata_184_<?php echo $i; ?>" id="metadata_184_<?php echo $i; ?>" value="<?php echo $metadata_184_[$i]; ?>"/>
                     </div>
@@ -181,7 +180,7 @@ function metabox_concert($post) {
                 <!-- TARIF-->
                     <div class='metagroup_sub_items grid_tarif'>
                         <?php for ($j = 1; $j <= 5; $j++) { ?>
-                            <p class=" tarif_item_<?php echo $j; ?> pinput">
+                            <p class="pinput">
                                 <label for="metadata_185_<?php echo $i; ?>_<?php echo $j; ?>">Tarif <?php echo $j; ?></label>
                                 <input type="text" name="metadata_185_<?php echo $i; ?>_<?php echo $j; ?>" id="metadata_185_<?php echo $i; ?>_<?php echo $j; ?>" value="<?php echo ${"metadata_185_[$i]_$j"}; ?>"/>
                             </p>
@@ -197,7 +196,7 @@ function metabox_concert($post) {
     <section class='metagroup'>
         <h2>LES ARTISTES ou ENTITÉS</h2>
 
-            <div class='metagroup_sub'>
+            <div class=''>
             
                 <div class='metagroup_sub_items grid_4fr_simple'>
                 <?php for ($i = 1; $i <= 30; $i++) { ?>
@@ -225,7 +224,7 @@ function metabox_concert($post) {
         <h2>LE PROGRAMME</h2>
         
         <!-- PDF A TÉLÉCHARGER -->
-        <div class='metagroup_sub'>
+        <div class=''>
             <h3>Programme PDF</h3>
             <div class='metagroup_sub_items grid_4fr_simple'>
                 <div class="pinput">
@@ -267,7 +266,7 @@ function metabox_concert($post) {
         </div>
 
         <!-- LES OEUVRES -->
-        <div class='metagroup_sub'>
+        <div class=''>
             <h3>LES OEUVRES</h3>
             <div class='metagroup_sub_items grid_4fr_simple'>
                 <?php for ($i = 1; $i <= 20; $i++) { ?>
@@ -296,7 +295,7 @@ function metabox_concert($post) {
     <section class='metagroup'>
         <h2>LA REVUE DE PRESSE</h2>
 
-            <div class='metagroup_sub'>
+            <div class=''>
             
                 <div class='metagroup_sub_items grid_revue_presse'>
                 <?php for ($i = 1; $i <= 3; $i++) { ?>
@@ -330,7 +329,7 @@ function metabox_concert($post) {
 
         <h2>PHOTOS & VIDÉOS</h2>
 
-            <div class='metagroup_sub'>
+            <div class=''>
                 <h3>VIDÉOS</h3>
                 <div class='metagroup_sub_items grid_3fr_simple'>
                 <?php for ($i = 1; $i <= 3; $i++) { ?>
@@ -344,7 +343,7 @@ function metabox_concert($post) {
                 </div>
             </div>
 
-            <div class='metagroup_sub'>
+            <div class=''>
 
                 <h3>PHOTOS</h3>
 
@@ -401,15 +400,79 @@ function metabox_concert($post) {
 
 
 
+    <!-- --------------------- -->
+    <!-- GROUPE PARTENAIRES -->
+    <section class='metagroup'>
+        <h2>PARTENAIRES</h2>
 
+        <!-- PARTENAIRE AVEC MENTION -->
+        <div class=''>
+            <h3>Partenaire avec mention</h3>
+            <div class='metagroup_sub_items grid_concert_representations'>
+                
+                <div class="pinput">
+                    <label for="metadata_188">Choisir le partenaire</label>
+                    
+                    <!-- LISTE DÉROULANTE DES PARTENAIRES DU POST TYPE "PARTENAIRE" -->
+                    <select name="metadata_188" id="metadata_188">
 
+                    <!-- BOUCLE POUR ALLER CHERCHER LES POSTS DE TYPE "PARTENAIRE" ET LES LISTER EN <OPTION> DU <SELECT> -->
+                    <?php
+                    $args_boucle_partenaire = array(  'post_type' => 'partenaire',  'orderby' => 'title', 'order'=> 'ASC',);
+                    $listeoptions_partenaire = array();
+                    $listeoptions_partenaire[0] = '';
+                    $loop_partenaire = new WP_Query( $args_boucle_partenaire );
+                    if ( $loop_partenaire->have_posts() ) {
+                        while ( $loop_partenaire->have_posts() ) {
+                            $loop_partenaire->the_post();
+                            $listeoptions_partenaire[] = get_post_field( 'post_name', get_post() );
+                    }}
+                    foreach ($listeoptions_partenaire as $value) {
+                        echo '<option value="'.$value.'"' . selected($metadata_188, $value, false) .'>'.$value.'</option> ';
+                        unset($value);
+                    }?>
+                    </select>
+                </div>
 
+            </div>
+        </div>
 
+        <!-- CHOIX DES 15 PARTENAIRES -->
+        <div class=''>
+            <h3>Partenaires</h3>
 
+            <div class='metagroup_sub_items grid_concert_representations'>
+                <?php for ($i = 1; $i <= 15; $i++) { ?>
+                    <div class=" pinput">
+                        <label for="metadata_190_<?php echo $i; ?>">Choisir le partenaire <?php echo $i; ?></label>
+                      
+                        <!-- LISTE DÉROULANTE DES PARTENAIRES DU POST TYPE "PARTENAIRE" -->
+                        <select name="metadata_190_<?php echo $i; ?>" id="metadata_190_<?php echo $i; ?>">
 
+                        <!-- BOUCLE POUR ALLER CHERCHER LES POSTS DE TYPE "PARTENAIRE" ET LES LISTER EN <OPTION> DU <SELECT> -->
+                        <?php
+                        $args_boucle_partenaires = array(  'post_type' => 'partenaire',  'orderby' => 'title', 'order'=> 'ASC',);
+                        $listeoptions_partenaires = array();
+                        $listeoptions_partenaires[0] = '';
+                        $loop_partenaires = new WP_Query( $args_boucle_partenaires );
+                        if ( $loop_partenaires->have_posts() ) {
+                            while ( $loop_partenaires->have_posts() ) {
+                                $loop_partenaires->the_post();
+                                $listeoptions_partenaires[] = get_post_field( 'post_name', get_post() );
+                        }}
+                        foreach ($listeoptions_partenaires as $value) {
+                            echo '<option value="'.$value.'"' . selected($metadata_190_[$i], $value, false) .'>'.$value.'</option> ';
+                            unset($value);
+                        }?>
+                        </select>
+                    </div>
 
+                <?php } ?>
 
-
+            </div>        
+        </div>
+        
+    </section>
 
     <?php
 }
@@ -488,7 +551,14 @@ function jcp_metabox_save_concert($post_id) {
     }
     if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_193', $_POST)) { update_post_meta( $post_id, 'metadata_193', $_POST['metadata_193']);};
     if (isset($_POST['metadata_193'])) {if (empty($_POST['metadata_193'])) {delete_post_meta($post_id, 'metadata_193');}}
+
+    if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_188', $_POST)) { update_post_meta( $post_id, 'metadata_188', $_POST['metadata_188']);};
+    if (isset($_POST['metadata_188'])) {if (empty($_POST['metadata_188'])) {delete_post_meta($post_id, 'metadata_188');}}
     
+    for ($i = 1; $i <= 15; $i++) {
+        if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_190_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_190_'.$i.'', $_POST['metadata_190_'.$i.'']);};
+        if (isset($_POST['metadata_190_'.$i.''])) {if (empty($_POST['metadata_190_'.$i.''])) {delete_post_meta($post_id, 'metadata_190_'.$i.'');}}
+    }
 
 }
 

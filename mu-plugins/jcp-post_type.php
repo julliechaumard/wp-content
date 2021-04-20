@@ -37,7 +37,8 @@
 * CONCERT
 * SALLE
 * PARTENAIRES
-*
+* ARTISTE INVITÉ
+* 
 *************************************************************************/
 
 
@@ -197,38 +198,38 @@ function jcp_create_cpt() {
     ));
 
     /************************************************************************
-    * ARTISTE
+    * ARTISTE INVITÉ
     *************************************************************************/
 
-    register_post_type( 'artiste', array(
+    register_post_type( 'artiste_invite', array(
         'labels' => array(
-            'name' => __( 'Artistes' ),
-            'singular_name' => __( 'Artiste' ),
-            'add_new' => __( 'Ajouter  un artiste' ),
-            'add_new_item' => __( 'Ajouter un artiste' ),
-            'edit_item' => __( 'Modifier un artiste' ),
-            'new_item' => __( 'Nouveau artiste' ),
-            'view_item' => __( 'Voir un artiste' ),
-            'view_items' => __( 'Voir les artistes' ),
-            'search_items' => __( 'Chercher un artiste' ),
-            'not_found_in_trash' => __( 'Artiste non trouvé dans la corbeille' ),
+            'name' => __( 'Artiste invité' ),
+            'singular_name' => __( 'Artiste invité' ),
+            'add_new' => __( 'Ajouter  un artiste invité' ),
+            'add_new_item' => __( 'Ajouter un artiste invité' ),
+            'edit_item' => __( 'Modifier un artiste invité' ),
+            'new_item' => __( 'Nouvel artiste invité' ),
+            'view_item' => __( 'Voir un artiste invité' ),
+            'view_items' => __( 'Voir les artistes invités' ),
+            'search_items' => __( 'Chercher un artiste invité' ),
+            'not_found_in_trash' => __( 'Artiste invité non trouvé dans la corbeille' ),
             'parent_item_colon' => __( 'Retour' ),
-            'all_items' => __( 'Tous les artistes' ),
-            'archives' => __( 'Archive artistes' ),
-            'attributes'  => __( 'Propriétés artiste' ),
+            'all_items' => __( 'Tous les artistes invités' ),
+            'archives' => __( 'Archive artistes invités' ),
+            'attributes'  => __( 'Propriétés artiste invité' ),
             'insert_into_item' => __( 'Ajouter' ),
             'uploaded_to_this_item' => __( 'Télécharger' ),
-            'featured_image' => __( 'Image mise en avant artiste' ),
-            'set_featured_image' => __( 'Ajouter image mise en avant artiste' ),
-            'remove_featured_image' => __( 'Supprimer image mise en avant artiste' ),
-            'use_featured_image' => __( 'Utiliser image mise en avant artiste' ),
-            'menu_name' => __( 'Artiste' ),
-            'filter_items_list' => __( 'Artiste' ),
-            'items_list_navigation' => __( 'Artiste' ),
-            'items_list' => __( 'Artiste' ),
-            'name_admin_bar' => __( 'Ajouter un artiste' )
+            'featured_image' => __( 'Image mise en avant artiste invité' ),
+            'set_featured_image' => __( 'Ajouter image mise en avant artiste invité' ),
+            'remove_featured_image' => __( 'Supprimer image mise en avant artiste invité' ),
+            'use_featured_image' => __( 'Utiliser image mise en avant artiste invité' ),
+            'menu_name' => __( 'Artiste invité' ),
+            'filter_items_list' => __( 'Artiste invité' ),
+            'items_list_navigation' => __( 'Artiste invité' ),
+            'items_list' => __( 'Artiste invité' ),
+            'name_admin_bar' => __( 'Ajouter un artiste invité' )
         ),
-        'description' => 'Dossier des artistes',
+        'description' => 'Dossier des artistes invité',
         'public' => true,
         'has_archive' => true,
         'rewrite' => array('slug' => 'artiste'),

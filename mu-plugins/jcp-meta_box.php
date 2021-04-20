@@ -50,11 +50,14 @@ add_action( 'add_meta_boxes', 'jcp_declare_metabox_salle' );
 add_action( 'save_post', 'jcp_metabox_save_salle');
 add_action( 'add_meta_boxes', 'jcp_declare_metabox_partenaire' );
 add_action( 'save_post', 'jcp_metabox_save_partenaire');
+add_action( 'add_meta_boxes', 'jcp_declare_metabox_artiste_invite' );
+add_action( 'save_post', 'jcp_metabox_save_artiste_invite');
 
 
 include 'jcp-meta_box/jcp-meta_box_concert.php';
 include 'jcp-meta_box/jcp-meta_box_salle.php';
 include 'jcp-meta_box/jcp-meta_box_partenaire.php';
+include 'jcp-meta_box/jcp-meta_box_artiste_invite.php';
 
 
 ?>
