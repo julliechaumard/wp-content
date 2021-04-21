@@ -219,14 +219,14 @@ function metabox_concert($post) {
 
                     <!-- CONCERT ANNULÉ -->
                     <div class="pinput">
-                        <label for="metadata_183_<?php echo $i; ?>">Annulé</label>
-                        <input type="text" name="metadata_183_<?php echo $i; ?>" id="metadata_183_<?php echo $i; ?>" placeholder='saisir "annul"' value="<?php echo $metadata_183_[$i]; ?>"/>
+                        <label for="metadata_183_<?php echo $i; ?>">Annulé (annul)</label>
+                        <input type="text" name="metadata_183_<?php echo $i; ?>" id="metadata_183_<?php echo $i; ?>" value="<?php echo $metadata_183_[$i]; ?>"/>
                     </div>
 
                     <!-- CONCERT REPORTÉ -->
                     <div class="pinput">
-                        <label for="metadata_184_<?php echo $i; ?>">Reporté</label>
-                        <input type="text" name="metadata_184_<?php echo $i; ?>" id="metadata_184_<?php echo $i; ?>" placeholder='saisir "report"' value="<?php echo $metadata_184_[$i]; ?>"/>
+                        <label for="metadata_184_<?php echo $i; ?>">Reporté (report)</label>
+                        <input type="text" name="metadata_184_<?php echo $i; ?>" id="metadata_184_<?php echo $i; ?>" value="<?php echo $metadata_184_[$i]; ?>"/>
                     </div>
                 </div>
 
@@ -367,7 +367,7 @@ function metabox_concert($post) {
                     <!-- TEXTE DE LA REVUE -->
                     <div class="pinput">
                         <label for="metadata_197_<?php echo $i; ?>">Extrait de l'article <?php echo $i; ?></label>
-                        <textarea name="metadata_197_<?php echo $i; ?>" id="metadata_197_<?php echo $i; ?>" cols="50" rows="4" placeholder="425 caractères MAX avec espaces"><?php echo $metadata_197_[$i]; ?></textarea>
+                        <textarea name="metadata_197_<?php echo $i; ?>" id="metadata_197_<?php echo $i; ?>" cols="50" rows="4" placeholder="<?php echo $metadata_197_[$i]; ?>"></textarea>
                     </div>
                 <?php } ?>
                 </div>
@@ -540,66 +540,89 @@ function jcp_metabox_save_concert($post_id) {
 
     // metadata
     if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_199', $_POST)) { update_post_meta( $post_id, 'metadata_199', $_POST['metadata_199']);};
+    if (isset($_POST['metadata_199'])) {if (empty($_POST['metadata_199'])) {delete_post_meta($post_id, 'metadata_199');}}
     // metadata
     if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_200', $_POST)) { update_post_meta( $post_id, 'metadata_200', $_POST['metadata_200']);};
+    if (isset($_POST['metadata_200'])) {if (empty($_POST['metadata_200'])) {delete_post_meta($post_id, 'metadata_200');}}
 
     if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_201', $_POST)) { update_post_meta( $post_id, 'metadata_201', $_POST['metadata_201']);};
+    if (isset($_POST['metadata_201'])) {if (empty($_POST['metadata_201'])) {delete_post_meta($post_id, 'metadata_201');}}
 
     for ($i = 1; $i <= 10; $i++) {
         if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_180_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_180_'.$i.'', $_POST['metadata_180_'.$i.'']);};
+        if (isset($_POST['metadata_180_'.$i.''])) {if (empty($_POST['metadata_180_'.$i.''])) {delete_post_meta($post_id, 'metadata_180_'.$i.'');}}
     }
     for ($i = 1; $i <= 10; $i++) {
         if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_181_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_181_'.$i.'', $_POST['metadata_181_'.$i.'']);};
+        if (isset($_POST['metadata_181_'.$i.''])) {if (empty($_POST['metadata_181_'.$i.''])) {delete_post_meta($post_id, 'metadata_181_'.$i.'');}}
     }
     for ($i = 1; $i <= 10; $i++) {
         if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_182_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_182_'.$i.'', $_POST['metadata_182_'.$i.'']);};
+        if (isset($_POST['metadata_182_'.$i.''])) {if (empty($_POST['metadata_182_'.$i.''])) {delete_post_meta($post_id, 'metadata_182_'.$i.'');}}
     }
     for ($i = 1; $i <= 10; $i++) {
         if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_183_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_183_'.$i.'', $_POST['metadata_183_'.$i.'']);};
+        if (isset($_POST['metadata_183_'.$i.''])) {if (empty($_POST['metadata_183_'.$i.''])) {delete_post_meta($post_id, 'metadata_183_'.$i.'');}}
     }
     for ($i = 1; $i <= 10; $i++) {
         if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_184_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_184_'.$i.'', $_POST['metadata_184_'.$i.'']);};
+        if (isset($_POST['metadata_184_'.$i.''])) {if (empty($_POST['metadata_184_'.$i.''])) {delete_post_meta($post_id, 'metadata_184_'.$i.'');}}
     }
     for ($i = 1; $i <= 10; $i++) {
         for ($j = 1; $j <=5; $j++) {  
             if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_185_'.$i.'_'.$j.'', $_POST)) { update_post_meta( $post_id, 'metadata_185_'.$i.'_'.$j.'', $_POST['metadata_185_'.$i.'_'.$j.'']);};
+            if (isset($_POST['metadata_185_'.$i.'_'.$j.''])) {if (empty($_POST['metadata_185_'.$i.'_'.$j.''])) {delete_post_meta($post_id, 'metadata_185_'.$i.'_'.$j.'');}}
         }
     }
     for ($i = 1; $i <= 30; $i++) {
         if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_186_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_186_'.$i.'', $_POST['metadata_186_'.$i.'']);};
+        if (isset($_POST['metadata_186_'.$i.''])) {if (empty($_POST['metadata_186_'.$i.''])) {delete_post_meta($post_id, 'metadata_186_'.$i.'');}}
     }
     for ($i = 1; $i <= 30; $i++) {
         if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_187_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_187_'.$i.'', $_POST['metadata_187_'.$i.'']);};
+        if (isset($_POST['metadata_187_'.$i.''])) {if (empty($_POST['metadata_187_'.$i.''])) {delete_post_meta($post_id, 'metadata_187_'.$i.'');}}
     }
     for ($i = 1; $i <= 20; $i++) {
         if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_194_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_194_'.$i.'', $_POST['metadata_194_'.$i.'']);};
+        if (isset($_POST['metadata_194_'.$i.''])) {if (empty($_POST['metadata_194_'.$i.''])) {delete_post_meta($post_id, 'metadata_194_'.$i.'');}}
     }
     for ($i = 1; $i <= 20; $i++) {
         if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_195_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_195_'.$i.'', $_POST['metadata_195_'.$i.'']);};
+        if (isset($_POST['metadata_195_'.$i.''])) {if (empty($_POST['metadata_195_'.$i.''])) {delete_post_meta($post_id, 'metadata_195_'.$i.'');}}
     }
     for ($i = 1; $i <= 3; $i++) {
         if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_196_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_196_'.$i.'', $_POST['metadata_196_'.$i.'']);};
+        if (isset($_POST['metadata_196_'.$i.''])) {if (empty($_POST['metadata_196_'.$i.''])) {delete_post_meta($post_id, 'metadata_196_'.$i.'');}}
     }
     for ($i = 1; $i <= 3; $i++) {
         if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_197_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_197_'.$i.'', $_POST['metadata_197_'.$i.'']);};
+        if (isset($_POST['metadata_197_'.$i.''])) {if (empty($_POST['metadata_197_'.$i.''])) {delete_post_meta($post_id, 'metadata_197_'.$i.'');}}
     }
     for ($i = 1; $i <= 3; $i++) {
         if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_198_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_198_'.$i.'', $_POST['metadata_198_'.$i.'']);};
+        if (isset($_POST['metadata_198_'.$i.''])) {if (empty($_POST['metadata_198_'.$i.''])) {delete_post_meta($post_id, 'metadata_198_'.$i.'');}}
     }
     for ($i = 1; $i <= 3; $i++) {
         if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_191_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_191_'.$i.'', $_POST['metadata_191_'.$i.'']);};
+        if (isset($_POST['metadata_191_'.$i.''])) {if (empty($_POST['metadata_191_'.$i.''])) {delete_post_meta($post_id, 'metadata_191_'.$i.'');}}
     }
     for ($i = 1; $i <= 10; $i++) {
         if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_192_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_192_'.$i.'', $_POST['metadata_192_'.$i.'']);};
+        if (isset($_POST['metadata_192_'.$i.''])) {if (empty($_POST['metadata_192_'.$i.''])) {delete_post_meta($post_id, 'metadata_192_'.$i.'');}}
     }
     if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_193', $_POST)) { update_post_meta( $post_id, 'metadata_193', $_POST['metadata_193']);};
+    if (isset($_POST['metadata_193'])) {if (empty($_POST['metadata_193'])) {delete_post_meta($post_id, 'metadata_193');}}
 
     if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_188', $_POST)) { update_post_meta( $post_id, 'metadata_188', $_POST['metadata_188']);};
+    if (isset($_POST['metadata_188'])) {if (empty($_POST['metadata_188'])) {delete_post_meta($post_id, 'metadata_188');}}
 
     if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_189', $_POST)) { update_post_meta( $post_id, 'metadata_189', $_POST['metadata_189']);};
+    if (isset($_POST['metadata_189'])) {if (empty($_POST['metadata_189'])) {delete_post_meta($post_id, 'metadata_189');}}
+
 
     for ($i = 1; $i <= 15; $i++) {
         if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_190_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_190_'.$i.'', $_POST['metadata_190_'.$i.'']);};
+        if (isset($_POST['metadata_190_'.$i.''])) {if (empty($_POST['metadata_190_'.$i.''])) {delete_post_meta($post_id, 'metadata_190_'.$i.'');}}
     }
 
 }
