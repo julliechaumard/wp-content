@@ -48,22 +48,25 @@ function metabox_salle($post) {
     <section class='metagroup'>
         <h2>NOM</h2>
         <div class='metagroup_sub'>
-            <div class='metagroup_sub_items grid_3fr_simple'>
+            <div class='metagroup_sub_items'>
+                <div class="bloc50p">
                     <!-- NOM DE LA SALLE -->
                     <div class="pinput">
                         <label for="metadata_270">Nom de la salle</label>
                         <input type="text" name="metadata_270" id="metadata_270" value="<?php echo $metadata_270; ?>"/>
-                    </div>     
+                    </div>  
+                </div>   
             </div>
         </div>
 
         <h2>COORDONÉES</h2>
         <div class='metagroup_sub'>
-            <div class='metagroup_sub_items grid_3fr_simple'>
+            <div class='metagroup_sub_items'>
+                <div class="bloc50p">
                     <!-- ADRESSE DE LA SALLE -->
                     <div class="pinput">
                         <label for="metadata_271">Adresse complète de la salle</label>
-                        <textarea name="metadata_271" id="metadata_271" cols="50" rows="4" placeholder="<?php echo $metadata_271; ?>"></textarea>
+                        <textarea name="metadata_271" id="metadata_271" cols="50" rows="4" placeholder=""><?php echo $metadata_271; ?></textarea>
                     </div>
                     <!-- VILLE DE LA SALLE -->
                     <div class="pinput">
@@ -85,6 +88,7 @@ function metabox_salle($post) {
                         <label for="metadata_275">Site Internet</label>
                         <input type="url" name="metadata_275" id="metadata_275" value="<?php echo $metadata_275; ?>"/>
                     </div>  
+                </div>
                     
             </div>
         </div>
@@ -103,22 +107,16 @@ function jcp_metabox_save_salle($post_id) {
 
     // metadata
     if (get_post_type($post_id) == 'salle' && array_key_exists('metadata_270', $_POST)) { update_post_meta( $post_id, 'metadata_270', $_POST['metadata_270']);};
-    if (isset($_POST['metadata_270'])) {if (empty($_POST['metadata_270'])) {delete_post_meta($post_id, 'metadata_270');}}
     // metadata
     if (get_post_type($post_id) == 'salle' && array_key_exists('metadata_271', $_POST)) { update_post_meta( $post_id, 'metadata_271', $_POST['metadata_271']);};
-    if (isset($_POST['metadata_271'])) {if (empty($_POST['metadata_271'])) {delete_post_meta($post_id, 'metadata_271');}}
 
     if (get_post_type($post_id) == 'salle' && array_key_exists('metadata_272', $_POST)) { update_post_meta( $post_id, 'metadata_272', $_POST['metadata_272']);};
-    if (isset($_POST['metadata_272'])) {if (empty($_POST['metadata_272'])) {delete_post_meta($post_id, 'metadata_272');}}
     
     if (get_post_type($post_id) == 'salle' && array_key_exists('metadata_273', $_POST)) { update_post_meta( $post_id, 'metadata_273', $_POST['metadata_273']);};
-    if (isset($_POST['metadata_273'])) {if (empty($_POST['metadata_273'])) {delete_post_meta($post_id, 'metadata_273');}}
     
     if (get_post_type($post_id) == 'salle' && array_key_exists('metadata_274', $_POST)) { update_post_meta( $post_id, 'metadata_274', $_POST['metadata_274']);};
-    if (isset($_POST['metadata_274'])) {if (empty($_POST['metadata_274'])) {delete_post_meta($post_id, 'metadata_274');}}
     
     if (get_post_type($post_id) == 'salle' && array_key_exists('metadata_275', $_POST)) { update_post_meta( $post_id, 'metadata_275', $_POST['metadata_275']);};
-    if (isset($_POST['metadata_275'])) {if (empty($_POST['metadata_275'])) {delete_post_meta($post_id, 'metadata_275');}}
        
 }
 

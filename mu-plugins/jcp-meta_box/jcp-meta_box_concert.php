@@ -151,20 +151,20 @@ function metabox_concert($post) {
         <h2>LES TITRES</h2>
         <div class=''>
             <div class='metagroup_sub_items grid_4fr_simple'>
-                <!-- TITRE DU CONCERT EN GRAS -->
+                <!-- TITRE DU CONCERT LIGNE1 -->
                 <div class="pinput">
-                    <label for="metadata_199">Titre du concert en gras</label>
-                    <input type="text" name="metadata_199" id="metadata_199" value="<?php echo $metadata_199; ?>"/>
+                    <label for="metadata_199">Titre du concert ligne1</label>
+                    <input type="text" name="metadata_199" id="metadata_199" placeholder='en MAJUSCULE' value="<?php echo $metadata_199; ?>"/>
                 </div>
                 <!-- TITRE DU CONCERT EN LEGER -->
                 <div class="pinput">
-                    <label for="metadata_200">Titre du concert en léger</label>
-                    <input type="text" name="metadata_200" id="metadata_200" value="<?php echo $metadata_200; ?>"/>
+                    <label for="metadata_200">Titre du concert ligne2+</label>
+                    <input type="text" name="metadata_200" id="metadata_200" placeholder='en MAJUSCULE' value="<?php echo $metadata_200; ?>"/>
                 </div>
                 <!-- SOUS-TITRE DU CONCERT -->
                 <div class="pinput">
                     <label for="metadata_201">Sous-titre du concert</label>
-                    <input type="text" name="metadata_201" id="metadata_201" value="<?php echo $metadata_201; ?>"/>
+                    <input type="text" name="metadata_201" id="metadata_201" placeholder='en MAJUSCULE' value="<?php echo $metadata_201; ?>"/>
                 </div>
             </div>
         </div>
@@ -355,7 +355,7 @@ function metabox_concert($post) {
                     <!-- NOM du JOURNAL -->
                     <div class="pinput">
                         <label for="metadata_196_<?php echo $i; ?>">Nom du journal <?php echo $i; ?></label>
-                        <input type="text" name="metadata_196_<?php echo $i; ?>" id="metadata_196_<?php echo $i; ?>" value="<?php echo $metadata_196_[$i]; ?>"/>
+                        <input type="text" name="metadata_196_<?php echo $i; ?>" id="metadata_196_<?php echo $i; ?>" placeholder="EN MAJUSCULE" value="<?php echo $metadata_196_[$i]; ?>"/>
                     </div>
 
                     <!-- URL DU JOURNAL -->
@@ -540,11 +540,8 @@ function jcp_metabox_save_concert($post_id) {
 
     // metadata
     if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_199', $_POST)) { update_post_meta( $post_id, 'metadata_199', $_POST['metadata_199']);};
-    // metadata
     if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_200', $_POST)) { update_post_meta( $post_id, 'metadata_200', $_POST['metadata_200']);};
-
     if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_201', $_POST)) { update_post_meta( $post_id, 'metadata_201', $_POST['metadata_201']);};
-
     for ($i = 1; $i <= 10; $i++) {
         if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_180_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_180_'.$i.'', $_POST['metadata_180_'.$i.'']);};
     }
@@ -593,11 +590,8 @@ function jcp_metabox_save_concert($post_id) {
         if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_192_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_192_'.$i.'', $_POST['metadata_192_'.$i.'']);};
     }
     if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_193', $_POST)) { update_post_meta( $post_id, 'metadata_193', $_POST['metadata_193']);};
-
     if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_188', $_POST)) { update_post_meta( $post_id, 'metadata_188', $_POST['metadata_188']);};
-
     if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_189', $_POST)) { update_post_meta( $post_id, 'metadata_189', $_POST['metadata_189']);};
-
     for ($i = 1; $i <= 15; $i++) {
         if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_190_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_190_'.$i.'', $_POST['metadata_190_'.$i.'']);};
     }

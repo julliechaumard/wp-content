@@ -4,13 +4,13 @@
 * Déclarer les box Metadata
 *************************************************************************/
 
-function jcp_declare_metabox_partenaire() {
+function jcp_declare_metabox_recrutement() {
  
 	add_meta_box(
-		'metabox_partenaire',
-		'Informations partenaire',
-		'metabox_partenaire',
-		'partenaire',
+		'metabox_recrutement',
+		'Informations recrutement',
+		'metabox_recrutement',
+		'recrutement',
 		'normal',
 		'default'
 	);
@@ -21,19 +21,16 @@ function jcp_declare_metabox_partenaire() {
 *************************************************************************/
 
 
-function metabox_partenaire($post) {
+function metabox_recrutement($post) {
     /************************************************************************
     //Variables pour récupérer les valeurs existantes (s'il y en a)
     *************************************************************************/
 
-    $metadata_250 = get_post_meta( $post->ID, 'metadata_250', true );
-    $metadata_251 = get_post_meta( $post->ID, 'metadata_251', true );
-    $metadata_252 = get_post_meta( $post->ID, 'metadata_252', true );
-    $metadata_253 = get_post_meta( $post->ID, 'metadata_253', true );
-    $metadata_254 = get_post_meta( $post->ID, 'metadata_254', true );
-    $metadata_255 = get_post_meta( $post->ID, 'metadata_255', true );
-    $metadata_256 = get_post_meta( $post->ID, 'metadata_256', true );
-    $metadata_257 = get_post_meta( $post->ID, 'metadata_257', true );
+    $metadata_662 = get_post_meta( $post->ID, 'metadata_662', true );
+    $metadata_663 = get_post_meta( $post->ID, 'metadata_663', true );
+    $metadata_664 = get_post_meta( $post->ID, 'metadata_664', true );
+    $metadata_665 = get_post_meta( $post->ID, 'metadata_665', true );
+    $metadata_666 = get_post_meta( $post->ID, 'metadata_666', true );
 
     /************************************************************************
     // SAISIE DES INFORMATIONS
@@ -51,12 +48,12 @@ function metabox_partenaire($post) {
             <div class='metagroup_sub_items grid_4fr_simple'>
                 <!-- IMAGE VIGNETTE -->
                 <div class="pinput">
-                    <label for="metadata_255">Image vignette</label>
-                    <input type="text" name="metadata_255" id="metadata_255" class="vignette-url" value="<?php echo $metadata_255; ?>"/>
+                    <label for="metadata_666">Image vignette</label>
+                    <input type="text" name="metadata_666" id="metadata_666" class="vignette-url" value="<?php echo $metadata_666; ?>"/>
                     <input type="button" class="vignette-uploader" value="Sélectionner une image">
                 </div>
                 <div class="vignette-preview">
-                    <img src="<?php echo get_post_meta($post->ID, 'metadata_255', true); ?>" style="max-width: 150px;">
+                    <img src="<?php echo get_post_meta($post->ID, 'metadata_666', true); ?>" style="max-width: 150px;">
                 </div>
 
                 <!-- SCRIPT POUR SÉLECTIONNER MÉDIA DANS LA BIBLIOTHÈQUE -->
@@ -97,77 +94,34 @@ function metabox_partenaire($post) {
     </section>
 
     <!-- --------------------- -->
-    <!-- GROUPE INFORMATIONS DU PARTENAIRE -->
+    <!-- GROUPE INFORMATIONS RECRUTEMENT -->
     <section class='metagroup'>
 
-        <!-- NOM DU PARTENAIRE -->
-        <h2>NOM</h2>
+        <!-- TITRE DE L'ANNONCE -->
+        <h2>TITRE DE L'ANNONCE</h2>
         <div class='metagroup_sub'>
             <div class='metagroup_sub_items grid_3fr_simple'>
                     <div class="pinput">
-                        <label for="metadata_250">Nom de partenaire</label>
-                        <input type="text" name="metadata_250" id="metadata_250" placeholder='en MAJUSCULE' value="<?php echo $metadata_250; ?>"/>
-                    </div>     
-            </div>
-        </div>
-
-        <!-- ACCROCHE DU PARTENAIRE -->
-        <h2>ACCROCHE BANNIÈRE</h2>
-        <div class='metagroup_sub'>
-            <div class='metagroup_sub_items grid_3fr_simple'>
-                    <div class="pinput">
-                        <label for="metadata_256">Accroche - ligne1</label>
-                        <input type="text" name="metadata_256" id="metadata_256" placeholder='1 à 3 mots en MAJUSCULE' value="<?php echo $metadata_256; ?>"/>
+                        <label for="metadata_664">TITRE du poste - ligne1</label>
+                        <input type="text" name="metadata_664" id="metadata_664" placeholder='1 à 3 mots en MAJUSCULE' value="<?php echo $metadata_664; ?>"/>
                     </div>     
             </div>
             <div class='metagroup_sub_items grid_3fr_simple'>
                     <div class="pinput">
-                        <label for="metadata_257">Accroche - ligne2+</label>
-                        <textarea name="metadata_257" id="metadata_257" cols="50" rows="4" placeholder="276 caractères MAX avec espaces en tout  en MAJUSCULE"><?php echo $metadata_257; ?></textarea>
+                        <label for="metadata_665">TITRE du poste - ligne2+</label>
+                        <textarea name="metadata_665" id="metadata_665" cols="50" rows="4" placeholder="en MAJUSCULE"><?php echo $metadata_665; ?></textarea>
                     </div>     
             </div>
         </div>
 
-        <h2>DESCRIPTION</h2>
+        <h2>Annonce en PDF</h2>
         <div class='metagroup_sub'>
             <div class='metagroup_sub_items grid_3fr_simple'>
-                    <!-- DESCRIPTION COURTE DU PARTENAIRE -->
-                    <div class="pinput">
-                        <label for="metadata_254">Description courte</label>
-                        <textarea name="metadata_254" id="metadata_254" cols="50" rows="4" placeholder="276 caractères MAX avec espaces"><?php echo $metadata_254; ?></textarea>
-                    </div>     
-            </div>
-        </div>
-
-        <h2>Site Internet</h2>
-        <div class='metagroup_sub'>
-            <div class='metagroup_sub_items grid_3fr_simple'>
-                    <!-- URL DU PARTENAIRE -->
-                    <div class="pinput">
-                        <label for="metadata_251">URL Site Internet</label>
-                        <input type="url" name="metadata_251" id="metadata_251" value="<?php echo $metadata_251; ?>"/>
-                    </div>    
-            </div>
-        </div>
-
-        <h2>LOGO</h2>
-        <div class='metagroup_sub'>
-            <div class='metagroup_sub_items grid_3fr_simple'>
-
-                <!-- MENTION DU PARTENAIRE POUR LOGO DE LA PAGE CONCERT -->
+                <!-- URL DU PDF -->
                 <div class="pinput">
-                    <label for="metadata_253">Mention</label>
-                    <textarea name="metadata_253" id="metadata_253" cols="40" rows="4" placeholder=""><?php echo $metadata_253; ?></textarea>
-                </div>
-            
-                <!-- LOGO -->
-                <div class="pinput">
-                    <label for="metadata_252">Logo</label>
-                    <input type="text" name="metadata_252" id="metadata_252" class="logo-url" value="<?php echo $metadata_252; ?>"/>
-                    <input type="button" class="logo-uploader" value="Sélectionner une image">
-                </div>
-                <div class="logo-preview">
-                    <img src="<?php echo get_post_meta($post->ID, 'metadata_252', true); ?>" style="max-width: 150px;">
+                    <label for="metadata_662">Fichier PDF</label>
+                    <input type="text" name="metadata_662" id="metadata_662" class="pdf-url" value="<?php echo $metadata_662; ?>"/>
+                    <input type="button" class="pdf-uploader" value="Sélectionner un fichier">
                 </div>
 
                 <!-- SCRIPT POUR SÉLECTIONNER MÉDIA DANS LA BIBLIOTHÈQUE -->
@@ -176,12 +130,10 @@ function metabox_partenaire($post) {
                         // Instantiates the variable that holds the media library frame.
                         var meta_image_frame;
                         // Runs when the image button is clicked.
-                        $('.logo-uploader').click(function (e) {
-                            // Get preview pane
-                            var meta_image_preview = $(this).parent().parent().children('.logo-preview');
+                        $('.pdf-uploader').click(function (e) {
                             // Prevents the default action from occuring.
                             e.preventDefault();
-                            var meta_image = $(this).parent().children('.logo-url');
+                            var meta_image = $(this).parent().children('.pdf-url');
                             // If the frame already exists, re-open it.
                             if (meta_image_frame) {meta_image_frame.open(); return;}
                             // Sets up the media library frame
@@ -195,7 +147,6 @@ function metabox_partenaire($post) {
                                 var media_attachment = meta_image_frame.state().get('selection').first().toJSON();
                                 // Sends the attachment URL to our custom image input field.
                                 meta_image.val(media_attachment.url);
-                                meta_image_preview.children('img').attr('src', media_attachment.url);
                             });
                             // Opens the media library frame.
                             meta_image_frame.open();
@@ -203,8 +154,22 @@ function metabox_partenaire($post) {
                     });
                 </script>
 
+
+                    
             </div>
         </div>
+
+        <h2>A CONTACTER</h2>
+        <div class='metagroup_sub'>
+            <div class='metagroup_sub_items grid_3fr_simple'>
+                <!-- A CONTACTER -->
+                <div class="pinput">
+                    <label for="metadata_663">Contacts pour postuler</label>
+                    <textarea name="metadata_663" id="metadata_663" cols="50" rows="4" placeholder=""><?php echo $metadata_663; ?></textarea>
+                </div> 
+            </div>
+        </div>
+
     </section>
     
     <?php
@@ -216,17 +181,15 @@ function metabox_partenaire($post) {
 * Save datas
 *************************************************************************/
 
-function jcp_metabox_save_partenaire($post_id) {
+function jcp_metabox_save_recrutement($post_id) {
 
     // metadata
-    if (get_post_type($post_id) == 'partenaire' && array_key_exists('metadata_250', $_POST)) { update_post_meta( $post_id, 'metadata_250', $_POST['metadata_250']);};
-    if (get_post_type($post_id) == 'partenaire' && array_key_exists('metadata_251', $_POST)) { update_post_meta( $post_id, 'metadata_251', $_POST['metadata_251']);};
-    if (get_post_type($post_id) == 'partenaire' && array_key_exists('metadata_252', $_POST)) { update_post_meta( $post_id, 'metadata_252', $_POST['metadata_252']);};
-    if (get_post_type($post_id) == 'partenaire' && array_key_exists('metadata_253', $_POST)) { update_post_meta( $post_id, 'metadata_253', $_POST['metadata_253']);};
-    if (get_post_type($post_id) == 'partenaire' && array_key_exists('metadata_254', $_POST)) { update_post_meta( $post_id, 'metadata_254', $_POST['metadata_254']);};
-    if (get_post_type($post_id) == 'partenaire' && array_key_exists('metadata_255', $_POST)) { update_post_meta( $post_id, 'metadata_255', $_POST['metadata_255']);};
-    if (get_post_type($post_id) == 'partenaire' && array_key_exists('metadata_256', $_POST)) { update_post_meta( $post_id, 'metadata_256', $_POST['metadata_256']);};
-    if (get_post_type($post_id) == 'partenaire' && array_key_exists('metadata_257', $_POST)) { update_post_meta( $post_id, 'metadata_257', $_POST['metadata_257']);};
+    if (get_post_type($post_id) == 'recrutement' && array_key_exists('metadata_662', $_POST)) { update_post_meta( $post_id, 'metadata_662', $_POST['metadata_662']);};
+    if (get_post_type($post_id) == 'recrutement' && array_key_exists('metadata_663', $_POST)) { update_post_meta( $post_id, 'metadata_663', $_POST['metadata_663']);};
+    if (get_post_type($post_id) == 'recrutement' && array_key_exists('metadata_664', $_POST)) { update_post_meta( $post_id, 'metadata_664', $_POST['metadata_664']);};
+    if (get_post_type($post_id) == 'recrutement' && array_key_exists('metadata_665', $_POST)) { update_post_meta( $post_id, 'metadata_665', $_POST['metadata_665']);};
+    if (get_post_type($post_id) == 'recrutement' && array_key_exists('metadata_666', $_POST)) { update_post_meta( $post_id, 'metadata_666', $_POST['metadata_666']);};
+
 }
 
 ?>

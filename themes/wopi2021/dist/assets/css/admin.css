@@ -21,10 +21,8 @@
     color: gray
 }
 
-/* INPUT CONTENAIR */
 .pinput {
     margin: 0px !important;
-    /*padding: 2px 5px 2px 5px;*/
     border-radius: 5px 5px 5px 5px;
     color: aliceblue;
     font-weight: bold;
@@ -45,7 +43,11 @@ textarea:focus, input:focus {
 input[type=date] {
     background-color: #158498;
     color: white;
-  }
+}
+textarea {
+    width: 100%;
+    font-weight: 400;
+}
 
 .metagroup {
     margin-bottom: 50px;
@@ -67,7 +69,14 @@ input[type=date] {
     padding-left: 10px;
     padding-right: 10px;
 }
-
+.grid_2fr {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-auto-rows: minmax(10px, auto);
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
+    justify-items: stretch;
+}
 .grid_3fr_simple {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -85,6 +94,12 @@ input[type=date] {
     grid-row-gap: 10px;
     justify-items: stretch;
 }
+
+.bloc50p {
+    width: 50%;
+}
+
+
 
 /******************************************
 *
@@ -105,13 +120,9 @@ input[type=date] {
 * METABOX CONCERT REPRESENTATION
 *
 *******************************************/
-
-
-
 .grid_concert_representations {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(186px, 1fr));
-    
     grid-auto-rows: minmax(10px, auto);
     grid-column-gap: 30px;
     grid-row-gap: 10px;

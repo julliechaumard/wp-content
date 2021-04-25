@@ -48,12 +48,32 @@ add_action( 'add_meta_boxes', 'jcp_declare_metabox_partenaire' );
 add_action( 'save_post', 'jcp_metabox_save_partenaire');
 add_action( 'add_meta_boxes', 'jcp_declare_metabox_artiste_invite' );
 add_action( 'save_post', 'jcp_metabox_save_artiste_invite');
+add_action( 'add_meta_boxes', 'jcp_declare_metabox_orchestre' );
+add_action( 'save_post', 'jcp_metabox_save_orchestre');
+add_action( 'add_meta_boxes', 'jcp_declare_metabox_recrutement' );
+add_action( 'save_post', 'jcp_metabox_save_recrutement');
+add_action( 'add_meta_boxes', 'jcp_declare_metabox_actualite' );
+add_action( 'save_post', 'jcp_metabox_save_actualite');
 
+add_action( 'add_meta_boxes', 'jcp_declare_metabox_page_agenda' );
+add_action( 'save_post', 'jcp_metabox_save_page_agenda');
+add_action( 'add_meta_boxes', 'jcp_declare_metabox_page_artistes_invites' );
+add_action( 'save_post', 'jcp_metabox_save_page_artistes_invites');
+add_action( 'add_meta_boxes', 'jcp_declare_metabox_page_collaborations' );
+add_action( 'save_post', 'jcp_metabox_save_page_collaborations');
 
 include 'jcp-meta_box/jcp-meta_box_concert.php';
 include 'jcp-meta_box/jcp-meta_box_salle.php';
 include 'jcp-meta_box/jcp-meta_box_partenaire.php';
 include 'jcp-meta_box/jcp-meta_box_artiste_invite.php';
+include 'jcp-meta_box/jcp-meta_box_ochestre.php';
+include 'jcp-meta_box/jcp-meta_box_recrutement.php';
+include 'jcp-meta_box/jcp-meta_box_actualite.php';
+
+include 'jcp-meta_box/jcp-meta_box_page_agenda.php';
+include 'jcp-meta_box/jcp-meta_box_page_artistes_invites.php';
+include 'jcp-meta_box/jcp-meta_box_page_collaborations.php';
+include 'jcp-meta_box/jcp-meta_box_page_collaborations.php';
 
 
 ?>

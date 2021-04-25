@@ -38,7 +38,9 @@
 * SALLE
 * PARTENAIRES
 * ARTISTE INVITÉ
-* 
+* L'ORCHESTRE
+* RECRUTEMENT
+* ACTUALITÉ
 *************************************************************************/
 
 
@@ -85,10 +87,60 @@ function jcp_create_cpt() {
         'rewrite' => array('slug' => 'concert'),
         //The value of five puts it below Posts and 100 puts it below Settings. 
         'show_in_menu' => true,
-        'menu_position'=> 5,
+        'menu_position'=> 3,
         'menu_icon' => get_stylesheet_directory_uri() . '/dist/assets/images/icones/cpt_icone_concert.png',
         'show_in_rest' => true,
-        'supports' => array( 'title', 'editor', 'thumbnail', 'revisions', 'page-attributes', 'excerpt' ),
+        'supports' => array( 'title', 'editor', 'thumbnail', 'page-attributes' ),
+        'can_export' => true,
+        'delete_with_user' => false,
+        'show_in_admin_bar' => true,
+        'show_in_nav_menus' => true,
+        // supprimer les droits sur previeuw et permalien
+        'publicly_queryable' => true
+    ));
+
+        /************************************************************************
+    * ACTUALITÉ
+    *************************************************************************/
+
+    register_post_type( 'actualite', array(
+        'labels' => array(
+            'name' => __( 'Actualité' ),
+            'singular_name' => __( 'Actualité' ),
+            'add_new' => __( 'Ajouter  une actualité' ),
+            'add_new_item' => __( 'Ajouter une actualité' ),
+            'edit_item' => __( 'Modifier une actualité' ),
+            'new_item' => __( 'Nouvelle actualité' ),
+            'view_item' => __( 'Voir une actualité' ),
+            'view_items' => __( 'Voir les actualités' ),
+            'search_items' => __( 'Chercher une actualité' ),
+            'not_found_in_trash' => __( 'Actualité non trouvée dans la corbeille' ),
+            'parent_item_colon' => __( 'Retour' ),
+            'all_items' => __( 'Toutes les actualités' ),
+            'archives' => __( 'Archive actualités' ),
+            'attributes'  => __( 'Propriétés actualité' ),
+            'insert_into_item' => __( 'Ajouter' ),
+            'uploaded_to_this_item' => __( 'Télécharger' ),
+            'featured_image' => __( 'Image bannière actualité' ),
+            'set_featured_image' => __( 'Ajouter image bannière actualité' ),
+            'remove_featured_image' => __( 'Supprimer image bannière actualité' ),
+            'use_featured_image' => __( 'Utiliser image bannière actualité' ),
+            'menu_name' => __( 'Actualité' ),
+            'filter_items_list' => __( 'Actualité' ),
+            'items_list_navigation' => __( 'Actualité' ),
+            'items_list' => __( 'Actualité' ),
+            'name_admin_bar' => __( 'Ajouter une actualité' )
+        ),
+        'description' => 'Dossier des actualités',
+        'public' => true,
+        'has_archive' => true,
+        'rewrite' => array('slug' => 'actualite'),
+        //The value of five puts it below Posts and 100 puts it below Settings. 
+        'show_in_menu' => true,
+        'menu_position'=> 3,
+        'menu_icon' => get_stylesheet_directory_uri() . '/dist/assets/images/icones/cpt_icone_coulisse.png',
+        'show_in_rest' => true,
+        'supports' => array( 'title', 'editor', 'thumbnail', 'page-attributes' ),
         'can_export' => true,
         'delete_with_user' => false,
         'show_in_admin_bar' => true,
@@ -135,10 +187,10 @@ function jcp_create_cpt() {
         'rewrite' => array('slug' => 'salle'),
         //The value of five puts it below Posts and 100 puts it below Settings. 
         'show_in_menu' => true,
-        'menu_position'=> 5,
+        'menu_position'=> 3,
         'menu_icon' => get_stylesheet_directory_uri() . '/dist/assets/images/icones/cpt_icone_lieu.png',
         'show_in_rest' => true,
-        'supports' => array( 'title', 'editor', 'thumbnail', 'revisions', 'page-attributes', 'excerpt' ),
+        'supports' => array( 'title', 'editor', 'thumbnail', 'page-attributes' ),
         'can_export' => true,
         'delete_with_user' => false,
         'show_in_admin_bar' => true,
@@ -185,10 +237,10 @@ function jcp_create_cpt() {
         'rewrite' => array('slug' => 'partenaire'),
         //The value of five puts it below Posts and 100 puts it below Settings. 
         'show_in_menu' => true,
-        'menu_position'=> 5,
+        'menu_position'=> 3,
         'menu_icon' => get_stylesheet_directory_uri() . '/dist/assets/images/icones/cpt_icone_collaboration.png',
         'show_in_rest' => true,
-        'supports' => array( 'title', 'editor', 'thumbnail', 'revisions', 'page-attributes', 'excerpt' ),
+        'supports' => array( 'title', 'editor', 'thumbnail', 'page-attributes' ),
         'can_export' => true,
         'delete_with_user' => false,
         'show_in_admin_bar' => true,
@@ -232,13 +284,13 @@ function jcp_create_cpt() {
         'description' => 'Dossier des artistes invité',
         'public' => true,
         'has_archive' => true,
-        'rewrite' => array('slug' => 'artiste'),
+        'rewrite' => array('slug' => 'artiste_invite'),
         //The value of five puts it below Posts and 100 puts it below Settings. 
         'show_in_menu' => true,
-        'menu_position' => 5,
-        'menu_icon' => get_stylesheet_directory_uri() . '/dist/assets/images/icones/cpt_icone_artiste.png',
+        'menu_position' => 3,
+        'menu_icon' => get_stylesheet_directory_uri() . '/dist/assets/images/icones/cpt_icone_artiste_vert.png',
         'show_in_rest' => true,
-        'supports' => array( 'title', 'editor', 'thumbnail', 'revisions', 'page-attributes', 'excerpt' ),
+        'supports' => array( 'title', 'editor', 'thumbnail', 'page-attributes' ),
         'can_export' => true,
         'delete_with_user' => false,
         'show_in_admin_bar' => true,
@@ -248,6 +300,106 @@ function jcp_create_cpt() {
     ));
 
 
+    /************************************************************************
+    * L'ORCHESTRE
+    *************************************************************************/
+
+    register_post_type( 'orchestre', array(
+        'labels' => array(
+            'name' => __( 'Orchestre' ),
+            'singular_name' => __( 'Orchestre' ),
+            'add_new' => __( 'Ajouter  un membre de l\'orchestre' ),
+            'add_new_item' => __( 'Ajouter un membre de l\'orchestre' ),
+            'edit_item' => __( 'Modifier un membre de l\'orchestre' ),
+            'new_item' => __( 'Nouveau membre de l\'orchestre' ),
+            'view_item' => __( 'Voir un membre de l\'orchestre' ),
+            'view_items' => __( 'Voir les membres de l\'orchestre' ),
+            'search_items' => __( 'Chercher un membre de l\'orchestre' ),
+            'not_found_in_trash' => __( 'Membre de l\'orchestre non trouvé dans la corbeille' ),
+            'parent_item_colon' => __( 'Retour' ),
+            'all_items' => __( 'Tous les membres de l\'orchestre' ),
+            'archives' => __( 'Archive orchestre' ),
+            'attributes'  => __( 'Propriétés orchestre' ),
+            'insert_into_item' => __( 'Ajouter' ),
+            'uploaded_to_this_item' => __( 'Télécharger' ),
+            'featured_image' => __( 'Image bannière membre de l\'orchestre' ),
+            'set_featured_image' => __( 'Ajouter image bannière membre de l\'orchestre' ),
+            'remove_featured_image' => __( 'Supprimer image bannière membre de l\'orchestre' ),
+            'use_featured_image' => __( 'Utiliser image bannière membre de l\'orchestre' ),
+            'menu_name' => __( 'Orchestre' ),
+            'filter_items_list' => __( 'Orchestre' ),
+            'items_list_navigation' => __( 'Orchestre' ),
+            'items_list' => __( 'Orchestre' ),
+            'name_admin_bar' => __( 'Ajouter un Orchestre' )
+        ),
+        'description' => 'Dossier des membres de l\'orchestre',
+        'public' => true,
+        'has_archive' => true,
+        'rewrite' => array('slug' => 'orchestre'),
+        //The value of five puts it below Posts and 100 puts it below Settings. 
+        'show_in_menu' => true,
+        'menu_position' => 3,
+        'menu_icon' => get_stylesheet_directory_uri() . '/dist/assets/images/icones/cpt_icone_artiste_bleu.png',
+        'show_in_rest' => true,
+        'supports' => array( 'title', 'editor', 'thumbnail', 'page-attributes' ),
+        'can_export' => true,
+        'delete_with_user' => false,
+        'show_in_admin_bar' => true,
+        'show_in_nav_menus' => true,
+        // supprimer les droits sur previeuw et permalien
+        'publicly_queryable' => true
+    ));
+
+
+    /************************************************************************
+    * RECRUTEMENT
+    *************************************************************************/
+
+    register_post_type( 'recrutement', array(
+        'labels' => array(
+            'name' => __( 'Recrutement' ),
+            'singular_name' => __( 'Recrutement' ),
+            'add_new' => __( 'Ajouter  une annonce de recrutement' ),
+            'add_new_item' => __( 'Ajouter une annonce de recrutement' ),
+            'edit_item' => __( 'Modifier une annonce de recrutement' ),
+            'new_item' => __( 'Nouvelle annonce de recrutement' ),
+            'view_item' => __( 'Voir une annonce de recrutement' ),
+            'view_items' => __( 'Voir les annonces de recrutement' ),
+            'search_items' => __( 'Chercher une annonce de recrutement' ),
+            'not_found_in_trash' => __( 'Annonce de recrutement non trouvée dans la corbeille' ),
+            'parent_item_colon' => __( 'Retour' ),
+            'all_items' => __( 'Toutes les annonces de recrutement' ),
+            'archives' => __( 'Archive recrutement' ),
+            'attributes'  => __( 'Propriétés recrutement' ),
+            'insert_into_item' => __( 'Ajouter' ),
+            'uploaded_to_this_item' => __( 'Télécharger' ),
+            'featured_image' => __( 'Image bannière annonce de recrutement' ),
+            'set_featured_image' => __( 'Ajouter image bannière annonce de recrutement' ),
+            'remove_featured_image' => __( 'Supprimer image bannière annonce de recrutement' ),
+            'use_featured_image' => __( 'Utiliser image bannière annonce de recrutement' ),
+            'menu_name' => __( 'Recrutement' ),
+            'filter_items_list' => __( 'Recrutement' ),
+            'items_list_navigation' => __( 'Recrutement' ),
+            'items_list' => __( 'Recrutement' ),
+            'name_admin_bar' => __( 'Ajouter une annonce de recrutement' )
+        ),
+        'description' => 'Dossier des annonces de recrutement',
+        'public' => true,
+        'has_archive' => true,
+        'rewrite' => array('slug' => 'recrutement'),
+        //The value of five puts it below Posts and 100 puts it below Settings. 
+        'show_in_menu' => true,
+        'menu_position' => 3,
+        'menu_icon' => get_stylesheet_directory_uri() . '/dist/assets/images/icones/cpt_icone_project.png',
+        'show_in_rest' => true,
+        'supports' => array( 'title', 'editor', 'thumbnail', 'page-attributes' ),
+        'can_export' => true,
+        'delete_with_user' => false,
+        'show_in_admin_bar' => true,
+        'show_in_nav_menus' => true,
+        // supprimer les droits sur previeuw et permalien
+        'publicly_queryable' => true
+    ));
 
 
 }   

@@ -43,11 +43,7 @@ add_action( 'init', 'jcp_create_taxonomies', 0 );
 
 function jcp_create_taxonomies() {
 
-    ///////////////////////////////////////////////////////////////////////////////
-    /// POST CONCERT
-    ///////////////////////////////////////////////////////////////////////////////
-
-    // Saison (concert)
+    // Saison
     $labels = array(
         'name'  => 'Saison',
         'singular_name' => 'Saison',
@@ -74,25 +70,25 @@ function jcp_create_taxonomies() {
         'query_var' => true,
         'rewrite' => array( 'slug' => 'saison' ),
     );
-    register_taxonomy( 'saison', array('concert'), $args );
+    register_taxonomy( 'saison', array('concert','partenaire','artiste_invite','actualite'), $args );
 
-    // Actu (concert)
+    // PLACEMENT
     $labels = array(
-        'name'  => 'Actualité',
-        'singular_name' => 'Actualité',
-        'search_items'  => 'Rechercher actualité',
-        'popular_items' => 'Actualités populaires',
-        'all_items' => 'Toutes les actualités',
+        'name'  => 'Placement',
+        'singular_name' => 'Placement',
+        'search_items'  => 'Rechercher placement',
+        'popular_items' => 'Placements populaires',
+        'all_items' => 'Tous les placements',
         'parent_item' => null,
         'parent_item_colon' => null,
-        'edit_item' => 'Editer actualité',
-        'update_item' => 'Mettre à jour actualité',
-        'add_new_item'  => 'Ajouter nouvel emplacement d\'actualité',
-        'new_item_name' => 'Nom nouvelle actualité',
-        'separate_items_with_commas' => 'Separer les actualités par une virgule',
-        'add_or_remove_items' => 'Ajouter ou supprimer actualité',
-        'choose_from_most_used' => 'Rechercher les actualités les plus utilisées',
-        'menu_name' => 'Etiquette actualité'
+        'edit_item' => 'Editer placement',
+        'update_item' => 'Mettre à jour placement',
+        'add_new_item'  => 'Ajouter nouveau type placement',
+        'new_item_name' => 'Nom nouveau placement',
+        'separate_items_with_commas' => 'Separer les placements par une virgule',
+        'add_or_remove_items' => 'Ajouter ou supprimer placement',
+        'choose_from_most_used' => 'Rechercher les placements les plus utilisées',
+        'menu_name' => 'Etiquette placement'
     );
     $args = array(
         'hierarchical' => false,
@@ -103,9 +99,9 @@ function jcp_create_taxonomies() {
         'query_var' => true,
         'rewrite' => array( 'slug' => 'actualite' ),
     );
-    register_taxonomy( 'actualite', array('concert'), $args );
+    register_taxonomy( 'placement', array('concert'), $args );
 
-    // Genre (concert)
+    // Genre
     $labels = array(
         'name'  => 'Genre',
         'singular_name' => 'Genre',
@@ -134,7 +130,7 @@ function jcp_create_taxonomies() {
     );
     register_taxonomy( 'genre', array('concert'), $args );
 
-    // Action_culturelle (concert)
+    // Action_culturelle
     $labels = array(
         'name'  => 'Action culturelle',
         'singular_name' => 'Action culturelle',
@@ -163,28 +159,23 @@ function jcp_create_taxonomies() {
     );
     register_taxonomy( 'action_culturelle', array('concert'), $args );
 
-
-    ///////////////////////////////////////////////////////////////////////////////
-    /// POST PARTENAIRE
-    ///////////////////////////////////////////////////////////////////////////////
-
-    // Saison (partenaire)
+    // CATEGORIE PARTENAIRE
     $labels = array(
-        'name'  => 'Saison',
-        'singular_name' => 'Saison',
-        'search_items'  => 'Rechercher saison',
-        'popular_items' => 'Saisons populaires',
-        'all_items' => 'Toutes les saisons',
+        'name'  => 'Catégorie partenaire',
+        'singular_name' => 'Catégorie partenaire',
+        'search_items'  => 'Rechercher catégorie partenaire',
+        'popular_items' => 'Catégories partenaire populaires',
+        'all_items' => 'Toutes les catégories partenaire',
         'parent_item' => null,
         'parent_item_colon' => null,
-        'edit_item' => 'Editer saison',
-        'update_item' => 'Mettre à jour saison',
-        'add_new_item'  => 'Ajouter nouvelle saison',
-        'new_item_name' => 'Nom nouvelle saison',
-        'separate_items_with_commas' => 'Separer les saisons par une virgule',
-        'add_or_remove_items' => 'Ajouter ou supprimer saison',
-        'choose_from_most_used' => 'Rechercher les saisons les plus utilisées',
-        'menu_name' => 'Etiquette saison'
+        'edit_item' => 'Editer catégorie partenaire',
+        'update_item' => 'Mettre à jour catégorie partenaire',
+        'add_new_item'  => 'Ajouter nouvelle catégorie partenaire',
+        'new_item_name' => 'Nom nouvelle catégorie partenaire',
+        'separate_items_with_commas' => 'Separer les catégories partenaire par une virgule',
+        'add_or_remove_items' => 'Ajouter ou supprimer catégorie partenaire',
+        'choose_from_most_used' => 'Rechercher les catégories partenaire les plus utilisées',
+        'menu_name' => 'Etiquette catégorie partenaire'
     );
     $args = array(
         'hierarchical' => false,
@@ -193,32 +184,57 @@ function jcp_create_taxonomies() {
         'show_in_rest' => true,
         'show_admin_column' => true,
         'query_var' => true,
-        'rewrite' => array( 'slug' => 'saison' ),
+        'rewrite' => array( 'slug' => 'categorie_partenaire' ),
     );
-    register_taxonomy( 'saison', array('partenaire'), $args );
+    register_taxonomy( 'categorie_partenaire', array('partenaire'), $args );
+
+    // CATEGORIE ARTISTE INVITE
+        $labels = array(
+            'name'  => 'Catégorie artiste invité',
+            'singular_name' => 'Catégorie artiste invité',
+            'search_items'  => 'Rechercher catégorie artiste invité',
+            'popular_items' => 'Catégories artiste invité populaires',
+            'all_items' => 'Toutes les catégories artiste invité',
+            'parent_item' => null,
+            'parent_item_colon' => null,
+            'edit_item' => 'Editer catégorie artiste invité',
+            'update_item' => 'Mettre à jour catégorie artiste invité',
+            'add_new_item'  => 'Ajouter nouvelle catégorie artiste invité',
+            'new_item_name' => 'Nom nouvelle catégorie artiste invité',
+            'separate_items_with_commas' => 'Separer les catégories artiste invité par une virgule',
+            'add_or_remove_items' => 'Ajouter ou supprimer catégorie artiste invité',
+            'choose_from_most_used' => 'Rechercher les catégories artiste invité les plus utilisées',
+            'menu_name' => 'Etiquette catégorie artiste invité'
+        );
+        $args = array(
+            'hierarchical' => false,
+            'labels' => $labels,
+            'show_ui' => true,
+            'show_in_rest' => true,
+            'show_admin_column' => true,
+            'query_var' => true,
+            'rewrite' => array( 'slug' => 'categorie_artiste_invite' ),
+        );
+        register_taxonomy( 'categorie_artiste_invite', array('artiste_invite'), $args );
 
 
-    ///////////////////////////////////////////////////////////////////////////////
-    /// POST ARTISTE INVITE
-    ///////////////////////////////////////////////////////////////////////////////
-
-    // Saison (Artiste invité)
+    // CATEGORIE MEMBRE DE l'ORCHESTRE
     $labels = array(
-        'name'  => 'Saison',
-        'singular_name' => 'Saison',
-        'search_items'  => 'Rechercher saison',
-        'popular_items' => 'Saisons populaires',
-        'all_items' => 'Toutes les saisons',
+        'name'  => 'Catégorie membre de l\'orchestre',
+        'singular_name' => 'Catégorie membre de l\'orchestre',
+        'search_items'  => 'Rechercher catégorie membre de l\'orchestre',
+        'popular_items' => 'Catégories membre de l\'orchestre populaires',
+        'all_items' => 'Toutes les catégories membre de l\'orchestre',
         'parent_item' => null,
         'parent_item_colon' => null,
-        'edit_item' => 'Editer saison',
-        'update_item' => 'Mettre à jour saison',
-        'add_new_item'  => 'Ajouter nouvelle saison',
-        'new_item_name' => 'Nom nouvelle saison',
-        'separate_items_with_commas' => 'Separer les saisons par une virgule',
-        'add_or_remove_items' => 'Ajouter ou supprimer saison',
-        'choose_from_most_used' => 'Rechercher les saisons les plus utilisées',
-        'menu_name' => 'Etiquette saison'
+        'edit_item' => 'Editer catégorie membre de l\'orchestre',
+        'update_item' => 'Mettre à jour catégorie membre de l\'orchestre',
+        'add_new_item'  => 'Ajouter nouvelle catégorie membre de l\'orchestre',
+        'new_item_name' => 'Nom nouvelle catégorie membre de l\'orchestre',
+        'separate_items_with_commas' => 'Separer les catégories membre de l\'orchestre par une virgule',
+        'add_or_remove_items' => 'Ajouter ou supprimer catégorie membre de l\'orchestre',
+        'choose_from_most_used' => 'Rechercher les catégories membre de l\'orchestre les plus utilisées',
+        'menu_name' => 'Etiquette catégorie membre de l\'orchestre'
     );
     $args = array(
         'hierarchical' => false,
@@ -227,20 +243,39 @@ function jcp_create_taxonomies() {
         'show_in_rest' => true,
         'show_admin_column' => true,
         'query_var' => true,
-        'rewrite' => array( 'slug' => 'saison' ),
+        'rewrite' => array( 'slug' => 'categorie_orchestre' ),
     );
-    register_taxonomy( 'artiste_invite', array('partenaire'), $args );
+    register_taxonomy( 'categorie_orchestre', array('orchestre'), $args );
 
 
-
-
-
-
-
-
-
-
-
+    // CATEGORIE ACTUALITE
+    $labels = array(
+        'name'  => 'Catégorie actualité',
+        'singular_name' => 'Catégorie actualité',
+        'search_items'  => 'Rechercher catégorie actualité',
+        'popular_items' => 'Catégories actualité populaires',
+        'all_items' => 'Toutes les catégories actualité',
+        'parent_item' => null,
+        'parent_item_colon' => null,
+        'edit_item' => 'Editer catégorie actualité',
+        'update_item' => 'Mettre à jour catégorie actualité',
+        'add_new_item'  => 'Ajouter nouvelle catégorie actualité',
+        'new_item_name' => 'Nom nouvelle catégorie actualité',
+        'separate_items_with_commas' => 'Separer les catégories actualité par une virgule',
+        'add_or_remove_items' => 'Ajouter ou supprimer catégorie actualité',
+        'choose_from_most_used' => 'Rechercher les catégories actualité les plus utilisées',
+        'menu_name' => 'Etiquette catégorie actualité'
+    );
+    $args = array(
+        'hierarchical' => false,
+        'labels' => $labels,
+        'show_ui' => true,
+        'show_in_rest' => true,
+        'show_admin_column' => true,
+        'query_var' => true,
+        'rewrite' => array( 'slug' => 'categorie_actu' ),
+    );
+    register_taxonomy( 'categorie_actu', array('actualite'), $args );
 
 
 
