@@ -376,7 +376,7 @@ function metabox_concert($post) {
         
     </section>
 
-        <!-- --------------------- -->
+    <!-- --------------------- -->
     <!-- GROUPE PHOTOS ET VIDEOS -->
     <section class='metagroup'>
 

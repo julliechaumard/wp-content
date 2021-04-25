@@ -155,13 +155,13 @@ function metabox_artiste_invite($post) {
         <div class='metagroup_sub'>
             <div class='metagroup_sub_items grid_3fr_simple'>
                     <div class="pinput">
-                        <label for="metadata_120">Accroche - Mot ligne1</label>
+                        <label for="metadata_120">Accroche - Mots ligne1</label>
                         <input type="text" name="metadata_120" id="metadata_120" placeholder='1 à 3 mots en MAJUSCULE' value="<?php echo $metadata_120; ?>"/>
                     </div>     
             </div>
             <div class='metagroup_sub_items grid_3fr_simple'>
                     <div class="pinput">
-                        <label for="metadata_121">Accroche - Mot ligne2+</label>
+                        <label for="metadata_121">Accroche - Mots ligne2+</label>
                         <textarea name="metadata_121" id="metadata_121" cols="50" rows="4" placeholder="276 caractères MAX avec espaces en tout  en MAJUSCULE"><?php echo $metadata_121; ?></textarea>
                     </div>     
             </div>
@@ -226,10 +226,10 @@ function metabox_artiste_invite($post) {
         <h2>TÉMOIGNAGE</h2>
         <div class='metagroup_sub'>
             <div class='metagroup_sub_items grid_3fr_simple'>
-                    <div class="pinput">
-                        <label for="metadata_129">Texte du témoignage</label>
-                        <textarea name="metadata_129" id="metadata_129" cols="50" rows="4" placeholder="425 caractères MAX avec espaces"><?php echo $metadata_129; ?></textarea>
-                    </div>     
+                <div class="pinput">
+                    <label for="metadata_129">Texte du témoignage</label>
+                    <textarea name="metadata_129" id="metadata_129" cols="50" rows="4" placeholder="425 caractères MAX avec espaces"><?php echo $metadata_129; ?></textarea>
+                </div>     
             </div>
 
         </div>

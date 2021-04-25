@@ -4,15 +4,13 @@
 * Déclarer les box Metadata
 *************************************************************************/
 
-function jcp_declare_metabox_page_agenda() {
-    //$pagename = get_post_meta($post->ID, '_wp_page_template', true);
-    //if($pageTemplate == '/page-templates/page-agenda.php' )  
+function jcp_declare_metabox_page_quisommesnous() {
     global $post;
-    if ( 'page-templates/page-agenda.php' == get_post_meta( $post->ID, '_wp_page_template', true ) ) {
+    if ( 'page-templates/page-quisommesnous.php' == get_post_meta( $post->ID, '_wp_page_template', true ) ) {
         add_meta_box(
-            'metabox_page_agenda',
-            'Informations page agenda',
-            'metabox_page_agenda',
+            'metabox_page_quisommesnous',
+            'Informations page quisommesnous',
+            'metabox_page_quisommesnous',
             'page',
             'normal',
             'default'
@@ -25,13 +23,13 @@ function jcp_declare_metabox_page_agenda() {
 *************************************************************************/
 
 
-function metabox_page_agenda($post) {
+function metabox_page_quisommesnous($post) {
     /************************************************************************
     //Variables pour récupérer les valeurs existantes (s'il y en a)
     *************************************************************************/
 
-    $metadata_110 = get_post_meta( $post->ID, 'metadata_110', true );
-    $metadata_111 = get_post_meta( $post->ID, 'metadata_111', true );
+    $metadata_650 = get_post_meta( $post->ID, 'metadata_650', true );
+    $metadata_651 = get_post_meta( $post->ID, 'metadata_651', true );
 
     /************************************************************************
     // SAISIE DES INFORMATIONS
@@ -49,14 +47,14 @@ function metabox_page_agenda($post) {
         <div class='metagroup_sub'>
             <div class='metagroup_sub_items grid_3fr_simple'>
                     <div class="pinput">
-                        <label for="metadata_110">Accroche - Mot ligne1</label>
-                        <input type="text" name="metadata_110" id="metadata_110" placeholder='1 à 3 mots en MAJUSCULE' value="<?php echo $metadata_110; ?>"/>
+                        <label for="metadata_650">Accroche - Mots ligne1</label>
+                        <input type="text" name="metadata_650" id="metadata_650" placeholder='1 à 3 mots en MAJUSCULE' value="<?php echo $metadata_650; ?>"/>
                     </div>     
             </div>
             <div class='metagroup_sub_items grid_3fr_simple'>
                     <div class="pinput">
-                        <label for="metadata_111">Accroche - Mot ligne2+</label>
-                        <textarea name="metadata_111" id="metadata_111" cols="50" rows="4" placeholder="276 caractères MAX avec espaces en tout  en MAJUSCULE"><?php echo $metadata_111; ?></textarea>
+                        <label for="metadata_651">Accroche - Mots ligne2+</label>
+                        <textarea name="metadata_651" id="metadata_651" cols="50" rows="4" placeholder="276 caractères MAX avec espaces en tout  en MAJUSCULE"><?php echo $metadata_651; ?></textarea>
                     </div>     
             </div>
         </div>
@@ -72,10 +70,10 @@ function metabox_page_agenda($post) {
 * Save datas
 *************************************************************************/
 
-function jcp_metabox_save_page_agenda($post_id) {
+function jcp_metabox_save_page_quisommesnous($post_id) {
     global $post;
-    if ('page-templates/page-agenda.php' == get_post_meta( $post->ID, '_wp_page_template', true ) && array_key_exists('metadata_110', $_POST)) { update_post_meta( $post->ID, 'metadata_110', $_POST['metadata_110']);};
-    if ('page-templates/page-agenda.php' == get_post_meta( $post->ID, '_wp_page_template', true ) && array_key_exists('metadata_111', $_POST)) { update_post_meta( $post->ID, 'metadata_111', $_POST['metadata_111']);};
+    if ('page-templates/page-quisommesnous.php' == get_post_meta( $post->ID, '_wp_page_template', true ) && array_key_exists('metadata_650', $_POST)) { update_post_meta( $post->ID, 'metadata_650', $_POST['metadata_650']);};
+    if ('page-templates/page-quisommesnous.php' == get_post_meta( $post->ID, '_wp_page_template', true ) && array_key_exists('metadata_651', $_POST)) { update_post_meta( $post->ID, 'metadata_651', $_POST['metadata_651']);};
 
 }
 

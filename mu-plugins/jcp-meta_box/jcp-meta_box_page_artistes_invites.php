@@ -47,13 +47,13 @@ function metabox_page_artistes_invites($post) {
         <div class='metagroup_sub'>
             <div class='metagroup_sub_items grid_3fr_simple'>
                     <div class="pinput">
-                        <label for="metadata_140">Accroche - Mot ligne1</label>
+                        <label for="metadata_140">Accroche - Mots ligne1</label>
                         <input type="text" name="metadata_140" id="metadata_140" placeholder='1 à 3 mots en MAJUSCULE' value="<?php echo $metadata_140; ?>"/>
                     </div>     
             </div>
             <div class='metagroup_sub_items grid_3fr_simple'>
                     <div class="pinput">
-                        <label for="metadata_141">Accroche - Mot ligne2+</label>
+                        <label for="metadata_141">Accroche - Mots ligne2+</label>
                         <textarea name="metadata_141" id="metadata_141" cols="50" rows="4" placeholder="276 caractères MAX avec espaces en tout  en MAJUSCULE"><?php echo $metadata_141; ?></textarea>
                     </div>     
             </div>

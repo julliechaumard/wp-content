@@ -4,13 +4,13 @@
 * Déclarer les box Metadata
 *************************************************************************/
 
-function jcp_declare_metabox_page_agenda() {
+function jcp_declare_metabox_page_recrutement() {
     global $post;
-    if ( 'page-templates/page-agenda.php' == get_post_meta( $post->ID, '_wp_page_template', true ) ) {
+    if ( 'page-templates/page-recrutement.php' == get_post_meta( $post->ID, '_wp_page_template', true ) ) {
         add_meta_box(
-            'metabox_page_agenda',
-            'Informations page agenda',
-            'metabox_page_agenda',
+            'metabox_page_recrutement',
+            'Informations page recrutement',
+            'metabox_page_recrutement',
             'page',
             'normal',
             'default'
@@ -23,13 +23,13 @@ function jcp_declare_metabox_page_agenda() {
 *************************************************************************/
 
 
-function metabox_page_agenda($post) {
+function metabox_page_recrutement($post) {
     /************************************************************************
     //Variables pour récupérer les valeurs existantes (s'il y en a)
     *************************************************************************/
 
-    $metadata_110 = get_post_meta( $post->ID, 'metadata_110', true );
-    $metadata_111 = get_post_meta( $post->ID, 'metadata_111', true );
+    $metadata_660 = get_post_meta( $post->ID, 'metadata_660', true );
+    $metadata_661 = get_post_meta( $post->ID, 'metadata_661', true );
 
     /************************************************************************
     // SAISIE DES INFORMATIONS
@@ -47,14 +47,14 @@ function metabox_page_agenda($post) {
         <div class='metagroup_sub'>
             <div class='metagroup_sub_items grid_3fr_simple'>
                     <div class="pinput">
-                        <label for="metadata_110">Accroche - Mots ligne1</label>
-                        <input type="text" name="metadata_110" id="metadata_110" placeholder='1 à 3 mots en MAJUSCULE' value="<?php echo $metadata_110; ?>"/>
+                        <label for="metadata_660">Accroche - Mots ligne1</label>
+                        <input type="text" name="metadata_660" id="metadata_660" placeholder='1 à 3 mots en MAJUSCULE' value="<?php echo $metadata_660; ?>"/>
                     </div>     
             </div>
             <div class='metagroup_sub_items grid_3fr_simple'>
                     <div class="pinput">
-                        <label for="metadata_111">Accroche - Mots ligne2+</label>
-                        <textarea name="metadata_111" id="metadata_111" cols="50" rows="4" placeholder="276 caractères MAX avec espaces en tout  en MAJUSCULE"><?php echo $metadata_111; ?></textarea>
+                        <label for="metadata_661">Accroche - Mots ligne2+</label>
+                        <textarea name="metadata_661" id="metadata_661" cols="50" rows="4" placeholder="276 caractères MAX avec espaces en tout  en MAJUSCULE"><?php echo $metadata_661; ?></textarea>
                     </div>     
             </div>
         </div>
@@ -70,10 +70,10 @@ function metabox_page_agenda($post) {
 * Save datas
 *************************************************************************/
 
-function jcp_metabox_save_page_agenda($post_id) {
+function jcp_metabox_save_page_recrutement($post_id) {
     global $post;
-    if ('page-templates/page-agenda.php' == get_post_meta( $post->ID, '_wp_page_template', true ) && array_key_exists('metadata_110', $_POST)) { update_post_meta( $post->ID, 'metadata_110', $_POST['metadata_110']);};
-    if ('page-templates/page-agenda.php' == get_post_meta( $post->ID, '_wp_page_template', true ) && array_key_exists('metadata_111', $_POST)) { update_post_meta( $post->ID, 'metadata_111', $_POST['metadata_111']);};
+    if ('page-templates/page-recrutement.php' == get_post_meta( $post->ID, '_wp_page_template', true ) && array_key_exists('metadata_660', $_POST)) { update_post_meta( $post->ID, 'metadata_660', $_POST['metadata_660']);};
+    if ('page-templates/page-recrutement.php' == get_post_meta( $post->ID, '_wp_page_template', true ) && array_key_exists('metadata_661', $_POST)) { update_post_meta( $post->ID, 'metadata_661', $_POST['metadata_661']);};
 
 }
 

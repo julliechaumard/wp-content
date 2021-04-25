@@ -61,6 +61,28 @@ add_action( 'add_meta_boxes', 'jcp_declare_metabox_page_artistes_invites' );
 add_action( 'save_post', 'jcp_metabox_save_page_artistes_invites');
 add_action( 'add_meta_boxes', 'jcp_declare_metabox_page_collaborations' );
 add_action( 'save_post', 'jcp_metabox_save_page_collaborations');
+add_action( 'add_meta_boxes', 'jcp_declare_metabox_page_concerts_jeunes' );
+add_action( 'save_post', 'jcp_metabox_save_page_concerts_jeunes');
+add_action( 'add_meta_boxes', 'jcp_declare_metabox_page_saison' );
+add_action( 'save_post', 'jcp_metabox_save_page_saison');
+add_action( 'add_meta_boxes', 'jcp_declare_metabox_page_accueil' );
+add_action( 'save_post', 'jcp_metabox_save_page_accueil');
+add_action( 'add_meta_boxes', 'jcp_declare_metabox_page_actualites' );
+add_action( 'save_post', 'jcp_metabox_save_page_actualites');
+add_action( 'add_meta_boxes', 'jcp_declare_metabox_page_histoire' );
+add_action( 'save_post', 'jcp_metabox_save_page_histoire');
+add_action( 'add_meta_boxes', 'jcp_declare_metabox_page_partenaires' );
+add_action( 'save_post', 'jcp_metabox_save_page_partenaires');
+add_action( 'add_meta_boxes', 'jcp_declare_metabox_page_quisommesnous' );
+add_action( 'save_post', 'jcp_metabox_save_page_quisommesnous');
+add_action( 'add_meta_boxes', 'jcp_declare_metabox_page_recrutement' );
+add_action( 'save_post', 'jcp_metabox_save_page_recrutement');
+add_action( 'add_meta_boxes', 'jcp_declare_metabox_page_soutenez_entreprise' );
+add_action( 'save_post', 'jcp_metabox_save_page_soutenez_entreprise');
+add_action( 'add_meta_boxes', 'jcp_declare_metabox_page_soutenez_particulier' );
+add_action( 'save_post', 'jcp_metabox_save_page_soutenez_particulier');
+add_action( 'add_meta_boxes', 'jcp_declare_metabox_page_soutenez_picardissimo' );
+add_action( 'save_post', 'jcp_metabox_save_page_soutenez_picardissimo');
 
 include 'jcp-meta_box/jcp-meta_box_concert.php';
 include 'jcp-meta_box/jcp-meta_box_salle.php';
@@ -73,8 +95,17 @@ include 'jcp-meta_box/jcp-meta_box_actualite.php';
 include 'jcp-meta_box/jcp-meta_box_page_agenda.php';
 include 'jcp-meta_box/jcp-meta_box_page_artistes_invites.php';
 include 'jcp-meta_box/jcp-meta_box_page_collaborations.php';
-include 'jcp-meta_box/jcp-meta_box_page_collaborations.php';
-
+include 'jcp-meta_box/jcp-meta_box_page_concerts_jeunes.php';
+include 'jcp-meta_box/jcp-meta_box_page_saison.php';
+include 'jcp-meta_box/jcp-meta_box_page_accueil.php';
+include 'jcp-meta_box/jcp-meta_box_page_actualites.php';
+include 'jcp-meta_box/jcp-meta_box_page_histoire.php';
+include 'jcp-meta_box/jcp-meta_box_page_partenaires.php';
+include 'jcp-meta_box/jcp-meta_box_page_quisommesnous.php';
+include 'jcp-meta_box/jcp-meta_box_page_recrutement.php';
+include 'jcp-meta_box/jcp-meta_box_page_soutenez_entreprise.php';
+include 'jcp-meta_box/jcp-meta_box_page_soutenez_particulier.php';
+include 'jcp-meta_box/jcp-meta_box_page_soutenez_picardissimo.php';
 
 ?>
 

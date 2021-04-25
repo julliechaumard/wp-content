@@ -85,10 +85,26 @@ textarea {
     grid-row-gap: 10px;
     justify-items: stretch;
 }
+.grid_fr {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-auto-rows: minmax(10px, auto);
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
+    justify-items: stretch;
+}
 
 .grid_4fr_simple {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: minmax(10px, auto);
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
+    justify-items: stretch;
+}
+.grid_4fr {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr 2fr;
     grid-auto-rows: minmax(10px, auto);
     grid-column-gap: 20px;
     grid-row-gap: 10px;

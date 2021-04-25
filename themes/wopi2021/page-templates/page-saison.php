@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: page_agenda
+Template Name: page_saison
 */
 ?>
 <?php

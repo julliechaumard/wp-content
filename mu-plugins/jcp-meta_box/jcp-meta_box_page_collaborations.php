@@ -63,13 +63,13 @@ function metabox_page_collaborations($post) {
         <div class='metagroup_sub'>
             <div class='metagroup_sub_items grid_3fr_simple'>
                     <div class="pinput">
-                        <label for="metadata_160">Accroche - Mot ligne1</label>
+                        <label for="metadata_160">Accroche - Mots ligne1</label>
                         <input type="text" name="metadata_160" id="metadata_160" placeholder='1 à 3 mots en MAJUSCULE' value="<?php echo $metadata_160; ?>"/>
                     </div>     
             </div>
             <div class='metagroup_sub_items grid_3fr_simple'>
                     <div class="pinput">
-                        <label for="metadata_161">Accroche - Mot ligne2+</label>
+                        <label for="metadata_161">Accroche - Mots ligne2+</label>
                         <textarea name="metadata_161" id="metadata_161" cols="50" rows="4" placeholder="276 caractères MAX avec espaces en tout  en MAJUSCULE"><?php echo $metadata_161; ?></textarea>
                     </div>     
             </div>
@@ -112,7 +112,6 @@ function metabox_page_collaborations($post) {
 
     <!-- --------------------- -->
     <!-- GROUPE TEMOIGNAGE -->
-
     <section class='metagroup'>
         <h2>TÉMOIGNAGE</h2>
             

@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: page_concerts_jeunes
+Template Name: page_recrutement
 */
 ?>
 <?php
