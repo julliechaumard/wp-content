@@ -71,9 +71,9 @@ function metabox_page_histoire($post) {
 *************************************************************************/
 
 function jcp_metabox_save_page_histoire($post_id) {
-    global $post;
-    if ('page-templates/page-histoire.php' == get_post_meta( $post->ID, '_wp_page_template', true ) && array_key_exists('metadata_630', $_POST)) { update_post_meta( $post->ID, 'metadata_630', $_POST['metadata_630']);};
-    if ('page-templates/page-histoire.php' == get_post_meta( $post->ID, '_wp_page_template', true ) && array_key_exists('metadata_631', $_POST)) { update_post_meta( $post->ID, 'metadata_631', $_POST['metadata_631']);};
+    
+    if ('page-templates/page-histoire.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_630', $_POST)) { update_post_meta( $post_id, 'metadata_630', $_POST['metadata_630']);};
+    if ('page-templates/page-histoire.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_631', $_POST)) { update_post_meta( $post_id, 'metadata_631', $_POST['metadata_631']);};
 
 }
 

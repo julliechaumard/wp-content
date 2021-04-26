@@ -71,9 +71,9 @@ function metabox_page_partenaires($post) {
 *************************************************************************/
 
 function jcp_metabox_save_page_partenaires($post_id) {
-    global $post;
-    if ('page-templates/page-partenaires.php' == get_post_meta( $post->ID, '_wp_page_template', true ) && array_key_exists('metadata_640', $_POST)) { update_post_meta( $post->ID, 'metadata_640', $_POST['metadata_640']);};
-    if ('page-templates/page-partenaires.php' == get_post_meta( $post->ID, '_wp_page_template', true ) && array_key_exists('metadata_641', $_POST)) { update_post_meta( $post->ID, 'metadata_641', $_POST['metadata_641']);};
+    
+    if ('page-templates/page-partenaires.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_640', $_POST)) { update_post_meta( $post_id, 'metadata_640', $_POST['metadata_640']);};
+    if ('page-templates/page-partenaires.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_641', $_POST)) { update_post_meta( $post_id, 'metadata_641', $_POST['metadata_641']);};
 
 }
 

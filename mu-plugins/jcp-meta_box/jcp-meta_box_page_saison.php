@@ -71,9 +71,9 @@ function metabox_page_saison($post) {
 *************************************************************************/
 
 function jcp_metabox_save_page_saison($post_id) {
-    global $post;
-    if ('page-templates/page-saison.php' == get_post_meta( $post->ID, '_wp_page_template', true ) && array_key_exists('metadata_100', $_POST)) { update_post_meta( $post->ID, 'metadata_100', $_POST['metadata_100']);};
-    if ('page-templates/page-saison.php' == get_post_meta( $post->ID, '_wp_page_template', true ) && array_key_exists('metadata_101', $_POST)) { update_post_meta( $post->ID, 'metadata_101', $_POST['metadata_101']);};
+    
+    if ('page-templates/page-saison.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_100', $_POST)) { update_post_meta( $post_id, 'metadata_100', $_POST['metadata_100']);};
+    if ('page-templates/page-saison.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_101', $_POST)) { update_post_meta( $post_id, 'metadata_101', $_POST['metadata_101']);};
 
 }
 

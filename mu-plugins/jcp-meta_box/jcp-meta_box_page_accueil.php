@@ -280,37 +280,37 @@ function metabox_page_accueil($post) {
 *************************************************************************/
 
 function jcp_metabox_save_page_accueil($post_id) {
-    global $post;
-    if ('page-templates/page-accueil.php' == get_post_meta( $post->ID, '_wp_page_template', true ) && array_key_exists('metadata_001', $_POST)) { update_post_meta( $post->ID, 'metadata_001', $_POST['metadata_001']);};
-    if ('page-templates/page-accueil.php' == get_post_meta( $post->ID, '_wp_page_template', true ) && array_key_exists('metadata_002', $_POST)) { update_post_meta( $post->ID, 'metadata_002', $_POST['metadata_002']);};
-    if ('page-templates/page-accueil.php' == get_post_meta( $post->ID, '_wp_page_template', true ) && array_key_exists('metadata_003', $_POST)) { update_post_meta( $post->ID, 'metadata_003', $_POST['metadata_003']);};
-    if ('page-templates/page-accueil.php' == get_post_meta( $post->ID, '_wp_page_template', true ) && array_key_exists('metadata_004', $_POST)) { update_post_meta( $post->ID, 'metadata_004', $_POST['metadata_004']);};
-    if ('page-templates/page-accueil.php' == get_post_meta( $post->ID, '_wp_page_template', true ) && array_key_exists('metadata_008', $_POST)) { update_post_meta( $post->ID, 'metadata_008', $_POST['metadata_008']);};
-    if ('page-templates/page-accueil.php' == get_post_meta( $post->ID, '_wp_page_template', true ) && array_key_exists('metadata_012', $_POST)) { update_post_meta( $post->ID, 'metadata_012', $_POST['metadata_012']);};
-    if ('page-templates/page-accueil.php' == get_post_meta( $post->ID, '_wp_page_template', true ) && array_key_exists('metadata_015', $_POST)) { update_post_meta( $post->ID, 'metadata_015', $_POST['metadata_015']);};
+    
+    if ('page-templates/page-accueil.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_001', $_POST)) { update_post_meta( $post_id, 'metadata_001', $_POST['metadata_001']);};
+    if ('page-templates/page-accueil.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_002', $_POST)) { update_post_meta( $post_id, 'metadata_002', $_POST['metadata_002']);};
+    if ('page-templates/page-accueil.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_003', $_POST)) { update_post_meta( $post_id, 'metadata_003', $_POST['metadata_003']);};
+    if ('page-templates/page-accueil.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_004', $_POST)) { update_post_meta( $post_id, 'metadata_004', $_POST['metadata_004']);};
+    if ('page-templates/page-accueil.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_008', $_POST)) { update_post_meta( $post_id, 'metadata_008', $_POST['metadata_008']);};
+    if ('page-templates/page-accueil.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_012', $_POST)) { update_post_meta( $post_id, 'metadata_012', $_POST['metadata_012']);};
+    if ('page-templates/page-accueil.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_015', $_POST)) { update_post_meta( $post_id, 'metadata_015', $_POST['metadata_015']);};
     for ($i = 1; $i <= 6; $i++) {
-        if ('page-templates/page-accueil.php' == get_post_meta( $post->ID, '_wp_page_template', true ) && array_key_exists('metadata_005_'.$i.'', $_POST)) { update_post_meta( $post->ID, 'metadata_005_'.$i.'', $_POST['metadata_005_'.$i.'']);};
-    }
-    for ($i = 1; $i <= 6; $i++) {
-        if ('page-templates/page-accueil.php' == get_post_meta( $post->ID, '_wp_page_template', true ) && array_key_exists('metadata_006_'.$i.'', $_POST)) { update_post_meta( $post->ID, 'metadata_006_'.$i.'', $_POST['metadata_006_'.$i.'']);};
+        if ('page-templates/page-accueil.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_005_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_005_'.$i.'', $_POST['metadata_005_'.$i.'']);};
     }
     for ($i = 1; $i <= 6; $i++) {
-        if ('page-templates/page-accueil.php' == get_post_meta( $post->ID, '_wp_page_template', true ) && array_key_exists('metadata_007_'.$i.'', $_POST)) { update_post_meta( $post->ID, 'metadata_007_'.$i.'', $_POST['metadata_007_'.$i.'']);};
+        if ('page-templates/page-accueil.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_006_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_006_'.$i.'', $_POST['metadata_006_'.$i.'']);};
+    }
+    for ($i = 1; $i <= 6; $i++) {
+        if ('page-templates/page-accueil.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_007_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_007_'.$i.'', $_POST['metadata_007_'.$i.'']);};
     }
     for ($i = 1; $i <= 3; $i++) {
-        if ('page-templates/page-accueil.php' == get_post_meta( $post->ID, '_wp_page_template', true ) && array_key_exists('metadata_009_'.$i.'', $_POST)) { update_post_meta( $post->ID, 'metadata_009_'.$i.'', $_POST['metadata_009_'.$i.'']);};
+        if ('page-templates/page-accueil.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_009_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_009_'.$i.'', $_POST['metadata_009_'.$i.'']);};
     }
     for ($i = 1; $i <= 3; $i++) {
-        if ('page-templates/page-accueil.php' == get_post_meta( $post->ID, '_wp_page_template', true ) && array_key_exists('metadata_010_'.$i.'', $_POST)) { update_post_meta( $post->ID, 'metadata_010_'.$i.'', $_POST['metadata_010_'.$i.'']);};
+        if ('page-templates/page-accueil.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_010_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_010_'.$i.'', $_POST['metadata_010_'.$i.'']);};
     }
     for ($i = 1; $i <= 3; $i++) {
-        if ('page-templates/page-accueil.php' == get_post_meta( $post->ID, '_wp_page_template', true ) && array_key_exists('metadata_011_'.$i.'', $_POST)) { update_post_meta( $post->ID, 'metadata_011_'.$i.'', $_POST['metadata_011_'.$i.'']);};
+        if ('page-templates/page-accueil.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_011_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_011_'.$i.'', $_POST['metadata_011_'.$i.'']);};
     }
     for ($i = 1; $i <= 3; $i++) {
-        if ('page-templates/page-accueil.php' == get_post_meta( $post->ID, '_wp_page_template', true ) && array_key_exists('metadata_013_'.$i.'', $_POST)) { update_post_meta( $post->ID, 'metadata_013_'.$i.'', $_POST['metadata_013_'.$i.'']);};
+        if ('page-templates/page-accueil.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_013_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_013_'.$i.'', $_POST['metadata_013_'.$i.'']);};
     }
     for ($i = 1; $i <= 3; $i++) {
-        if ('page-templates/page-accueil.php' == get_post_meta( $post->ID, '_wp_page_template', true ) && array_key_exists('metadata_014_'.$i.'', $_POST)) { update_post_meta( $post->ID, 'metadata_014_'.$i.'', $_POST['metadata_014_'.$i.'']);};
+        if ('page-templates/page-accueil.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_014_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_014_'.$i.'', $_POST['metadata_014_'.$i.'']);};
     }
 }
 

@@ -38,6 +38,7 @@ add_action( 'admin_bar_menu', 'remove_default_post_type_menu_bar', 999 );
 add_action( 'wp_dashboard_setup', 'remove_draft_widget', 999 );
 add_action( 'after_setup_theme', 'jcp_thumbnails' );
 add_action( 'after_setup_theme', 'jcp_title' );
+add_action( 'save_post', 'my_project_updated_send_email' );
 
 // Supprimer type d'article par défaut dans dashboard Brouillon rapide
 function remove_draft_widget(){
@@ -86,6 +87,19 @@ function jcp_title() {
 // ajouter la fonction "ajouter image mmise en avant"
 function jcp_thumbnails() {
     add_theme_support( 'post-thumbnails' );
+}
+
+
+function my_project_updated_send_email( $post_id ) {
+ 
+    // If this is just a revision, don't send the email.
+    if ( wp_is_post_revision( $post_id ) ) {
+        return;
+        }
+ 
+    $post_title = get_the_title( $post_id );
+    $post_url = get_permalink( $post_id );
+    $subject = 'A post has been updated';
 }
 
  /* Your code goes above here. */  

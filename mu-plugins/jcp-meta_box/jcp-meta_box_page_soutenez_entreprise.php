@@ -155,15 +155,15 @@ function metabox_page_soutenez_entreprise($post) {
 *************************************************************************/
 
 function jcp_metabox_save_page_soutenez_entreprise($post_id) {
-    global $post;
-    if ('page-templates/page-soutenez_entreprise.php' == get_post_meta( $post->ID, '_wp_page_template', true ) && array_key_exists('metadata_670', $_POST)) { update_post_meta( $post->ID, 'metadata_670', $_POST['metadata_670']);};
-    if ('page-templates/page-soutenez_entreprise.php' == get_post_meta( $post->ID, '_wp_page_template', true ) && array_key_exists('metadata_671', $_POST)) { update_post_meta( $post->ID, 'metadata_671', $_POST['metadata_671']);};
-    if ('page-templates/page-soutenez_entreprise.php' == get_post_meta( $post->ID, '_wp_page_template', true ) && array_key_exists('metadata_672', $_POST)) { update_post_meta( $post->ID, 'metadata_672', $_POST['metadata_672']);};
+    
+    if ('page-templates/page-soutenez_entreprise.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_670', $_POST)) { update_post_meta( $post_id, 'metadata_670', $_POST['metadata_670']);};
+    if ('page-templates/page-soutenez_entreprise.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_671', $_POST)) { update_post_meta( $post_id, 'metadata_671', $_POST['metadata_671']);};
+    if ('page-templates/page-soutenez_entreprise.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_672', $_POST)) { update_post_meta( $post_id, 'metadata_672', $_POST['metadata_672']);};
     for ($i = 1; $i <= 20; $i++) {
-        if ('page-templates/page-soutenez_entreprise.php' == get_post_meta( $post->ID, '_wp_page_template', true ) && array_key_exists('metadata_673_'.$i.'', $_POST)) { update_post_meta( $post->ID, 'metadata_673_'.$i.'', $_POST['metadata_673_'.$i.'']);};
+        if ('page-templates/page-soutenez_entreprise.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_673_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_673_'.$i.'', $_POST['metadata_673_'.$i.'']);};
     }
     for ($i = 1; $i <= 20; $i++) {
-        if ('page-templates/page-soutenez_entreprise.php' == get_post_meta( $post->ID, '_wp_page_template', true ) && array_key_exists('metadata_674_'.$i.'', $_POST)) { update_post_meta( $post->ID, 'metadata_674_'.$i.'', $_POST['metadata_674_'.$i.'']);};
+        if ('page-templates/page-soutenez_entreprise.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_674_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_674_'.$i.'', $_POST['metadata_674_'.$i.'']);};
     }
 }
 

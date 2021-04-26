@@ -143,23 +143,23 @@ function metabox_page_collaborations($post) {
 *************************************************************************/
 
 function jcp_metabox_save_page_collaborations($post_id) {
-    global $post;
-    if ('page-templates/page-collaborations.php' == get_post_meta( $post->ID, '_wp_page_template', true ) && array_key_exists('metadata_160', $_POST)) { update_post_meta( $post->ID, 'metadata_160', $_POST['metadata_160']);};
-    if ('page-templates/page-collaborations.php' == get_post_meta( $post->ID, '_wp_page_template', true ) && array_key_exists('metadata_161', $_POST)) { update_post_meta( $post->ID, 'metadata_161', $_POST['metadata_161']);};
+    
+    if ('page-templates/page-collaborations.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_160', $_POST)) { update_post_meta( $post_id, 'metadata_160', $_POST['metadata_160']);};
+    if ('page-templates/page-collaborations.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_161', $_POST)) { update_post_meta( $post_id, 'metadata_161', $_POST['metadata_161']);};
     for ($i = 1; $i <= 3; $i++) {
-        if ('page-templates/page-collaborations.php' == get_post_meta( $post->ID, '_wp_page_template', true ) && array_key_exists('metadata_162_'.$i.'', $_POST)) { update_post_meta( $post->ID, 'metadata_162_'.$i.'', $_POST['metadata_162_'.$i.'']);};
+        if ('page-templates/page-collaborations.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_162_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_162_'.$i.'', $_POST['metadata_162_'.$i.'']);};
     }
     for ($i = 1; $i <= 3; $i++) {
-        if ('page-templates/page-collaborations.php' == get_post_meta( $post->ID, '_wp_page_template', true ) && array_key_exists('metadata_163_'.$i.'', $_POST)) { update_post_meta( $post->ID, 'metadata_163_'.$i.'', $_POST['metadata_163_'.$i.'']);};
+        if ('page-templates/page-collaborations.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_163_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_163_'.$i.'', $_POST['metadata_163_'.$i.'']);};
     }
     for ($i = 1; $i <= 3; $i++) {
-        if ('page-templates/page-collaborations.php' == get_post_meta( $post->ID, '_wp_page_template', true ) && array_key_exists('metadata_164_'.$i.'', $_POST)) { update_post_meta( $post->ID, 'metadata_164_'.$i.'', $_POST['metadata_164_'.$i.'']);};
+        if ('page-templates/page-collaborations.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_164_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_164_'.$i.'', $_POST['metadata_164_'.$i.'']);};
     }
     for ($i = 1; $i <= 3; $i++) {
-        if ('page-templates/page-collaborations.php' == get_post_meta( $post->ID, '_wp_page_template', true ) && array_key_exists('metadata_165_'.$i.'', $_POST)) { update_post_meta( $post->ID, 'metadata_165_'.$i.'', $_POST['metadata_165_'.$i.'']);};
+        if ('page-templates/page-collaborations.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_165_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_165_'.$i.'', $_POST['metadata_165_'.$i.'']);};
     }
     for ($i = 1; $i <= 3; $i++) {
-        if ('page-templates/page-collaborations.php' == get_post_meta( $post->ID, '_wp_page_template', true ) && array_key_exists('metadata_166_'.$i.'', $_POST)) { update_post_meta( $post->ID, 'metadata_166_'.$i.'', $_POST['metadata_166_'.$i.'']);};
+        if ('page-templates/page-collaborations.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_166_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_166_'.$i.'', $_POST['metadata_166_'.$i.'']);};
     }
 }
 

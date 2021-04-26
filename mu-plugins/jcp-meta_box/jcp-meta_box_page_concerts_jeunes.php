@@ -71,9 +71,9 @@ function metabox_page_concerts_jeunes($post) {
 *************************************************************************/
 
 function jcp_metabox_save_page_concerts_jeunes($post_id) {
-    global $post;
-    if ('page-templates/page-concerts_jeunes.php' == get_post_meta( $post->ID, '_wp_page_template', true ) && array_key_exists('metadata_230', $_POST)) { update_post_meta( $post->ID, 'metadata_230', $_POST['metadata_230']);};
-    if ('page-templates/page-concerts_jeunes.php' == get_post_meta( $post->ID, '_wp_page_template', true ) && array_key_exists('metadata_231', $_POST)) { update_post_meta( $post->ID, 'metadata_231', $_POST['metadata_231']);};
+    
+    if ('page-templates/page-concerts_jeunes.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_230', $_POST)) { update_post_meta( $post_id, 'metadata_230', $_POST['metadata_230']);};
+    if ('page-templates/page-concerts_jeunes.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_231', $_POST)) { update_post_meta( $post_id, 'metadata_231', $_POST['metadata_231']);};
 
 }
 

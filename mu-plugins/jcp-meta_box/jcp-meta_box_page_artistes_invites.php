@@ -71,9 +71,9 @@ function metabox_page_artistes_invites($post) {
 *************************************************************************/
 
 function jcp_metabox_save_page_artistes_invites($post_id) {
-    global $post;
-    if ('page-templates/page-artistes_invites.php' == get_post_meta( $post->ID, '_wp_page_template', true ) && array_key_exists('metadata_140', $_POST)) { update_post_meta( $post->ID, 'metadata_140', $_POST['metadata_140']);};
-    if ('page-templates/page-artistes_invites.php' == get_post_meta( $post->ID, '_wp_page_template', true ) && array_key_exists('metadata_141', $_POST)) { update_post_meta( $post->ID, 'metadata_141', $_POST['metadata_141']);};
+
+    if ('page-templates/page-artistes_invites.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_140', $_POST)) { update_post_meta( $post_id, 'metadata_140', $_POST['metadata_140']);};
+    if ('page-templates/page-artistes_invites.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_141', $_POST)) { update_post_meta( $post_id, 'metadata_141', $_POST['metadata_141']);};
 
 }
 

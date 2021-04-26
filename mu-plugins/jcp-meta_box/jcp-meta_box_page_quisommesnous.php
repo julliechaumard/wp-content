@@ -71,9 +71,9 @@ function metabox_page_quisommesnous($post) {
 *************************************************************************/
 
 function jcp_metabox_save_page_quisommesnous($post_id) {
-    global $post;
-    if ('page-templates/page-quisommesnous.php' == get_post_meta( $post->ID, '_wp_page_template', true ) && array_key_exists('metadata_650', $_POST)) { update_post_meta( $post->ID, 'metadata_650', $_POST['metadata_650']);};
-    if ('page-templates/page-quisommesnous.php' == get_post_meta( $post->ID, '_wp_page_template', true ) && array_key_exists('metadata_651', $_POST)) { update_post_meta( $post->ID, 'metadata_651', $_POST['metadata_651']);};
+    
+    if ('page-templates/page-quisommesnous.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_650', $_POST)) { update_post_meta( $post_id, 'metadata_650', $_POST['metadata_650']);};
+    if ('page-templates/page-quisommesnous.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_651', $_POST)) { update_post_meta( $post_id, 'metadata_651', $_POST['metadata_651']);};
 
 }
 

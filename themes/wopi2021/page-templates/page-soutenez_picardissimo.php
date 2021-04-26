@@ -13,7 +13,7 @@ Template Name: page_soutenez_picardissimo
 
 $pagename = get_post_meta($post->ID, '_wp_page_template', true);
 echo $pagename;
-$identifiant = get_post_type($post->ID);
+$identifiant = get_post_type($post->post_title);
 echo '<br>';
 echo $identifiant;
 echo '<br>';
@@ -21,9 +21,16 @@ if ( 'page-templates/page-agenda.php' == get_post_meta( $post->ID, '_wp_page_tem
     echo 'true';
 }
 echo '<br>';
-echo $post->ID;
+echo $post->post_title;
 echo '<br>';
-print_r ($_POST);
+global $post;
+echo $post_id;
+echo '<br>';
+print_r ($post);
+echo '<br>';
+$juju = $_POST['metadata_100'];
+echo 'variable juju = ';
+echo $juju;
 
 ?>
 
@@ -34,3 +41,4 @@ print_r ($_POST);
 <?php
  get_footer();
 ?>
+

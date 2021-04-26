@@ -85,10 +85,10 @@ function metabox_page_soutenez_particulier($post) {
 *************************************************************************/
 
 function jcp_metabox_save_page_soutenez_particulier($post_id) {
-    global $post;
-    if ('page-templates/page-soutenez_particulier.php' == get_post_meta( $post->ID, '_wp_page_template', true ) && array_key_exists('metadata_680', $_POST)) { update_post_meta( $post->ID, 'metadata_680', $_POST['metadata_680']);};
-    if ('page-templates/page-soutenez_particulier.php' == get_post_meta( $post->ID, '_wp_page_template', true ) && array_key_exists('metadata_681', $_POST)) { update_post_meta( $post->ID, 'metadata_681', $_POST['metadata_681']);};
-    if ('page-templates/page-soutenez_particulier.php' == get_post_meta( $post->ID, '_wp_page_template', true ) && array_key_exists('metadata_682', $_POST)) { update_post_meta( $post->ID, 'metadata_682', $_POST['metadata_682']);};
+    
+    if ('page-templates/page-soutenez_particulier.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_680', $_POST)) { update_post_meta( $post_id, 'metadata_680', $_POST['metadata_680']);};
+    if ('page-templates/page-soutenez_particulier.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_681', $_POST)) { update_post_meta( $post_id, 'metadata_681', $_POST['metadata_681']);};
+    if ('page-templates/page-soutenez_particulier.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_682', $_POST)) { update_post_meta( $post_id, 'metadata_682', $_POST['metadata_682']);};
 
 }
 

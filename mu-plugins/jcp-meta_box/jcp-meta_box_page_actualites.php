@@ -71,9 +71,9 @@ function metabox_page_actualites($post) {
 *************************************************************************/
 
 function jcp_metabox_save_page_actualites($post_id) {
-    global $post;
-    if ('page-templates/page-actualites.php' == get_post_meta( $post->ID, '_wp_page_template', true ) && array_key_exists('metadata_907', $_POST)) { update_post_meta( $post->ID, 'metadata_907', $_POST['metadata_907']);};
-    if ('page-templates/page-actualites.php' == get_post_meta( $post->ID, '_wp_page_template', true ) && array_key_exists('metadata_908', $_POST)) { update_post_meta( $post->ID, 'metadata_908', $_POST['metadata_908']);};
+    
+    if ('page-templates/page-actualites.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_907', $_POST)) { update_post_meta( $post_id, 'metadata_907', $_POST['metadata_907']);};
+    if ('page-templates/page-actualites.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_908', $_POST)) { update_post_meta( $post_id, 'metadata_908', $_POST['metadata_908']);};
 
 }
 
