@@ -33,12 +33,16 @@
 /* Your code goes below here. */
 
 add_action( 'init', 'jcp_remove_champs' );
+add_action( 'intermediate_image_sizes_advanced', 'jcp_supprime_image_size');
 add_action( 'admin_menu', 'remove_default_post_type' );
 add_action( 'admin_bar_menu', 'remove_default_post_type_menu_bar', 999 );
 add_action( 'wp_dashboard_setup', 'remove_draft_widget', 999 );
 add_action( 'after_setup_theme', 'jcp_thumbnails' );
 add_action( 'after_setup_theme', 'jcp_title' );
 add_action( 'save_post', 'my_project_updated_send_email' );
+
+// disable scaled image size
+add_filter('big_image_size_threshold', '__return_false');
 
 // Supprimer type d'article par défaut dans dashboard Brouillon rapide
 function remove_draft_widget(){
@@ -84,11 +88,22 @@ function jcp_title() {
     add_theme_support('title-tag');
 }
 
-// ajouter la fonction "ajouter image mmise en avant"
+// ajouter la fonction "ajouter image mise en avant"
 function jcp_thumbnails() {
     add_theme_support( 'post-thumbnails' );
 }
 
+//ARRÊTER lE GENERATION AUTOMATIQUE D'IMAGES
+function jcp_supprime_image_size($sizes) {
+    unset($sizes['thumbnail']);    // disable thumbnail size
+	unset($sizes['medium']);       // disable medium size
+	unset($sizes['large']);        // disable large size
+	unset($sizes['medium_large']); // disable medium-large size
+	unset($sizes['1536x1536']);    // disable 2x medium-large size
+	unset($sizes['2048x2048']);    // disable 2x large size
+	
+	return $sizes;
+}
 
 function my_project_updated_send_email( $post_id ) {
  

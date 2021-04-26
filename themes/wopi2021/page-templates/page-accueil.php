@@ -24,6 +24,11 @@ echo '<br>';
 echo $post->ID;
 echo '<br>';
 print_r ($_POST);
+echo '<br>';
+foreach ( get_intermediate_image_sizes() as $size ) {
+    echo $size;
+    echo '<br>';
+}
 
 ?>
 
