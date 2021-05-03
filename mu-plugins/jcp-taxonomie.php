@@ -68,7 +68,7 @@ function jcp_create_taxonomies() {
         'show_in_rest' => true,
         'show_admin_column' => true,
         'query_var' => true,
-        'rewrite' => array( 'slug' => 'saison' ),
+        'rewrite' => array( 'slug' => 'saison' )
     );
     register_taxonomy( 'saison', array('concert','partenaire','artiste_invite','actualite'), $args );
 
@@ -97,7 +97,7 @@ function jcp_create_taxonomies() {
         'show_in_rest' => true,
         'show_admin_column' => true,
         'query_var' => true,
-        'rewrite' => array( 'slug' => 'actualite' ),
+        'rewrite' => array( 'slug' => 'placement' ),
     );
     register_taxonomy( 'placement', array('concert'), $args );
 
@@ -276,11 +276,6 @@ function jcp_create_taxonomies() {
         'rewrite' => array( 'slug' => 'categorie_actu' ),
     );
     register_taxonomy( 'categorie_actu', array('actualite'), $args );
-
-
-
-
-
 
 }
 
