@@ -97,7 +97,7 @@ function jcp_create_taxonomies() {
         'show_in_rest' => true,
         'show_admin_column' => true,
         'query_var' => true,
-        'rewrite' => array( 'slug' => 'placement' ),
+        'rewrite' => array( 'slug' => 'placement' )
     );
     register_taxonomy( 'placement', array('concert'), $args );
 
@@ -126,7 +126,7 @@ function jcp_create_taxonomies() {
         'show_in_rest' => true,
         'show_admin_column' => true,
         'query_var' => true,
-        'rewrite' => array( 'slug' => 'genre' ),
+        'rewrite' => array( 'slug' => 'genre' )
     );
     register_taxonomy( 'genre', array('concert'), $args );
 
@@ -155,7 +155,7 @@ function jcp_create_taxonomies() {
         'show_in_rest' => true,
         'show_admin_column' => true,
         'query_var' => true,
-        'rewrite' => array( 'slug' => 'action_culturelle' ),
+        'rewrite' => array( 'slug' => 'action_culturelle' )
     );
     register_taxonomy( 'action_culturelle', array('concert'), $args );
 
@@ -184,7 +184,7 @@ function jcp_create_taxonomies() {
         'show_in_rest' => true,
         'show_admin_column' => true,
         'query_var' => true,
-        'rewrite' => array( 'slug' => 'categorie_partenaire' ),
+        'rewrite' => array( 'slug' => 'categorie_partenaire' )
     );
     register_taxonomy( 'categorie_partenaire', array('partenaire'), $args );
 
@@ -213,7 +213,7 @@ function jcp_create_taxonomies() {
             'show_in_rest' => true,
             'show_admin_column' => true,
             'query_var' => true,
-            'rewrite' => array( 'slug' => 'categorie_artiste_invite' ),
+            'rewrite' => array( 'slug' => 'categorie_artiste_invite' )
         );
         register_taxonomy( 'categorie_artiste_invite', array('artiste_invite'), $args );
 
@@ -243,7 +243,7 @@ function jcp_create_taxonomies() {
         'show_in_rest' => true,
         'show_admin_column' => true,
         'query_var' => true,
-        'rewrite' => array( 'slug' => 'categorie_orchestre' ),
+        'rewrite' => array( 'slug' => 'categorie_orchestre' )
     );
     register_taxonomy( 'categorie_orchestre', array('orchestre'), $args );
 
@@ -273,7 +273,7 @@ function jcp_create_taxonomies() {
         'show_in_rest' => true,
         'show_admin_column' => true,
         'query_var' => true,
-        'rewrite' => array( 'slug' => 'categorie_actu' ),
+        'rewrite' => array( 'slug' => 'categorie_actu' )
     );
     register_taxonomy( 'categorie_actu', array('actualite'), $args );
 
