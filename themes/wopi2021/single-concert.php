@@ -1,6 +1,7 @@
 <?php
 /*
-Template Name: single_projet
+Template Name: single-concert
+Template Post Type: concert
 */
 ?>
 
@@ -10,6 +11,9 @@ Template Name: single_projet
 ?>
 
 <main>
+
+    <p>CECI EST LA FICHE CONCERT</p>
+
 </main>
 
 <?php

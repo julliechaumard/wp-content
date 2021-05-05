@@ -1,2 +1,0 @@
-[26-Apr-2021 21:03:07 UTC] PHP Notice: A feed could not be found at `https://feeds.feedburner.com/wpfr`; the status code is `200` and content-type is `text/html; charset=UTF-8` in /Users/julie/Documents/GitHub/wopi2021/wp-includes/class-simplepie.php on line 1728
-[03-May-2021 08:06:53 UTC] PHP Notice: A feed could not be found at `https://feeds.feedburner.com/wpfr`; the status code is `200` and content-type is `text/html; charset=UTF-8` in /Users/julie/Documents/GitHub/wopi2021/wp-includes/class-simplepie.php on line 1728

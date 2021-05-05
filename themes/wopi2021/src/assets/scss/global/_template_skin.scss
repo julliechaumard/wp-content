@@ -1,14 +1,14 @@
 /* CSS */
-/* GRID */
+/* TEMPLATE */
 
 /* ******************************************************
 ** SKIN de la page et de ses grandes section
 ****************************************************** */
 
-/* GRID MENU PRINCIPAL*/
-.grid_2col12_1row {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    column-gap: 10px;
-    align-items: center;
+html, body {
+    background-color: $color_body_bg;
+}
+
+.page {
+    background-color: $color_page_bg;
 }

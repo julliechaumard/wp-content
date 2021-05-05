@@ -39,7 +39,7 @@ add_action( 'admin_bar_menu', 'remove_default_post_type_menu_bar', 999 );
 add_action( 'wp_dashboard_setup', 'remove_draft_widget', 999 );
 add_action( 'after_setup_theme', 'jcp_thumbnails' );
 add_action( 'after_setup_theme', 'jcp_title' );
-add_action( 'save_post', 'my_project_updated_send_email' );
+add_filter('upload_mimes', 'add_file_types_to_uploads');
 
 // disable scaled image size
 add_filter('big_image_size_threshold', '__return_false');
@@ -105,19 +105,12 @@ function jcp_supprime_image_size($sizes) {
 	return $sizes;
 }
 
-function my_project_updated_send_email( $post_id ) {
- 
-    // If this is just a revision, don't send the email.
-    if ( wp_is_post_revision( $post_id ) ) {
-        return;
-        }
- 
-    $post_title = get_the_title( $post_id );
-    $post_url = get_permalink( $post_id );
-    $subject = 'A post has been updated';
+// permettre l'ajout d'image au formay SVG dans les médias
+function add_file_types_to_uploads($file_types){
+    $new_filetypes = array();
+    $new_filetypes['svg'] = 'image/svg+xml';
+    $file_types = array_merge($file_types, $new_filetypes );
+    return $file_types;
 }
-
- /* Your code goes above here. */  
- 
  
  ?>

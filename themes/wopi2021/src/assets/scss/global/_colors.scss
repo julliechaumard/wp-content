@@ -2,32 +2,63 @@
 //Color system
 //
 
+// /////////////////////////////////
+// VARIABLES DES COULEURS
+// /////////////////////////////////
+
+// BLANC
+$color_blanc: #fff;
+
+// BLANC
+$color_blanc_transparent: rgba(255, 255, 255, 0.901);
+
+// GRIS
+$color_gris_fonce: #A09F9F;
+
+// NOIR CLAIR
+$color_noir_clair: #717171;
+// NOIR MOYEN
+$color_noir_moyen: #545454;
+// NOIR FONCE
+$color_noir_fonce: #454545;
+
+// VIOLET
+$color_violet: #646085;
+// ROSE
+$color_rose: #f24c8a;
+// JAUNE
+$color_jaune: #dce264;
+// VERT
+$color_vert: #158498;
+// MORDORE
+$color_mordore: #aa8936;
+
+// /////////////////////////////////
+// VARIABLES DES AFFECTATIONS DES COULEURS
+// /////////////////////////////////
+
+///// BACKGROUD DE LA PAGE
+
+// BACKGROUND BODY
+$color_body_bg: $color_gris_fonce;
+// BACKGROUND PAGE
+$color_page_bg: $color_blanc;
+
+///// COULEURS PAR PAGE
+
 // ACCUEIL
-// violet
-$_color_accueil: #646085;
-
+$color_accueil: $color_violet;
 // SAISON
-// Rose
-$_color_saison: #f24c8a;
-
+$color_saison: $color_rose;
 // ACTIONS CULTURELLES
-// Jaune
-$_color_actions: #dce264;
-
+$color_actions: $color_jaune;
 // ACTUALITES
-// violet
-$_color_actus: #646085;
-
+$color_actus: $color_violet;
 // L'ORCHESTRE
-// Vert
-$_color_orchestre: #158498;
-
+$color_orchestre: $color_vert;
 // MEDIATHEQUE
-// violet
-$_color_medias: #646085;
-
+$color_medias: $color_violet;
 // NEWSLETTER
-// Mordoré
-$_color_nl: #aa8936;
+$color_nl: $color_mordore;
 
 
