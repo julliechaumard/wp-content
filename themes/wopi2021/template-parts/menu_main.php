@@ -1,6 +1,8 @@
+
+
 <nav class="menu_main">
     <ul>
-        <li class='menu_item'>Saison
+        <li class='menu_item <?php menu_active() ?>'>Saison
             <ul class='sub_menu'>
                 <li class="sub_menu_item"><a href="#">Agenda</a></li>
                 <li class="sub_menu_item"><a href="#">Jeune public</a></li>

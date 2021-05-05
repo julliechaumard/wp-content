@@ -45,6 +45,7 @@ function metabox_artiste_invite($post) {
     }
     $metadata_129 = get_post_meta( $post->ID, 'metadata_129', true );
     $metadata_130 = get_post_meta( $post->ID, 'metadata_130', true );
+    $metadata_131 = get_post_meta( $post->ID, 'metadata_131', true );
 
     /************************************************************************
     // SAISIE DES INFORMATIONS
@@ -146,6 +147,23 @@ function metabox_artiste_invite($post) {
 
     </section>
 
+
+    <!-- --------------------- -->
+    <!-- GROUPE SITE INTERNET DE L'ARTISTE -->
+    <section class='metagroup'>
+        
+        <h2>SITE INTERNET DE L'ARTISTE INVITÉ</h2>
+        <div class='metagroup_sub'>
+            <div class='metagroup_sub_items grid_3fr_simple'>
+                <div class="pinput">
+                    <label for="metadata_131">URL du site internet</label>
+                    <input type="url" name="metadata_131" id="metadata_131" value="<?php echo $metadata_131 ?>"/>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
 
     <!-- --------------------- -->
     <!-- GROUPE ACCROCHE -->
@@ -266,7 +284,7 @@ function jcp_metabox_save_artiste_invite($post_id) {
     }
     if (get_post_type($post_id) == 'artiste_invite' && array_key_exists('metadata_129', $_POST)) { update_post_meta( $post_id, 'metadata_129', $_POST['metadata_129']);};
     if (get_post_type($post_id) == 'artiste_invite' && array_key_exists('metadata_130', $_POST)) { update_post_meta( $post_id, 'metadata_130', $_POST['metadata_130']);};
-
+    if (get_post_type($post_id) == 'artiste_invite' && array_key_exists('metadata_131', $_POST)) { update_post_meta( $post_id, 'metadata_131', $_POST['metadata_131']);};
 }
 
 ?>

@@ -1,0 +1,39 @@
+/* CSS */
+/* MODULE */
+
+/* ******************************************************
+** BANNER HEADER
+****************************************************** */
+
+/*************************************/
+/* ESPACEMENT ENTRE LES SECTIONS */
+.accroche_cell {
+    margin-left: -35px;
+}
+
+/*************************************/
+/* PLACEMENT DANS LES CASES DE LA GRILLE */
+.Title_cell {
+    grid-column: 1;
+    grid-row: 1;
+    overflow: hidden;
+}
+.accroche_cell {
+    grid-column: 1;
+    grid-row: 2 / 4;
+    overflow: hidden;
+}
+.illustration_cell {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+}
+
+/*************************************/
+/* PLACEMENT DANS LA CASE ACCROCHE */
+.accroche_cell {
+    padding-bottom: 20px;
+    padding-left: 35px;
+    padding-top: 5px;
+    padding-right: 5px;
+    overflow: hidden;
+}

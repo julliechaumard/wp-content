@@ -1,0 +1,1 @@
+[05-May-2021 17:36:36 UTC] PHP Fatal error:  Cannot redeclare couleur() (previously declared in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/functions/function_color.php:5) in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/functions/function_color.php on line 4

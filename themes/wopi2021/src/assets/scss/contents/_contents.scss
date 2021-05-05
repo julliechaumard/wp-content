@@ -6,6 +6,35 @@
 ****************************************************** */
 
 /*****************************************
+* TITRES */
+
+/* TITRE DE LA PAGE */
+.titre_page_container {
+    font-size: 33px;
+}
+.titre_page_gras {
+    font-family: ubuntu_moyen;
+}
+.titre_page_leger {
+    font-family: ubuntu_fin;
+}
+
+/*****************************************
+* ACCROCHE */
+
+.accroche_cell_texte {
+    font-size: 19px;
+    color: $color_blanc;
+}
+.accroche_cell_texte_gras {
+    font-family: ubuntu_moyen;
+}
+.accroche_cell_texte_leger {
+    font-family: ubuntu_fin;
+}
+
+
+/*****************************************
 * LINK */
 
 a {
@@ -28,15 +57,21 @@ ul, li {
 }
 .sub_menu {
     background-color: $color_blanc_transparent;
+    
 }
 .sub_menu_item, .menu_item_level1 {
     white-space: nowrap; /* pour ne pas revenir à la ligne*/
+    font-family: ubuntu_fin;
     /* Au survol du sous-menu */
     &:hover {
         color: $color_noir_clair;
         font-family: ubuntu_moyen;
         letter-spacing: -0.4px;
     }
+}
+
+.menu_active {
+    font-family: ubuntu_moyen;
 }
 
 /*****************************************

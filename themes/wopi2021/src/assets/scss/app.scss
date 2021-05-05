@@ -6,11 +6,13 @@
 @import "global/colors";
 @import "global/template";
 @import "global/template_skin";
+@import "global/layout";
 @import "global/grid";
 
 
 //MODULES
 @import "components/mod_menus";
+@import "components/mod_banner_top";
 
 //CONTENTS
 @import "contents/contents";
