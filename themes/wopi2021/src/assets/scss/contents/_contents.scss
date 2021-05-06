@@ -103,19 +103,46 @@ ul, li {
     object-fit: cover;
 }
 
+/*****************************************
+* TEXTES */
+button {
+    color: white;
+    background-color: $color_rose;
+    padding-top: 8px;
+    padding-bottom: 7px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border: 0px;
+    border-radius: 14px;
+}
 
 /*****************************************
 * TEXTES */
 
+.ubuntu_leger {
+    font-family: ubuntu_leger;
+}
+
+.ubuntu_bold {
+    font-family: ubuntu_bold;
+}
+
+.ubuntu_moyen {
+    font-family: ubuntu_moyen;
+}
+
+.alert {
+    color: $color_orange;
+}
+
+.souligne {
+    text-decoration: underline;
+}
+
+
 /* Distribution du concert*/
 .artistes_list {
     font-size: 14px;
-}
-.artiste_nom {
-    font-family: ubuntu_bold;
-}
-.artiste_poste {
-    font-family: ubuntu_leger;
 }
 
 .content_wp {
