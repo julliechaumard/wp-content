@@ -1,0 +1,54 @@
+/* CSS */
+/* MODULE */
+
+/* ******************************************************
+** FICHE DU CONCERT - TOUTES LES INFOS
+****************************************************** */
+
+/*************************************/
+/* PLACEMENT DANS LES CASES DE LA GRILLE */
+
+.distribution_concert_cell {
+    grid-column: 1;
+    grid-row: 1 / 2;
+}
+.dates_concert_cell {
+    grid-column: 1;
+    grid-row: 2;
+}
+.programme_concert_cell {
+    grid-column: 2;
+    grid-row: 1 / 4;
+}
+.partenaires_concert_cell {
+    grid-column: 2;
+    grid-row: 4;
+}
+
+
+/*************************************/
+/* POSITIONNEMENT DES ELEMENTS */
+
+/* Distribution */
+.artistes_list {
+    margin-top: 20px;
+}
+.artiste_nom {
+    padding-right: 8px;
+}
+.artiste {
+    padding-bottom: 3px;
+}
+
+/* Programme */
+.programme_concert_cell {
+    margin-left: 70px;
+}
+
+/* Partenaire */
+.partenaires_concert_cell {
+    margin-left: 70px;
+}
+.partenaires_concert_list {
+    margin-top: 20px;
+}

@@ -83,6 +83,7 @@ function metabox_concert($post) {
     $metadata_199 = get_post_meta( $post->ID, 'metadata_199', true );
     $metadata_200 = get_post_meta( $post->ID, 'metadata_200', true );
     $metadata_201 = get_post_meta( $post->ID, 'metadata_201', true );
+    $metadata_202 = get_post_meta( $post->ID, 'metadata_202', true );
 
     /************************************************************************
     // SAISIE DES INFORMATIONS
@@ -276,14 +277,26 @@ function metabox_concert($post) {
     <section class='metagroup'>
         <h2>LE PROGRAMME</h2>
         
+        <!-- DUREE -->
+        <div class=''>
+            <h3>Durée</h3>
+            <div class='metagroup_sub_items grid_4fr_simple'>
+                <div class="pinput">
+                    <label for="metadata_202">Durée du concert</label>
+                    <input type="text" name="metadata_202" id="metadata_202" placeholder='' value="<?php echo $metadata_202; ?>"/>
+                </div>
+            </div>
+        </div>
+
         <!-- PDF A TÉLÉCHARGER -->
         <div class=''>
             <h3>Programme PDF</h3>
             <div class='metagroup_sub_items grid_4fr_simple'>
                 <div class="pinput">
-                <label for="metadata_193">PDF du programme</label>
-                <input type="text" name="metadata_193" id="metadata_193" class="pdf-url" value="<?php echo $metadata_193; ?>"/>
-                <input type="button" class="pdf-uploader" value="Sélectionner un PDF">
+                    <label for="metadata_193">PDF du programme</label>
+                    <input type="text" name="metadata_193" id="metadata_193" class="pdf-url" value="<?php echo $metadata_193; ?>"/>
+                    <input type="button" class="pdf-uploader" value="Sélectionner un PDF">
+                </div>
             </div>
 
             <!-- SCRIPT POUR TÉLÉCHARGER UN FICHIER PDF -->
@@ -542,6 +555,7 @@ function jcp_metabox_save_concert($post_id) {
     if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_199', $_POST)) { update_post_meta( $post_id, 'metadata_199', $_POST['metadata_199']);};
     if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_200', $_POST)) { update_post_meta( $post_id, 'metadata_200', $_POST['metadata_200']);};
     if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_201', $_POST)) { update_post_meta( $post_id, 'metadata_201', $_POST['metadata_201']);};
+    if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_202', $_POST)) { update_post_meta( $post_id, 'metadata_202', $_POST['metadata_202']);};
     for ($i = 1; $i <= 10; $i++) {
         if (get_post_type($post_id) == 'concert' && array_key_exists('metadata_180_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_180_'.$i.'', $_POST['metadata_180_'.$i.'']);};
     }

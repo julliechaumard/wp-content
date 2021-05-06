@@ -28,7 +28,9 @@
     /* au survol du niveau 1, le sous-menu apparait */
     &:hover {
         .sub_menu {
-            display: block;      
+            visibility: visible;
+            /* Pour l'effet de transition */
+            opacity: 1;
         }
     }
 }
@@ -44,7 +46,10 @@
     position: absolute;
     left: 0;
     /* Sous-menu caché */
-    display: none;
+    visibility:hidden;
+    /* Pour l'effet de transition */
+    opacity: 0;
+    transition: visibility 0.4s,opacity 0.4s cubic-bezier(0.4, 0, 1, 1);
 }
 
 .sub_menu_item {

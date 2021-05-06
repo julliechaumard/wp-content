@@ -1,6 +1,6 @@
 
 
-<nav class="menu_main">
+<nav class="menu_main tx_color_noir_fonce">
     <ul>
         <li class='menu_item <?php menu_active() ?>'>Saison
             <ul class='sub_menu'>

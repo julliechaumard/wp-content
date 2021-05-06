@@ -5,12 +5,10 @@
 ** SKIN de la page et de ses grandes section
 ****************************************************** */
 /*
-/* GRID MENU PRINCIPAL*/
+/* GRID NAV BAR TOP*/
 .grid_2col12_1row {
     display: grid;
     grid-template-columns: minmax(0, 35%) minmax(0, 65%);
-    column-gap: 10px;
-    align-items: center;
 }
 
 /* GRID BANNER TOP*/
@@ -22,5 +20,27 @@
 .grid_1col1_1row {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
+}
+.align_center {
     align-items: center;
+}
+
+.grid_2col12_5row {
+    display: grid;
+    grid-template-columns: minmax(0, 35%) minmax(0, 65%);
+    grid-template-rows: auto auto auto auto;
+}
+
+/* GRID FICHE CONCERT PARTENAIRE MENTION*/
+.grid_2colmax_1row {
+    display: grid;
+    grid-template-columns: minmax(50px, 170px) auto;
+    column-gap: 7px;
+}
+
+.grid_autocolmax_autorow {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 170px));
+    column-gap: 7px;
+    row-gap: 7px;
 }

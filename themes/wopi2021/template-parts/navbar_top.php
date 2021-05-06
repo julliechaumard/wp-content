@@ -8,7 +8,7 @@ if ( is_page(array('agenda', 'Saison')) OR is_singular (array( 'collaboration','
 ?>
 
 <!-- TOP BAR -->
-<section class='grid_2col12_1row margin_section_botton'>
+<section class='grid_2col12_1row align_center margin_section_botton'>
     <div>
         <img class='img_ajust' src="<?php bloginfo('template_directory'); logo_couleur()?>" alt="Logo Orchestre de Picardie">
     </div>

@@ -19,6 +19,17 @@
     font-family: ubuntu_fin;
 }
 
+/* TITRE DES CHAPITRES */
+.titre_chapitre_container {
+    font-size: 26px;
+}
+
+/* PETITS TITRES */
+.titre_paragraphe {
+    font-family: ubuntu_courant;
+    font-size: 20px;
+}
+
 /*****************************************
 * ACCROCHE */
 
@@ -33,7 +44,9 @@
     font-family: ubuntu_fin;
 }
 
-
+.duree_concert_titre {
+    font-family: ubuntu_moyen;
+}
 /*****************************************
 * LINK */
 
@@ -53,7 +66,6 @@ ul, li {
     cursor: pointer;
     font-family: ubuntu_leger;
     font-size: 16px;
-    color: $color_noir_fonce;
 }
 .sub_menu {
     background-color: $color_blanc_transparent;
@@ -74,6 +86,13 @@ ul, li {
     font-family: ubuntu_moyen;
 }
 
+.menu_res_soc_item {
+    &:hover {
+        font-family: ubuntu_moyen;
+        letter-spacing: -0.4px;
+    }
+}
+
 /*****************************************
 * IMAGE */
 
@@ -82,4 +101,37 @@ ul, li {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+
+/*****************************************
+* TEXTES */
+
+/* Distribution du concert*/
+.artistes_list {
+    font-size: 14px;
+}
+.artiste_nom {
+    font-family: ubuntu_bold;
+}
+.artiste_poste {
+    font-family: ubuntu_leger;
+}
+
+.content_wp {
+    max-width: 570px;
+    font-family: ubuntu_leger;
+    font-size: 14px;
+    p {
+        margin-bottom: 13px;
+        line-height: 20px;
+    }
+    strong {
+        font-family: ubuntu_bold;
+        color: black;
+    }
+    em {
+        font-family: ubuntu_moyen_italique;
+        color: black;
+    }
 }
