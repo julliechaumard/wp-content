@@ -4,6 +4,7 @@
 @import "global/base";
 @import "global/fonts";
 @import "global/colors";
+@import "global/media_queries";
 @import "global/template";
 @import "global/template_skin";
 @import "global/layout";
@@ -11,9 +12,14 @@
 
 
 //MODULES
+@import "components/mod_titles";
+@import "components/mod_topbar";
 @import "components/mod_menus";
 @import "components/mod_banner_top";
 @import "components/mod_fiche_concert_infos";
+@import "components/mod_plain_box";
+@import "components/mod_videos_youtube";
+@import "components/mod_footer";
 
 //CONTENTS
 @import "contents/contents";

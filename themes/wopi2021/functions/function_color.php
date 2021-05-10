@@ -14,5 +14,11 @@ function logo_couleur() {
       }
 }
 
+function menu_pipe_couleur() {
+  if ( is_page(array('agenda', 'Saison')) OR is_singular (array( 'collaboration','concert' )) OR is_front_page() ) { 
+      echo 'saison';
+      
+    }
+}
 
 ?>

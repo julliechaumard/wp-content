@@ -1,4 +1,4 @@
-
+<!-- MAIN MENU -->
 
 <nav class="menu_main tx_color_noir_fonce">
     <ul>

@@ -2,15 +2,8 @@
 /* MODULE */
 
 /* ******************************************************
-** BANNER HEADER
+** BANNER  TOP HEADER
 ****************************************************** */
-
-/*************************************/
-/* ESPACEMENT ENTRE LES SECTIONS */
-.accroche_cell {
-    margin-left: -35px;
-}
-
 
 /*************************************/
 /* PLACEMENT DANS LES CASES DE LA GRILLE */
@@ -36,6 +29,12 @@
 }
 
 /*************************************/
+/* ESPACEMENT ENTRE LES SECTIONS */
+.accroche_cell {
+    margin-left: -35px;
+}
+
+/*************************************/
 /* PLACEMENT DANS LA CASE ACCROCHE */
 .accroche_cell {
     padding-bottom: 20px;
@@ -43,4 +42,8 @@
     padding-top: 5px;
     padding-right: 5px;
     overflow: hidden;
+}
+
+.titre_page_container {
+    padding-right: 15px;
 }

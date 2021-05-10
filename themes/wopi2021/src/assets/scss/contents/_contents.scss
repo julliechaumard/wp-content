@@ -5,48 +5,43 @@
 ** FORMATS DES ELEMENTS DE CONTENU
 ****************************************************** */
 
+
 /*****************************************
 * TITRES */
 
 /* TITRE DE LA PAGE */
 .titre_page_container {
-    font-size: 33px;
+    font-size: 31px;
+    @include mobile { 
+        font-size: 20px;
+    }
 }
-.titre_page_gras {
+.titre_gras {
     font-family: ubuntu_moyen;
 }
-.titre_page_leger {
+.titre_leger {
     font-family: ubuntu_fin;
 }
 
 /* TITRE DES CHAPITRES */
 .titre_chapitre_container {
-    font-size: 26px;
+    font-size: 24px;
+}
+
+/* TITRE PLAINBOX */
+.titre_plainbox_container {
+    font-size: 40px;
+    color: white;
 }
 
 /* PETITS TITRES */
 .titre_paragraphe {
     font-family: ubuntu_courant;
+}
+.titre_paragraphe_size {
     font-size: 20px;
 }
 
-/*****************************************
-* ACCROCHE */
-
-.accroche_cell_texte {
-    font-size: 19px;
-    color: $color_blanc;
-}
-.accroche_cell_texte_gras {
-    font-family: ubuntu_moyen;
-}
-.accroche_cell_texte_leger {
-    font-family: ubuntu_fin;
-}
-
-.duree_concert_titre {
-    font-family: ubuntu_moyen;
-}
 /*****************************************
 * LINK */
 
@@ -62,13 +57,26 @@ ul, li {
     list-style: none;
 }
 
+/* MAIN MENU */
+/* NAV RESEAUX SOCIAUX */
 .menu_item {
     cursor: pointer;
+    @include topbar_hamburger {
+        cursor: unset;
+    }
     font-family: ubuntu_leger;
     font-size: 16px;
+    @include topbar_hamburger {
+        color: white;
+        text-transform: uppercase;
+    }
 }
 .sub_menu {
     background-color: $color_blanc_transparent;
+    @include topbar_hamburger {
+        color: $color_noir_fonce;
+        text-transform: capitalize;
+    }
     
 }
 .sub_menu_item, .menu_item_level1 {
@@ -87,49 +95,86 @@ ul, li {
 }
 
 .menu_res_soc_item {
+    font-size: 14px;
+    @include mobile { 
+        font-size: 11px;
+    }
     &:hover {
         font-family: ubuntu_moyen;
         letter-spacing: -0.4px;
     }
 }
+.pipe_saison {
+    border-right: solid 1px $color_saison !important;
+}
 
 /*****************************************
 * IMAGE */
 
-/* L'image est ajusté à la taille de la grille */
+/* IMAGE DE LA BANNIERE */
+/* LOGO TOP BAR */
+/* L'image est ajusté à la taille de la grille (hauteur et largeur) */
 .img_ajust {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
+/* LOGO FOOTER */
+/* L'image est ajusté à la largeur */
+.img_width {
+    width: 100%;
+}
+/* TOP BAR MOBILE */
+.img_width_auto {
+    width: auto;
+}
+
+/* POUR SVG LOGOS INSTITUTIONNELS PAGE ACCUEIL */
+.img_svg {
+    width: 100%;
+    max-height: 134px;
+}
+
 /*****************************************
-* TEXTES */
-button {
-    color: white;
-    background-color: $color_rose;
-    padding-top: 8px;
-    padding-bottom: 7px;
-    padding-right: 15px;
-    padding-left: 15px;
+* BUTTON */
+
+@mixin button ($pad-t, $pad-r, $pad-b, $pad-l, $radius) {
+    padding-top: $pad-t;
+    padding-right: $pad-r;
+    padding-bottom: $pad-b;
+    padding-left: $pad-l;
     border: 0px;
-    border-radius: 14px;
-}
-
-/*****************************************
-* TEXTES */
-
-.ubuntu_leger {
-    font-family: ubuntu_leger;
-}
-
-.ubuntu_bold {
-    font-family: ubuntu_bold;
-}
-
-.ubuntu_moyen {
+    border-radius: $radius;
     font-family: ubuntu_moyen;
 }
+
+/* BUTTON SITE INTERNET SALLE*/
+.button_petit {
+    @include button (8px, 15px, 7px, 15px, 14px)
+}
+
+/* BUTTON NEWSLETTER*/
+.button_grand {
+    @include button (13px, 26px, 13px, 26px, 22px)
+}
+
+/* BUTTON SITE INTERNET SALLE*/
+.button_saison {
+    color: white;
+    background-color: $color_saison;
+}
+/* BUTTON NEWSLETTER*/
+.button_newsl {
+    color: $color_noir_fonce;
+    background-color: white;
+    font-size: 18px;
+}
+
+
+
+/*****************************************
+* TEXTES */
 
 .alert {
     color: $color_orange;
@@ -139,12 +184,32 @@ button {
     text-decoration: underline;
 }
 
-
-/* Distribution du concert*/
-.artistes_list {
-    font-size: 14px;
+/* ACCROCHE */
+.accroche_cell_texte {
+    font-size: 17px;
+    color: $color_blanc;
+}
+.accroche_cell_texte_gras {
+    font-family: ubuntu_moyen;
+}
+.accroche_cell_texte_leger {
+    font-family: ubuntu_fin;
 }
 
+.duree_concert_titre {
+    font-family: ubuntu_moyen;
+}
+
+/* Distribution du concert */
+.listes_concert {
+    font-size: 14px;
+}
+/* DATES du concert */
+.liste_date {
+    font-size: 15px;
+}
+
+/* CONTENT WP POST */
 .content_wp {
     max-width: 570px;
     font-family: ubuntu_leger;
@@ -162,3 +227,4 @@ button {
         color: black;
     }
 }
+

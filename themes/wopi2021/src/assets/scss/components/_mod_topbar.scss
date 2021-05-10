@@ -1,0 +1,148 @@
+/* CSS */
+/* MODULE */
+
+/* ******************************************************
+** BARRE DE NAVIGATION + LOGO
+****************************************************** */
+.top_bar_desktop {
+    display: grid;
+    @include topbar_hamburger {
+        display: none;
+    }
+}
+
+.top_bar_mobile {
+    display: none;
+    @include topbar_hamburger {
+        display: grid;
+    }
+    margin-top: -35px;
+    margin-right: -35px;
+    margin-left: -35px;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    padding-right: 35px;
+    padding-left: 35px;
+    @include mobilexs {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+
+.top_bar_height_logo {
+    height: 14vw;
+    @include mobilexs {
+        height: 18vw;
+    }
+}
+.menu_main_mobile {
+    display: none;
+}
+
+/* CSS MENU HAMBURGER */
+.menu_hamburger {
+    cursor: pointer;
+    width: 32px;
+    height: auto;
+    justify-self: center;
+    @include mobilexs {
+        justify-self: start;
+    }
+}
+
+.icone_hamburger {
+    width: 32px;
+    height: auto;
+}
+
+.menu_hamburger_open {
+    display: none;
+    opacity: 0;
+}
+
+.show_menu_hamburger {
+    display: block;
+    opacity: 1;
+}
+.hide_menu_hamburger {
+    display: none;
+    opacity: 0;
+}
+
+/* CSS HAMBURGER TEST */
+  .mod_hamberger{
+    font-family:sans-serif;
+    max-width:480px;
+    margin:0 auto;
+    background:#000;
+    color:#fff;
+    line-height:1.5;
+    position:relative;
+  }
+  
+  .header_test{
+    padding:0 12px;
+    position:fixed;
+    z-index:999;
+    width:100%;
+    max-width:480px;
+    background:#111;
+    box-sizing:border-box;
+    border-bottom:1px solid #fff;
+  }
+  
+  .header_test-title{
+    line-height:50px;
+    font-size:22px;
+  }
+  .ul_test,.li_test{
+    display:block;
+  }
+  .li_test{
+    height:50px;
+    line-height:50px;
+    padding:0 12px;
+    border-bottom:1px solid #777;
+    background:#111;
+  }
+  
+  #menu-button{
+    position:absolute;
+    top:0;
+    right:0;
+    width:50px;
+    height:50px;
+    overflow:hidden;
+    background:#fff;
+    color:#000;
+    line-height:50px;
+    text-align:center;
+    font-size:40px;
+    cursor:pointer;
+    transition:all .5s;
+  }
+  
+  
+  #menu-button::after{
+    content:'×';
+  }
+  #menu-button.close{
+    color:#fff;
+    background:#000;
+  }
+  #menu-button.close::after{
+    content:'≡';
+  }
+  
+  #menu_test{
+    transition:transform .5s;
+    position:absolute;
+    width:100%;
+    max-width:480px;
+    transform:translateY(-300px);
+  
+  }
+  #menu_test.show-menu{
+    transform:translateY(51px);
+  }
+  

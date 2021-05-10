@@ -5,25 +5,105 @@
 ** LES GRID DU SITE
 ****************************************************** */
 
+/* ******************************************************
+** ALIGNEMENTS */
+
 .align_center {
     align-items: center;
 }
-
-/* GRID NAV BAR TOP*/
-.grid_2col12_1row {
-    display: grid;
-    grid-template-columns: minmax(0, 35%) minmax(0, 65%);
+.justify_center {
+    justify-items: center;
 }
 
-/* GRID BANNER TOP*/
+/* GRID PLAINBOX */
+.grid {
+    display: grid;
+}
+
+/* ******************************************************
+** COLUMS */
+
+/* GRID NAV BAR TOP DESKTOP*/
+.grid_2col12_1row {
+    grid-template-columns: minmax(0, 35%) minmax(0, 65%);
+}
+/* GRID NAV BAR TOP MOBILE*/
+.grid_2col12_1row_mob {
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    @include mobilexs {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* GRID BANNER ACCROCHE*/
+.grid_1col1_1row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+}
+/* GRID FOOTER CONTACTS */
+.grid_2col12 {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
+}
+/* GRID FOOTER CONTACTS */
+.grid_10col {
+    display: grid;
+    grid-template-columns: repeat(5,17px max-content);
+    column-gap: 10px;
+    align-items: center;
+}
+
+/* LOGOS PARTENAIRE AVEC MENTION FICHE CONCERT */
+.grid_2colmax_1row {
+    display: grid;
+    grid-template-columns: minmax(50px, 110px) auto;
+    column-gap: 7px;
+}
+/* LOGOS PARTENAIRES FICHE CONCERT */
+.grid_autocolmax_autorow {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 110px));
+    @include mobile {
+        grid-template-columns: repeat(auto-fill, minmax(50px, 90px));
+    }
+    column-gap: 7px;
+    row-gap: 7px;
+}
+/* 3 VIDEOS PAGE CONCERT*/
+.grid_3col {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+/* ******************************************************
+** COLUMS + ROWS */
+
+/* GRID BANNER TOP */
 .grid_2col12_3row {
     display: grid;
     grid-template-columns: minmax(0, 35%) minmax(0, 65%);
     grid-template-rows: minmax(0, 55%) minmax(0, 22%) minmax(0, 23%);
 }
-.grid_1col1_1row {
+
+/* FOOTER LOGOS INSTITUTIONNELS*/
+.grid_2col1111_2row{
     display: grid;
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 42px;
+    @include mobile {
+        column-gap: 5px;
+    }
+    row-gap: 21px;
 }
 
 /* GRID FICHE CONCERT PARTENAIRE MENTION*/
@@ -31,18 +111,21 @@
     display: grid;
     grid-template-columns: minmax(0, 35%) minmax(0, 65%);
     grid-template-rows: auto auto auto auto;
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
 }
 
-
-.grid_2colmax_1row {
+/* LES PHOTOS PAGE CONCERT*/
+.grid_photos {
     display: grid;
-    grid-template-columns: minmax(50px, 110px) auto;
-    column-gap: 7px;
+    grid-template-columns: repeat(2, 1fr);
+    @include mobile {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    grid-auto-rows: minmax(10px, auto);
+    column-gap: 10px;
+    row-gap: 10px;
 }
 
-.grid_autocolmax_autorow {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(50px, 110px));
-    column-gap: 7px;
-    row-gap: 7px;
-}
+

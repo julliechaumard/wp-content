@@ -1,0 +1,50 @@
+/* CSS */
+/* CONTENT */
+
+/* ******************************************************
+** MEDIA QUERIES
+****************************************************** */
+
+/* ******************************************************
+** VARIABLES */
+
+$breakpoint_mobilexs: 300px;
+$breakpoint_mobile: 700px;
+$breakpoint_tablette: 701px;
+/* Point de passage du Top Bar menu en hamburger */
+$breakpoint_topbar_hamburger: 890px;
+$breakpoint_topbar_desktop: 890px;
+
+/* ******************************************************
+** MIXIN */
+
+/* MOBILE XS */
+@mixin mobilexs() {
+    @media screen and (max-width:$breakpoint_mobilexs){
+        @content;
+    }
+}
+/* MOBILE */
+@mixin mobile() {
+    @media screen and (max-width:$breakpoint_mobile){
+        @content;
+    }
+}
+
+/* TABLETTE + ORDINATEUR */
+@mixin nomobile() {
+    @media screen and (min-width:$breakpoint_tablette){
+        @content;
+    }
+}
+/* Point de passage du Top Bar menu en hamburger */
+@mixin topbar_hamburger() {
+    @media screen and (max-width:$breakpoint_topbar_hamburger){
+        @content;
+    }
+}
+@mixin topbar_desktop() {
+    @media screen and (min-width:$breakpoint_topbar_desktop){
+        @content;
+    }
+}

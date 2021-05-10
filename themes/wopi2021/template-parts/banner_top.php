@@ -9,9 +9,9 @@
         <div>
             <h1 class='titre_page_container'>
                 <!-- CONTENU DU TITRE DIFFERENTE SELON PAGE -->
-                <span class='titre_page_gras'><?php titre_page_gras($post) ?></span>
+                <span class='titre_gras'><?php titre_gras($post) ?></span>
                 <br>
-                <span class='titre_page_leger'><?php titre_page_leger($post) ?></span>
+                <span class='titre_leger'><?php titre_leger($post) ?></span>
             </h1>
         </div>
 
@@ -36,9 +36,6 @@
                     <br>
                     <!-- SOUS-TITRE -->
                     <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_201', true); ?></span>
-                    <br>
-                    <!-- DUREE -->
-                    <span class='margint_20_block accroche_cell_texte_leger'><span class='duree_concert_titre'>Durée : </span><?php echo get_post_meta($post->ID, 'metadata_202', true); ?></span>
                 </p>
     <?php endif;?>
 
@@ -70,11 +67,11 @@
     <!-- ---------------- -->
     <nav class="nav_res_soc_cell">
     <ul class='tx_<?php couleur() ?>'>
-        <li class='menu_item menu_res_soc_item'><a target="_blank" href="https://www.instagram.com/orchestredepicardie/">Instagram</a></li>
-        <li class='menu_item menu_res_soc_item'><a target="_blank" href="https://www.instagram.com/musicodpic/">Instajeunes</a></li>
-        <li class='menu_item menu_res_soc_item'><a target="_blank" href="https://www.facebook.com/Orchestredepicardie/">Facebook</a></li>
-        <li class='menu_item menu_res_soc_item'><a target="_blank" href="https://twitter.com/ORCHESPICARDIE">Twitter</a></li>
-        <li class='menu_item menu_res_soc_item'><a  target="_blank"href="https://www.youtube.com/channel/UC0K2FgYMFDrYtjudbI-6Tjw/videos">Youtube</a></li>
+        <li class='menu_item menu_res_soc_item pipe_<?php menu_pipe_couleur() ?>'><a target="_blank" href="https://www.instagram.com/orchestredepicardie/">Instagram</a></li>
+        <li class='menu_item menu_res_soc_item pipe_<?php menu_pipe_couleur() ?>'><a target="_blank" href="https://www.instagram.com/musicodpic/">Instajeunes</a></li>
+        <li class='menu_item menu_res_soc_item pipe_<?php menu_pipe_couleur() ?>'><a target="_blank" href="https://www.facebook.com/Orchestredepicardie/">Facebook</a></li>
+        <li class='menu_item menu_res_soc_item pipe_<?php menu_pipe_couleur() ?>'><a target="_blank" href="https://twitter.com/ORCHESPICARDIE">Twitter</a></li>
+        <li class='menu_item menu_res_soc_item pipe_<?php menu_pipe_couleur() ?>'><a  target="_blank"href="https://www.youtube.com/channel/UC0K2FgYMFDrYtjudbI-6Tjw/videos">Youtube</a></li>
     </ul>
 
 

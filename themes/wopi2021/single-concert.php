@@ -23,16 +23,23 @@ Template Post Type: concert
             <!-- Titre -->
             <div>
                 <h2 class='titre_chapitre_container'>
-                    <span class='titre_page_gras'>DISTRIBUTION</span>
+                    <span class='titre_gras'>DISTRIBUTION</span>
                     <br>
-                    <span class='titre_page_leger'>DU CONCERT</span>
+                    <span class='titre_leger'>DU CONCERT</span>
                 </h2>
             </div>
 
             <!-- Les artistes -->
-            <div class='artistes_list'>
+            <div class='listes_concert'>
                 <?php for ($i = 1; $i <= 30; $i++) { ?>
-                    <p class="artiste"><span class="artiste_nom ubuntu_bold"><?php echo get_post_meta($post->ID, 'metadata_186_'.$i, true); ?></span><span class="ubuntu_leger"><?php echo get_post_meta($post->ID, 'metadata_187_'.$i, true); ?></span></p>
+                    <div class="artiste">
+                        <div class="paddingr_8 ubuntu_bold">
+                            <?php echo get_post_meta($post->ID, 'metadata_186_'.$i, true); ?>
+                        </div>
+                        <div class="ubuntu_fin">
+                            <?php echo get_post_meta($post->ID, 'metadata_187_'.$i, true); ?>
+                        </div>
+                    </div>
                 <?php } ?>
             </div>
 
@@ -40,18 +47,18 @@ Template Post Type: concert
         </section>
 
         <!-- DATES -->
-        <section class="dates_concert_cell">
+        <section class="dates_concert_cell margin_section_botton_mobile">
              <!-- Titre -->
             <div>
                 <h3 class='titre_chapitre_container'>
-                    <span class='titre_page_gras'>DATES</span>
+                    <span class='titre_gras'>DATES</span>
                     <br>
-                    <span class='titre_page_leger'>ET REPRÉSENTATIONS</span>
+                    <span class='titre_leger'>ET REPRÉSENTATIONS</span>
                 </h3>
             </div>
 
             <!-- Les dates -->
-            <div class="dates_liste ubuntu_leger">
+            <div class="liste_date ubuntu_leger">
 
                 <?php for ($i = 1; $i <= 10; $i++) {
                     // LOOP pour aller chercher la salle et ses informations
@@ -77,21 +84,22 @@ Template Post Type: concert
                             <p>
                                 — <span class="jour"><?php echo mysql2date('l j F', get_post_meta($post->ID, 'metadata_180_'.$i, true)); ?></span>
                                 <span class="heure"><?php echo get_post_meta($post->ID, 'metadata_181_'.$i, true); ?></span>
-                                <span class="ville ubuntu_bold"><?php echo $ville;?></span><span class="icone" onclick="document.querySelector('.salle<?php echo $i; ?>').classList.toggle('ouvrir')"><img class='img_ajust' src="<?php bloginfo('template_directory')?>/dist/assets/images/icones/icone_ticket.svg" alt="icone billeterie à cliquer"></span>
+                                <span class="ville ubuntu_bold"><?php echo $ville;?></span>
+                                <span class="icone" onclick="document.querySelector('.salle<?php echo $i; ?>').classList.toggle('ouvrir')"><img class='img_ajust' src="<?php bloginfo('template_directory')?>/dist/assets/images/icones/icone_ticket.svg" alt="icone billeterie à cliquer"></span>
                             </p>
     
                         <!-- CONCERT ANNULE / REPORTE -->
                         <?php if(get_post_meta($post->ID, 'metadata_183_'.$i, true)=="annul") { ?>
-                            <p class="alert ubuntu_moyen">CONCERT ANNULÉ</p>
+                            <p class="alert ubuntu_moyen paddingt_5">CONCERT ANNULÉ</p>
                         <?php };?>
                         <?php if(get_post_meta($post->ID, 'metadata_184_'.$i, true)=="report") { ?>
-                            <p class="alert ubuntu_moyen">CONCERT REPORTÉ</p>
+                            <p class="alert ubuntu_moyen paddingt_5">CONCERT REPORTÉ</p>
                         <?php };?>
 
                         <!-- INFOS SALLE -->
                         <div class='infos_salle salle<?php echo $i; ?>'>
                             <p class="nom_salle"><span class="nom_salle_content ubuntu_moyen"><?php echo $nom_salle;?></span>
-                                <button><a target="_blank" href="<?php echo $url_salle;?>">SITE INTERNET</a></button></p>
+                            <button class="button_petit button_saison"><a target="_blank" href="<?php echo $url_salle;?>">SITE INTERNET</a></button></p>
                             <p class="adresse_salle"><?php echo $adresse_salle;?></p>
                             <p class="contact_salle"><span class='telephone_salle'><?php echo $telephone_salle;?></span><span class='mail_salle'><?php echo $mail_salle;?></span></p>
                             
@@ -111,17 +119,28 @@ Template Post Type: concert
              <!-- Titre -->
             <div>
                 <h4 class='titre_chapitre_container'>
-                    <span class='titre_page_gras'>PROGRAMME</span>
+                    <span class='titre_gras'>PROGRAMME</span>
                     <br>
-                    <span class='titre_page_leger'>DU CONCERT</span>
+                    <span class='titre_leger'>DU CONCERT</span>
                 </h4>
             </div>
 
             <!-- Les pieces -->
-            <div class='artistes_list margin_section_botton'>
+            <div class='listes_concert margin_subtitle_bottom'>
                 <?php for ($i = 1; $i <= 20; $i++) { ?>
-                    <p class="artiste"><span class="artiste_nom ubuntu_bold"><?php echo get_post_meta($post->ID, 'metadata_194_'.$i, true); ?></span><span class="ubuntu_leger"><?php echo get_post_meta($post->ID, 'metadata_195_'.$i, true); ?></span></p>
+                    <div class="artiste">
+                        <div class="paddingr_8 ubuntu_bold">
+                            <?php echo get_post_meta($post->ID, 'metadata_194_'.$i, true); ?>
+                        </div>
+                        <div class="ubuntu_leger">
+                            <?php echo get_post_meta($post->ID, 'metadata_195_'.$i, true); ?>
+                        </div>
+                    </div>
                 <?php } ?>
+            </div>
+
+            <div class="margin_subtitle_bottom">
+                <p class='ubuntu_leger'><span class='duree_concert_titre'>Durée : </span><?php echo get_post_meta($post->ID, 'metadata_202', true); ?></p>
             </div>
 
             <!-- La description -->
@@ -134,8 +153,8 @@ Template Post Type: concert
         </section>
         
         <!-- PARTENAIRES-->
-        <section class="partenaires_concert_cell">
-            <div class="titre_paragraphe">PARTENAIRES</div>
+        <section class="partenaires_concert_cell margin_section_botton_mobile">
+            <div class="titre_paragraphe titre_paragraphe_size">PARTENAIRES</div>
             <div class="partenaires_concert_list">
 
                 <!-- Partenaire avec mention -->
@@ -163,7 +182,7 @@ Template Post Type: concert
 
                         <?php };
                     };
-                };?>
+                }; wp_reset_query(); ?>
 
                 <!-- LOGOS des Partenaires -->
                 <div class="partenaires_concert_logo_list grid_autocolmax_autorow">
@@ -182,7 +201,7 @@ Template Post Type: concert
                                     </div>
                                 <?php };
                             };
-                        };?>
+                        }; wp_reset_query(); ?>
                 </div>
 
             </div>
@@ -196,10 +215,37 @@ Template Post Type: concert
     <!-- LES PHOTOS ET VIDEOS -->
     <!-- --------------------------------- -->
 
-    <section>
-        
-        <!--  -->
-        <div class="">
+    <section class="margin_section_botton">
+        <!-- TITRE -->
+        <div>
+            <p class='titre_chapitre_container'>
+                <span class='titre_gras'>PHOTO & VIDÉOS</span>
+                <br>
+                <span class='titre_leger'>DU CONCERT</span>
+            </p>
+        </div>
+
+        <!-- VIDEOS -->
+        <div class="grid_3col align_center">
+            <!-- Boucle pour les 3 VIDEOS -->
+            <?php for ($i = 1; $i <= 3; $i++) {?>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?php echo get_post_meta($post->ID, 'metadata_191_'.$i, true); ?>" allowfullscreen></iframe>
+                </div>
+            <?php }; ?>
+            <div></div>
+        </div>
+
+        <!-- PHOTOS -->
+        <div class="grid_photos">
+
+            <!-- Boucle pour les 10 PHOTOS -->
+            <?php for ($i = 1; $i <= 10; $i++) {?>
+                <div>
+                    <img class="img_ajust" src="<?php echo get_post_meta($post->ID, 'metadata_192_'.$i, true); ?>" alt="Photo du concert">
+                </div>
+            <?php }; ?>
+            <div></div>
 
         </div>
 

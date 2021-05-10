@@ -9,20 +9,31 @@
 /* PLACEMENT DANS LES CASES DE LA GRILLE */
 
 .distribution_concert_cell {
-    grid-column: 1;
-    grid-row: 1 / 2;
+    @include nomobile {
+        grid-column: 1;
+        grid-row: 1 / 2;
+    }
 }
 .dates_concert_cell {
-    grid-column: 1;
-    grid-row: 2/5;
+    @include nomobile {
+        grid-column: 1;
+        grid-row: 2/5;
+    }
 }
 .programme_concert_cell {
-    grid-column: 2;
-    grid-row: 1 / 4;
+    @include nomobile {
+        grid-column: 2;
+        grid-row: 1 / 4;
+    }
+    @include mobile {
+        grid-row: 1;
+    }
 }
 .partenaires_concert_cell {
-    grid-column: 2;
-    grid-row: 4;
+    @include nomobile {
+        grid-column: 2;
+        grid-row: 4;
+    }
 }
 
 
@@ -30,24 +41,24 @@
 /* POSITIONNEMENT DES ELEMENTS */
 
 /* Distribution */
-.artistes_list {
-    margin-top: 20px;
-}
-.artiste_nom {
-    padding-right: 8px;
-}
 .artiste {
-    padding-bottom: 3px;
+    padding-bottom: 5px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 /* Programme */
 .programme_concert_cell {
-    margin-left: 70px;
+    @include nomobile {
+        margin-left: 89px;
+    }
 }
 
 /* Partenaire */
 .partenaires_concert_cell {
-    margin-left: 70px;
+    @include nomobile {
+        margin-left: 89px;
+    }
 }
 .partenaires_concert_list {
     margin-top: 20px;

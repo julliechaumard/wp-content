@@ -21,6 +21,7 @@ $color_noir_clair: #717171;
 $color_noir_moyen: #545454;
 // NOIR FONCE
 $color_noir_fonce: #454545;
+$color_noir_tres_fonce: #353535;
 
 // VIOLET
 $color_violet: #646085;
@@ -46,6 +47,13 @@ $color_orange: #FA6400;
 $color_body_bg: $color_gris_fonce;
 // BACKGROUND PAGE
 $color_page_bg: $color_blanc;
+
+// BACKGROUND NEWSLETTER
+$color_newsl_bg: $color_mordore;
+
+// BACKGROUND FOOTER
+$color_footer_bg: $color_noir_tres_fonce;
+
 
 ///// COULEURS PAR PAGE
 
@@ -73,12 +81,24 @@ $color_nl: $color_mordore;
     background-color: $color_saison;
 }
 
+.bg_color_newsl {
+    background-color: $color_newsl_bg;
+}
+
+.bg_color_footer {
+    background-color: $color_footer_bg;
+}
+
+
 // ///////////////////////////////////////////
 // CLASSES DES COULEURS DE TEXTE
 // ///////////////////////////////////////////
 
 .tx_color_noir_fonce {
     color: $color_noir_fonce;
+}
+.tx_color_blanc {
+    color: white;
 }
 
 .tx_color_saison {

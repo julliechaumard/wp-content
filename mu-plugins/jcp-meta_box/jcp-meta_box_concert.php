@@ -412,6 +412,7 @@ function metabox_concert($post) {
             <div class=''>
 
                 <h3>PHOTOS</h3>
+                <p>Grouper les photos portraits ensemble et les paysables ensemble</p>
 
                 <div class='metagroup_sub_items grid_4fr_simple'>
                     <?php for ($i = 1; $i <= 10; $i++) { ?>
