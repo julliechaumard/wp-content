@@ -226,7 +226,7 @@ Template Post Type: concert
         </div>
 
         <!-- VIDEOS -->
-        <div class="grid_3col align_center">
+        <div class="photos_container grid_3col align_center">
             <!-- Boucle pour les 3 VIDEOS -->
             <?php for ($i = 1; $i <= 3; $i++) {?>
                 <div class="embed-responsive embed-responsive-16by9">
@@ -237,7 +237,7 @@ Template Post Type: concert
         </div>
 
         <!-- PHOTOS -->
-        <div class="grid_photos">
+        <div class="photos_container grid_photos">
 
             <!-- Boucle pour les 10 PHOTOS -->
             <?php for ($i = 1; $i <= 10; $i++) {?>

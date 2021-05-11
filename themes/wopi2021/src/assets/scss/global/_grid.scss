@@ -36,11 +36,62 @@
     }
 }
 
+/* GRID BANNER TOP */
+.grid_2col12_3row {
+    height: 546px;
+    @media screen and (max-width:990px){
+        height: 452px;
+    }
+    @media screen and (max-width:890px){
+        height: 486px;
+    }
+    @media screen and (max-width:790px){
+        height: 355px;
+    }
+    display: grid;
+    grid-template-columns: 35% 65%;
+    grid-template-rows: 55% 22% 25%;
+}
 /* GRID BANNER ACCROCHE*/
 .grid_1col1_1row {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
 }
+
+/* BANNER TOP MOBILE*/
+.grid_2col12_3row_mobile {
+    height: 666px;
+    @media screen and (max-width:700px){
+        height: 397px;
+    }
+    @media screen and (max-width:600px){
+        height: 340px;
+    }
+    @media screen and (max-width:500px){
+        height: 279px;
+    }
+    @media screen and (max-width:400px){
+        height: 223px;
+    }
+    @media screen and (max-width:300px){
+        height: 166px;
+    }
+    @media screen and (max-width:200px){
+        height: 112px;
+    }
+
+    display: grid;
+    grid-template-columns: 24px auto;
+    @media screen and (max-width:400px){
+        grid-template-columns: 15px auto;
+    }
+    grid-template-rows: 70% 30%;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+
+
 /* GRID FOOTER CONTACTS */
 .grid_2col12 {
     display: grid;
@@ -84,15 +135,6 @@
     row-gap: 10px;
 }
 
-/* ******************************************************
-** COLUMS + ROWS */
-
-/* GRID BANNER TOP */
-.grid_2col12_3row {
-    display: grid;
-    grid-template-columns: minmax(0, 35%) minmax(0, 65%);
-    grid-template-rows: minmax(0, 55%) minmax(0, 22%) minmax(0, 23%);
-}
 
 /* FOOTER LOGOS INSTITUTIONNELS*/
 .grid_2col1111_2row{

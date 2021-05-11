@@ -79,11 +79,51 @@
     padding-bottom: 9px;
 }
 
+/* MENU HAMBURGER */
+.menu_hamburger {
+    cursor: pointer;
+    width: 32px;
+    height: auto;
+    justify-self: center;
+    @include mobilexs {
+        justify-self: start;
+    }
+}
 
+.icone_hamburger {
+    width: 32px;
+    height: auto;
+}
 
+.menu_hamburger_open {
+    display: none;
+    opacity: 0;
+}
 
+.show_menu_hamburger {
+    display: grid;
+    opacity: 1;
+}
+.hide_menu_hamburger {
+    display: none;
+    opacity: 0;
+}
 
+/* CSS MENU RESEAUX SOCIAUX */
+.menu_res_soc_item {
+    display: inline-block;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: center;
+    @include mobile {
+        margin-bottom: 5px;
+    }
+}
 
+.nav_res_soc_cell {
+    margin-top: 27px;
+    margin-bottom: 8px;
+}
 
 
 
