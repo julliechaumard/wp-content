@@ -209,6 +209,7 @@ function metabox_concert($post) {
                         if ( $loop_salle->have_posts() ) {
                             while ( $loop_salle->have_posts() ) {
                                 $loop_salle->the_post();
+                                // on récupère le slug de toutes les salles pour les afficher dans le menu déroulant
                                 $listeoptions_salle[] = get_post_field( 'post_name', get_post() );
                         }}
                         foreach ($listeoptions_salle as $value) {

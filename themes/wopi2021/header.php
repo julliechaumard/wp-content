@@ -46,12 +46,12 @@ Chrome
   <?php endif; ?>
 
   <!-- mots-clés -->
-  <meta name="keywords" content="danse, amiens, spectacle" />
+  <meta name="keywords" content="orchestre, amiens, spectacle, picardie, concert" />
 
   <!-- Auteur / Créateur / Publication -->
   <link rel="author" href="mailto:juliechaumard@icloud.com" title="JulieChaumard.paris" />
   <meta name="creator" content="JulieChaumard.paris">
-  <meta name="publisher" content="Maison de la Culture d'Amiens">
+  <meta name="publisher" content="Orchestre de Picardie">
 
   <!-- Page accueil -->
   <link rel="start" href="http://localhost:8888/" />
@@ -70,7 +70,7 @@ Chrome
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:title" content="Tatiana Julien">
-  <meta property="og:description" content="Tatiana Julien danse pour la Maison de la Culture d'Amiens">
+  <meta property="og:description" content="Les concert de l'Orchestre de Picardie">
   <meta property="og:url" content="http://localhost:8888/">
   <meta property="og:image" content="">
   <meta property="og:image:alt" content="Illustration du site">

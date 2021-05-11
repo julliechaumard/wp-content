@@ -55,7 +55,11 @@ if ( is_page(array('agenda', 'Saison')) OR is_singular (array( 'collaboration','
                     <li class="sub_menu_item"><a href="#">Recrutements</a></li>
                 </ul>
             </li>
-            <li class='menu_item menu_item_level1'><a href="#">Médiathèque</a></li>
+            <li class='menu_item'><a href="#">Médiathèque</a>
+                <ul class='sub_menu'>
+                    <li class="sub_menu_item"><a href="#">Toute la médiathèqyue</a></li>
+                </ul>
+            </li>
         </ul>
 
     </nav>
@@ -118,7 +122,11 @@ if ( is_page(array('agenda', 'Saison')) OR is_singular (array( 'collaboration','
                     <li class="sub_menu_item"><a href="#">Recrutements</a></li>
                 </ul>
             </li>
-            <li class='menu_item menu_item_level1'><a href="#">Médiathèque</a></li>
+            <li class='menu_item'><a href="#">Médiathèque</a>
+                <ul class='sub_menu'>
+                    <li class="sub_menu_item"><a href="#">Toute la médiathèqyue</a></li>
+                </ul>
+            </li>
         </ul>
     </nav>
 

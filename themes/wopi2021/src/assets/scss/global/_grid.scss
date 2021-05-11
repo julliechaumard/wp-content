@@ -104,6 +104,10 @@
 .grid_10col {
     display: grid;
     grid-template-columns: repeat(5,17px max-content);
+    @media screen and (max-width:940){
+        grid-template-columns: repeat(1,17px max-content);
+        row-gap: 10px;
+    }
     column-gap: 10px;
     align-items: center;
 }
