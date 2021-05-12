@@ -30,10 +30,10 @@ Template Post Type: concert
             </div>
 
             <!-- Les artistes -->
-            <div class='listes_concert'>
+            <div class='liste_art_comp'>
                 <?php for ($i = 1; $i <= 30; $i++) { ?>
                     <?php if(!empty(get_post_meta($post->ID, 'metadata_186_'.$i, true))) { ?>
-                        <div class="artiste">
+                        <div class="artiste paddingb_5">
                             <div class="paddingr_8 ubuntu_bold">
                                 <?php echo get_post_meta($post->ID, 'metadata_186_'.$i, true); ?>
                             </div>
@@ -150,10 +150,10 @@ Template Post Type: concert
             </div>
 
             <!-- Les pieces -->
-            <div class='listes_concert margin_subtitle_bottom'>
+            <div class='liste_art_comp margin_subtitle_bottom'>
                 <?php for ($i = 1; $i <= 20; $i++) { ?>
                     <?php if(!empty(get_post_meta($post->ID, 'metadata_194_'.$i, true))) { ?>
-                        <div class="artiste">
+                        <div class="artiste paddingb_5">
                             <div class="paddingr_8 ubuntu_bold">
                                 <?php echo get_post_meta($post->ID, 'metadata_194_'.$i, true); ?>
                             </div>
@@ -257,7 +257,7 @@ Template Post Type: concert
         </div>
 
         <!-- VIDEOS -->
-        <div class="photos_container grid_3col align_center">
+        <div class="photos_container grid_3col grid_column_gap10 grid_row_gap10 align_center">
             <!-- Boucle pour les 3 VIDEOS -->
             <?php for ($i = 1; $i <= 3; $i++) {?>
                 <?php if(!empty(get_post_meta($post->ID, 'metadata_191_'.$i, true))) { ?>

@@ -3,9 +3,11 @@
 // COULEUR LOGO + COULEUR
 // selon page
 if ( is_page(array('agenda', 'Saison')) OR is_singular (array( 'collaboration','concert' )) OR is_front_page() ) { 
-    $url_logo = '/dist/assets/images/logos/logo_orchestre_rose.jpg';
     $color = 'color_saison';
-  }
+}
+if ( is_page(array('page-accueil')) OR is_front_page() ) { 
+$color = 'color_accueil';
+}
 
 ?>
 

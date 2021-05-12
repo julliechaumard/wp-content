@@ -66,13 +66,17 @@
 /* PLACEMENT DANS LA CASE ACCROCHE */
 .accroche_cell {
     padding-bottom: 20px;
-    padding-left: 35px;
+    padding-left: 25px;
     padding-top: 5px;
-    padding-right: 30px;
-    @include mobile{
-        padding-left: 24px;
+    padding-right: 16px;
+    @media screen and (max-width:910px){
+        padding-left: 18px;
     }
-    @media screen and (max-width:400px){
+    @media screen and (max-width:751px){
+        padding-top: 20px;
+        padding-right: 15%;
+    }
+    @media screen and (max-width:751px){
         padding-left: 15px;
     }
     overflow: hidden;

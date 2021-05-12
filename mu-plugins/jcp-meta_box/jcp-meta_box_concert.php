@@ -165,7 +165,7 @@ function metabox_concert($post) {
                 <!-- SOUS-TITRE DU CONCERT -->
                 <div class="pinput">
                     <label for="metadata_201">Sous-titre du concert</label>
-                    <input type="text" name="metadata_201" id="metadata_201" placeholder='en MAJUSCULE' value="<?php echo $metadata_201; ?>"/>
+                    <input type="text" name="metadata_201" id="metadata_201" placeholder='en minuscule' value="<?php echo $metadata_201; ?>"/>
                 </div>
             </div>
         </div>
@@ -176,7 +176,7 @@ function metabox_concert($post) {
     <!-- GROUPE DATES ET LIEUX -->
     <section class='metagroup'>
         <h2>DATES ET LIEUX</h2>
-
+        <h3>❗️ METTRE LA DERNIÈRE DATE DE LA SÉRIE DANS "REPRÉSENTATION 10"</h3>
         <?php for ($i = 1; $i <= 10; $i++) { ?>
             <div class=''>
                 <h3>REPRÉSENTATION <?php echo $i; ?></h3>
@@ -252,7 +252,7 @@ function metabox_concert($post) {
         <h2>LES ARTISTES ou ENTITÉS</h2>
 
             <div class=''>
-            
+                <h3>LES 3 PREMIERS SONT DANS LA PAGE AGENDA / ACCUEIL</h3>
                 <div class='metagroup_sub_items grid_4fr_simple'>
                 <?php for ($i = 1; $i <= 30; $i++) { ?>
                     <!-- NOM de L'ARTISTE -->

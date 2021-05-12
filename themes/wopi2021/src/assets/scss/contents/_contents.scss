@@ -16,6 +16,12 @@
         font-size: 27px;
     }
 }
+.titre_card_container {
+    font-size: 23px;
+    @include mobile { 
+        font-size: 17px;
+    }
+}
 .titre_gras {
     font-family: ubuntu_moyen;
 }
@@ -25,13 +31,22 @@
 
 /* TITRE DES CHAPITRES */
 .titre_chapitre_container {
-    font-size: 24px;
+    font-size: 27px;
+    @include mobilexs { 
+        font-size: 20px;
+    }
 }
 
 /* TITRE PLAINBOX */
 .titre_plainbox_container {
     font-size: 40px;
     color: white;
+    @include mobile { 
+        font-size: 30px;
+    }
+    @include mobilexs { 
+        font-size: 20px;
+    }
 }
 
 /* PETITS TITRES */
@@ -113,7 +128,12 @@ ul, li {
         border-right: solid 0px !important;
     }
 }
-
+.pipe_accueil {
+    border-right: solid 1px $color_accueil !important;
+    &:last-child {
+        border-right: solid 0px !important;
+    }
+}
 /*****************************************
 * IMAGE */
 
@@ -124,6 +144,9 @@ ul, li {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+.img_ajust_liste {
+    width: 100%;
 }
 
 /* LOGO FOOTER */
@@ -175,12 +198,40 @@ ul, li {
     color: $color_noir_fonce;
     background-color: white;
     font-size: 18px;
+    @include mobile { 
+        font-size: 14px;
+    }
 }
 
 
 
 /*****************************************
 * TEXTES */
+
+/* FONT SIZE ***********************/
+.fontsize_13 {
+    font-size: 13px;
+}
+
+/* ALIGNEMENT */
+.texte_right {
+    text-align: right;
+}
+/* Distribution du concert */
+.liste_art_comp {
+    font-size: 14px;
+}
+/* DATES du concert */
+.liste_date {
+    font-size: 15px;
+}
+
+/* Texte divers simple */
+/* LISTE DES CONCERTS ACCROCHE */
+.tx_simple_size {
+    font-size: 15px;
+}
+
 
 .alert {
     color: $color_orange;
@@ -192,7 +243,16 @@ ul, li {
 
 /* ACCROCHE */
 .accroche_cell_texte {
-    font-size: 17px;
+    font-size: 21px;
+    @media screen and (max-width:951px){
+        font-size: 20px;
+    }
+    @media screen and (max-width:790px){
+        font-size: 15px;
+    }
+    @media screen and (min-width:701px) and (max-width:729px){
+        font-size: 14px;
+    }
     color: $color_blanc;
 }
 .accroche_cell_texte_gras {
@@ -206,14 +266,7 @@ ul, li {
     font-family: ubuntu_moyen;
 }
 
-/* Distribution du concert */
-.listes_concert {
-    font-size: 14px;
-}
-/* DATES du concert */
-.liste_date {
-    font-size: 15px;
-}
+
 
 /* CONTENT WP POST */
 .content_wp {

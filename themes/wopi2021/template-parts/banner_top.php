@@ -14,7 +14,7 @@
     <div class='Title_cell tx_color_noir_fonce'>
         <div>
             <h1 class='titre_page_container'>
-                <!-- CONTENU DU TITRE DIFFERENTE SELON PAGE -->
+                <!-- CONTENU DU TITRE DIFFERENTE SELON PAGE function_titre_page.php -->
                 <span class='titre_gras'><?php titre_gras($post) ?></span>
                 <br>
                 <span class='titre_leger'><?php titre_leger($post) ?></span>
@@ -35,7 +35,7 @@
             <div class=''>
                 <p class='accroche_cell_texte'>
                     <!-- GENRE -->
-                    <span class='accroche_cell_texte_gras margint_20_block'>
+                    <span class='accroche_cell_texte_gras margint_20 block'>
                         <?php $concert_genre =  wp_get_post_terms($post->ID, 'genre', array("fields" => "names"));
                         if (!empty($concert_genre)) {echo $concert_genre[0];}?>
                     </span>
@@ -47,16 +47,33 @@
         </div> 
     <?php endif;?>
 
-    <!-- AUTRES PAGES -->
+    <!-- AGENDA -->
     <?php 
-    if ( ! is_singular (array( 'concert' )) ) : ?>
+    if ( is_page(array('agenda')) ) : ?>
         <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
             <div class=''>
-            <p class='accroche_cell_texte'>
-                <span class='accroche_cell_texte_gras'>PAS FICHE CONCERT</span>
-                <br>
-                <span class='accroche_cell_texte_leger'>EST UN EXEMPLE POUR VOUS MONTRER COMBIEN NOUS ALLONS FAIRE EN SORTE QUE LES SPECTATEUR PASSENT UNE BONNE SOIR2E SOIT PARTICULIEREMENT ADAPTEESAR</span>
-            </p>
+                <p class='accroche_cell_texte'>
+                    <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_110', true); ?></span>
+                    <br>
+                    <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_111', true); ?></span>
+                </p>
+            </div>
+        </div>
+    <?php endif;?>
+
+    <!-- ACCUEIL -->
+    <?php
+    if ( is_front_page() ) : ?>
+        <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
+            <div class=''>
+                <p class='accroche_cell_texte'>
+                    <a href="<?php echo get_post_meta($post->ID, 'metadata_015', true); ?>">
+                        <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_003', true); ?></span>
+                        <br>
+                        <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_004', true); ?></span>
+                    </a>
+                </p>
+            </div>
         </div>
     <?php endif; ?>
     
@@ -135,7 +152,7 @@
             <div class=''>
                 <p class='accroche_cell_texte'>
                     <!-- GENRE -->
-                    <span class='accroche_cell_texte_gras margint_20_block'>
+                    <span class='accroche_cell_texte_gras block'>
                         <?php $concert_genre =  wp_get_post_terms($post->ID, 'genre', array("fields" => "names"));
                         if (!empty($concert_genre)) {echo $concert_genre[0];}?>
                     </span>
@@ -147,16 +164,33 @@
         </div> 
     <?php endif;?>
 
-    <!-- AUTRES PAGES -->
+    <!-- AGENDAS -->
     <?php 
-    if ( ! is_singular (array( 'concert' )) ) : ?>
+    if ( is_page(array('agenda')) ) : ?>
         <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
             <div class=''>
-            <p class='accroche_cell_texte'>
-                <span class='accroche_cell_texte_gras'>PAS FICHE CONCERT</span>
-                <br>
-                <span class='accroche_cell_texte_leger'>EST UN EXEMPLE POUR VOUS MONTRER COMBIEN NOUS ALLONS FAIRE EN SORTE QUE LES SPECTATEUR PASSENT UNE BONNE SOIR2E SOIT PARTICULIEREMENT ADAPTEESAR</span>
-            </p>
+                <p class='accroche_cell_texte'>
+                    <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_110', true); ?></span>
+                    <br>
+                    <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_111', true); ?></span>
+                </p>
+            </div>
+        </div>
+    <?php endif; ?>
+
+    <!-- ACCUEIL -->
+    <?php
+    if ( is_front_page() ) : ?>
+        <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
+            <div class=''>
+                <p class='accroche_cell_texte'>
+                    <a href="<?php echo get_post_meta($post->ID, 'metadata_015', true); ?>">
+                        <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_003', true); ?></span>
+                        <br>
+                        <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_004', true); ?></span>
+                    </a>
+                </p>
+            </div>
         </div>
     <?php endif; ?>
 

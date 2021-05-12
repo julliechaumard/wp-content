@@ -38,7 +38,10 @@
 /* LES ELEMENTS */
 
 .borderl_white {
-    border-left: solid 1px white;
+    @include nomobile {
+        border-left: solid 1px white;
+    } 
+    
     @include mobile {
         border-top: solid 1px white;
     } 

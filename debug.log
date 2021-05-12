@@ -1,17 +1,113 @@
-[11-May-2021 18:09:38 UTC] PHP Fatal error:  Uncaught Error: Object of class WP_Query could not be converted to string in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/single-concert.php:70
+[12-May-2021 09:41:54 UTC] PHP Notice:  Undefined offset: 1 in /Users/julie/Documents/GitHub/wopi2021/wp-includes/class-wp-query.php on line 3300
+[12-May-2021 09:41:54 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 117
+[12-May-2021 09:41:54 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 118
+[12-May-2021 09:41:54 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 123
+[12-May-2021 09:41:54 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 126
+[12-May-2021 09:41:54 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 101
+[12-May-2021 09:41:54 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 101
+[12-May-2021 09:41:54 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 101
+[12-May-2021 09:41:54 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 101
+[12-May-2021 09:41:54 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 101
+[12-May-2021 09:41:54 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 101
+[12-May-2021 09:41:54 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 101
+[12-May-2021 09:41:54 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 101
+[12-May-2021 09:41:54 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 101
+[12-May-2021 09:41:54 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 143
+[12-May-2021 09:46:32 UTC] PHP Notice:  Undefined variable: preserve_post in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 114
+[12-May-2021 09:46:32 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 120
+[12-May-2021 09:46:32 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 121
+[12-May-2021 09:46:32 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 126
+[12-May-2021 09:46:32 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 129
+[12-May-2021 09:46:32 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 102
+[12-May-2021 09:46:32 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 102
+[12-May-2021 09:46:32 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 102
+[12-May-2021 09:46:32 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 102
+[12-May-2021 09:46:32 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 102
+[12-May-2021 09:46:32 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 102
+[12-May-2021 09:46:32 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 102
+[12-May-2021 09:46:32 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 102
+[12-May-2021 09:46:32 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 102
+[12-May-2021 09:46:32 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 146
+[12-May-2021 09:47:01 UTC] PHP Notice:  Undefined variable: preserve_post in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 114
+[12-May-2021 09:47:01 UTC] PHP Fatal error:  Uncaught Error: Call to a member function have_posts() on null in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php:46
 Stack trace:
 #0 /Users/julie/Documents/GitHub/wopi2021/wp-includes/template-loader.php(106): include()
 #1 /Users/julie/Documents/GitHub/wopi2021/wp-blog-header.php(19): require_once('/Users/julie/Do...')
 #2 /Users/julie/Documents/GitHub/wopi2021/index.php(17): require('/Users/julie/Do...')
 #3 {main}
-  thrown in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/single-concert.php on line 70
-[11-May-2021 18:10:24 UTC] PHP Parse error:  syntax error, unexpected '$loop_salle' (T_VARIABLE) in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/single-concert.php on line 70
-[11-May-2021 19:05:29 UTC] PHP Notice:  Undefined variable: ville in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/single-concert.php on line 89
-[11-May-2021 19:05:29 UTC] PHP Notice:  Undefined variable: nom_salle in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/single-concert.php on line 103
-[11-May-2021 19:05:29 UTC] PHP Notice:  Undefined variable: url_salle in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/single-concert.php on line 104
-[11-May-2021 19:05:29 UTC] PHP Notice:  Undefined variable: adresse_salle in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/single-concert.php on line 105
-[11-May-2021 19:05:29 UTC] PHP Notice:  Undefined variable: telephone_salle in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/single-concert.php on line 106
-[11-May-2021 19:05:29 UTC] PHP Notice:  Undefined variable: mail_salle in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/single-concert.php on line 106
-[11-May-2021 20:47:50 UTC] PHP Parse error:  syntax error, unexpected end of file in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/single-concert.php on line 274
-[11-May-2021 22:24:33 UTC] PHP Parse error:  syntax error, unexpected ')' in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/single-concert.php on line 224
-[11-May-2021 22:24:46 UTC] PHP Parse error:  syntax error, unexpected ')' in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/single-concert.php on line 224
+  thrown in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 46
+[12-May-2021 09:47:18 UTC] PHP Notice:  Undefined variable: preserve_post in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 114
+[12-May-2021 09:47:18 UTC] PHP Fatal error:  Uncaught Error: Call to a member function have_posts() on null in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php:46
+Stack trace:
+#0 /Users/julie/Documents/GitHub/wopi2021/wp-includes/template-loader.php(106): include()
+#1 /Users/julie/Documents/GitHub/wopi2021/wp-blog-header.php(19): require_once('/Users/julie/Do...')
+#2 /Users/julie/Documents/GitHub/wopi2021/index.php(17): require('/Users/julie/Do...')
+#3 {main}
+  thrown in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 46
+[12-May-2021 09:50:40 UTC] PHP Notice:  Undefined variable: preserve_post in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 118
+[12-May-2021 09:50:40 UTC] PHP Fatal error:  Uncaught Error: Call to a member function have_posts() on null in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php:45
+Stack trace:
+#0 /Users/julie/Documents/GitHub/wopi2021/wp-includes/template-loader.php(106): include()
+#1 /Users/julie/Documents/GitHub/wopi2021/wp-blog-header.php(19): require_once('/Users/julie/Do...')
+#2 /Users/julie/Documents/GitHub/wopi2021/index.php(17): require('/Users/julie/Do...')
+#3 {main}
+  thrown in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 45
+[12-May-2021 10:06:23 UTC] PHP Notice:  Undefined variable: ville in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 109
+[12-May-2021 10:06:23 UTC] PHP Notice:  Undefined variable: ville in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 109
+[12-May-2021 10:06:23 UTC] PHP Notice:  Undefined variable: ville in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 109
+[12-May-2021 10:06:23 UTC] PHP Notice:  Undefined variable: ville in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 109
+[12-May-2021 10:06:23 UTC] PHP Notice:  Undefined variable: ville in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 109
+[12-May-2021 10:06:23 UTC] PHP Notice:  Undefined variable: ville in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 109
+[12-May-2021 10:06:23 UTC] PHP Notice:  Undefined variable: ville in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 109
+[12-May-2021 10:06:23 UTC] PHP Notice:  Undefined variable: ville in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 109
+[12-May-2021 10:06:23 UTC] PHP Notice:  Undefined variable: ville in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 109
+[12-May-2021 10:15:39 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 103
+[12-May-2021 10:16:07 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 104
+[12-May-2021 10:16:27 UTC] PHP Notice:  Array to string conversion in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 116
+[12-May-2021 10:16:27 UTC] PHP Notice:  Array to string conversion in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 116
+[12-May-2021 10:16:27 UTC] PHP Notice:  Array to string conversion in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 116
+[12-May-2021 10:16:27 UTC] PHP Notice:  Array to string conversion in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 116
+[12-May-2021 10:16:27 UTC] PHP Notice:  Array to string conversion in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 116
+[12-May-2021 10:16:27 UTC] PHP Notice:  Array to string conversion in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 116
+[12-May-2021 10:16:27 UTC] PHP Notice:  Array to string conversion in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 116
+[12-May-2021 10:16:27 UTC] PHP Notice:  Array to string conversion in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 116
+[12-May-2021 10:16:27 UTC] PHP Notice:  Array to string conversion in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 116
+[12-May-2021 10:16:27 UTC] PHP Notice:  Array to string conversion in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 116
+[12-May-2021 10:17:17 UTC] PHP Notice:  Undefined offset: 10 in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 116
+[12-May-2021 10:19:26 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 106
+[12-May-2021 10:19:26 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 106
+[12-May-2021 10:19:26 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 106
+[12-May-2021 10:19:26 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 106
+[12-May-2021 10:19:26 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 106
+[12-May-2021 10:19:26 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 106
+[12-May-2021 10:19:26 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 106
+[12-May-2021 10:19:26 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 106
+[12-May-2021 10:19:26 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 106
+[12-May-2021 10:19:26 UTC] PHP Notice:  Undefined offset: 10 in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 119
+[12-May-2021 10:20:22 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 109
+[12-May-2021 10:20:22 UTC] PHP Notice:  Trying to access array offset on value of type bool in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 122
+[12-May-2021 10:20:22 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 109
+[12-May-2021 10:20:22 UTC] PHP Notice:  Trying to access array offset on value of type bool in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 122
+[12-May-2021 10:20:22 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 109
+[12-May-2021 10:20:22 UTC] PHP Notice:  Trying to access array offset on value of type bool in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 122
+[12-May-2021 10:20:22 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 109
+[12-May-2021 10:20:22 UTC] PHP Notice:  Trying to access array offset on value of type bool in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 122
+[12-May-2021 10:20:22 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 109
+[12-May-2021 10:20:22 UTC] PHP Notice:  Trying to access array offset on value of type bool in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 122
+[12-May-2021 10:20:22 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 109
+[12-May-2021 10:20:22 UTC] PHP Notice:  Trying to access array offset on value of type bool in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 122
+[12-May-2021 10:20:22 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 109
+[12-May-2021 10:20:22 UTC] PHP Notice:  Trying to access array offset on value of type bool in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 122
+[12-May-2021 10:20:22 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 109
+[12-May-2021 10:20:22 UTC] PHP Notice:  Trying to access array offset on value of type bool in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 122
+[12-May-2021 10:20:22 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 109
+[12-May-2021 10:20:22 UTC] PHP Notice:  Trying to access array offset on value of type bool in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 122
+[12-May-2021 10:20:22 UTC] PHP Notice:  Trying to access array offset on value of type bool in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 122
+[12-May-2021 10:21:59 UTC] PHP Notice:  Uninitialized string offset: 6 in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 122
+[12-May-2021 10:21:59 UTC] PHP Notice:  Uninitialized string offset: 7 in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 122
+[12-May-2021 10:21:59 UTC] PHP Notice:  Uninitialized string offset: 8 in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 122
+[12-May-2021 10:21:59 UTC] PHP Notice:  Uninitialized string offset: 9 in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 122
+[12-May-2021 10:21:59 UTC] PHP Notice:  Uninitialized string offset: 10 in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 122
+[12-May-2021 10:24:41 UTC] PHP Notice:  Undefined variable: ville in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 110
+[12-May-2021 18:46:55 UTC] PHP Notice: A feed could not be found at `https://feeds.feedburner.com/wpfr`; the status code is `200` and content-type is `text/html; charset=UTF-8` in /Users/julie/Documents/GitHub/wopi2021/wp-includes/class-simplepie.php on line 1728
+[12-May-2021 19:30:08 UTC] PHP Parse error:  syntax error, unexpected ')', expecting ';' or ',' in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-agenda.php on line 106

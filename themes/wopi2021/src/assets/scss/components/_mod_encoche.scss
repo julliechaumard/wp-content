@@ -1,0 +1,372 @@
+/* CSS */
+/* MODULE */
+
+/* ******************************************************
+** LES ENCOCHES (PETITS CARRES)
+****************************************************** */
+
+%encocheblanc {
+    width: 32px;
+    height: 27px;
+    background-color: white;
+}
+
+.concert_card {
+    @media screen and (min-width:800px) and (max-width:10000px) {
+        &:nth-of-type(1){
+                .encoche_blanc {
+                    width: 32px;
+                    height: 27px;
+                    margin-top: -1px;
+                    margin-left: -1px;
+                    background-color: white;
+            }
+        }
+        &:nth-of-type(5){
+            .encoche_blanc {
+                width: 32px;
+                height: 27px;
+                margin-top: -1px;
+                margin-left: -1px;
+                background-color: white;
+            }
+        }
+        &:nth-of-type(9){
+            .encoche_blanc {
+                width: 32px;
+                height: 27px;
+                margin-top: -1px;
+                margin-left: -1px;
+                background-color: white;
+            }
+        }
+        &:nth-of-type(10){
+            .encoche_blanc {
+                width: 32px;
+                height: 27px;
+                margin-top: -1px;
+                margin-left: -1px;
+                background-color: white;
+            }
+        }
+        &:nth-of-type(14){
+            .encoche_blanc {
+                width: 32px;
+                height: 27px;
+                margin-top: -1px;
+                margin-left: -1px;
+                background-color: white;
+            }
+        }
+        &:nth-of-type(18){
+            .encoche_blanc {
+                width: 32px;
+                height: 27px;
+                margin-top: -1px;
+                margin-left: -1px;
+                background-color: white;
+            }
+        }
+        &:nth-of-type(19){
+            .encoche_blanc {
+                width: 32px;
+                height: 27px;
+                margin-top: -1px;
+                margin-left: -1px;
+                background-color: white;
+            }
+        }
+        &:nth-of-type(23){
+            .encoche_blanc {
+                width: 32px;
+                height: 27px;
+                margin-top: -1px;
+                margin-left: -1px;
+                background-color: white;
+            }
+        }
+        &:nth-of-type(27){
+            .encoche_blanc {
+                width: 32px;
+                height: 27px;
+                margin-top: -1px;
+                margin-left: -1px;
+                background-color: white;
+            }
+        }
+        &:nth-of-type(28){
+            .encoche_blanc {
+                width: 32px;
+                height: 27px;
+                margin-top: -1px;
+                margin-left: -1px;
+                background-color: white;
+            }
+        }
+        &:nth-of-type(32){
+            .encoche_blanc {
+                width: 32px;
+                height: 27px;
+                margin-top: -1px;
+                margin-left: -1px;
+                background-color: white;
+            }
+        }
+        &:nth-of-type(36){
+            .encoche_blanc {
+                width: 32px;
+                height: 27px;
+                margin-top: -1px;
+                margin-left: -1px;
+                background-color: white;
+            }
+        }
+        &:nth-of-type(37){
+            .encoche_blanc {
+                width: 32px;
+                height: 27px;
+                margin-top: -1px;
+                margin-left: -1px;
+                background-color: white;
+            }
+        }
+        &:nth-of-type(41){
+            .encoche_blanc {
+                width: 32px;
+                height: 27px;
+                margin-top: -1px;
+                margin-left: -1px;
+                background-color: white;
+            }
+        }
+        &:nth-of-type(45){
+            .encoche_blanc {
+                width: 32px;
+                height: 27px;
+                margin-top: -1px;
+                margin-left: -1px;
+                background-color: white;    
+            }
+        }
+    }
+
+
+
+    @media screen and (min-width:401px) and (max-width:799px){
+        &:nth-of-type(1){
+            .encoche_blanc {
+                width: 32px;
+                height: 27px;
+                margin-top: -1px;
+                margin-left: -1px;
+                background-color: white;
+        }
+        }
+        &:nth-of-type(4){
+            .encoche_blanc {
+                width: 32px;
+                height: 27px;
+                margin-top: -1px;
+                margin-left: -1px;
+                background-color: white;
+            }
+        }
+        &:nth-of-type(5){
+            .encoche_blanc {
+                width: 32px;
+                height: 27px;
+                margin-top: -1px;
+                margin-left: -1px;
+                background-color: white;
+            }
+        }
+        &:nth-of-type(8){
+            .encoche_blanc {
+                width: 32px;
+                height: 27px;
+                margin-top: -1px;
+                margin-left: -1px;
+                background-color: white;
+            }
+        }
+        &:nth-of-type(9){
+            .encoche_blanc {
+                width: 32px;
+                height: 27px;
+                margin-top: -1px;
+                margin-left: -1px;
+                background-color: white;
+            }
+        }
+        &:nth-of-type(12){
+            .encoche_blanc {
+                width: 32px;
+                height: 27px;
+                margin-top: -1px;
+                margin-left: -1px;
+                background-color: white;
+            }
+        }
+        &:nth-of-type(13){
+            .encoche_blanc {
+                width: 32px;
+                height: 27px;
+                margin-top: -1px;
+                margin-left: -1px;
+                background-color: white;
+            }
+        }
+        &:nth-of-type(16){
+            .encoche_blanc {
+                width: 32px;
+                height: 27px;
+                margin-top: -1px;
+                margin-left: -1px;
+                background-color: white;
+            }
+        }
+        &:nth-of-type(17){
+            .encoche_blanc {
+                width: 32px;
+                height: 27px;
+                margin-top: -1px;
+                margin-left: -1px;
+                background-color: white;
+            }
+        }
+        &:nth-of-type(20){
+            .encoche_blanc {
+                width: 32px;
+                height: 27px;
+                margin-top: -1px;
+                margin-left: -1px;
+                background-color: white;
+            }
+        }
+        &:nth-of-type(21){
+            .encoche_blanc {
+                width: 32px;
+                height: 27px;
+                margin-top: -1px;
+                margin-left: -1px;
+                background-color: white;
+            }
+        }
+        &:nth-of-type(24){
+            .encoche_blanc {
+                width: 32px;
+                height: 27px;
+                margin-top: -1px;
+                margin-left: -1px;
+                background-color: white;
+            }
+        }
+        &:nth-of-type(25){
+            .encoche_blanc {
+                width: 32px;
+                height: 27px;
+                margin-top: -1px;
+                margin-left: -1px;
+                background-color: white;
+            }
+        }
+        &:nth-of-type(28){
+            .encoche_blanc {
+                width: 32px;
+                height: 27px;
+                margin-top: -1px;
+                margin-left: -1px;
+                background-color: white;
+            }
+        }
+        &:nth-of-type(29){
+            .encoche_blanc {
+                width: 32px;
+                height: 27px;
+                margin-top: -1px;
+                margin-left: -1px;
+                background-color: white;    
+            }
+        }
+        &:nth-of-type(32){
+            .encoche_blanc {
+                width: 32px;
+                height: 27px;
+                margin-top: -1px;
+                margin-left: -1px;
+                background-color: white;    
+            }
+        }
+        &:nth-of-type(33){
+            .encoche_blanc {
+                width: 32px;
+                height: 27px;
+                margin-top: -1px;
+                margin-left: -1px;
+                background-color: white;    
+            }
+        }
+        &:nth-of-type(36){
+            .encoche_blanc {
+                width: 32px;
+                height: 27px;
+                margin-top: -1px;
+                margin-left: -1px;
+                background-color: white;    
+            }
+        }
+        &:nth-of-type(37){
+            .encoche_blanc {
+                width: 32px;
+                height: 27px;
+                margin-top: -1px;
+                margin-left: -1px;
+                background-color: white;    
+            }
+        }
+        &:nth-of-type(40){
+            .encoche_blanc {
+                width: 32px;
+                height: 27px;
+                margin-top: -1px;
+                margin-left: -1px;
+                background-color: white;    
+            }
+        }
+        &:nth-of-type(41){
+            .encoche_blanc {
+                width: 32px;
+                height: 27px;
+                margin-top: -1px;
+                margin-left: -1px;
+                background-color: white;    
+            }
+        }
+        &:nth-of-type(44){
+            .encoche_blanc {
+                width: 32px;
+                height: 27px;
+                margin-top: -1px;
+                margin-left: -1px;
+                background-color: white;    
+            }
+        }
+    }
+
+
+
+
+
+    @media screen and (min-width:0px) and (max-width:400px){
+        &:nth-of-type(2n-1){
+                .encoche_blanc {
+                    width: 32px;
+                    height: 27px;
+                    margin-top: -1px;
+                    margin-left: -1px;
+                    background-color: white;
+            }
+        }
+    }
+
+}

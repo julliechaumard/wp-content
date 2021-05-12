@@ -87,12 +87,17 @@
     justify-self: center;
     @include mobilexs {
         justify-self: start;
+        width: 22px;
+        margin-top: 10px;
     }
 }
 
 .icone_hamburger {
     width: 32px;
     height: auto;
+    @include mobilexs {
+        width: 22px;
+    }
 }
 
 .menu_hamburger_open {
@@ -125,8 +130,21 @@
     margin-bottom: 8px;
 }
 
+/* ******************************************************
+** EN SAVOIR PLUS
+****************************************************** */
 
 
+.fleche {
+    a {
+        border-bottom: $color_saison 2px solid;
+        padding-bottom: 3px;
+        font-size: 12px;
+    }
+    img {
+        padding-left: 3px;
+    }
+}
 
 
 

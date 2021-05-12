@@ -5,6 +5,20 @@
 ** LES GRID DU SITE
 ****************************************************** */
 
+/* GRID PLAINBOX */
+.grid {
+    display: grid;
+}
+
+/* ******************************************************
+** POSITIONNEMENT DES ELEMENTS DANS LA GRILLE */
+
+/* CARREE BLANC */
+.grid_area_11 {
+    grid-column: 1;
+    grid-row: 1;
+}
+
 /* ******************************************************
 ** ALIGNEMENTS */
 
@@ -15,10 +29,7 @@
     justify-items: center;
 }
 
-/* GRID PLAINBOX */
-.grid {
-    display: grid;
-}
+
 
 /* ******************************************************
 ** COLUMS */
@@ -104,7 +115,7 @@
 .grid_10col {
     display: grid;
     grid-template-columns: repeat(5,17px max-content);
-    @media screen and (max-width:940){
+    @media screen and (max-width:940px){
         grid-template-columns: repeat(1,17px max-content);
         row-gap: 10px;
     }
@@ -129,14 +140,35 @@
     row-gap: 7px;
 }
 /* 3 VIDEOS PAGE CONCERT*/
+/* LISTE DES CONCERTS PAGE AGENDA */
 .grid_3col {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     @include mobile {
         grid-template-columns: 1fr;
     }
+}
+.grid_3col_liste {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    @media screen and (max-width:799px){
+        grid-template-columns: 1fr 1fr;
+    }
+    @media screen and (max-width:400px){
+        grid-template-columns: 1fr;
+    }
+}
+.grid_column_gap10 {
     column-gap: 10px;
+}
+.grid_column_gap24 {
+    column-gap: 24px;
+}
+.grid_row_gap10 {
     row-gap: 10px;
+}
+.grid_row_gap50 {
+    row-gap: 50px;
 }
 
 

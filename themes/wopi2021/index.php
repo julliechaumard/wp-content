@@ -6,11 +6,11 @@ Template Name: accueil
 
 <?php
  get_header();
- get_template_part('template-parts/header','accueil');
+ get_template_part('template-parts/header','page');
 ?>
 
 <main>
-    toto
+    PAGE ACCUEIL
 </main>
 
 <?php

@@ -13,6 +13,7 @@ $color_blanc: #fff;
 $color_blanc_transparent: rgba(255, 255, 255, 0.901);
 
 // GRIS
+$color_gris_clair: #CACACA;
 $color_gris_fonce: #A09F9F;
 
 // NOIR CLAIR
@@ -80,6 +81,9 @@ $color_nl: $color_mordore;
 .bg_color_saison {
     background-color: $color_saison;
 }
+.bg_color_accueil {
+    background-color: $color_accueil;
+}
 
 .bg_color_newsl {
     background-color: $color_newsl_bg;
@@ -100,8 +104,13 @@ $color_nl: $color_mordore;
 .tx_color_blanc {
     color: white;
 }
+.tx_color_gris_clair {
+    color: $color_gris_clair;
+}
 
 .tx_color_saison {
     color: $color_saison;
 }
-
+.tx_color_accueil {
+    color: $color_accueil;
+}
