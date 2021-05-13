@@ -137,7 +137,6 @@
 
 .fleche {
     a {
-        border-bottom: $color_saison 2px solid;
         padding-bottom: 3px;
         font-size: 12px;
     }
@@ -145,8 +144,21 @@
         padding-left: 3px;
     }
 }
-
-
+.fleche_saison {
+    a {
+        border-bottom: $color_saison 2px solid;
+    }
+}
+.fleche_accueil {
+    a {
+        border-bottom: $color_accueil 2px solid;
+    }
+}
+.fleche_blanc {
+    a {
+        border-bottom: white 2px solid;
+    }
+}
 
 
 

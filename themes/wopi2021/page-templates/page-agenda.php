@@ -22,7 +22,7 @@ Template Name: page_agenda
         </div>
 
         <!-- LISTE DES CONCERTS -->
-        <section class="grid_3col_liste grid_column_gap24 grid_row_gap10 grid_row_gap50 margint_40 margin_section_botton">
+        <section class="grid_3col_liste grid_column_gap24 grid_row_gap50 margint_40 margin_section_botton">
 
             <!-- LOOP AGENDA DES CONCERTS => AUJOURD'HUI -->
 
@@ -55,7 +55,7 @@ Template Name: page_agenda
                     ?>
 
                     <!-- UN CONCERT -->
-                    <div class="concert_card">
+                    <div class="concert_card encoche_list_card">
                         <!-- GENRE -->
                         <div>
                             <p class="texte_right ubuntu_moyen tx_color_gris_clair">
@@ -68,7 +68,7 @@ Template Name: page_agenda
                             <img class='img_ajust_liste grid_area_11' src="<?php echo get_post_meta($post->ID, 'metadata_189', true); ?>" alt="Illustration du concert">
                             <div class="grid_area_11 encoche_blanc"></div>
                         </div>
-                        <div class="concert_card_border">
+                        <div class="concert_card_layout concert_card_border">
                             <!-- TITRE -->
                             <div class="">
                                 <h2 class='titre_card_container'>
@@ -140,7 +140,7 @@ Template Name: page_agenda
                                 endfor;?>
                             </div>
 
-                            <div class="fleche paddingt_20 marginb_6 ubuntu_bold tx_color_saison"><a href="<?php the_permalink(); ?>">EN SAVOIR PLUS <img src="<?php bloginfo('template_directory');?>/dist/assets/images/icones/lien_fleche_rose.png" alt=""></a></div>
+                            <div class="fleche fleche_saison paddingt_20 marginb_6 ubuntu_bold tx_color_saison"><a href="<?php the_permalink(); ?>">EN SAVOIR PLUS <img src="<?php bloginfo('template_directory');?>/dist/assets/images/icones/lien_fleche_rose.png" alt=""></a></div>
                         </div>
 
                     </div>

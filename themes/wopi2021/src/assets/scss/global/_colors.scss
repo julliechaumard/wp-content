@@ -84,6 +84,9 @@ $color_nl: $color_mordore;
 .bg_color_accueil {
     background-color: $color_accueil;
 }
+.bg_color_orchestre {
+    background-color: $color_orchestre;
+}
 
 .bg_color_newsl {
     background-color: $color_newsl_bg;
@@ -101,6 +104,11 @@ $color_nl: $color_mordore;
 .tx_color_noir_fonce {
     color: $color_noir_fonce;
 }
+.tx_color_noir_clair {
+    color: $color_noir_clair;
+}
+
+
 .tx_color_blanc {
     color: white;
 }
@@ -113,4 +121,7 @@ $color_nl: $color_mordore;
 }
 .tx_color_accueil {
     color: $color_accueil;
+}
+.tx_color_orchestre {
+    color: $color_orchestre;
 }

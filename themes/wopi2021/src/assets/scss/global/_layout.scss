@@ -9,8 +9,38 @@
     display: block;
 }
 
+
+.relative {
+    position: relative;
+}
+
+
 /*************************************/
-/* MARGINS & PADDINGS */
+/* ****** WIDTH & HEIGHT *********/
+
+.height_min_200 {
+    min-height: 200px;
+}
+
+/*************************************/
+/* ****** MARGINS & PADDINGS *********/
+
+/* ANNUL MARGIN PAGE DESKTOP */
+.nopagemarge_desk {
+    @include nomobile {
+        margin-right: -35px;
+        margin-left: -35px;
+    }
+}
+
+/* ANNUL MARGIN PAGE MOBILE */
+.nopagemarge_mob {
+    @include mobile {
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+}
+
 
 /* BANNER ACCROCHE FICHE CONCERT */
 .margint_20 {
@@ -21,13 +51,24 @@
     margin-top: 40px;
 }
 
+.margint_70 {
+    margin-top: 70px;
+}
+
 /* LISTE DES CONCERTS */
 .marginb_3 {
     margin-bottom: 3px;
 }
+/* PROCHAIN CONCERT */
+.marginb_4 {
+    margin-bottom: 4px;
+}
 /* FICHE CONCERT INFO SALLE / Nom salle + site internet */
 .marginb_6 {
     margin-bottom: 6px;
+}
+.marginb_20 {
+    margin-bottom: 20px;
 }
 .margin_section_botton {
     margin-bottom: 40px;
@@ -64,19 +105,23 @@
     padding-top: 30px;
 }
 
+
+/* LISTE ARTISTE FICHE CONCERT */
+/* LISTE OEUVRE FICHE CONCERT */
+.paddingr_8 {
+    padding-right: 8px;
+}
 .paddingb_1 {
     padding-bottom: 1px;
 }
 .paddingb_3 {
     padding-bottom: 3px;
 }
-/* LISTE ARTISTE FICHE CONCERT */
-/* LISTE OEUVRE FICHE CONCERT */
-.paddingr_8 {
-    padding-right: 8px;
-}
 .paddingb_5 {
     padding-bottom: 5px;
+}
+.paddingb_10 {
+    padding-bottom: 10px;
 }
 /* FOOTER CONTACTS */
 .paddingb_20 {
@@ -93,6 +138,9 @@
     padding-bottom: 36px;
 }
 
+.paddingl_15 {
+    padding-left: 15px;
+}
 /* FOOTER CONTACTS */
 .paddingl_100 {
     padding-left: 100px;

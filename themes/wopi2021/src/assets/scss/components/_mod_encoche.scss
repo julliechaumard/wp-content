@@ -5,13 +5,88 @@
 ** LES ENCOCHES (PETITS CARRES)
 ****************************************************** */
 
-%encocheblanc {
-    width: 32px;
-    height: 27px;
-    background-color: white;
+/* PROCHAIN CONCERT */
+.encoche_one_card {
+            .encoche_blanc {
+                width: 32px;
+                height: 27px;
+                margin-top: -1px;
+                margin-left: -1px;
+                background-color: white;
+        }
 }
 
-.concert_card {
+/* DATE CADRE */
+.date_cadre_container {
+    margin-top: -38px;
+    margin-left: -38px;
+    @include mobile {
+        margin-left: -20px;
+    }
+}
+.date_cadre_border {
+    border-bottom: solid 2px $color_noir_moyen;
+}
+.date_cadre_1 {
+    transform: rotate(-35deg);
+    order: 3;
+    width: 60px;
+    height: 40px;
+    background-color: white;
+    margin-top: 0px;
+    margin-left: 0px;
+    @include mobilexs {
+        width: 46px;
+    }
+}
+.date_cadre_2 {
+    order: 3;
+    width: 80px;
+    height: 40px;
+    background-color: white;
+    margin-top: -7px;
+    margin-left: 19px;
+    @include mobilexs {
+        width: 64px;
+        margin-left: 10px;
+    }
+}
+.date_cadre_texte {
+    width: 75px;
+    height: 40px;
+}
+.date_cadre_texte_1 {
+    margin-top: -66px;
+    margin-left: 9px;
+    @include mobilexs {
+        margin-top: -61px;
+    }
+}
+.date_cadre_texte_2 {
+    margin-top: -4px;
+    margin-left: 39px;
+    @include mobilexs {
+        margin-left: 25px;
+    }
+}
+.date_cadre_texte_jour {
+    font-family: didot_regular_italic;
+    font-size: 27px;
+    @include mobilexs {
+        font-size: 17px;
+    }
+}
+.date_cadre_texte_mois {
+    padding-left: 3px;
+    font-family: didot_regular;
+    font-size: 14px;
+    text-transform: lowercase;
+    vertical-align: top;
+    line-height: 8px;
+}
+
+/* LISTE DES CONCERTS */
+.encoche_list_card {
     @media screen and (min-width:800px) and (max-width:10000px) {
         &:nth-of-type(1){
                 .encoche_blanc {

@@ -1,13 +1,6 @@
 <?php
-
-// COULEUR LOGO + COULEUR
-// selon page
-if ( is_page(array('agenda', 'Saison')) OR is_singular (array( 'collaboration','concert' )) OR is_front_page() ) { 
-    $color = 'color_saison';
-}
-if ( is_page(array('page-accueil')) OR is_front_page() ) { 
-$color = 'color_accueil';
-}
+//// TOP BAR DE LA PAGE AVEC LE LOGO DE L'ORCHESTRE
+//// ET LE MENU PRINCIPAL
 
 ?>
 
@@ -17,11 +10,13 @@ $color = 'color_accueil';
 <section class='top_bar_desktop grid_2col12_1row align_center margin_section_botton'>
     <!-- LOGO -->
     <div>
-        <picture>
-            <source media="(max-width: 890px)" srcset="<?php bloginfo('template_directory');?>/dist/assets/images/logos/logo_odp_transparent.png">
-            <source media="(min-width: 891px)" srcset="<?php bloginfo('template_directory'); logo_couleur()?>">
-            <img class='img_width' src="<?php bloginfo('template_directory');?>/dist/assets/images/logos/logo_odp.png" alt="Logo Orchestre de Picardie">
-        </picture>
+        <a href="<?php echo get_permalink(get_page_by_title('accueil')) ?>">
+            <picture>
+                <source media="(max-width: 890px)" srcset="<?php bloginfo('template_directory');?>/dist/assets/images/logos/logo_odp_transparent.png">
+                <source media="(min-width: 891px)" srcset="<?php bloginfo('template_directory'); logo_couleur()?>">
+                <img class='img_width' src="<?php bloginfo('template_directory');?>/dist/assets/images/logos/logo_odp.png" alt="Logo Orchestre de Picardie">
+            </picture>
+        </a>
     </div>
 
     <!-- MAIN MENU -->
@@ -29,10 +24,11 @@ $color = 'color_accueil';
         <ul>
             <li class='menu_item <?php menu_active() ?>'>Saison
                 <ul class='sub_menu'>
-                    <li class="sub_menu_item"><a href="#">Agenda</a></li>
+                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('agenda')) ?>">Agenda</a></li>
                     <li class="sub_menu_item"><a href="#">Jeune public</a></li>
                     <li class="sub_menu_item"><a href="#">Artistes invités</a></li>
                     <li class="sub_menu_item"><a href="#">Collaborations</a></li>
+                    <li class="sub_menu_item"><a href="#">La Saison</a></li>
                 </ul>
             </li>
             <li class='menu_item'>Actions culturelles
@@ -50,7 +46,7 @@ $color = 'color_accueil';
             </li>
             <li class='menu_item'>L'Orchestre
                 <ul class='sub_menu'>
-                    <li class="sub_menu_item"><a href="#">Qui sommes nous ?</a></li>
+                    <li class="sub_menu_item"><a href="<?php bloginfo( 'url' ) ?>/qui-sommes-nous/">Qui sommes nous ?</a></li>
                     <li class="sub_menu_item"><a href="#">Notre histoire Nos missions</a></li>
                     <li class="sub_menu_item"><a href="#">Partenaires</a></li>
                     <li class="sub_menu_item"><a href="#">Soutenez-nous</a></li>
@@ -76,11 +72,13 @@ $color = 'color_accueil';
 <section class="top_bar_mobile grid_2col12_1row_mob bg_<?php couleur() ?>">
     <!-- LOGO -->
     <div>
-        <picture>
-            <source media="(max-width: 890px)" srcset="<?php bloginfo('template_directory');?>/dist/assets/images/logos/logo_odp_transparent.png">
-            <source media="(min-width: 891px)" srcset="<?php bloginfo('template_directory'); logo_couleur()?>">
-            <img class='img_width_auto top_bar_height_logo' src="<?php bloginfo('template_directory');?>/dist/assets/images/logos/logo_odp.png" alt="Logo Orchestre de Picardie">
-        </picture>
+        <a href="<?php echo get_permalink(get_page_by_title('accueil')) ?>">
+            <picture>
+                <source media="(max-width: 890px)" srcset="<?php bloginfo('template_directory');?>/dist/assets/images/logos/logo_odp_transparent.png">
+                <source media="(min-width: 891px)" srcset="<?php bloginfo('template_directory'); logo_couleur()?>">
+                <img class='img_width_auto top_bar_height_logo' src="<?php bloginfo('template_directory');?>/dist/assets/images/logos/logo_odp.png" alt="Logo Orchestre de Picardie">
+            </picture>
+        </a>
     </div>
     <!-- ICONE HAMBURGER -->
     <!-- ICONE HAMBURGER FERME -->
@@ -96,10 +94,11 @@ $color = 'color_accueil';
         <ul>
             <li class='menu_item <?php menu_active() ?>'>Saison
                 <ul class='sub_menu'>
-                    <li class="sub_menu_item"><a href="#">Agenda</a></li>
+                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('agenda')) ?>">Agenda</a></li>
                     <li class="sub_menu_item"><a href="#">Jeune public</a></li>
                     <li class="sub_menu_item"><a href="#">Artistes invités</a></li>
                     <li class="sub_menu_item"><a href="#">Collaborations</a></li>
+                    <li class="sub_menu_item"><a href="#">La Saison</a></li>
                 </ul>
             </li>
             <li class='menu_item'>Actions culturelles
@@ -117,7 +116,7 @@ $color = 'color_accueil';
             </li>
             <li class='menu_item'>L'Orchestre
                 <ul class='sub_menu'>
-                    <li class="sub_menu_item"><a href="#">Qui sommes nous ?</a></li>
+                    <li class="sub_menu_item"><a href="<?php bloginfo( 'url' ) ?>/qui-sommes-nous/">Qui sommes nous ?</a></li>
                     <li class="sub_menu_item"><a href="#">Notre histoire Nos missions</a></li>
                     <li class="sub_menu_item"><a href="#">Partenaires</a></li>
                     <li class="sub_menu_item"><a href="#">Soutenez-nous</a></li>

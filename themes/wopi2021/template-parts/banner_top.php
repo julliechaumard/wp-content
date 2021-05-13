@@ -28,6 +28,7 @@
     <!-- ---------------- -->
 
     <!-- CONTENU DE L'ACCROCHE DIFFERENT SELON PAGE -->
+
     <!-- FICHE DU CONCERT -->
     <?php 
     if ( is_singular (array( 'concert' )) ) : ?>
@@ -72,6 +73,20 @@
                         <br>
                         <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_004', true); ?></span>
                     </a>
+                </p>
+            </div>
+        </div>
+    <?php endif; ?>
+
+    <!-- QUI SOMMES-NOUS ? -->
+    <?php
+    if ( is_page(array('qui-sommes-nous')) ) : ?>
+        <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
+            <div class=''>
+                <p class='accroche_cell_texte'>
+                        <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_650', true); ?></span>
+                        <br>
+                        <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_651', true); ?></span>
                 </p>
             </div>
         </div>
@@ -189,6 +204,20 @@
                         <br>
                         <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_004', true); ?></span>
                     </a>
+                </p>
+            </div>
+        </div>
+    <?php endif; ?>
+
+    <!-- QUI SOMMES-NOUS ? -->
+    <?php
+    if ( is_page(array('qui-sommes-nous')) ) : ?>
+        <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
+            <div class=''>
+                <p class='accroche_cell_texte'>
+                        <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_650', true); ?></span>
+                        <br>
+                        <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_651', true); ?></span>
                 </p>
             </div>
         </div>

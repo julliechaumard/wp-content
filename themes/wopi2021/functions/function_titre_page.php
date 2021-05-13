@@ -11,6 +11,9 @@ function titre_gras($post) {
     if ( is_front_page() ) { 
       echo get_post_meta($post->ID, 'metadata_001', true);
     }
+    if ( is_page(array('qui-sommes-nous')) ) { 
+      echo "QUI";
+    }
 }
 function titre_leger($post) {
   if ( is_singular (array( 'concert' )) ) { 
@@ -21,6 +24,9 @@ function titre_leger($post) {
   }
   if ( is_front_page() ) { 
     echo get_post_meta($post->ID, 'metadata_002', true);
+  }
+  if ( is_page(array('qui-sommes-nous')) ) { 
+    echo "SOMMES-NOUS ?";
   }
 }
 

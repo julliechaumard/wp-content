@@ -176,7 +176,8 @@ function metabox_concert($post) {
     <!-- GROUPE DATES ET LIEUX -->
     <section class='metagroup'>
         <h2>DATES ET LIEUX</h2>
-        <h3>❗️ METTRE LA DERNIÈRE DATE DE LA SÉRIE DANS "REPRÉSENTATION 10"</h3>
+        <h3>❗️ METTRE LA première DATE DE LA SÉRIE DANS "REPRÉSENTATION 1"</h3>
+        <h3>❗️ METTRE LA deuxième DATE DE LA SÉRIE DANS "REPRÉSENTATION 10"</h3>
         <?php for ($i = 1; $i <= 10; $i++) { ?>
             <div class=''>
                 <h3>REPRÉSENTATION <?php echo $i; ?></h3>
