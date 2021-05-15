@@ -138,15 +138,21 @@
 .fleche {
     a {
         padding-bottom: 3px;
-        font-size: 12px;
+        font-size: 10px;
     }
     img {
         padding-left: 3px;
+        max-width: 16px;
     }
 }
 .fleche_saison {
     a {
         border-bottom: $color_saison 2px solid;
+    }
+}
+.fleche_orchestre {
+    a {
+        border-bottom: $color_orchestre 2px solid;
     }
 }
 .fleche_accueil {

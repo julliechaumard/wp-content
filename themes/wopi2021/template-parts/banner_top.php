@@ -91,6 +91,20 @@
             </div>
         </div>
     <?php endif; ?>
+
+    <!-- ARTISTES INVITES -->
+    <?php
+    if ( is_page(array('artistes-invites')) ) : ?>
+        <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
+            <div class=''>
+                <p class='accroche_cell_texte'>
+                        <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_140', true); ?></span>
+                        <br>
+                        <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_141', true); ?></span>
+                </p>
+            </div>
+        </div>
+    <?php endif; ?>
     
 
     <!-- ---------------- -->
@@ -218,6 +232,20 @@
                         <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_650', true); ?></span>
                         <br>
                         <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_651', true); ?></span>
+                </p>
+            </div>
+        </div>
+    <?php endif; ?>
+
+    <!-- ARTISTES INVITES -->
+    <?php
+    if ( is_page(array('artistes-invites')) ) : ?>
+        <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
+            <div class=''>
+                <p class='accroche_cell_texte'>
+                        <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_140', true); ?></span>
+                        <br>
+                        <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_141', true); ?></span>
                 </p>
             </div>
         </div>

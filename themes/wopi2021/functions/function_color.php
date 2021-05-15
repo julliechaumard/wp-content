@@ -2,7 +2,7 @@
 // COULEUR LOGO + COULEUR
 // LOGO + COULEUR DE LA PAGE
 function couleur() {
-    if ( is_page(array('agenda', 'saison')) OR is_singular (array( 'collaboration','concert' )) ) { 
+    if ( is_page(array('agenda', 'saison', 'artistes-invites')) OR is_singular (array( 'collaboration','concert' )) ) { 
         echo 'color_saison';
       }
     if ( is_front_page() ) { 
@@ -14,7 +14,7 @@ function couleur() {
 }
 
 function logo_couleur() {
-    if ( is_page(array('agenda', 'saison')) OR is_singular (array( 'collaboration','concert' )) ) { 
+    if ( is_page(array('agenda', 'saison', 'artistes-invites')) OR is_singular (array( 'collaboration','concert' )) ) { 
         echo '/dist/assets/images/logos/logo_orchestre_rose.jpg';
       }
     if ( is_front_page() ) { 
@@ -26,7 +26,7 @@ function logo_couleur() {
 }
 
 function menu_pipe_couleur() {
-  if ( is_page(array('agenda', 'Saison')) OR is_singular (array( 'collaboration','concert' )) ) { 
+  if ( is_page(array('agenda', 'Saison', 'artistes-invites')) OR is_singular (array( 'collaboration','concert' )) ) { 
       echo 'saison';
     }
   if ( is_front_page() ) { 

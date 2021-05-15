@@ -14,6 +14,9 @@ function titre_gras($post) {
     if ( is_page(array('qui-sommes-nous')) ) { 
       echo "QUI";
     }
+    if ( is_page(array('artistes-invites')) ) { 
+      echo "LES ARTISTES";
+    }
 }
 function titre_leger($post) {
   if ( is_singular (array( 'concert' )) ) { 
@@ -27,6 +30,9 @@ function titre_leger($post) {
   }
   if ( is_page(array('qui-sommes-nous')) ) { 
     echo "SOMMES-NOUS ?";
+  }
+  if ( is_page(array('artistes-invites')) ) { 
+    echo "INVITÉS";
   }
 }
 

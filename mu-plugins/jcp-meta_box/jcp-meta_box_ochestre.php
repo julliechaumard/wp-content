@@ -173,7 +173,7 @@ function metabox_orchestre($post) {
     <!-- GROUPE DESCRIPTION COURTE -->
     <section class='metagroup'>
         
-        <h2>DESCRIPTION POUR LISTE DES MEMBRE DE L'ORCHESTRE</h2>
+        <h2>DESCRIPTION POUR LISTE DES MEMBRE DE L'ORCHESTRE et du BUREAU</h2>
         <div class='metagroup_sub'>
             <div class='metagroup_sub_items grid_3fr_simple'>
                     <div class="pinput">

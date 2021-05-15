@@ -91,6 +91,14 @@
 .grid_row_gap10 {
     row-gap: 10px;
 }
+.grid_row_gap20 {
+    row-gap: 20px;
+}
+.grid_row_gap20_mob {
+    @include mobile {
+        row-gap: 20px;
+    }
+}
 .grid_row_gap50 {
     row-gap: 50px;
 }
@@ -175,6 +183,21 @@
         grid-template-columns: 1fr;
     }
 }
+.grid_2col40_45 {
+    display: grid;
+    grid-template-columns: 40% 45%;
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
+}
+
+.grid_2col25_60 {
+    display: grid;
+    grid-template-columns: 25% 60%;
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
+}
 
 /* GRID TITRE RESEAUX SOCIAUX */
 .grid_2col25_75 {
@@ -202,6 +225,14 @@
     grid-template-columns: minmax(50px, 110px) auto;
     column-gap: 7px;
 }
+.grid_2colmax_20_110 {
+    display: grid;
+    grid-template-columns: minmax(50px, 110px) auto;
+    column-gap: 7px;
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
+}
 /* LOGOS PARTENAIRES FICHE CONCERT */
 .grid_autocolmax_autorow {
     display: grid;
@@ -221,6 +252,7 @@
         grid-template-columns: 1fr;
     }
 }
+/* LISTE ARTISTES */
 .grid_3col_liste {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -274,14 +306,30 @@
     grid-auto-rows: auto;
 }
 
-/* CARD LISTE ARTISTE DIRECTION ORCHESTRE */
-.grid_2col_45_55 {
-    display: grid;
-    grid-template-columns: 45% 55%;
-}
-
 /* LISTE ARTISTE DIRECTION ORCHESTRE */
 .grid_2col_11 {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* CARD LISTE ARTISTE DIRECTION ORCHESTRE */
+.grid_2col_45_55 {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* CARD LISTES */
+.grid_2col_45_55 {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
 }

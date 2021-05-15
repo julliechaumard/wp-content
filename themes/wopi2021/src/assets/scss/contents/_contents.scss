@@ -7,6 +7,12 @@
 
 
 /*****************************************
+* BORDER */
+.borderb {
+    border-bottom: solid 1px $color_gris_fonce;
+}
+
+/*****************************************
 * TITRES */
 
 /* TITRE DE LA PAGE */
@@ -140,36 +146,7 @@ ul, li {
         border-right: solid 0px !important;
     }
 }
-/*****************************************
-* IMAGE */
 
-/* IMAGE DE LA BANNIERE */
-/* LOGO TOP BAR */
-/* L'image est ajusté à la taille de la grille (hauteur et largeur) */
-.img_ajust {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.img_ajust_liste {
-    width: 100%;
-}
-
-/* LOGO FOOTER */
-/* L'image est ajusté à la largeur */
-.img_width {
-    width: 100%;
-}
-/* TOP BAR MOBILE */
-.img_width_auto {
-    width: auto;
-}
-
-/* POUR SVG LOGOS INSTITUTIONNELS PAGE ACCUEIL */
-.img_svg {
-    width: 100%;
-    max-height: 134px;
-}
 
 /*****************************************
 * BUTTON */
@@ -215,14 +192,24 @@ ul, li {
 * TEXTES */
 
 /* FONT SIZE ***********************/
+.fontsize_10 {
+    font-size: 10px;
+}
 .fontsize_13 {
     font-size: 13px;
 }
 
-/* ALIGNEMENT */
+/* ALIGNEMENT ************************/
 .texte_right {
     text-align: right;
 }
+
+.texte_left_mob {
+    @include mobile {
+        text-align: left;
+    }
+}
+
 /* Distribution du concert */
 .liste_art_comp {
     font-size: 14px;

@@ -22,29 +22,29 @@
     <!-- MAIN MENU -->
     <nav class="menu_main tx_color_noir_fonce">
         <ul>
-            <li class='menu_item <?php menu_active() ?>'>Saison
+            <li class='menu_item <?php menu_active_saison() ?>'>Saison
                 <ul class='sub_menu'>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('agenda')) ?>">Agenda</a></li>
                     <li class="sub_menu_item"><a href="#">Jeune public</a></li>
-                    <li class="sub_menu_item"><a href="#">Artistes invités</a></li>
+                    <li class="sub_menu_item"><a href="<?php bloginfo( 'url' ) ?>/artistes-invites/">Artistes invités</a></li>
                     <li class="sub_menu_item"><a href="#">Collaborations</a></li>
                     <li class="sub_menu_item"><a href="#">La Saison</a></li>
                 </ul>
             </li>
-            <li class='menu_item'>Actions culturelles
+            <li class='menu_item <?php  ?>'>Actions culturelles
                 <ul class='sub_menu'>
                     <li class="sub_menu_item"><a href="#">Elèves et enseignants</a></li>
                     <li class="sub_menu_item"><a href="#">Académie</a></li>
                     <li class="sub_menu_item"><a href="#">Actions citoyennes et  sociales</a></li>
                 </ul>
             </li>
-            <li class='menu_item'>Actualités
+            <li class='menu_item <?php  ?>'>Actualités
                 <ul class='sub_menu'>
                     <li class="sub_menu_item"><a href="#">Actualités</a></li>
                     <li class="sub_menu_item"><a href="#">Mur social</a></li>
                 </ul>
             </li>
-            <li class='menu_item'>L'Orchestre
+            <li class='menu_item <?php menu_active_orchestre() ?>'>L'Orchestre
                 <ul class='sub_menu'>
                     <li class="sub_menu_item"><a href="<?php bloginfo( 'url' ) ?>/qui-sommes-nous/">Qui sommes nous ?</a></li>
                     <li class="sub_menu_item"><a href="#">Notre histoire Nos missions</a></li>
@@ -53,7 +53,7 @@
                     <li class="sub_menu_item"><a href="#">Recrutements</a></li>
                 </ul>
             </li>
-            <li class='menu_item'><a href="#">Médiathèque</a>
+            <li class='menu_item <?php  ?>'><a href="#">Médiathèque</a>
                 <ul class='sub_menu'>
                     <li class="sub_menu_item"><a href="#">Toute la médiathèqyue</a></li>
                 </ul>
@@ -92,11 +92,11 @@
     <!-- MAIN MENU -->
     <nav id="menu_hamburger_nav" class="hide_menu_hamburger">
         <ul>
-            <li class='menu_item <?php menu_active() ?>'>Saison
+            <li class='menu_item <?php menu_active_saison() ?>'>Saison
                 <ul class='sub_menu'>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('agenda')) ?>">Agenda</a></li>
                     <li class="sub_menu_item"><a href="#">Jeune public</a></li>
-                    <li class="sub_menu_item"><a href="#">Artistes invités</a></li>
+                    <li class="sub_menu_item"><a href="<?php bloginfo( 'url' ) ?>/artistes-invites/">Artistes invités</a></li>
                     <li class="sub_menu_item"><a href="#">Collaborations</a></li>
                     <li class="sub_menu_item"><a href="#">La Saison</a></li>
                 </ul>
@@ -114,7 +114,7 @@
                     <li class="sub_menu_item"><a href="#">Mur social</a></li>
                 </ul>
             </li>
-            <li class='menu_item'>L'Orchestre
+            <li class='menu_item <?php menu_active_orchestre() ?>'>L'Orchestre
                 <ul class='sub_menu'>
                     <li class="sub_menu_item"><a href="<?php bloginfo( 'url' ) ?>/qui-sommes-nous/">Qui sommes nous ?</a></li>
                     <li class="sub_menu_item"><a href="#">Notre histoire Nos missions</a></li>
