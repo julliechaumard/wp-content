@@ -7,7 +7,7 @@
 <!-- ---------------- -->
 <!-- TOP BAR DESKTOP -->
 <!-- ---------------- -->
-<section class='top_bar_desktop grid_2col12_1row align_center margin_section_botton'>
+<section class='top_bar_desktop grid_2col12_1row align_center marginb_50'>
     <!-- LOGO -->
     <div>
         <a href="<?php echo get_permalink(get_page_by_title('accueil')) ?>">
@@ -25,10 +25,10 @@
             <li class='menu_item <?php menu_active_saison() ?>'>Saison
                 <ul class='sub_menu'>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('agenda')) ?>">Agenda</a></li>
-                    <li class="sub_menu_item"><a href="#">Jeune public</a></li>
+                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Concerts jeunes publics')) ?>">Jeune public</a></li>
                     <li class="sub_menu_item"><a href="<?php bloginfo( 'url' ) ?>/artistes-invites/">Artistes invités</a></li>
-                    <li class="sub_menu_item"><a href="#">Collaborations</a></li>
-                    <li class="sub_menu_item"><a href="#">La Saison</a></li>
+                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Collaborations')) ?>">Collaborations</a></li>
+                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('saison')) ?>">La Saison</a></li>
                 </ul>
             </li>
             <li class='menu_item <?php  ?>'>Actions culturelles
@@ -95,10 +95,10 @@
             <li class='menu_item <?php menu_active_saison() ?>'>Saison
                 <ul class='sub_menu'>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('agenda')) ?>">Agenda</a></li>
-                    <li class="sub_menu_item"><a href="#">Jeune public</a></li>
+                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Concerts jeunes publics')) ?>">Jeune public</a></li>
                     <li class="sub_menu_item"><a href="<?php bloginfo( 'url' ) ?>/artistes-invites/">Artistes invités</a></li>
-                    <li class="sub_menu_item"><a href="#">Collaborations</a></li>
-                    <li class="sub_menu_item"><a href="#">La Saison</a></li>
+                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Collaborations')) ?>">Collaborations</a></li>
+                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('saison')) ?>">La Saison</a></li>
                 </ul>
             </li>
             <li class='menu_item'>Actions culturelles

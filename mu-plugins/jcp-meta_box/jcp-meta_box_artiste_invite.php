@@ -162,7 +162,6 @@ function metabox_artiste_invite($post) {
             </div>
 
         </div>
-
     </section>
 
     <!-- --------------------- -->

@@ -45,6 +45,7 @@ function metabox_orchestre($post) {
     }
     $metadata_610 = get_post_meta( $post->ID, 'metadata_610', true );
     $metadata_611 = get_post_meta( $post->ID, 'metadata_611', true );
+    $metadata_612 = get_post_meta( $post->ID, 'metadata_612', true );
 
     /************************************************************************
     // SAISIE DES INFORMATIONS
@@ -146,6 +147,21 @@ function metabox_orchestre($post) {
 
     </section>
 
+    <!-- --------------------- -->
+    <!-- GROUPE SITE INTERNET DE L'ARTISTE -->
+    <section class='metagroup'>
+        
+        <h2>SITE INTERNET DE L'ARTISTE</h2>
+        <div class='metagroup_sub'>
+            <div class='metagroup_sub_items grid_3fr_simple'>
+                <div class="pinput">
+                    <label for="metadata_131">URL du site internet</label>
+                    <input type="url" name="metadata_612" id="metadata_612" value="<?php echo $metadata_612 ?>"/>
+                </div>
+            </div>
+
+        </div>
+    </section>
 
     <!-- --------------------- -->
     <!-- GROUPE ACCROCHE -->
@@ -265,6 +281,7 @@ function jcp_metabox_save_orchestre($post_id) {
     }
     if (get_post_type($post_id) == 'orchestre' && array_key_exists('metadata_610', $_POST)) { update_post_meta( $post_id, 'metadata_610', $_POST['metadata_610']);};
     if (get_post_type($post_id) == 'orchestre' && array_key_exists('metadata_611', $_POST)) { update_post_meta( $post_id, 'metadata_611', $_POST['metadata_611']);};
+    if (get_post_type($post_id) == 'orchestre' && array_key_exists('metadata_612', $_POST)) { update_post_meta( $post_id, 'metadata_612', $_POST['metadata_612']);};
 
 }
 

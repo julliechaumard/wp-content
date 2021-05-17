@@ -78,6 +78,9 @@
 /* ******************************************************
 ** GAP */
 
+.grid_column_gap7 {
+    column-gap: 7px;
+}
 .grid_column_gap10 {
     column-gap: 10px;
 }
@@ -222,7 +225,7 @@
 /* LOGOS PARTENAIRE AVEC MENTION FICHE CONCERT */
 .grid_2colmax_1row {
     display: grid;
-    grid-template-columns: minmax(50px, 110px) auto;
+    grid-template-columns: minmax(50px, 150px) auto;
     column-gap: 7px;
 }
 .grid_2colmax_20_110 {
@@ -236,13 +239,19 @@
 /* LOGOS PARTENAIRES FICHE CONCERT */
 .grid_autocolmax_autorow {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(50px, 110px));
-    @include mobile {
-        grid-template-columns: repeat(auto-fill, minmax(50px, 90px));
-    }
+    grid-template-columns: repeat(auto-fill, minmax(50px, 150px));
     column-gap: 7px;
     row-gap: 7px;
 }
+
+/* LOGOS PAGE COLLABORATIONS */
+.grid_autocolmax_autorow {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 240px));
+    column-gap: 30px;
+    row-gap: 50px;
+}
+
 /* 3 VIDEOS PAGE CONCERT*/
 /* LISTE DES CONCERTS PAGE AGENDA */
 .grid_3col {

@@ -48,6 +48,10 @@
 /*************************************/
 /* ****** WIDTH & HEIGHT *********/
 
+.max_width_250 {
+    max-width: 250px;
+}
+
 .height_min_200 {
     min-height: 200px;
 }
@@ -87,6 +91,9 @@
 .margint_70 {
     margin-top: 70px;
 }
+.margint_90 {
+    margin-top: 90px;
+}
 
 .marginr_20 {
     margin-right: 20px;
@@ -120,6 +127,13 @@
     }
 }
 
+.marginb_50 {
+    margin-bottom: 50px;
+}
+
+.marginl_-3 {
+    margin-left: -3px;
+}
 .marginl_20 {
     margin-left: 20px;
 }

@@ -201,7 +201,7 @@ Template Post Type: concert
                             <!-- Récupérer logo et mention -->
                             <div class="partenaires_concert_item_mention grid_2colmax_1row align_center">
                                 <div>
-                                    <img class="img_ajust" src="<?php echo get_post_meta($post->ID, 'metadata_252', true); ?>" alt="Logo du partenaire">
+                                    <img class="img_width" src="<?php echo get_post_meta($post->ID, 'metadata_252', true); ?>" alt="Logo du partenaire">
                                 </div>
                                 <div>
                                     <p><?php echo get_post_meta($post->ID, 'metadata_253', true); ?></p>
@@ -227,7 +227,7 @@ Template Post Type: concert
                                         $loop_partenaire->the_post();?>
 
                                         <div class="partenaires_concert_logo_item">
-                                            <img class="img_ajust" src="<?php echo get_post_meta($post->ID, 'metadata_252', true); ?>" alt="Logo du partenaire">
+                                            <img class="img_width" src="<?php echo get_post_meta($post->ID, 'metadata_252', true); ?>" alt="Logo du partenaire">
                                         </div>
                                     <?php };
                                 };wp_reset_query(); 

@@ -152,6 +152,13 @@ Template Name: page_agenda
 
         </section>
 
+        <!-- AVERTISSEMENT -->
+        <section class="margin_section_botton">
+            <div>
+                <p class="content_wp">Cette programmation peut être à tout moment modifiée et complétée</p>
+            </div>
+        </section>
+
     </article>
 
 </main>

@@ -29,6 +29,64 @@
 
     <!-- CONTENU DE L'ACCROCHE DIFFERENT SELON PAGE -->
 
+    <!-- ACCUEIL -->
+    <?php
+    if ( is_front_page() ) : ?>
+        <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
+            <div class=''>
+                <p class='accroche_cell_texte'>
+                    <a href="<?php echo get_post_meta($post->ID, 'metadata_015', true); ?>">
+                        <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_003', true); ?></span>
+                        <br>
+                        <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_004', true); ?></span>
+                    </a>
+                </p>
+            </div>
+        </div>
+    <?php endif; ?>
+
+    <!-- AGENDA -->
+    <?php 
+    if ( is_page(array('agenda')) ) : ?>
+        <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
+            <div class=''>
+                <p class='accroche_cell_texte'>
+                    <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_110', true); ?></span>
+                    <br>
+                    <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_111', true); ?></span>
+                </p>
+            </div>
+        </div>
+    <?php endif;?>
+
+    <!-- CONCERTS JEUNE PUBLIC -->
+    <?php 
+    if ( is_page(array('concerts-jeunes-publics')) ) : ?>
+        <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
+            <div class=''>
+                <p class='accroche_cell_texte'>
+                    <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_230', true); ?></span>
+                    <br>
+                    <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_231', true); ?></span>
+                </p>
+            </div>
+        </div>
+    <?php endif;?>
+
+    <!-- SAISON -->
+    <?php 
+    if ( is_page(array('saison')) ) : ?>
+        <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
+            <div class=''>
+                <p class='accroche_cell_texte'>
+                    <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_100', true); ?></span>
+                    <br>
+                    <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_101', true); ?></span>
+                </p>
+            </div>
+        </div>
+    <?php endif;?>
+
     <!-- FICHE DU CONCERT -->
     <?php 
     if ( is_singular (array( 'concert' )) ) : ?>
@@ -48,31 +106,43 @@
         </div> 
     <?php endif;?>
 
-    <!-- AGENDA -->
-    <?php 
-    if ( is_page(array('agenda')) ) : ?>
+    <!-- ARTISTES INVITES -->
+    <?php
+    if ( is_page(array('artistes-invites')) ) : ?>
         <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
             <div class=''>
                 <p class='accroche_cell_texte'>
-                    <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_110', true); ?></span>
+                    <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_140', true); ?></span>
                     <br>
-                    <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_111', true); ?></span>
+                    <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_141', true); ?></span>
                 </p>
             </div>
         </div>
+    <?php endif; ?>
+    
+    <!-- FICHE DE L'ARTISTE INVITE -->
+    <?php 
+    if ( is_singular (array( 'artiste_invite' )) ) : ?>
+        <div class='accroche_cell grid_1col1_1row align_center  bg_<?php couleur() ?>'>
+            <div class=''>
+                <p class='accroche_cell_texte'>
+                    <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_120', true); ?></span>
+                    <br>
+                    <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_121', true); ?></span>
+                </p>
+            </div>
+        </div> 
     <?php endif;?>
 
-    <!-- ACCUEIL -->
+    <!-- COLLABORATIONS -->
     <?php
-    if ( is_front_page() ) : ?>
+    if ( is_page(array('collaborations')) ) : ?>
         <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
             <div class=''>
                 <p class='accroche_cell_texte'>
-                    <a href="<?php echo get_post_meta($post->ID, 'metadata_015', true); ?>">
-                        <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_003', true); ?></span>
-                        <br>
-                        <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_004', true); ?></span>
-                    </a>
+                    <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_160', true); ?></span>
+                    <br>
+                    <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_161', true); ?></span>
                 </p>
             </div>
         </div>
@@ -84,28 +154,27 @@
         <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
             <div class=''>
                 <p class='accroche_cell_texte'>
-                        <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_650', true); ?></span>
-                        <br>
-                        <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_651', true); ?></span>
+                    <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_650', true); ?></span>
+                    <br>
+                    <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_651', true); ?></span>
                 </p>
             </div>
         </div>
     <?php endif; ?>
 
-    <!-- ARTISTES INVITES -->
-    <?php
-    if ( is_page(array('artistes-invites')) ) : ?>
-        <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
+    <!-- FICHE DE L'ARTISTE ORCHESTRE -->
+    <?php 
+    if ( is_singular (array( 'orchestre' )) ) : ?>
+        <div class='accroche_cell grid_1col1_1row align_center  bg_<?php couleur() ?>'>
             <div class=''>
                 <p class='accroche_cell_texte'>
-                        <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_140', true); ?></span>
-                        <br>
-                        <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_141', true); ?></span>
+                    <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_601', true); ?></span>
+                    <br>
+                    <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_602', true); ?></span>
                 </p>
             </div>
-        </div>
-    <?php endif; ?>
-    
+        </div> 
+    <?php endif;?>
 
     <!-- ---------------- -->
     <!-- ILLUSTRATION -->
@@ -174,6 +243,65 @@
     <!-- ---------------- -->
 
     <!-- CONTENU DE L'ACCROCHE DIFFERENT SELON PAGE -->
+
+    <!-- ACCUEIL -->
+    <?php
+    if ( is_front_page() ) : ?>
+        <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
+            <div class=''>
+                <p class='accroche_cell_texte'>
+                    <a href="<?php echo get_post_meta($post->ID, 'metadata_015', true); ?>">
+                        <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_003', true); ?></span>
+                        <br>
+                        <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_004', true); ?></span>
+                    </a>
+                </p>
+            </div>
+        </div>
+    <?php endif; ?>
+
+    <!-- AGENDA -->
+    <?php 
+    if ( is_page(array('agenda')) ) : ?>
+        <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
+            <div class=''>
+                <p class='accroche_cell_texte'>
+                    <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_110', true); ?></span>
+                    <br>
+                    <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_111', true); ?></span>
+                </p>
+            </div>
+        </div>
+    <?php endif; ?>
+
+    <!-- CONCERTS JEUNE PUBLIC -->
+    <?php 
+    if ( is_page(array('concerts-jeunes-publics')) ) : ?>
+        <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
+            <div class=''>
+                <p class='accroche_cell_texte'>
+                    <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_230', true); ?></span>
+                    <br>
+                    <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_231', true); ?></span>
+                </p>
+            </div>
+        </div>
+    <?php endif;?>
+
+    <!-- SAISON -->
+    <?php 
+    if ( is_page(array('saison')) ) : ?>
+        <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
+            <div class=''>
+                <p class='accroche_cell_texte'>
+                    <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_100', true); ?></span>
+                    <br>
+                    <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_101', true); ?></span>
+                </p>
+            </div>
+        </div>
+    <?php endif;?>
+
     <!-- FICHE DU CONCERT -->
     <?php 
     if ( is_singular (array( 'concert' )) ) : ?>
@@ -193,35 +321,61 @@
         </div> 
     <?php endif;?>
 
-    <!-- AGENDAS -->
-    <?php 
-    if ( is_page(array('agenda')) ) : ?>
+    <!-- ARTISTES INVITES -->
+    <?php
+    if ( is_page(array('artistes-invites')) ) : ?>
         <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
             <div class=''>
                 <p class='accroche_cell_texte'>
-                    <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_110', true); ?></span>
-                    <br>
-                    <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_111', true); ?></span>
+                        <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_140', true); ?></span>
+                        <br>
+                        <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_141', true); ?></span>
                 </p>
             </div>
         </div>
     <?php endif; ?>
 
-    <!-- ACCUEIL -->
-    <?php
-    if ( is_front_page() ) : ?>
+    <!-- FICHE DE L'ARTISTE INVITE -->
+    <?php 
+    if ( is_singular (array( 'artiste_invite' )) ) : ?>
         <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
             <div class=''>
                 <p class='accroche_cell_texte'>
-                    <a href="<?php echo get_post_meta($post->ID, 'metadata_015', true); ?>">
-                        <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_003', true); ?></span>
-                        <br>
-                        <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_004', true); ?></span>
-                    </a>
+                    <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_120', true); ?></span>
+                    <br>
+                    <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_121', true); ?></span>
+                </p>
+            </div>
+        </div> 
+    <?php endif;?>
+
+    <!-- COLLABORATIONS -->
+    <?php
+    if ( is_page(array('collaborations')) ) : ?>
+        <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
+            <div class=''>
+                <p class='accroche_cell_texte'>
+                    <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_160', true); ?></span>
+                    <br>
+                    <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_161', true); ?></span>
                 </p>
             </div>
         </div>
     <?php endif; ?>
+    
+    <!-- FICHE DE L'ARTISTE ORCHESTRE -->
+    <?php 
+    if ( is_singular (array( 'orchestre' )) ) : ?>
+        <div class='accroche_cell grid_1col1_1row align_center  bg_<?php couleur() ?>'>
+            <div class=''>
+                <p class='accroche_cell_texte'>
+                    <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_601', true); ?></span>
+                    <br>
+                    <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_602', true); ?></span>
+                </p>
+            </div>
+        </div> 
+    <?php endif;?>
 
     <!-- QUI SOMMES-NOUS ? -->
     <?php
@@ -232,20 +386,6 @@
                         <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_650', true); ?></span>
                         <br>
                         <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_651', true); ?></span>
-                </p>
-            </div>
-        </div>
-    <?php endif; ?>
-
-    <!-- ARTISTES INVITES -->
-    <?php
-    if ( is_page(array('artistes-invites')) ) : ?>
-        <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
-            <div class=''>
-                <p class='accroche_cell_texte'>
-                        <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_140', true); ?></span>
-                        <br>
-                        <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_141', true); ?></span>
                 </p>
             </div>
         </div>

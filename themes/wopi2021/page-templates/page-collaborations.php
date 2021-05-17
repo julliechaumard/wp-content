@@ -5,28 +5,124 @@ Template Name: page_collaborations
 ?>
 <?php
 
- get_header();
+get_header();
+get_template_part('template-parts/header','page');
 
 ?>
 <main>
-<?php
 
-$pagename = get_post_meta($post->ID, '_wp_page_template', true);
-echo $pagename;
-$identifiant = get_post_type($post->ID);
-echo '<br>';
-echo $identifiant;
-echo '<br>';
-if ( 'page-templates/page-agenda.php' == get_post_meta( $post->ID, '_wp_page_template', true ) ) {
-    echo 'true';
-}
-echo '<br>';
-echo $post->ID;
-echo '<br>';
-print_r ($_POST);
+<article class="margint_90">
 
-?>
+    <!-- ------------------------------ -->
+    <!-- COLLABORATION AVEC DESCRIPTION -->
+    <!-- ------------------------------ -->
+    
+    <!-- CARRE ROSE -->
+    <div class="encoche_rose marginl_-3"></div>
+    <!-- COLLABORATION AVEC DESCRIPTION -->
+    <section class="grid_2col_11 grid_column_gap40 grid_row_gap50 align_center marginl_20 margin_section_botton">
 
+        <!--  LOOP COLLABORATION AVEC DESCRIPTION -->
+        <?php 
+            $args_collaboration = array(
+                'post_type' => 'partenaire',
+                'posts_per_page' => -1,
+
+                'tax_query' => array(
+                    'relation' => 'AND',
+                    array(
+                        'taxonomy' => 'categorie_partenaire',
+                        'field'    => 'slug',
+                        'terms'    => 'culturel'),
+                    array(
+                        'taxonomy' => 'saison',
+                        'field'    => 'slug',
+                        'terms'    => array('2021-2022'))),
+            );
+            $loop_collaboration = new WP_Query( $args_collaboration );
+            if ($loop_collaboration->have_posts()) :
+                while ($loop_collaboration->have_posts()) :
+                    $loop_collaboration->the_post();?>
+
+
+                    <?php 
+                    if (!empty(get_post_meta($post->ID, 'metadata_254', true))) : ?>
+
+                        <div class="grid_2col_11 align_center grid_column_gap7">
+                            <div class="">
+                                <img class='img_width max_width_250' src="<?php echo get_post_meta($post->ID, 'metadata_252', true); ?>" alt="Photo du partenaire">
+                            </div>
+                            <div>
+                                <p class="fontsize_13 ubuntu_fin paddingt_7 paddingb_5"><?php echo get_post_meta($post->ID, 'metadata_254', true) ?></p>
+                            </div>
+                        </div>
+
+
+
+                    <?php endif; ?>
+
+
+
+
+                <?php endwhile; 
+            endif; 
+        ?>
+
+
+    </section>
+
+    <!-- ------------------------------ -->
+    <!-- COLLABORATION SANS DESCRIPTION -->
+    <!-- ------------------------------ -->
+
+    <!-- CARRE ROSE -->
+    <div class="encoche_rose marginl_-3"></div>
+    <!-- COLLABORATION SANS DESCRIPTION -->
+    <section class="grid_autocolmax_autorow   align_center marginl_20 margin_section_botton">
+
+        <!--  LOOP COLLABORATION AVEC DESCRIPTION -->
+        <?php 
+            $args_collaboration = array(
+                'post_type' => 'partenaire',
+                'posts_per_page' => -1,
+
+                'tax_query' => array(
+                    'relation' => 'AND',
+                    array(
+                        'taxonomy' => 'categorie_partenaire',
+                        'field'    => 'slug',
+                        'terms'    => 'culturel'),
+                    array(
+                        'taxonomy' => 'saison',
+                        'field'    => 'slug',
+                        'terms'    => array('2021-2022'))),
+            );
+            $loop_collaboration = new WP_Query( $args_collaboration );
+            if ($loop_collaboration->have_posts()) :
+                while ($loop_collaboration->have_posts()) :
+                    $loop_collaboration->the_post();?>
+
+
+                    <?php 
+                    if (empty(get_post_meta($post->ID, 'metadata_254', true))) : ?>
+
+                            <div class="">
+                                <img class='img_width max_width_250' src="<?php echo get_post_meta($post->ID, 'metadata_252', true); ?>" alt="Photo du partenaire">
+                            </div>
+
+                    <?php endif; ?>
+
+
+
+
+                <?php endwhile; 
+            endif; 
+        ?>
+
+
+    </section>
+
+</article>
 
 </main>
 

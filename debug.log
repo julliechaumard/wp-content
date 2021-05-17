@@ -1,0 +1,8 @@
+[16-May-2021 22:48:44 UTC] PHP Parse error:  syntax error, unexpected ':', expecting ';' in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-collaborations.php on line 52
+[16-May-2021 22:49:03 UTC] PHP Notice:  Undefined variable: args_autre in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-collaborations.php on line 37
+[16-May-2021 22:50:17 UTC] PHP Notice:  Undefined variable: args_autre in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-collaborations.php on line 37
+[16-May-2021 22:51:14 UTC] PHP Notice:  Undefined variable: args_autre in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-collaborations.php on line 28
+[16-May-2021 22:51:50 UTC] PHP Notice:  Undefined variable: args_autre in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-collaborations.php on line 37
+[16-May-2021 22:53:13 UTC] PHP Notice:  Undefined variable: args_autre in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-collaborations.php on line 37
+[16-May-2021 22:54:42 UTC] PHP Notice:  Undefined variable: args_autre in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-collaborations.php on line 37
+[16-May-2021 22:55:02 UTC] PHP Notice:  Undefined variable: args_autre in /Users/julie/Documents/GitHub/wopi2021/wp-content/themes/wopi2021/page-templates/page-collaborations.php on line 38
