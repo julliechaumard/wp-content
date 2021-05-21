@@ -131,6 +131,11 @@
     margin-bottom: 50px;
 }
 
+.marginl_0_mob {
+    @include mobilexs {
+        margin-left: 0px !important;
+    }
+}
 .marginl_-3 {
     margin-left: -3px;
 }
@@ -148,6 +153,9 @@
 /* LISTE CONCERTS ARTSITES */
 .paddingt_7 {
     padding-top: 7px;
+}
+.paddingt_10 {
+    padding-top: 10px;
 }
 /* LISTE CONCERTS ARTSITES */
 .paddingt_12 {
@@ -203,6 +211,10 @@
 /* FOOTER CONTACTS BOUTON ENVOYER UN MESSAGE */
 .paddingb_36 {
     padding-bottom: 36px;
+}
+
+.paddingb_40 {
+    padding-bottom: 40px;
 }
 
 .paddingl_15 {

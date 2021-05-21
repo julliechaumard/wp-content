@@ -7,7 +7,7 @@ function menu_active_saison() {
       }
 }
 function menu_active_orchestre() {
-  if ( is_page(array('qui-sommes-nous')) OR is_singular (array( 'orchestre' )) ) { 
+  if ( is_page(array('qui-sommes-nous', 'partenaires', 'notre-histoire')) OR is_singular (array( 'orchestre' )) ) { 
     echo 'menu_active';
   }
 }

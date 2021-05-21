@@ -29,6 +29,12 @@ function titre_gras($post) {
     if ( is_page(array('qui-sommes-nous')) ) { 
       echo "QUI";
     }
+    if ( is_page(array('notre-histoire')) ) { 
+      echo "NOTRE HISTOIRE";
+    }
+    if ( is_page(array('partenaires')) ) { 
+      echo "LES PARTENAIRES";
+    }
     if ( is_page(array('artistes-invites')) ) { 
       echo "LES ARTISTES";
     }
@@ -60,6 +66,12 @@ function titre_leger($post) {
   }
   if ( is_page(array('qui-sommes-nous')) ) { 
     echo "SOMMES-NOUS ?";
+  }
+  if ( is_page(array('notre-histoire')) ) { 
+    echo "NOS MISSIONS";
+  }
+  if ( is_page(array('partenaires')) ) { 
+    echo "DE L’ORCHESTRE";
   }
   if ( is_page(array('artistes-invites')) ) { 
     echo "INVITÉS";

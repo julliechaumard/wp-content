@@ -65,7 +65,7 @@ get_template_part('template-parts/header','page');
                            <div class="">
                                <h2 class='titre_card_container'>
                                    <span class='titre_gras'><?php echo get_post_meta($post->ID, 'metadata_199', true); ?></span>
-                                   
+                                   <br>
                                    <span class='titre_leger'><?php echo get_post_meta($post->ID, 'metadata_200', true); ?></span>
                                </h2>
                            </div>
@@ -76,7 +76,7 @@ get_template_part('template-parts/header','page');
                                </div>
                            <?php } ?>
                            <!-- DISTRIBUTION -->
-                           <div class='liste_art_comp paddingt_12'>
+                           <div class='liste_art_comp paddingt_7'>
                                <?php for ($i = 1; $i <= 3; $i++) { ?>
                                    <?php if(!empty(get_post_meta($post->ID, 'metadata_186_'.$i, true))) { ?>
                                        <div class="artiste">
@@ -91,7 +91,7 @@ get_template_part('template-parts/header','page');
                                <?php } ?>
                            </div>
                            <!-- DATES -->
-                           <div class="liste_date paddingt_12">
+                           <div class="liste_date paddingt_7">
                            
                                <!-- BOUCLE SUR LES 10 DATES -->
                                <?php for ($i = 1; $i <= 10; $i++) :

@@ -28,7 +28,7 @@
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Concerts jeunes publics')) ?>">Jeune public</a></li>
                     <li class="sub_menu_item"><a href="<?php bloginfo( 'url' ) ?>/artistes-invites/">Artistes invités</a></li>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Collaborations')) ?>">Collaborations</a></li>
-                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('saison')) ?>">La Saison</a></li>
+                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('saison')) ?>">Saison 2021-2022</a></li>
                 </ul>
             </li>
             <li class='menu_item <?php  ?>'>Actions culturelles
@@ -47,15 +47,19 @@
             <li class='menu_item <?php menu_active_orchestre() ?>'>L'Orchestre
                 <ul class='sub_menu'>
                     <li class="sub_menu_item"><a href="<?php bloginfo( 'url' ) ?>/qui-sommes-nous/">Qui sommes nous ?</a></li>
-                    <li class="sub_menu_item"><a href="#">Notre histoire Nos missions</a></li>
-                    <li class="sub_menu_item"><a href="#">Partenaires</a></li>
+                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Notre histoire')) ?>">Notre histoire Nos missions</a></li>
+                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Partenaires')) ?>">Partenaires</a></li>
                     <li class="sub_menu_item"><a href="#">Soutenez-nous</a></li>
                     <li class="sub_menu_item"><a href="#">Recrutements</a></li>
                 </ul>
             </li>
             <li class='menu_item <?php  ?>'><a href="#">Médiathèque</a>
                 <ul class='sub_menu'>
-                    <li class="sub_menu_item"><a href="#">Toute la médiathèqyue</a></li>
+                    <li class="sub_menu_item"><a href="#">Concerts en ligne</a></li>
+                    <li class="sub_menu_item"><a href="#">Vidéos</a></li>
+                    <li class="sub_menu_item"><a href="#">Photos</a></li>
+                    <li class="sub_menu_item"><a href="#">Musiques</a></li>
+                    <li class="sub_menu_item"><a href="#">Discographie</a></li>
                 </ul>
             </li>
         </ul>
@@ -69,14 +73,14 @@
 <!-- ---------------- -->
 <!-- TOP BAR MOBILE -->
 <!-- ---------------- -->
-<section class="top_bar_mobile grid_2col12_1row_mob bg_<?php couleur() ?>">
+<section class="top_bar_mobile grid_2col12_1row_mob grid_row_gap14 bg_<?php couleur() ?>">
     <!-- LOGO -->
     <div>
         <a href="<?php echo get_permalink(get_page_by_title('accueil')) ?>">
             <picture>
                 <source media="(max-width: 890px)" srcset="<?php bloginfo('template_directory');?>/dist/assets/images/logos/logo_odp_transparent.png">
                 <source media="(min-width: 891px)" srcset="<?php bloginfo('template_directory'); logo_couleur()?>">
-                <img class='img_width_auto top_bar_height_logo' src="<?php bloginfo('template_directory');?>/dist/assets/images/logos/logo_odp.png" alt="Logo Orchestre de Picardie">
+                <img class='img_width' src="<?php bloginfo('template_directory');?>/dist/assets/images/logos/logo_odp.png" alt="Logo Orchestre de Picardie">
             </picture>
         </a>
     </div>
@@ -98,7 +102,7 @@
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Concerts jeunes publics')) ?>">Jeune public</a></li>
                     <li class="sub_menu_item"><a href="<?php bloginfo( 'url' ) ?>/artistes-invites/">Artistes invités</a></li>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Collaborations')) ?>">Collaborations</a></li>
-                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('saison')) ?>">La Saison</a></li>
+                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('saison')) ?>">Saison 2021-2022</a></li>
                 </ul>
             </li>
             <li class='menu_item'>Actions culturelles
@@ -117,15 +121,19 @@
             <li class='menu_item <?php menu_active_orchestre() ?>'>L'Orchestre
                 <ul class='sub_menu'>
                     <li class="sub_menu_item"><a href="<?php bloginfo( 'url' ) ?>/qui-sommes-nous/">Qui sommes nous ?</a></li>
-                    <li class="sub_menu_item"><a href="#">Notre histoire Nos missions</a></li>
-                    <li class="sub_menu_item"><a href="#">Partenaires</a></li>
+                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Notre histoire')) ?>">Notre histoire Nos missions</a></li>
+                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Partenaires')) ?>">Partenaires</a></li>
                     <li class="sub_menu_item"><a href="#">Soutenez-nous</a></li>
                     <li class="sub_menu_item"><a href="#">Recrutements</a></li>
                 </ul>
             </li>
             <li class='menu_item'><a href="#">Médiathèque</a>
                 <ul class='sub_menu'>
-                    <li class="sub_menu_item"><a href="#">Toute la médiathèqyue</a></li>
+                    <li class="sub_menu_item"><a href="#">Concerts en ligne</a></li>
+                    <li class="sub_menu_item"><a href="#">Vidéos</a></li>
+                    <li class="sub_menu_item"><a href="#">Photos</a></li>
+                    <li class="sub_menu_item"><a href="#">Musiques</a></li>
+                    <li class="sub_menu_item"><a href="#">Discographie</a></li>
                 </ul>
             </li>
         </ul>

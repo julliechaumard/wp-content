@@ -13,21 +13,84 @@ Template Name: page_accueil
 <article>
 
     <!-- --------------------------------- -->
-    <!-- LISTE DES MEMBRES DE LA DIRECTION -->
+    <!-- DIRECTEUR GENERAL -->
     <!-- --------------------------------- -->
     <section class="margin_section_botton">
 
         <!-- Titre -->
         <div class="paddingt_30">
             <h2 class='titre_chapitre_container'>
-                <span class='titre_leger'>LA DIRECTION</span>
+                <span class='titre_leger'>DIRECTEUR</span>
                 <br>
-                <span class='titre_gras'>DE L'ORCHESTRE</span>
+                <span class='titre_gras'>GÉNÉRAL</span>
             </h2>
         </div>
 
-        <!-- LES MEMBRES -->
-        <div class="grid_2col_11 grid_column_gap40 grid_row_gap20 height_min_200">
+        <!-- DIRECTEUR GENERAL -->
+        
+
+            <div class="grid_2col_45_55">
+
+                <!-- LOOP MUSICIEN directeur  -->
+                <?php 
+                $args_directeur_general = array(
+                    'post_type' => 'orchestre',
+                    'posts_per_page' => -1,
+
+                    'tax_query' => array(
+                        array(
+                        'taxonomy' => 'categorie_orchestre',
+                        'field'    => 'slug',
+                        'terms'    => 'directeur')
+                    ),
+                );
+                $loop_directeur_general = new WP_Query( $args_directeur_general );
+                if ($loop_directeur_general->have_posts()) :
+                    while ($loop_directeur_general->have_posts()) :
+                        $loop_directeur_general->the_post();?>
+
+                        <!-- ILLUSTRATION -->
+                        <div>
+                            <img class='img_ajust' src="<?php echo get_post_meta($post->ID, 'metadata_611', true); ?>" alt="Photo du directeur">
+                        </div>
+                        
+
+                        <!-- INFORMATION -->
+                        <div class="flex flex_align_end paddingt_15 paddingb_15 paddingr_15 paddingl_15 bg_color_orchestre tx_color_blanc">
+                            <div>
+                                <div class="titre_card_container">
+                                    <p class="titre_gras paddingb_5"><?php echo get_post_meta($post->ID, 'metadata_603', true); ?></p>
+                                    <p class="titre_leger"><?php echo get_post_meta($post->ID, 'metadata_605', true); ?></p>
+                                </div>
+                                <div class="fleche fleche_blanc alignself_end paddingt_20 marginb_6 ubuntu_bold tx_color_blanc"></div>
+                            </div>
+                            
+                        </div>
+                    <?php endwhile; 
+                endif; 
+                wp_reset_query(); ?>
+            </div>
+
+        
+    </section>
+
+
+    <!-- --------------------------------- -->
+    <!-- DIRECTEUR MUSICAL -->
+    <!-- --------------------------------- -->
+    <section class="margin_section_botton">
+
+        <!-- Titre -->
+        <div class="paddingt_30">
+            <h2 class='titre_chapitre_container'>
+                <span class='titre_leger'>DIRECTEUR</span>
+                <br>
+                <span class='titre_gras'>MUSICAL</span>
+            </h2>
+        </div>
+
+        <!-- DIRECTEUR GENERAL -->
+
 
             <!-- DIRECTEUR MUSICAL -->
             <div class="grid_2col_45_55">
@@ -51,7 +114,10 @@ Template Name: page_accueil
                         $loop_directeur_musical->the_post();?>
 
                         <!-- ILLUSTRATION -->
-                        <img class='img_ajust' src="<?php echo get_post_meta($post->ID, 'metadata_611', true); ?>" alt="Photo du directeur musical">
+                        <div>
+                            <img class='img_ajust' src="<?php echo get_post_meta($post->ID, 'metadata_611', true); ?>" alt="Photo du directeur musical">
+                        </div>
+                        
 
                         <!-- INFORMATION -->
                         <div class="flex flex_align_end paddingt_15 paddingb_15 paddingr_15 paddingl_15 bg_color_orchestre tx_color_blanc">
@@ -70,47 +136,8 @@ Template Name: page_accueil
                 wp_reset_query(); ?>
             </div>
 
-            <!-- DIRECTEUR GENERAL -->
-            <div class="grid_2col_45_55">
-
-                <!-- LOOP MUSICIEN directeur  -->
-                <?php 
-                $args_directeur_general = array(
-                    'post_type' => 'orchestre',
-                    'posts_per_page' => -1,
-
-                    'tax_query' => array(
-                        array(
-                        'taxonomy' => 'categorie_orchestre',
-                        'field'    => 'slug',
-                        'terms'    => 'directeur')
-                    ),
-                );
-                $loop_directeur_general = new WP_Query( $args_directeur_general );
-                if ($loop_directeur_general->have_posts()) :
-                    while ($loop_directeur_general->have_posts()) :
-                        $loop_directeur_general->the_post();?>
-
-                        <!-- ILLUSTRATION -->
-                        <img class='img_ajust' src="<?php echo get_post_meta($post->ID, 'metadata_611', true); ?>" alt="Photo du directeur">
-
-                        <!-- INFORMATION -->
-                        <div class="flex flex_align_end paddingt_15 paddingb_15 paddingr_15 paddingl_15 bg_color_orchestre tx_color_blanc">
-                            <div>
-                                <div class="titre_card_container">
-                                    <p class="titre_gras paddingb_5"><?php echo get_post_meta($post->ID, 'metadata_603', true); ?></p>
-                                    <p class="titre_leger"><?php echo get_post_meta($post->ID, 'metadata_605', true); ?></p>
-                                </div>
-                                <div class="fleche fleche_blanc alignself_end paddingt_20 marginb_6 ubuntu_bold tx_color_blanc"><a href="<?php the_permalink(); ?>">EN SAVOIR PLUS <img src="<?php bloginfo('template_directory');?>/dist/assets/images/icones/lien_fleche_blanc.png" alt=""></a></div>
-                            </div>
-                            
-                        </div>
-                    <?php endwhile; 
-                endif; 
-                wp_reset_query(); ?>
-            </div>
-        </div>
     </section>
+
 
 
     <!-- --------------------------------- -->
@@ -293,7 +320,7 @@ Template Name: page_accueil
                         <div class="">
                            
                             <!-- INFORMATION -->
-                            <div class="grid_2col25_60 grid_column_gap24 align_center marginb_20 ">
+                            <div class="grid_2col24_46 grid_column_gap24 align_start marginb_20 ">
                                 <!-- NOM DU ASSOCIATION -->
                                 <p class="texte_right texte_left_mob"><?php echo get_post_meta($post->ID, 'metadata_603', true); ?></p>
                                 <!-- DESCRIPTION COURTE -->

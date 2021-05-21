@@ -201,7 +201,14 @@ Template Post Type: concert
                             <!-- Récupérer logo et mention -->
                             <div class="partenaires_concert_item_mention grid_2colmax_1row align_center">
                                 <div>
-                                    <img class="img_width" src="<?php echo get_post_meta($post->ID, 'metadata_252', true); ?>" alt="Logo du partenaire">
+                                    <!-- LOGO avec lien vers le site internet du partenaire -->
+                                    <?php if (!empty(get_post_meta($post->ID, 'metadata_251', true))) : ?>
+                                        <a href="<?php get_post_meta($post->ID, 'metadata_251', true) ?>" target="_blank" ><img class="img_width" src="<?php echo get_post_meta($post->ID, 'metadata_252', true); ?>" alt="Logo du partenaire"></a>
+                                    <?php endif; ?>
+                                    <!-- LOGO sans lien vers le site internet du partenaire -->
+                                    <?php if (empty(get_post_meta($post->ID, 'metadata_251', true))) : ?>
+                                        <img class="img_width" src="<?php echo get_post_meta($post->ID, 'metadata_252', true); ?>" alt="Logo du partenaire">
+                                    <?php endif; ?>
                                 </div>
                                 <div>
                                     <p><?php echo get_post_meta($post->ID, 'metadata_253', true); ?></p>
@@ -226,9 +233,14 @@ Template Post Type: concert
                                     while ($loop_partenaire->have_posts()) {
                                         $loop_partenaire->the_post();?>
 
-                                        <div class="partenaires_concert_logo_item">
+                                        <!-- LOGO avec lien vers le site internet du partenaire -->
+                                        <?php if (!empty(get_post_meta($post->ID, 'metadata_251', true))) : ?>
+                                            <a href="<?php get_post_meta($post->ID, 'metadata_251', true) ?>" target="_blank" ><img class="img_width" src="<?php echo get_post_meta($post->ID, 'metadata_252', true); ?>" alt="Logo du partenaire"></a>
+                                        <?php endif; ?>
+                                        <!-- LOGO sans lien vers le site internet du partenaire -->
+                                        <?php if (empty(get_post_meta($post->ID, 'metadata_251', true))) : ?>
                                             <img class="img_width" src="<?php echo get_post_meta($post->ID, 'metadata_252', true); ?>" alt="Logo du partenaire">
-                                        </div>
+                                        <?php endif; ?>
                                     <?php };
                                 };wp_reset_query(); 
                             };

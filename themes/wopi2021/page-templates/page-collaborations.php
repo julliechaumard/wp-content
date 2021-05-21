@@ -78,9 +78,9 @@ get_template_part('template-parts/header','page');
     <!-- CARRE ROSE -->
     <div class="encoche_rose marginl_-3"></div>
     <!-- COLLABORATION SANS DESCRIPTION -->
-    <section class="grid_autocolmax_autorow   align_center marginl_20 margin_section_botton">
+    <section class="grid_autocolmax_autorow_220 align_center marginl_20 margin_section_botton">
 
-        <!--  LOOP COLLABORATION AVEC DESCRIPTION -->
+        <!--  LOOP COLLABORATION SANS DESCRIPTION -->
         <?php 
             $args_collaboration = array(
                 'post_type' => 'partenaire',

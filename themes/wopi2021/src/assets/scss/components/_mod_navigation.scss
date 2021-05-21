@@ -11,7 +11,7 @@
     @include topbar_hamburger {
         display: grid;
         justify-items: end;
-        grid-column: 1/3;   
+
     }
 }
 
@@ -84,9 +84,9 @@
     cursor: pointer;
     width: 32px;
     height: auto;
-    justify-self: center;
+    justify-self: end;
     @include mobilexs {
-        justify-self: start;
+        justify-self: end;
         width: 22px;
         margin-top: 10px;
     }

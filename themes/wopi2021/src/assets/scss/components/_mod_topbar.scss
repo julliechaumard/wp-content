@@ -23,8 +23,8 @@
         margin-bottom: 42px;
     }
     margin-left: -35px;
-    padding-top: 50px;
-    padding-bottom: 40px;
+    padding-top: 35px;
+    padding-bottom: 12px;
     padding-right: 35px;
     padding-left: 35px;
     @include mobile {
@@ -35,9 +35,3 @@
     }
 }
 
-.top_bar_height_logo {
-    height: 14vw;
-    @include mobilexs {
-        height: 18vw;
-    }
-}

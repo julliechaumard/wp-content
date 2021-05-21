@@ -62,6 +62,9 @@
 /* ******************************************************
 ** ALIGNEMENTS */
 
+.align_start {
+    align-items: start;
+}
 .align_center {
     align-items: center;
 }
@@ -94,6 +97,9 @@
 .grid_row_gap10 {
     row-gap: 10px;
 }
+.grid_row_gap14 {
+    row-gap: 14px;
+}
 .grid_row_gap20 {
     row-gap: 20px;
 }
@@ -112,15 +118,12 @@
 
 /* GRID NAV BAR TOP DESKTOP*/
 .grid_2col12_1row {
-    grid-template-columns: minmax(0, 35%) minmax(0, 65%);
+    grid-template-columns: minmax(0, 42%) minmax(0, 58%);
 }
 /* GRID NAV BAR TOP MOBILE*/
 .grid_2col12_1row_mob {
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr;
     align-items: center;
-    @include mobilexs {
-        grid-template-columns: 1fr;
-    }
 }
 
 /* GRID BANNER TOP */
@@ -194,9 +197,12 @@
     }
 }
 
-.grid_2col25_60 {
+.grid_2col24_46 {
     display: grid;
-    grid-template-columns: 25% 60%;
+    grid-template-columns: 24% 46%;
+    @include topbar_hamburger {
+        grid-template-columns: 27% 67%;
+    }
     @include mobile {
         grid-template-columns: 1fr;
     }
@@ -239,17 +245,17 @@
 /* LOGOS PARTENAIRES FICHE CONCERT */
 .grid_autocolmax_autorow {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(50px, 150px));
-    column-gap: 7px;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 148px));
+    column-gap: 10px;
     row-gap: 7px;
 }
 
 /* LOGOS PAGE COLLABORATIONS */
-.grid_autocolmax_autorow {
+.grid_autocolmax_autorow_220 {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 240px));
-    column-gap: 30px;
-    row-gap: 50px;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 220px));
+    column-gap: 60px;
+    row-gap: 60px;
 }
 
 /* 3 VIDEOS PAGE CONCERT*/
