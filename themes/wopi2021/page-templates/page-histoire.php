@@ -16,7 +16,7 @@ Template Name: page_histoire
         <!-- --------------------------------- -->
         <!-- L'HISTOIRE -->
         <!-- --------------------------------- -->    
-        <section class="programme_concert_cell margin_section_botton">
+        <section class="grid_area_1-31 grid_area_21 margin_section_botton">
              
             <!-- TITRE -->
             <div>
@@ -36,53 +36,37 @@ Template Name: page_histoire
 
         </section>
         
-    </article>
+
+        <!-- --------------------------------- -->
+        <!-- LES CHIFFRES -->
+        <!-- --------------------------------- -->
+
+        <div class="grid_area_12 justify_end_min500px marginr_20 marginb_12_mobilexs">
+            <img class='' src="<?php bloginfo('template_directory');?>/dist/assets/images/icones/icone_chiffres.png" alt="Logo Orchestre de Picardie">
+        </div>
+        
 
 
-    <!-- --------------------------------- -->
-    <!-- LES CHIFFRES -->
-    <!-- --------------------------------- -->
-    <section>
-        <div class="grid_2colmax_20_110 grid_row_gap20_mob marginr_40 marginl_20">
-
+        <div class="grid_area_22 grid_area_13 marginl_12_mobilexs">
+            <!-- TITRE -->
             <div>
-                <img class='' src="<?php bloginfo('template_directory');?>/dist/assets/images/icones/association_icone.png" alt="Logo Orchestre de Picardie">
+                <h4 class='titre_chapitre_container'>
+                    <span class='titre_gras'>DEPUIS SA CRÉATION</span>
+                    <br>
+                    <span class='titre_leger'>C'EST</span>
+                </h4>
             </div>
-            
-
-
-            <div class="">
-                <!-- TITRE -->
-                <div>
-                    <h4 class='titre_chapitre_container'>
-                        <span class='titre_gras'>DEPUIS SA CRÉATION</span>
-                        <br>
-                        <span class='titre_leger'>C'EST</span>
-                    </h4>
-                </div>
-            
-                <!-- INFORMATION -->
-                <div class="content_wp">
-                    <p>— 3 101 concerts dont 2 641 dans 254 communes et villes en Hauts-de-France.</p>
-                    <p>— En France, c’est 272 concerts dans 84 villes et à l’étranger 188 concerts dans 17 pays. </p>
-                    <ul>
-                        <li>
-                        — 6 directeurs musicaux ont accompagné l’Orchestre dans son développement :
-                        <ul>
-                            <li>‣ Alexandre Myrat (1984-1989), </li>
-                            <li>‣ Patrick Fournillier (1989-1992),</li>
-                        </ul>
-                        </li>
-                        
-
-                </div>
+        
+            <!-- INFORMATION -->
+            <div class="content_wp">
+                <!-- RECUPERER LE CONTENU DE LA PAGE "CHIFFRES" -->
+                <?php $mypost = get_page_by_title('Chiffres', OBJECT, 'page');
+                echo $mypost->post_content;?>
             </div>
 
-
-            
         </div>
 
-    </section>
+    </article>
 
 
 </main>

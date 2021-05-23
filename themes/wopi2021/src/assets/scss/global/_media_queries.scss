@@ -37,6 +37,12 @@ $breakpoint_topbar_desktop: 890px;
         @content;
     }
 }
+/* MOBILE + TABLETTE + ORDINATEUR */
+@mixin nomobilexs() {
+    @media screen and (min-width:$breakpoint_mobilexs){
+        @content;
+    }
+}
 /* Point de passage du Top Bar menu en hamburger */
 @mixin topbar_hamburger() {
     @media screen and (max-width:$breakpoint_topbar_hamburger){

@@ -49,7 +49,7 @@
                     <li class="sub_menu_item"><a href="<?php bloginfo( 'url' ) ?>/qui-sommes-nous/">Qui sommes nous ?</a></li>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Notre histoire')) ?>">Notre histoire Nos missions</a></li>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Partenaires')) ?>">Partenaires</a></li>
-                    <li class="sub_menu_item"><a href="#">Soutenez-nous</a></li>
+                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Soutenez-nous entreprise')) ?>">Soutenez-nous</a></li>
                     <li class="sub_menu_item"><a href="#">Recrutements</a></li>
                 </ul>
             </li>
@@ -123,7 +123,7 @@
                     <li class="sub_menu_item"><a href="<?php bloginfo( 'url' ) ?>/qui-sommes-nous/">Qui sommes nous ?</a></li>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Notre histoire')) ?>">Notre histoire Nos missions</a></li>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Partenaires')) ?>">Partenaires</a></li>
-                    <li class="sub_menu_item"><a href="#">Soutenez-nous</a></li>
+                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Soutenez-nous entreprise')) ?>">Soutenez-nous</a></li>
                     <li class="sub_menu_item"><a href="#">Recrutements</a></li>
                 </ul>
             </li>

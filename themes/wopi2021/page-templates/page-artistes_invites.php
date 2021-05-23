@@ -63,11 +63,13 @@ Template Name: page_accueil
                                         <!-- NOM DU MUSICIEN -->
                                         <p class="titre_gras paddingb_5"><?php echo get_post_meta($post->ID, 'metadata_122', true); ?></p>
                                         <!-- POSTES -->
-                                        <?php for ($i = 1; $i <= 4; $i++):
-                                            if (!empty(get_post_meta($post->ID, 'metadata_123_'.$i, true))): ?>
-                                                <p class="titre_leger paddingb_5"><?php echo get_post_meta($post->ID, 'metadata_123_'.$i, true); ?></p>
-                                            <?php endif;
-                                        endfor; ?>
+                                        <div class="tx_simple_size">
+                                            <?php for ($i = 1; $i <= 4; $i++):
+                                                if (!empty(get_post_meta($post->ID, 'metadata_123_'.$i, true))): ?>
+                                                    <p class="titre_leger paddingb_5"><?php echo get_post_meta($post->ID, 'metadata_123_'.$i, true); ?></p>
+                                                <?php endif;
+                                            endfor; ?>
+                                        </div>
                                         <!-- DESCRIPTION COURTE -->
                                         <?php if (!empty(get_post_meta($post->ID, 'metadata_125', true))): ?>
                                             <p class="fontsize_13 ubuntu_fin paddingt_7 paddingb_5"><?php echo get_post_meta($post->ID, 'metadata_125', true); ?></p>

@@ -56,6 +56,13 @@
     min-height: 200px;
 }
 
+.max_width_44_mobile {
+    @include mobile {
+        max-width: 44px;
+    }
+}
+
+
 /*************************************/
 /* ****** MARGINS & PADDINGS *********/
 
@@ -95,6 +102,9 @@
     margin-top: 90px;
 }
 
+.marginr_10 {
+    margin-right: 10px;
+}
 .marginr_20 {
     margin-right: 20px;
 }
@@ -115,6 +125,11 @@
 .marginb_6 {
     margin-bottom: 6px;
 }
+.marginb_12_mobilexs {
+    @include mobilexs {
+        margin-bottom: 12px;
+    }
+}
 .marginb_20 {
     margin-bottom: 20px;
 }
@@ -130,6 +145,9 @@
 .marginb_50 {
     margin-bottom: 50px;
 }
+.marginb_60 {
+    margin-bottom: 60px;
+}
 
 .marginl_0_mob {
     @include mobilexs {
@@ -138,6 +156,14 @@
 }
 .marginl_-3 {
     margin-left: -3px;
+}
+.marginl_12_mobilexs {
+    @include mobilexs {
+        margin-left: 12px;
+    }
+}
+.marginl_10 {
+    margin-left: 10px;
 }
 .marginl_20 {
     margin-left: 20px;

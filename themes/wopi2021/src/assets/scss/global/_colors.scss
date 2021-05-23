@@ -78,6 +78,16 @@ $color_nl: $color_mordore;
 // CLASSES DES COULEURS BACKGROUND
 // ///////////////////////////////////////////
 
+.bg_color_noir_tres_fonce {
+    background-color: $color_noir_tres_fonce;
+}
+.bg_color_noir_clair {
+    background-color: $color_noir_clair;
+}
+.bg_color_gris_clair {
+    background-color: $color_gris_clair;
+}
+
 .bg_color_saison {
     background-color: $color_saison;
 }
@@ -97,15 +107,23 @@ $color_nl: $color_mordore;
 }
 
 
+
 // ///////////////////////////////////////////
 // CLASSES DES COULEURS DE TEXTE
 // ///////////////////////////////////////////
+
+.tx_color_noir_tres_fonce {
+    color: $color_noir_tres_fonce;
+}
 
 .tx_color_noir_fonce {
     color: $color_noir_fonce;
 }
 .tx_color_noir_clair {
     color: $color_noir_clair;
+}
+.tx_color_gris_fonce {
+    color: $color_gris_fonce;
 }
 
 

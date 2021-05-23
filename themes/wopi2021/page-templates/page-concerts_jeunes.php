@@ -79,7 +79,6 @@ Template Name: page_concerts_jeunes
                             <div class="">
                                 <h2 class='titre_card_container'>
                                     <span class='titre_gras'><?php echo get_post_meta($post->ID, 'metadata_199', true); ?></span>
-                                    <br>
                                     <span class='titre_leger'><?php echo get_post_meta($post->ID, 'metadata_200', true); ?></span>
                                 </h2>
                             </div>

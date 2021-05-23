@@ -4,32 +4,14 @@ Template Name: page_soutenez_particulier
 */
 ?>
 <?php
-
  get_header();
-
+ get_template_part('template-parts/header','page');
 ?>
+
 <main>
-<?php
-
-$pagename = get_post_meta($post->ID, '_wp_page_template', true);
-echo $pagename;
-$identifiant = get_post_type($post->ID);
-echo '<br>';
-echo $identifiant;
-echo '<br>';
-if ( 'page-templates/page-agenda.php' == get_post_meta( $post->ID, '_wp_page_template', true ) ) {
-    echo 'true';
-}
-echo '<br>';
-echo $post->ID;
-echo '<br>';
-print_r ($_POST);
-
-?>
 
 
 </main>
-
 
 <?php
  get_footer();

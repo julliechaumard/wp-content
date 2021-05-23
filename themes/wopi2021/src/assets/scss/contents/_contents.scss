@@ -23,9 +23,9 @@
     }
 }
 .titre_card_container {
-    font-size: 23px;
+    font-size: 26px;
     @include mobile { 
-        font-size: 17px;
+        font-size: 19px;
     }
 }
 .titre_gras {
@@ -205,6 +205,12 @@ ul, li {
 .fontsize_13 {
     font-size: 13px;
 }
+.fontsize_16 {
+    font-size: 16px !important;
+}
+.fontsize_20 {
+    font-size: 20px;
+}
 
 /* ALIGNEMENT ************************/
 .texte_right {
@@ -284,6 +290,30 @@ ul, li {
     em {
         font-family: ubuntu_moyen_italique;
         color: black;
+    }
+    ul {
+        
+        li {
+            margin-bottom: 10px;
+            &:before {
+                content: '—';
+                padding-right: 7px;
+            }
+            ul {
+                margin-top: 5px;
+                li {
+                    margin-bottom: 5px;
+                    margin-left: 20px;
+                    &:before {
+                        content: '‣';
+                        padding-right: 7px;
+                    }
+                }
+
+                
+            }
+        }
+
     }
 }
 
