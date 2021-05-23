@@ -121,7 +121,7 @@ Template Name: page_soutenez_entreprise
 <!-- --------------------------------- -->
 <!-- LES MECENES -->
 <!-- --------------------------------- -->
-<section>
+<section class='margin_section_botton'>
     <!-- TITRE -->
     <div>
         <h2 class='titre_chapitre_container'>
