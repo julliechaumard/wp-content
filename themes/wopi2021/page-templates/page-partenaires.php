@@ -52,10 +52,20 @@ get_template_part('template-parts/header','page');
                     while ($loop_financier->have_posts()) :
                         $loop_financier->the_post();?>
 
-                            <div class="">
+                        <!-- LOGO avec lien vers le site internet du partenaire -->
+                        <?php if (!empty(get_post_meta($post->ID, 'metadata_251', true))) : ?>
+                            <div class="texte_center">
+                                <img class='img_width max_width_250' src="<?php echo get_post_meta($post->ID, 'metadata_252', true); ?>" alt="Photo du partenaire">
+                                <a class='ubuntu_fin fontsize_10' href="<?php echo get_post_meta($post->ID, 'metadata_251', true) ?>" target="_blank" >Site internet</a>
+                            </div>
+                        <?php endif; ?>
+                        <!-- LOGO sans lien vers le site internet du partenaire -->
+                        <?php if (empty(get_post_meta($post->ID, 'metadata_251', true))) : ?>
+                            <div>
                                 <img class='img_width max_width_250' src="<?php echo get_post_meta($post->ID, 'metadata_252', true); ?>" alt="Photo du partenaire">
                             </div>
-                    
+                        <?php endif; ?>
+
                     <?php endwhile; 
                 endif; 
             ?>
@@ -111,7 +121,22 @@ get_template_part('template-parts/header','page');
                             <div class="">
                                 <img class='img_width max_width_250' src="<?php echo get_post_meta($post->ID, 'metadata_252', true); ?>" alt="Photo du partenaire">
                             </div>
-                    
+
+
+                            <!-- LOGO avec lien vers le site internet du partenaire -->
+                            <?php if (!empty(get_post_meta($post->ID, 'metadata_251', true))) : ?>
+                                <div class="texte_center">
+                                    <img class='img_width max_width_250' src="<?php echo get_post_meta($post->ID, 'metadata_252', true); ?>" alt="Photo du partenaire">
+                                    <a class='ubuntu_fin fontsize_10' href="<?php echo get_post_meta($post->ID, 'metadata_251', true) ?>" target="_blank" >Site internet</a>
+                                </div>
+                            <?php endif; ?>
+                            <!-- LOGO sans lien vers le site internet du partenaire -->
+                            <?php if (empty(get_post_meta($post->ID, 'metadata_251', true))) : ?>
+                                <div>
+                                    <img class='img_width max_width_250' src="<?php echo get_post_meta($post->ID, 'metadata_252', true); ?>" alt="Photo du partenaire">
+                                </div>
+                            <?php endif; ?>
+            
                     <?php endwhile; 
                 endif; 
             ?>

@@ -15,14 +15,14 @@
   <section class="plainbox grid align_center justify_center bg_color_newsl margin_section_botton">
 
     <div>
-        <h2 class='titre_plainbox_container'>
-            <span class='titre_leger'>ABONNEZ-VOUS</span>
-            <br>
-            <span class='titre_gras'>À NOTRE LETTRE</span>
-            <br>
-            <span class='titre_gras'>D'INFORMATIONS</span>
-            
-        </h2>
+      <p class='titre_plainbox_container fontsize_33'>
+          <span class='titre_leger'>ABONNEZ-VOUS</span>
+          <br>
+          <span class='titre_gras'>À NOTRE LETTRE</span>
+          <br>
+          <span class='titre_gras'>D'INFORMATIONS</span>
+          
+      </p>
     </div>
 
     <div>
@@ -34,20 +34,22 @@
   <!-- --------------------------------- -->
   <!-- LOGOS INSTITUTIONNELS -->
   <!-- --------------------------------- -->
-  <section class="grid_2col1111_2row align_center justify_center mod_footer_logos margin_section_botton">
+  <div class='flex flex_justify_center'>
+  <section class="grid_2col1111_2row align_center mod_footer_logos margin_section_botton">
 
-    <div class="footer_logos_1">
-      <img class='img_width' src="<?php bloginfo('template_directory');?>/dist/assets/images/logos/logo_odp.png" alt="Logo Orchestre de Picardie">
+    <div class="footer_logos_1 justifys_center">
+      <img class='img_width max_width_600' src="<?php bloginfo('template_directory');?>/dist/assets/images/logos/logo_odp.png" alt="Logo Orchestre de Picardie">
     </div>
-    <div class="footer_logos_2">
-      <img class='img_svg' src="<?php bloginfo('template_directory');?>/dist/assets/images/logos/logo_prefet_hdf.svg" alt="Logo partenaire">
+    <div class="footer_logos_2 justify_end">
+      <img class='img_svg max_width_300' src="<?php bloginfo('template_directory');?>/dist/assets/images/logos/logo_prefet_hdf.svg" alt="Logo partenaire">
     </div>
-    <div class="footer_logos_3">
-      <img class='img_svg' src="<?php bloginfo('template_directory');?>/dist/assets/images/logos/logo_region_hdf.svg" alt="Logo partenaire">
+    <div class="footer_logos_3 justifys_start">
+      <img class='img_svg max_width_300' src="<?php bloginfo('template_directory');?>/dist/assets/images/logos/logo_region_hdf.svg" alt="Logo partenaire">
     </div>
-
 
   </section>
+  </div>
+
 
 
   <!-- --------------------------------- -->

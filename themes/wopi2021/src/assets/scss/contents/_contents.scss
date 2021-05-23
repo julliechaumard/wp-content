@@ -21,6 +21,9 @@
     @include mobile { 
         font-size: 27px;
     }
+    @include mobilexs { 
+        font-size: 22px;
+    }
 }
 .titre_card_container {
     font-size: 26px;
@@ -45,13 +48,12 @@
 
 /* TITRE PLAINBOX */
 .titre_plainbox_container {
-    font-size: 40px;
     color: white;
     @include mobile { 
-        font-size: 30px;
+        font-size: 30px !important;
     }
     @include mobilexs { 
-        font-size: 20px;
+        font-size: 20px !important;
     }
 }
 
@@ -61,6 +63,9 @@
 }
 .titre_paragraphe_size {
     font-size: 20px;
+    @include mobilexs {
+        font-size: 17px;
+    }
 }
 
 /*****************************************
@@ -211,10 +216,16 @@ ul, li {
 .fontsize_20 {
     font-size: 20px;
 }
+.fontsize_33 {
+    font-size: 33px;
+}
 
 /* ALIGNEMENT ************************/
 .texte_right {
     text-align: right;
+}
+.texte_center {
+    text-align: center;
 }
 
 .texte_left_mob {
@@ -279,10 +290,18 @@ ul, li {
     max-width: 570px;
     font-family: ubuntu_leger;
     font-size: 14px;
-    p {
+
+    h3, p {
         margin-bottom: 13px;
         line-height: 20px;
     }
+
+    h3 {
+        text-transform: uppercase;
+        font-family: ubuntu_moyen;
+        font-size: 16px;
+    }
+
     strong {
         font-family: ubuntu_bold;
         color: black;
@@ -292,9 +311,9 @@ ul, li {
         color: black;
     }
     ul {
-        
+        margin-bottom: 13px;
         li {
-            margin-bottom: 10px;
+            margin-bottom: 4px;
             &:before {
                 content: '—';
                 padding-right: 7px;
@@ -302,7 +321,7 @@ ul, li {
             ul {
                 margin-top: 5px;
                 li {
-                    margin-bottom: 5px;
+                    margin-bottom: 4px;
                     margin-left: 20px;
                     &:before {
                         content: '‣';

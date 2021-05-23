@@ -35,6 +35,12 @@ function titre_gras($post) {
     if ( is_page(array('soutenez-nous-entreprise')) ) { 
       echo "SOUTENEZ-NOUS";
     }
+    if ( is_page(array('soutenez-nous-particulier')) ) { 
+      echo "SOUTENEZ-NOUS";
+    }
+    if ( is_page(array('soutenez-nous-picardissimo')) ) { 
+      echo "SOUTENEZ-NOUS";
+    }
     if ( is_page(array('partenaires')) ) { 
       echo "LES PARTENAIRES";
     }
@@ -75,6 +81,12 @@ function titre_leger($post) {
   }
   if ( is_page(array('soutenez-nous-entreprise')) ) { 
     echo "ENTREPRISE";
+  }
+  if ( is_page(array('soutenez-nous-particulier')) ) { 
+    echo "PARTICULIER";
+  }
+  if ( is_page(array('soutenez-nous-picardissimo')) ) { 
+    echo "PICARDISSIMO";
   }
   if ( is_page(array('partenaires')) ) { 
     echo "DE L’ORCHESTRE";

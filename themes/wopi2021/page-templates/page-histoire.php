@@ -20,11 +20,11 @@ Template Name: page_histoire
              
             <!-- TITRE -->
             <div>
-                <h4 class='titre_chapitre_container'>
+                <h2 class='titre_chapitre_container'>
                     <span class='titre_gras'>ORCHESTRE NATIONAL</span>
                     <br>
                     <span class='titre_leger'>EN RÉGION HAUTS-DE-FRANCE</span>
-                </h4>
+                </h2>
             </div>
 
             <!-- DESCRIPTION -->
@@ -50,11 +50,11 @@ Template Name: page_histoire
         <div class="grid_area_22 grid_area_13 marginl_12_mobilexs">
             <!-- TITRE -->
             <div>
-                <h4 class='titre_chapitre_container'>
+                <h2 class='titre_chapitre_container'>
                     <span class='titre_gras'>DEPUIS SA CRÉATION</span>
                     <br>
                     <span class='titre_leger'>C'EST</span>
-                </h4>
+                </h2>
             </div>
         
             <!-- INFORMATION -->

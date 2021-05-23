@@ -49,8 +49,25 @@ get_template_part('template-parts/header','page');
                     if (!empty(get_post_meta($post->ID, 'metadata_254', true))) : ?>
 
                         <div class="grid_2col_11 align_center grid_column_gap7">
-                            <div class="">
-                                <img class='img_width max_width_250' src="<?php echo get_post_meta($post->ID, 'metadata_252', true); ?>" alt="Photo du partenaire">
+                            <div class="texte_center">
+                                
+
+                                <!-- LOGO avec lien vers le site internet du partenaire -->
+                                <?php if (!empty(get_post_meta($post->ID, 'metadata_251', true))) : ?>
+                                    
+                                        <img class='img_width max_width_250' src="<?php echo get_post_meta($post->ID, 'metadata_252', true); ?>" alt="Photo du partenaire">
+                                        <a class='ubuntu_fin fontsize_10' href="<?php echo get_post_meta($post->ID, 'metadata_251', true) ?>" target="_blank" >Site internet</a>
+                                    
+                                <?php endif; ?>
+                                <!-- LOGO sans lien vers le site internet du partenaire -->
+                                <?php if (empty(get_post_meta($post->ID, 'metadata_251', true))) : ?>
+                                    
+                                        <img class='img_width max_width_250' src="<?php echo get_post_meta($post->ID, 'metadata_252', true); ?>" alt="Photo du partenaire">
+                                    
+                                <?php endif; ?>
+
+
+
                             </div>
                             <div>
                                 <p class="fontsize_13 ubuntu_fin paddingt_7 paddingb_5"><?php echo get_post_meta($post->ID, 'metadata_254', true) ?></p>

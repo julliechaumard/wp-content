@@ -52,11 +52,11 @@ Template Post Type: concert
         <section class="dates_concert_cell margin_section_botton_mobile">
              <!-- Titre -->
             <div>
-                <h3 class='titre_chapitre_container'>
+                <h2 class='titre_chapitre_container'>
                     <span class='titre_gras'>DATES</span>
                     <br>
                     <span class='titre_leger'>ET REPRÉSENTATIONS</span>
-                </h3>
+                </h2>
             </div>
 
             <!-- Les dates -->
@@ -142,11 +142,11 @@ Template Post Type: concert
         <section class="programme_concert_cell margin_section_botton">
              <!-- Titre -->
             <div>
-                <h4 class='titre_chapitre_container'>
+                <h2 class='titre_chapitre_container'>
                     <span class='titre_gras'>PROGRAMME</span>
                     <br>
                     <span class='titre_leger'>DU CONCERT</span>
-                </h4>
+                </h2>
             </div>
 
             <!-- Les pieces -->
@@ -203,11 +203,16 @@ Template Post Type: concert
                                 <div>
                                     <!-- LOGO avec lien vers le site internet du partenaire -->
                                     <?php if (!empty(get_post_meta($post->ID, 'metadata_251', true))) : ?>
-                                        <a href="<?php get_post_meta($post->ID, 'metadata_251', true) ?>" target="_blank" ><img class="img_width" src="<?php echo get_post_meta($post->ID, 'metadata_252', true); ?>" alt="Logo du partenaire"></a>
+                                        <div class="texte_center">
+                                            <img class="img_width" src="<?php echo get_post_meta($post->ID, 'metadata_252', true); ?>" alt="Logo du partenaire">
+                                            <a class='ubuntu_fin fontsize_10' href="<?php get_post_meta($post->ID, 'metadata_251', true) ?>" target="_blank" >Site internet</a>
+                                        </div>
                                     <?php endif; ?>
                                     <!-- LOGO sans lien vers le site internet du partenaire -->
                                     <?php if (empty(get_post_meta($post->ID, 'metadata_251', true))) : ?>
-                                        <img class="img_width" src="<?php echo get_post_meta($post->ID, 'metadata_252', true); ?>" alt="Logo du partenaire">
+                                        <div>
+                                            <img class="img_width" src="<?php echo get_post_meta($post->ID, 'metadata_252', true); ?>" alt="Logo du partenaire">
+                                        </div>
                                     <?php endif; ?>
                                 </div>
                                 <div>
@@ -222,30 +227,36 @@ Template Post Type: concert
                 <!-- LOGOS des Partenaires -->
                 <div class="partenaires_concert_logo_list grid_autocolmax_autorow">
 
-                        <!-- Boucle pour les 15 partenaires -->
-                        <?php for ($i = 1; $i <= 15; $i++) {
+                    <!-- Boucle pour les 15 partenaires -->
+                    <?php for ($i = 1; $i <= 15; $i++) {
 
-                            if(!empty(get_post_meta($post->ID, 'metadata_190_'.$i, true))) {
-                                $partenaire = get_post_meta($post->ID, 'metadata_190_'.$i, true);
-                                $args_partenaire = array('post_type' => 'partenaire','name' => $partenaire,'posts_per_page' => 999,);
-                                $loop_partenaire = new WP_Query( $args_partenaire );
-                                if ($loop_partenaire->have_posts()) {
-                                    while ($loop_partenaire->have_posts()) {
-                                        $loop_partenaire->the_post();?>
+                        if(!empty(get_post_meta($post->ID, 'metadata_190_'.$i, true))) {
+                            $partenaire = get_post_meta($post->ID, 'metadata_190_'.$i, true);
+                            $args_partenaire = array('post_type' => 'partenaire','name' => $partenaire,'posts_per_page' => 999,);
+                            $loop_partenaire = new WP_Query( $args_partenaire );
+                            if ($loop_partenaire->have_posts()) {
+                                while ($loop_partenaire->have_posts()) {
+                                    $loop_partenaire->the_post();?>
 
-                                        <!-- LOGO avec lien vers le site internet du partenaire -->
-                                        <?php if (!empty(get_post_meta($post->ID, 'metadata_251', true))) : ?>
-                                            <a href="<?php get_post_meta($post->ID, 'metadata_251', true) ?>" target="_blank" ><img class="img_width" src="<?php echo get_post_meta($post->ID, 'metadata_252', true); ?>" alt="Logo du partenaire"></a>
-                                        <?php endif; ?>
-                                        <!-- LOGO sans lien vers le site internet du partenaire -->
-                                        <?php if (empty(get_post_meta($post->ID, 'metadata_251', true))) : ?>
+                                    <!-- LOGO avec lien vers le site internet du partenaire -->
+                                    <?php if (!empty(get_post_meta($post->ID, 'metadata_251', true))) : ?>
+                                        <div class="texte_center">
                                             <img class="img_width" src="<?php echo get_post_meta($post->ID, 'metadata_252', true); ?>" alt="Logo du partenaire">
-                                        <?php endif; ?>
-                                    <?php };
-                                };wp_reset_query(); 
-                            };
-                        }; ?>
-                </div>
+                                            <a class='ubuntu_fin fontsize_10' href="<?php echo get_post_meta($post->ID, 'metadata_251', true) ?>" target="_blank" >Site internet</a>
+                                        </div>
+                                    <?php endif; ?>
+                                    <!-- LOGO sans lien vers le site internet du partenaire -->
+                                    <?php if (empty(get_post_meta($post->ID, 'metadata_251', true))) : ?>
+                                        <div>
+                                            <img class="img_width" src="<?php echo get_post_meta($post->ID, 'metadata_252', true); ?>" alt="Logo du partenaire">
+                                        </div>
+                                    <?php endif; ?>
+
+                                <?php };
+                            };wp_reset_query(); 
+                        };
+                    }; ?>
+                    </div>
 
             </div>
         </section>

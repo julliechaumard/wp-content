@@ -21,11 +21,11 @@ Template Post Type: artiste_invite
              
             <!-- TITRE -->
             <div>
-                <h4 class='titre_chapitre_container'>
+                <h2 class='titre_chapitre_container'>
                     <span class='titre_gras'>PRÉSENTATION</span>
                     <br>
                     <span class='titre_leger'>DE L' ARTISTE</span>
-                </h4>
+                </h2>
             </div>
 
             <!-- POSTE -->

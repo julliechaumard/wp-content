@@ -51,6 +51,12 @@
 .max_width_250 {
     max-width: 250px;
 }
+.max_width_300 {
+    max-width: 300px;
+}
+.max_width_600 {
+    max-width: 600px;
+}
 
 .height_min_200 {
     min-height: 200px;
@@ -105,13 +111,30 @@
 .marginr_10 {
     margin-right: 10px;
 }
+.marginr_15_mobilexs {
+    @include mobilexs {
+        margin-right: 15px !important;
+    }
+}
 .marginr_20 {
     margin-right: 20px;
 }
 .marginr_40 {
     margin-right: 40px;
 }
-
+.marginr_50_mobile {
+    @include mobile {
+        margin-right: 50px;
+    }
+}
+.marginr_100 {
+    margin-right: 100px;
+}
+.marginr_100_nomobile {
+    @include nomobile {
+        margin-right: 100px;
+    }
+}
 
 /* LISTE DES CONCERTS */
 .marginb_3 {
@@ -165,8 +188,23 @@
 .marginl_10 {
     margin-left: 10px;
 }
+.marginl_15_mobilexs {
+    @include mobilexs {
+        margin-left: 15px !important;
+    }
+}
 .marginl_20 {
     margin-left: 20px;
+}
+.marginl_50_mobile {
+    @include mobile {
+        margin-left: 50px;
+    }
+}
+.marginl_100_nomobile {
+    @include nomobile {
+        margin-left: 100px;
+    }
 }
 
 /* INFORMATIONS FICHE CONCERT DATE / MENTIONS ANNULE*/
@@ -233,7 +271,9 @@
         padding-bottom: 20px;
     }
 }
-
+.paddingb_50 {
+    padding-bottom: 50px;
+}
 /* FOOTER CONTACTS BOUTON ENVOYER UN MESSAGE */
 .paddingb_36 {
     padding-bottom: 36px;

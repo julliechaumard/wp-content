@@ -15,6 +15,10 @@
 .flex_align_end {
     align-items: flex-end;
 }
+.flex_justify_center {
+    justify-content: center;
+}
+
 
 /* ******************************************************
 ** GRID */
@@ -156,6 +160,12 @@
     @media screen and (max-width:400px){
         justify-self: start !important;
     }
+}
+.justifys_center {
+    justify-self: center;
+}
+.justifys_start {
+    justify-self: start;
 }
 .justify_end {
     justify-self: end;
@@ -372,13 +382,13 @@
 /* FOOTER LOGOS INSTITUTIONNELS*/
 .grid_2col1111_2row{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(70px, 200px) minmax(70px, 250px);
     grid-template-rows: auto auto;
     column-gap: 42px;
     @include mobile {
-        column-gap: 5px;
+        column-gap: 25px;
     }
-    row-gap: 21px;
+    row-gap: 40px;
 }
 
 /* GRID FICHE CONCERT INFORMATION */
