@@ -111,7 +111,7 @@ include 'jcp-meta_box/jcp-meta_box_page_soutenez_entreprise.php';
 include 'jcp-meta_box/jcp-meta_box_page_soutenez_particulier.php';
 include 'jcp-meta_box/jcp-meta_box_page_soutenez_picardissimo.php';
 include 'jcp-meta_box/jcp-meta_box_page_medias_photos.php';
-include 'jcp-meta_box/jcp-jcp-meta_box_page_medias_videos.php';
+include 'jcp-meta_box/jcp-meta_box_page_medias_videos.php';
 
 ?>
 

@@ -88,17 +88,18 @@ function metabox_page_medias_photos($post) {
             <div class='metagroup_sub'>
                 
                 <div class='metagroup_sub_items grid_3fr_simple'>
+                    <div class="pinput">
+                        <label for="metadata_703_<?php echo $i; ?>">TITRE GRAS</label>
+                        <input type="text" name="metadata_703_<?php echo $i; ?>" id="metadata_703_<?php echo $i; ?>" placeholder='1 à 3 mots en MAJUSCULE' value="<?php echo $metadata_703_[$i]; ?>"/>
+                    </div>
+                    <div class=''>
                         <div class="pinput">
-                            <label for="metadata_703_<?php echo $i; ?>">TITRE GRAS</label>
-                            <input type="text" name="metadata_703_<?php echo $i; ?>" id="metadata_703_<?php echo $i; ?>" placeholder='1 à 3 mots en MAJUSCULE' value="<?php echo $metadata_703_[$i]; ?>"/>
-                        </div>     
-                </div>
-                <div class='metagroup_sub_items grid_3fr_simple'>
-                        <div class="pinput">
-                            <label for="metadata_704_<?php echo $i; ?>">TITRE GRAS</label>
+                            <label for="metadata_704_<?php echo $i; ?>">TITRE LEGER</label>
                             <input type="text" name="metadata_704_<?php echo $i; ?>" id="metadata_704_<?php echo $i; ?>" placeholder='1 à 3 mots en MAJUSCULE' value="<?php echo $metadata_704_[$i]; ?>"/>
                         </div>     
+                    </div>
                 </div>
+                
             </div>
 
             <!-- 10 PHOTOS -->

@@ -262,7 +262,7 @@
 
     <!-- MEDIATHEQUE VIDEOS-->
     <?php
-    if ( is_page(array('mediatheque_photos')) ) : ?>
+    if ( is_page(array('mediatheque_videos')) ) : ?>
         <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
             <div class=''>
                 <p class='accroche_cell_texte'>
@@ -575,7 +575,7 @@
 
     <!-- MEDIATHEQUE VIDEOS-->
     <?php
-    if ( is_page(array('mediatheque_photos')) ) : ?>
+    if ( is_page(array('mediatheque_videos')) ) : ?>
         <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
             <div class=''>
                 <p class='accroche_cell_texte'>

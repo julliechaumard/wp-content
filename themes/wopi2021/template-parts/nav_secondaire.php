@@ -58,31 +58,31 @@ if ( is_page(array('mediatheque_photos','mediatheque_videos')) ) :?>
         <!-- Carré de couleur -->
         <div class='nav_second_carre bg_color_media_ligne grid_area_1_2_max500px'></div>
         <!-- Label + Flèche -->
-        <div class="fleche ubuntu_bold tx_color_noir_fonce alignself_center marginl_10 grid_area_2_2_max500px"><a class='fontsize_16' href="<?php echo get_permalink(get_page_by_title('Soutenez-nous entreprise')) ?>">CONCERTS EN LIGNE</a></div>
+        <div class="fleche ubuntu_bold tx_color_noir_fonce alignself_center marginl_10 grid_area_2_2_max500px"><a class='fontsize_16' href="">CONCERTS EN LIGNE</a></div>
 
         <!-- MENU ITEM 2 -->
         <!-- Carré de couleur -->
         <div class='nav_second_carre bg_color_media_videos grid_area_2 grid_area_1_3_max500px'></div>
         <!-- Label + Flèche -->
-        <div class="fleche ubuntu_bold tx_color_noir_fonce alignself_center marginl_10"><a class='fontsize_16' href="<?php echo get_permalink(get_page_by_title('Soutenez-nous particulier')) ?>">VIDÉOS</a></div>
+        <div class="fleche ubuntu_bold tx_color_noir_fonce alignself_center marginl_10"><a class='fontsize_16' href="<?php echo get_permalink(get_page_by_title('Mediatheque_videos')) ?>">VIDÉOS</a></div>
 
         <!-- MENU ITEM 3 -->
         <!-- Carré de couleur -->
         <div class='nav_second_carre bg_color_media_musiques grid_area_2 grid_area_1_4_max500px'></div>
         <!-- Label + Flèche -->
-        <div class="fleche ubuntu_bold tx_color_noir_fonce alignself_center marginl_10"><a class='fontsize_16' href="<?php echo get_permalink(get_page_by_title('Soutenez-nous Picardissimo')) ?>">MUSIQUES</a></div>
+        <div class="fleche ubuntu_bold tx_color_noir_fonce alignself_center marginl_10"><a class='fontsize_16' href="">MUSIQUES</a></div>
 
             <!-- MENU ITEM 4 -->
         <!-- Carré de couleur -->
         <div class='nav_second_carre bg_color_media_photos grid_area_2 grid_area_1_5_max500px'></div>
         <!-- Label + Flèche -->
-        <div class="fleche ubuntu_bold tx_color_noir_fonce alignself_center marginl_10"><a class='fontsize_16' href="<?php echo get_permalink(get_page_by_title('Soutenez-nous Picardissimo')) ?>">PHOTOS</a></div>
+        <div class="fleche ubuntu_bold tx_color_noir_fonce alignself_center marginl_10"><a class='fontsize_16' href="<?php echo get_permalink(get_page_by_title('Mediatheque_photos')) ?>">PHOTOS</a></div>
 
             <!-- MENU ITEM 5 -->
         <!-- Carré de couleur -->
         <div class='nav_second_carre bg_color_media_disco grid_area_2 grid_area_1_6_max500px'></div>
         <!-- Label + Flèche -->
-        <div class="fleche ubuntu_bold tx_color_noir_fonce alignself_center marginl_10"><a class='fontsize_16' href="<?php echo get_permalink(get_page_by_title('Soutenez-nous Picardissimo')) ?>">DISCOGRAPHIE</a></div>
+        <div class="fleche ubuntu_bold tx_color_noir_fonce alignself_center marginl_10"><a class='fontsize_16' href="">DISCOGRAPHIE</a></div>
 
     </nav>
 
