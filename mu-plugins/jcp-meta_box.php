@@ -83,6 +83,10 @@ add_action( 'add_meta_boxes', 'jcp_declare_metabox_page_soutenez_particulier' );
 add_action( 'save_post', 'jcp_metabox_save_page_soutenez_particulier');
 add_action( 'add_meta_boxes', 'jcp_declare_metabox_page_soutenez_picardissimo' );
 add_action( 'save_post', 'jcp_metabox_save_page_soutenez_picardissimo');
+add_action( 'add_meta_boxes', 'jcp_declare_metabox_page_medias_photos' );
+add_action( 'save_post', 'jcp_metabox_save_page_medias_photos');
+add_action( 'add_meta_boxes', 'jcp_declare_metabox_page_medias_videos' );
+add_action( 'save_post', 'jcp_metabox_save_page_medias_videos');
 
 include 'jcp-meta_box/jcp-meta_box_concert.php';
 include 'jcp-meta_box/jcp-meta_box_salle.php';
@@ -106,6 +110,8 @@ include 'jcp-meta_box/jcp-meta_box_page_recrutement.php';
 include 'jcp-meta_box/jcp-meta_box_page_soutenez_entreprise.php';
 include 'jcp-meta_box/jcp-meta_box_page_soutenez_particulier.php';
 include 'jcp-meta_box/jcp-meta_box_page_soutenez_picardissimo.php';
+include 'jcp-meta_box/jcp-meta_box_page_medias_photos.php';
+include 'jcp-meta_box/jcp-jcp-meta_box_page_medias_videos.php';
 
 ?>
 

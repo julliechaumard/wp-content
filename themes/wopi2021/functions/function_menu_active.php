@@ -11,6 +11,11 @@ function menu_active_orchestre() {
     echo 'menu_active';
   }
 }
+function menu_active_medias() {
+  if ( is_page(array('mediatheque_photos','mediatheque_videos')) ) { 
+    echo 'menu_active';
+  }
+}
 
 
 ?>

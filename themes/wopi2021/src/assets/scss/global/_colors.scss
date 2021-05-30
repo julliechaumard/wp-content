@@ -97,6 +97,9 @@ $color_nl: $color_mordore;
 .bg_color_orchestre {
     background-color: $color_orchestre;
 }
+.bg_color_medias {
+    background-color: $color_medias;
+}
 
 .bg_color_newsl {
     background-color: $color_newsl_bg;
@@ -106,6 +109,21 @@ $color_nl: $color_mordore;
     background-color: $color_footer_bg;
 }
 
+.bg_color_media_ligne {
+    background-color: $color_violet;
+}
+.bg_color_media_videos {
+    background-color: #FFA2E6;
+}
+.bg_color_media_musiques {
+    background-color: #AEB4FF;
+}
+.bg_color_media_photos {
+    background-color: #FBC0AC;
+}
+.bg_color_media_disco {
+    background-color: #ADFCFF;
+}
 
 
 // ///////////////////////////////////////////
@@ -142,4 +160,7 @@ $color_nl: $color_mordore;
 }
 .tx_color_orchestre {
     color: $color_orchestre;
+}
+.tx_color_medias {
+    color: $color_medias;
 }

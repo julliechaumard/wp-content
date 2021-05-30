@@ -22,7 +22,7 @@ Template Post Type: concert
         <section class="distribution_concert_cell margin_section_botton">
             <!-- Titre -->
             <div>
-                <h2 class='titre_chapitre_container'>
+                <h2 class='titre_chapitre_container marginb_20'>
                     <span class='titre_gras'>DISTRIBUTION</span>
                     <br>
                     <span class='titre_leger'>DU CONCERT</span>
@@ -52,7 +52,7 @@ Template Post Type: concert
         <section class="dates_concert_cell margin_section_botton_mobile">
              <!-- Titre -->
             <div>
-                <h2 class='titre_chapitre_container'>
+                <h2 class='titre_chapitre_container marginb_20'>
                     <span class='titre_gras'>DATES</span>
                     <br>
                     <span class='titre_leger'>ET REPRÉSENTATIONS</span>
@@ -142,7 +142,7 @@ Template Post Type: concert
         <section class="programme_concert_cell margin_section_botton">
              <!-- Titre -->
             <div>
-                <h2 class='titre_chapitre_container'>
+                <h2 class='titre_chapitre_container marginb_20'>
                     <span class='titre_gras'>PROGRAMME</span>
                     <br>
                     <span class='titre_leger'>DU CONCERT</span>
@@ -150,7 +150,7 @@ Template Post Type: concert
             </div>
 
             <!-- Les pieces -->
-            <div class='liste_art_comp margin_subtitle_bottom'>
+            <div class='liste_art_comp marginb_20'>
                 <?php for ($i = 1; $i <= 20; $i++) { ?>
                     <?php if(!empty(get_post_meta($post->ID, 'metadata_194_'.$i, true))) { ?>
                         <div class="artiste paddingb_5">
@@ -165,7 +165,7 @@ Template Post Type: concert
                 <?php } ?>
             </div>
 
-            <div class="margin_subtitle_bottom">
+            <div class="marginb_20">
                 <?php if(!empty(get_post_meta($post->ID, 'metadata_202', true))) { ?>
                     <p class='ubuntu_leger'><span class='duree_concert_titre'>Durée : </span><?php echo get_post_meta($post->ID, 'metadata_202', true); ?></p>
                 <?php } ?>
@@ -272,7 +272,7 @@ Template Post Type: concert
     <section class="margin_section_botton">
         <!-- TITRE -->
         <div>
-            <p class='titre_chapitre_container'>
+            <p class='titre_chapitre_container marginb_20'>
                 <span class='titre_gras'>PHOTO & VIDÉOS</span>
                 <br>
                 <span class='titre_leger'>DU CONCERT</span>

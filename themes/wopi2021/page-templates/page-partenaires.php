@@ -20,7 +20,7 @@ get_template_part('template-parts/header','page');
 
         <!-- TITRE -->
         <div class="marginb_50">
-            <h2 class='titre_chapitre_container'>
+            <h2 class='titre_chapitre_container marginb_20'>
                 <span class='titre_leger'>SOUTIEN FINANCIER</span>
                 <br>
                 <span class='titre_gras'>DE L’ÉTAT ET DES COLLECTIVITÉS TERRITORIALES</span>
@@ -86,7 +86,7 @@ get_template_part('template-parts/header','page');
 
         <!-- TITRE -->
         <div class="marginb_50">
-            <h2 class='titre_chapitre_container'>
+            <h2 class='titre_chapitre_container marginb_20'>
                 <span class='titre_leger'>AUTRES</span>
                 <br>
                 <span class='titre_gras'>SOUTIEN</span>

@@ -46,7 +46,7 @@
     }
 }
 
-/* TITRE PLAINBOX */
+/* PLAINBOX */
 .titre_plainbox_container {
     color: white;
     @include mobile { 
@@ -54,6 +54,15 @@
     }
     @include mobilexs { 
         font-size: 20px !important;
+    }
+}
+.texte_plainbox_container {
+    color: white;
+    @include mobile { 
+        font-size: 22px !important;
+    }
+    @include mobilexs { 
+        font-size: 18px !important;
     }
 }
 
@@ -151,6 +160,12 @@ ul, li {
         border-right: solid 0px !important;
     }
 }
+.pipe_medias {
+    border-right: solid 1px $color_medias !important;
+    &:last-child {
+        border-right: solid 0px !important;
+    }
+}
 
 
 /*****************************************
@@ -186,6 +201,10 @@ ul, li {
     color: white;
     background-color: $color_orchestre;
 }
+.button_accueil {
+    color: color_accueil;
+    background-color: white;
+}
 
 
 /* BUTTON NEWSLETTER*/
@@ -215,6 +234,9 @@ ul, li {
 }
 .fontsize_20 {
     font-size: 20px;
+}
+.fontsize_27 {
+    font-size: 27px;
 }
 .fontsize_33 {
     font-size: 33px;

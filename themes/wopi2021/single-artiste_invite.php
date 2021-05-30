@@ -21,7 +21,7 @@ Template Post Type: artiste_invite
              
             <!-- TITRE -->
             <div>
-                <h2 class='titre_chapitre_container'>
+                <h2 class='titre_chapitre_container marginb_20'>
                     <span class='titre_gras'>PRÉSENTATION</span>
                     <br>
                     <span class='titre_leger'>DE L' ARTISTE</span>
@@ -29,7 +29,7 @@ Template Post Type: artiste_invite
             </div>
 
             <!-- POSTE -->
-            <div class='liste_art_comp margin_subtitle_bottom'>
+            <div class='liste_art_comp marginb_20'>
                 <?php for ($i = 1; $i <= 4; $i++) { ?>
                     <?php if(!empty(get_post_meta($post->ID, 'metadata_123_'.$i, true))) { ?>
                         <div class="artiste paddingb_5">

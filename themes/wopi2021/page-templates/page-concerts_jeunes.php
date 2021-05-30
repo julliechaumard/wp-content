@@ -14,7 +14,7 @@ Template Name: page_concerts_jeunes
     <article>
         <!-- Titre -->
         <div class="paddingt_30">
-            <h2 class='titre_chapitre_container'>
+            <h2 class='titre_chapitre_container marginb_20'>
                 <span class='titre_leger'>LES PROCHAINS</span>
                 <br>
                 <span class='titre_gras'>CONCERTS JEUNES PUBLICS</span>

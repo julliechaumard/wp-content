@@ -19,7 +19,7 @@ Template Name: page_accueil
 
         <!-- Titre -->
         <div class="">
-            <h2 class='titre_chapitre_container'>
+            <h2 class='titre_chapitre_container marginb_20'>
                 <span class='titre_leger'>COMPOSITEUR</span>
                 <br>
                 <span class='titre_gras'>EN RÉSIDENCE</span>
@@ -94,7 +94,7 @@ Template Name: page_accueil
 
         <!-- Titre -->
         <div class="paddingt_30">
-            <h2 class='titre_chapitre_container'>
+            <h2 class='titre_chapitre_container marginb_20'>
                 <span class='titre_leger'>CHEFS D'ORCHESTRE</span>
                 <br>
                 <span class='titre_gras'>INVITÉS</span>
@@ -167,7 +167,7 @@ Template Name: page_accueil
 
         <!-- Titre -->
         <div class="paddingt_30">
-            <h2 class='titre_chapitre_container'>
+            <h2 class='titre_chapitre_container marginb_20'>
                 <span class='titre_leger'>SOLISTES</span>
                 <br>
                 <span class='titre_gras'>INVITÉS</span>
@@ -240,7 +240,7 @@ Template Name: page_accueil
 
         <!-- Titre -->
         <div class="paddingt_30">
-            <h2 class='titre_chapitre_container'>
+            <h2 class='titre_chapitre_container marginb_20'>
                 <span class='titre_leger'>AUTRES ARTISTES</span>
                 <br>
                 <span class='titre_gras'>INVITÉS</span>

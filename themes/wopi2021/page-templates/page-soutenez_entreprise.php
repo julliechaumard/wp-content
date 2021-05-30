@@ -40,7 +40,7 @@ Template Name: page_soutenez_entreprise
              
             <!-- TITRE -->
             <div>
-                <h2 class='titre_chapitre_container'>
+                <h2 class='titre_chapitre_container marginb_20'>
                     <span class='titre_gras'>PRÉSENTATION</span>
                     <br>
                     <span class='titre_leger'>DU MÉCÉNAT D’ENTREPRISE</span>
@@ -65,7 +65,7 @@ Template Name: page_soutenez_entreprise
 
         <!-- TITRE -->
         <div>
-            <h2 class='titre_chapitre_container tx_color_orchestre'>
+            <h2 class='titre_chapitre_container marginb_20 tx_color_orchestre'>
                 <span class='titre_gras'>INFORMATIONS</span>
                 <br>
                 <span class='titre_leger'>PRATIQUES</span>
@@ -80,12 +80,7 @@ Template Name: page_soutenez_entreprise
         
             <!-- INFORMATION -->
             <div class="content_wp">
-                <p>Notre équipe est à votre écoute pour définir un ensemble de contreparties selon vos attentes et le montant de votre don.</p>
-                <p>— Prénom NOM
-                <br>
-                Collaboratrice de Direction, Chargée du mécénat
-                <br>
-                03.22.92.15.04</p>
+                <?php echo get_post_meta($post->ID, 'metadata_672', true); ?>
                 <p class="marginb_6"><button class="button_petit button_orchestre"><a target="_blank" href="mailto:lullishop@icloud.com?subject=Contact MÉCÉNAT ENTREPRISE depuis le site internet de l'Orchestre">CONTACTEZ-NOUS</a></button></p>
             </div>
 
@@ -103,7 +98,7 @@ Template Name: page_soutenez_entreprise
     <div style="text-align:center;">
         <div style="margin:8px 0px 4px;">
             <div>
-                <h2 class='titre_chapitre_container tx_color_blanc'>
+                <h2 class='titre_chapitre_container marginb_20 tx_color_blanc'>
                     <span class='titre_gras'>CONSULTER</span>
                     <br>
                     <span class='titre_leger'>LA BROCHURE</span>
@@ -124,7 +119,7 @@ Template Name: page_soutenez_entreprise
 <section class='margin_section_botton'>
     <!-- TITRE -->
     <div>
-        <h2 class='titre_chapitre_container'>
+        <h2 class='titre_chapitre_container marginb_20'>
             <span class='titre_gras'>L’ORCHESTRE DE PICARDIE REMERCIE CHALEUREUSEMENT</span>
             <br>
             <span class='titre_leger'>L’ENSEMBLE DE SES MÉCÈNES POUR LEUR ENGAGEMENT ET LEUR SOUTIEN</span>

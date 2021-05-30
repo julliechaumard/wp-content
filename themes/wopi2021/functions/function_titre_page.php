@@ -47,6 +47,12 @@ function titre_gras($post) {
     if ( is_page(array('artistes-invites')) ) { 
       echo "LES ARTISTES";
     }
+    if ( is_page(array('mediatheque_photos')) ) { 
+      echo "MÉDIATHÈQUE";
+    }
+    if ( is_page(array('mediatheque_videos')) ) { 
+      echo "MÉDIATHÈQUE";
+    }
 }
 function titre_leger($post) {
   if ( is_front_page() ) { 
@@ -93,6 +99,12 @@ function titre_leger($post) {
   }
   if ( is_page(array('artistes-invites')) ) { 
     echo "INVITÉS";
+  }
+  if ( is_page(array('mediatheque_photos')) ) { 
+    echo "PHOTOS";
+  }
+  if ( is_page(array('mediatheque_videos')) ) { 
+    echo "VIDÉOS";
   }
 }
 

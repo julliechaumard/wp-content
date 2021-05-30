@@ -14,7 +14,7 @@ get_template_part('template-parts/header','page');
    <article>
        <!-- Titre -->
        <div class="paddingt_30">
-           <h2 class='titre_chapitre_container'>
+           <h2 class='titre_chapitre_container marginb_20'>
                <span class='titre_leger'>TOUTE LA</span>
                <br>
                <span class='titre_gras'>SAISON</span>

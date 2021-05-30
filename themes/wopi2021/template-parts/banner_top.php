@@ -246,6 +246,34 @@
         </div>
     <?php endif; ?>
 
+    <!-- MEDIATHEQUE PHOTO-->
+    <?php
+    if ( is_page(array('mediatheque_photos')) ) : ?>
+        <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
+            <div class=''>
+                <p class='accroche_cell_texte'>
+                    <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_701', true); ?></span>
+                    <br>
+                    <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_702', true); ?></span>
+                </p>
+            </div>
+        </div>
+    <?php endif; ?>
+
+    <!-- MEDIATHEQUE VIDEOS-->
+    <?php
+    if ( is_page(array('mediatheque_photos')) ) : ?>
+        <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
+            <div class=''>
+                <p class='accroche_cell_texte'>
+                    <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_761', true); ?></span>
+                    <br>
+                    <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_762', true); ?></span>
+                </p>
+            </div>
+        </div>
+    <?php endif; ?>
+
     <!-- ---------------- -->
     <!-- ILLUSTRATION -->
     <!-- ---------------- -->
@@ -303,7 +331,7 @@
         <!-- ---------------- -->
 
         <div class='illustration_cell'>
-            <img class='img_ajust' src="<?php the_post_thumbnail_url(); ?>" alt="Illustration du concert">
+            <img class='img_ajust' src="<?php the_post_thumbnail_url(); ?>" alt="Illustration">
         </div>
 
     </div>
@@ -531,6 +559,34 @@
         </div>
     <?php endif; ?>
 
+    <!-- MEDIATHEQUE PHOTO-->
+    <?php
+    if ( is_page(array('mediatheque_photos')) ) : ?>
+        <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
+            <div class=''>
+                <p class='accroche_cell_texte'>
+                    <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_701', true); ?></span>
+                    <br>
+                    <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_702', true); ?></span>
+                </p>
+            </div>
+        </div>
+    <?php endif; ?>
+
+    <!-- MEDIATHEQUE VIDEOS-->
+    <?php
+    if ( is_page(array('mediatheque_photos')) ) : ?>
+        <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
+            <div class=''>
+                <p class='accroche_cell_texte'>
+                    <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_761', true); ?></span>
+                    <br>
+                    <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_762', true); ?></span>
+                </p>
+            </div>
+        </div>
+    <?php endif; ?>
+    
     <!-- ---------------- -->
     <!-- NAV RESEAUX SOCIAUX -->
     <!-- ---------------- -->

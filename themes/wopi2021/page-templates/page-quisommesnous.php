@@ -19,7 +19,7 @@ Template Name: page_accueil
 
         <!-- Titre -->
         <div class="paddingt_30">
-            <h2 class='titre_chapitre_container'>
+            <h2 class='titre_chapitre_container marginb_20'>
                 <span class='titre_leger'>DIRECTEUR</span>
                 <br>
                 <span class='titre_gras'>GÉNÉRAL</span>
@@ -82,7 +82,7 @@ Template Name: page_accueil
 
         <!-- Titre -->
         <div class="paddingt_30">
-            <h2 class='titre_chapitre_container'>
+            <h2 class='titre_chapitre_container marginb_20'>
                 <span class='titre_leger'>DIRECTEUR</span>
                 <br>
                 <span class='titre_gras'>MUSICAL</span>
@@ -147,7 +147,7 @@ Template Name: page_accueil
 
         <!-- Titre -->
         <div class="paddingt_30">
-            <h2 class='titre_chapitre_container'>
+            <h2 class='titre_chapitre_container marginb_20'>
                 <span class='titre_leger'>LES ARTISTES</span>
                 <br>
                 <span class='titre_gras'>MUSICIENS</span>
@@ -216,7 +216,7 @@ Template Name: page_accueil
 
         <!-- Titre -->
         <div class="paddingt_30">
-            <h2 class='titre_chapitre_container'>
+            <h2 class='titre_chapitre_container marginb_20'>
                 <span class='titre_leger'>L'ÉQUIPE</span>
                 <br>
                 <span class='titre_gras'>ADMINISTRATIVE ET TECHNIQUE</span>
@@ -285,7 +285,7 @@ Template Name: page_accueil
 
         <!-- Titre -->
         <div class="borderb marginb_20 paddingt_30">
-            <h2 class='titre_chapitre_container'>
+            <h2 class='titre_chapitre_container marginb_20'>
                 <span class='titre_leger'>L'ASSOCIATION</span>
                 <br>
                 <span class='titre_gras'>BUREAU</span>

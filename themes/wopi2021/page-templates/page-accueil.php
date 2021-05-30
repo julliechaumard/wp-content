@@ -284,6 +284,27 @@ Template Name: page_accueil
         <?php endwhile; endif; wp_reset_query(); ?>
 </section>
 
+<!-- ----------------------- -->
+<!-- SOUTENEZ-NOUS  -->
+<!-- ----------------------- -->
+<section class='plainbox grid align_center justify_center bg_color_accueil margin_section_botton'>
+        <div class="texte_center marginr_100_nomobile marginl_100_nomobile marginr_50_mobile marginl_50_mobile marginr_15_mobilexs marginl_15_mobilexs">
+            <div>
+                <h2 class='titre_plainbox_container fontsize_27 margin_section_botton tx_color_blanc'>
+                    <span class='titre_leger'>SOUTENEZ-NOUS</span>
+                </h2>
+            </div>
+            <div class='texte_plainbox_container fontsize_27 margin_section_botton tx_color_blanc'>
+                <p class='titre_gras'>« Oeuvrez pour que l’Orchestre et les instruments soient source de pédagogie et de lien social »</p>
+            </div>
+            <div>
+            <p class="marginb_6"><button class="button_petit button_accueil"><a href="<?php echo get_permalink(get_page_by_title('Soutenez-nous entreprise')) ?>">DÉCOUVREZ COMMENT NOUS SOUTENIR</a></button></p>
+            </div>
+            
+
+        </div>
+
+</section>
 
 <!-- ----------------------- -->
 <!-- RESEAUX SOCIAUX  -->
@@ -293,7 +314,7 @@ Template Name: page_accueil
     <!-- Titre -->
     <div class="grid_2col25_75 margint_70 marginb_20">
         <div class="">
-            <h2 class='titre_chapitre_container'>
+            <h2 class='titre_chapitre_container marginb_20'>
                 <span class='titre_leger'>NOS RÉSEAUX</span>
                 <br>
                 <span class='titre_gras'>SOCIAUX</span>
