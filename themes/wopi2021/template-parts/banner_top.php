@@ -274,6 +274,23 @@
         </div>
     <?php endif; ?>
 
+    <!-- ATUALITES-->
+    <?php
+    if ( is_page(array('actualites')) ) : ?>
+        <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
+            <div class=''>
+                <p class='accroche_cell_texte'>
+                    <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_907', true); ?></span>
+                    <br>
+                    <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_908', true); ?></span>
+                </p>
+            </div>
+        </div>
+    <?php endif; ?>
+
+
+
+
     <!-- ---------------- -->
     <!-- ILLUSTRATION -->
     <!-- ---------------- -->
@@ -586,6 +603,22 @@
             </div>
         </div>
     <?php endif; ?>
+
+    <!-- ATUALITES-->
+    <?php
+    if ( is_page(array('actualites')) ) : ?>
+        <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
+            <div class=''>
+                <p class='accroche_cell_texte'>
+                    <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_907', true); ?></span>
+                    <br>
+                    <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_908', true); ?></span>
+                </p>
+            </div>
+        </div>
+    <?php endif; ?>
+
+
     
     <!-- ---------------- -->
     <!-- NAV RESEAUX SOCIAUX -->

@@ -16,6 +16,11 @@ function menu_active_medias() {
     echo 'menu_active';
   }
 }
+function menu_active_actus() {
+  if ( is_page(array('actualites')) ) { 
+    echo 'menu_active';
+  }
+}
 
 
 ?>

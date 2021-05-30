@@ -53,6 +53,9 @@ function titre_gras($post) {
     if ( is_page(array('mediatheque_videos')) ) { 
       echo "MÉDIATHÈQUE";
     }
+    if ( is_page(array('actualites')) ) { 
+      echo "NOS DERNIÈRES";
+    }
 }
 function titre_leger($post) {
   if ( is_front_page() ) { 
@@ -106,6 +109,10 @@ function titre_leger($post) {
   if ( is_page(array('mediatheque_videos')) ) { 
     echo "VIDÉOS";
   }
+  if ( is_page(array('actualites')) ) { 
+    echo "ACTUALITÉS";
+  }
+
 }
 
 ?>
