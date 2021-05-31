@@ -40,7 +40,7 @@ Template Name: page_concerts_jeunes
                     array(
                         'taxonomy' => 'saison',
                         'field'    => 'slug',
-                        'terms'    => array('2021-2022', '2021-2022'))),
+                        'terms'    => array('2020-2021', '2021-2022'))),
 
                 'meta_query' => array(
                     array(

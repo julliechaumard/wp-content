@@ -14,7 +14,7 @@ Template Name: page_accueil
 <!-- PROCHAIN CONCERT        -->
 <!-- ----------------------- -->
 
-    <section class="margint_70 margin_section_botton">
+<section class="margint_70 margin_section_botton">
         <!-- TITRE PROCHAIN CONCERT -->
         <div>
             <p class="texte_right nopagemarge_mob ubuntu_moyen tx_color_gris_clair">PROCHAIN CONCERT</p>                        
@@ -31,7 +31,7 @@ Template Name: page_accueil
                 array(
                     'taxonomy' => 'saison',
                     'field'    => 'slug',
-                    'terms'    => array('2021-2022')),
+                    'terms'    => array('2020-2021', '2021-2022')),
                 array(
                     'taxonomy' => 'placement',
                     'field'    => 'slug',
@@ -170,7 +170,7 @@ Template Name: page_accueil
                 array(
                     'taxonomy' => 'saison',
                     'field'    => 'slug',
-                    'terms'    => array('2021-2022')),
+                    'terms'    => array('2020-2021', '2021-2022')),
                 array(
                     'taxonomy' => 'placement',
                     'field'    => 'slug',
@@ -282,6 +282,74 @@ Template Name: page_accueil
                 </div>
 
         <?php endwhile; endif; wp_reset_query(); ?>
+</section>
+
+<!-- ----------------------- -->
+<!-- COTE SCENE COTE COULISSE  -->
+<!-- ----------------------- -->
+
+<section class="margint_70 margin_section_botton">
+    <!-- Titre -->
+    <div class="paddingt_30">
+        <h2 class='titre_chapitre_container marginb_20'>
+            <span class='titre_leger'>CÔTÉ SCÈNE</span>
+            <br>
+            <span class='titre_gras'>CÔTÉ COULISSE</span>
+        </h2>
+    </div>
+
+    <!-- LOOP EVENEMENTS  -->
+    <?php 
+    $args_actu_event = array(
+        'post_type' => 'actualite',
+        'posts_per_page' => 6,
+
+        'tax_query' => array(
+            array(
+                'taxonomy' => 'saison',
+                'field'    => 'slug',
+                'terms'    => array('2020-2021', '2021-2022'))),
+        'orderby' => 'meta_value',
+        'meta_key' => 'metadata_903',
+        'order'=> 'DESC'
+    );
+    $loop_actu_event = new WP_Query( $args_actu_event );
+    if ($loop_actu_event->have_posts()) :?>
+        <!-- LES EVENTS  -->
+        <div class="grid_3col_liste grid_column_gap24 grid_row_gap50 height_min_200">
+            <?php while ($loop_actu_event->have_posts()) :
+                $loop_actu_event->the_post();?>
+
+                    <!-- L'EVENT  -->
+                    <div class="encoche_list_card grid">
+                        <!-- ILLUSTRATION -->
+                        <div class="grid nopagemarge_mobxs grid_area_11">
+                            <img class='img_ajust_liste grid_area_11' src="<?php echo get_post_meta($post->ID, 'metadata_907', true); ?>" alt="Photo de l'actu">
+                            <div class="grid_area_11 encoche_blanc"></div>
+                        </div>                            
+                        <!-- TITRE -->
+                        <div class="grid_area_11 alignself_end margint_-4 paddingt_15 paddingb_5 paddingr_10 paddingl_10">
+                            <div>
+                                <div>
+                                    <!-- Titre -->
+                                    <p class="ubuntu_bold tx_color_blanc paddingb_5"><?php echo get_post_meta($post->ID, 'metadata_901', true); ?> <?php echo get_post_meta($post->ID, 'metadata_902', true); ?></p>
+                                </div>
+                            </div>  
+                        </div>
+                        <!-- FLECHE -->
+                        <div class="margint_-4 paddingt_10 paddingb_15 paddingr_15">
+                            <div>
+                                <div class="fleche fleche_accueil alignself_end marginb_6 ubuntu_bold tx_color_accueil"><a href="<?php the_permalink(); ?>">EN SAVOIR PLUS <img src="<?php bloginfo('template_directory');?>/dist/assets/images/icones/lien_fleche_mauve.png" alt=""></a></div>
+                            </div>  
+                        </div>
+                    </div>
+            <?php endwhile;?>
+        </div>
+    <?php endif; 
+    wp_reset_query(); ?>
+
+
+
 </section>
 
 <!-- ----------------------- -->

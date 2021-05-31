@@ -8,10 +8,22 @@
 .block {
     display: block;
 }
-
-
 .relative {
     position: relative;
+}
+
+.block_mobile {
+    @include mobile {
+        display: block;
+    }
+    @include nomobile {
+        display: none;
+    }
+}
+.hide_desktop {
+    @include mobile {
+        display: none;
+    }
 }
 
 /*****************************************
@@ -87,11 +99,21 @@
         margin-left: -15px;
     }
 }
+.nopagemarge_mobxs {
+    @include mobilexs {
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+}
 
 .margint_-4{
     margin-top: -4px;
 }
-
+.margint_15_mobile {
+    @include mobile {
+       margin-top: 15px;
+    }
+}
 /* BANNER ACCROCHE FICHE CONCERT */
 .margint_20 {
     margin-top: 20px;
@@ -147,6 +169,9 @@
 /* FICHE CONCERT INFO SALLE / Nom salle + site internet */
 .marginb_6 {
     margin-bottom: 6px;
+}
+.marginb_10 {
+    margin-bottom: 10px;
 }
 .marginb_12_mobilexs {
     @include mobilexs {
@@ -250,8 +275,14 @@
 .paddingr_8 {
     padding-right: 8px;
 }
+.paddingr_10 {
+    padding-right: 10px;
+}
 .paddingr_15 {
     padding-right: 15px;
+}
+.paddingr_30 {
+    padding-right: 30px;
 }
 .paddingb_1 {
     padding-bottom: 1px;
@@ -288,7 +319,9 @@
 .paddingb_40 {
     padding-bottom: 40px;
 }
-
+.paddingl_10 {
+    padding-left: 10px;
+}
 .paddingl_15 {
     padding-left: 15px;
 }

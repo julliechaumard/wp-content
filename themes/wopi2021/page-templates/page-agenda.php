@@ -21,10 +21,10 @@ Template Name: page_agenda
             </h2>
         </div>
 
-        <!-- LISTE DES CONCERTS -->
+        <!-- PROCHAIN CONCERTS -->
         <section class="grid_3col_liste grid_column_gap24 grid_row_gap50 margint_40 margin_section_botton">
 
-            <!-- LOOP AGENDA DES CONCERTS => AUJOURD'HUI -->
+            <!-- LOOP CONCERTS => AUJOURD'HUI -->
 
             <?php 
             $args_liste_concert = array(
@@ -34,7 +34,7 @@ Template Name: page_agenda
                     array(
                     'taxonomy' => 'saison',
                     'field'    => 'slug',
-                    'terms'    => array('2021-2022', '2021-2022'))
+                    'terms'    => array('2020-2021', '2021-2022'))
                 ),
                 'meta_query' => array(
                     array(

@@ -38,7 +38,7 @@
                     <li class="sub_menu_item"><a href="#">Actions citoyennes et  sociales</a></li>
                 </ul>
             </li>
-            <li class='menu_item <?php  ?>'>Actualités
+            <li class='menu_item <?php menu_active_actus() ?>'>Actualités
                 <ul class='sub_menu'>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Actualités')) ?>">Actualités</a></li>
                     <li class="sub_menu_item"><a href="#">Mur social</a></li>
@@ -112,9 +112,9 @@
                     <li class="sub_menu_item"><a href="#">Actions citoyennes et  sociales</a></li>
                 </ul>
             </li>
-            <li class='menu_item' <?php menu_active_actus() ?>>Actualités
+            <li class='menu_item <?php menu_active_actus() ?>'>Actualités
                 <ul class='sub_menu'>
-                <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Actualités')) ?>">Actualités</a></li>
+                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Actualités')) ?>">Actualités</a></li>
                     <li class="sub_menu_item"><a href="#">Mur social</a></li>
                 </ul>
             </li>
