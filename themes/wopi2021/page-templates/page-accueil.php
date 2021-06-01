@@ -353,6 +353,54 @@ Template Name: page_accueil
 </section>
 
 <!-- ----------------------- -->
+<!-- MEDIATHEQUE  -->
+<!-- ----------------------- -->
+
+<section class="margint_90 margin_section_botton">
+
+
+    <div class="grid_2col12">
+        <!-- ILLUSTRATION -->
+        <div class="concert_card nopagemarge_mob encoche_one_card grid grid_area_21_desk">
+            <div class="embed-responsive embed-responsive-16by9 height_250">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?php echo get_post_meta($post->ID, 'metadata_016', true) ?>" allowfullscreen></iframe>
+            </div>
+        </div>
+    
+        <!-- INFORMATIONS -->
+        <div class="grid paddingr_30 paddingb_10 margint_20_mobile">
+            <div>
+                <!-- TITRE DESKTOP-->
+                <div class="">
+                    <h2 class='titre_card_container_grand'>
+                        <span class='titre_leger'>DÉCOUVREZ</span>
+                        <br>
+                        <span class='titre_gras'>NOTRE MÉDIATHÈQUE</span>
+                    </h2>
+                </div>
+
+                <!-- DESCRIPTION -->
+                <div class='liste_art_comp paddingt_12 marginr_20'>
+                    <!-- DESCRIPTION -->
+                    <?php if(!empty(get_post_meta($post->ID, 'metadata_008', true))) { ?>
+                        <div class="artiste">
+                            <div class="ubuntu_fin">
+                                <?php echo get_post_meta($post->ID, 'metadata_008', true); ?>
+                            </div>
+                        </div>
+                    <?php } ?>
+                </div>
+            </div>
+
+
+            <!-- EN SAVOIR PLUS -->
+            <div class="fleche fleche_accueil alignself_end paddingt_20 marginb_6 ubuntu_bold tx_color_accueil"><a href="<?php the_permalink(); ?>">ACCÉDER À LA MÉDIATHEQUE <img src="<?php bloginfo('template_directory');?>/dist/assets/images/icones/lien_fleche_mauve.png" alt=""></a></div>
+        </div>
+    </div>
+
+</section>
+
+<!-- ----------------------- -->
 <!-- SOUTENEZ-NOUS  -->
 <!-- ----------------------- -->
 <section class='plainbox grid align_center justify_center bg_color_accueil margin_section_botton'>

@@ -66,7 +66,7 @@ Template Name: page_accueil
                                         <div class="tx_simple_size">
                                             <?php for ($i = 1; $i <= 4; $i++):
                                                 if (!empty(get_post_meta($post->ID, 'metadata_123_'.$i, true))): ?>
-                                                    <p class="titre_leger paddingb_5"><?php echo get_post_meta($post->ID, 'metadata_123_'.$i, true); ?></p>
+                                                    <p class="titre_leger fontsize_16 fontsize_15_mob paddingb_5"><?php echo get_post_meta($post->ID, 'metadata_123_'.$i, true); ?></p>
                                                 <?php endif;
                                             endfor; ?>
                                         </div>
@@ -140,7 +140,7 @@ Template Name: page_accueil
                                         <!-- POSTES -->
                                         <?php for ($i = 1; $i <= 4; $i++):
                                             if (!empty(get_post_meta($post->ID, 'metadata_123_'.$i, true))): ?>
-                                                <p class="titre_leger paddingb_5"><?php echo get_post_meta($post->ID, 'metadata_123_'.$i, true); ?></p>
+                                                <p class="titre_leger fontsize_16 fontsize_15_mob paddingb_5"><?php echo get_post_meta($post->ID, 'metadata_123_'.$i, true); ?></p>
                                             <?php endif;
                                         endfor; ?>
                                         <!-- DESCRIPTION COURTE -->
@@ -213,7 +213,7 @@ Template Name: page_accueil
                                         <!-- POSTES -->
                                         <?php for ($i = 1; $i <= 4; $i++):
                                             if (!empty(get_post_meta($post->ID, 'metadata_123_'.$i, true))): ?>
-                                                <p class="titre_leger paddingb_5"><?php echo get_post_meta($post->ID, 'metadata_123_'.$i, true); ?></p>
+                                                <p class="titre_leger fontsize_16 fontsize_15_mob paddingb_5"><?php echo get_post_meta($post->ID, 'metadata_123_'.$i, true); ?></p>
                                             <?php endif;
                                         endfor; ?>
                                         <!-- DESCRIPTION COURTE -->
@@ -286,7 +286,7 @@ Template Name: page_accueil
                                         <!-- POSTES -->
                                         <?php for ($i = 1; $i <= 4; $i++):
                                             if (!empty(get_post_meta($post->ID, 'metadata_123_'.$i, true))): ?>
-                                                <p class="titre_leger paddingb_5"><?php echo get_post_meta($post->ID, 'metadata_123_'.$i, true); ?></p>
+                                                <p class="titre_leger fontsize_16 fontsize_15_mob paddingb_5"><?php echo get_post_meta($post->ID, 'metadata_123_'.$i, true); ?></p>
                                             <?php endif;
                                         endfor; ?>
                                         <!-- DESCRIPTION COURTE -->

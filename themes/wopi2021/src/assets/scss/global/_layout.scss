@@ -69,7 +69,9 @@
 .max_width_600 {
     max-width: 600px;
 }
-
+.height_250 {
+    height: 250px;
+}
 .height_min_200 {
     min-height: 200px;
 }
@@ -117,6 +119,11 @@
 /* BANNER ACCROCHE FICHE CONCERT */
 .margint_20 {
     margin-top: 20px;
+}
+.margint_20_mobile {
+    @include mobile {
+        margin-top: 20px;
+    }
 }
 /* LISTE DES CONCERTS */
 .margint_40 {

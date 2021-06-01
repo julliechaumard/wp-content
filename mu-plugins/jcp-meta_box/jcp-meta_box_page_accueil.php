@@ -35,6 +35,7 @@ function metabox_page_accueil($post) {
     $metadata_008 = get_post_meta( $post->ID, 'metadata_008', true );
     $metadata_012 = get_post_meta( $post->ID, 'metadata_012', true );
     $metadata_015 = get_post_meta( $post->ID, 'metadata_015', true );
+    $metadata_016 = get_post_meta( $post->ID, 'metadata_016', true );
     for ($i = 1; $i <= 6; $i++) {
         $metadata_005_[$i] = get_post_meta( $post->ID, 'metadata_005_'.$i.'', true );
     }
@@ -195,7 +196,11 @@ function metabox_page_accueil($post) {
                     <div class="pinput">
                         <label for="metadata_008">Accroche</label>
                         <textarea name="metadata_008" id="metadata_008" cols="50" rows="4" placeholder="320 caractères MAX avec espaces"><?php echo $metadata_008; ?></textarea>
-                    </div>     
+                    </div>
+                    <div class="pinput">
+                        <label for="metadata_016">Code vidéos YouTube</label>
+                        <input type="text" name="metadata_016" id="metadata_016" value="<?php echo $metadata_016; ?>"/>
+                    </div>   
             </div>
         </div>
     </section>
@@ -288,6 +293,7 @@ function jcp_metabox_save_page_accueil($post_id) {
     if ('page-templates/page-accueil.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_008', $_POST)) { update_post_meta( $post_id, 'metadata_008', $_POST['metadata_008']);};
     if ('page-templates/page-accueil.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_012', $_POST)) { update_post_meta( $post_id, 'metadata_012', $_POST['metadata_012']);};
     if ('page-templates/page-accueil.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_015', $_POST)) { update_post_meta( $post_id, 'metadata_015', $_POST['metadata_015']);};
+    if ('page-templates/page-accueil.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_016', $_POST)) { update_post_meta( $post_id, 'metadata_016', $_POST['metadata_016']);};
     for ($i = 1; $i <= 6; $i++) {
         if ('page-templates/page-accueil.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_005_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_005_'.$i.'', $_POST['metadata_005_'.$i.'']);};
     }
