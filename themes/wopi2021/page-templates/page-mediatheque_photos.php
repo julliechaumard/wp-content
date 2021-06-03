@@ -33,9 +33,15 @@ Template Name: page_medias_photos
                 <!-- Boucle pour les 10 PHOTOS -->
                 <?php for ($j = 1; $j <= 10; $j++) {?>
                     <?php if(!empty(get_post_meta($post->ID, 'metadata_705_'.$i.'_'.$j.'', true))) { ?>
-                        <div>
+                        <div class="grid">
                             <img class="img_ajust" src="<?php echo get_post_meta($post->ID, 'metadata_705_'.$i.'_'.$j.'', true); ?>" alt="Photo médiathèque">
+                            <?php 
+                            $the_slug = get_post_meta($post->ID, 'metadata_705_'.$i.'_'.$j.'', true);
+                            $mediapost = attachment_url_to_postid( $the_slug);
+                            echo '<p class="paddingb_3 texte_center tx_color_blanc alignself_end">',wp_get_attachment_caption($mediapost),'</p>';
+                            ?>
                         </div>
+
                     <?php }; ?>
                 <?php }; ?>
                 <div></div>

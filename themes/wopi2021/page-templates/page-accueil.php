@@ -394,7 +394,7 @@ Template Name: page_accueil
 
 
             <!-- EN SAVOIR PLUS -->
-            <div class="fleche fleche_accueil alignself_end paddingt_20 marginb_6 ubuntu_bold tx_color_accueil"><a href="<?php the_permalink(); ?>">ACCÉDER À LA MÉDIATHEQUE <img src="<?php bloginfo('template_directory');?>/dist/assets/images/icones/lien_fleche_mauve.png" alt=""></a></div>
+            <div class="fleche fleche_accueil alignself_end paddingt_20 marginb_6 ubuntu_bold tx_color_accueil"><a href="<?php echo get_permalink(get_page_by_title('Mediatheque_videos')) ?>">ACCÉDER À LA MÉDIATHEQUE <img src="<?php bloginfo('template_directory');?>/dist/assets/images/icones/lien_fleche_mauve.png" alt=""></a></div>
         </div>
     </div>
 

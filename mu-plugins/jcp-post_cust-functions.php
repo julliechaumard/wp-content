@@ -39,7 +39,7 @@ add_action( 'admin_bar_menu', 'remove_default_post_type_menu_bar', 999 );
 add_action( 'wp_dashboard_setup', 'remove_draft_widget', 999 );
 add_action( 'after_setup_theme', 'jcp_thumbnails' );
 add_action( 'after_setup_theme', 'jcp_title' );
-add_filter('upload_mimes', 'add_file_types_to_uploads');
+add_filter( 'upload_mimes', 'add_file_types_to_uploads');
 
 // disable scaled image size
 add_filter('big_image_size_threshold', '__return_false');
@@ -112,5 +112,35 @@ function add_file_types_to_uploads($file_types){
     $file_types = array_merge($file_types, $new_filetypes );
     return $file_types;
 }
- 
+
+// VOIR L'ORDRE DES POSTS DANS LA LISTE DES POSTS QUAND ON A REMPLI MENU_ORDER D'UN POST
+
+$MY_POST_TYPE = "partenaire"; // just for a showcase
+
+// the basic support (menu_order is included in the page-attributes)
+add_post_type_support($MY_POST_TYPE, 'page-attributes');
+
+// add a column to the post type's admin
+// basically registers the column and sets it's title
+add_filter('manage_' . $MY_POST_TYPE . '_posts_columns', function ($columns) {
+  $columns['menu_order'] = "Order"; //column key => title
+  return $columns;
+});
+
+// display the column value
+add_action( 'manage_' . $MY_POST_TYPE . '_posts_custom_column', function ($column_name, $post_id){
+  if ($column_name == 'menu_order') {
+     echo get_post($post_id)->menu_order;
+  }
+}, 10, 2); // priority, number of args - MANDATORY HERE! 
+
+// make it sortable
+$menu_order_sortable_on_screen = 'edit-' . $MY_POST_TYPE; // screen name of LIST page of posts
+add_filter('manage_' . $menu_order_sortable_on_screen . '_sortable_columns', function ($columns){
+  // column key => Query variable
+  // menu_order is in Query by default so we can just set it
+  $columns['menu_order'] = 'menu_order';
+  return $columns;
+});
+
  ?>

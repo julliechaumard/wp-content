@@ -46,6 +46,8 @@ get_template_part('template-parts/header','page');
                             'taxonomy' => 'saison',
                             'field'    => 'slug',
                             'terms'    => array('2021-2022'))),
+                    'orderby' => 'menu_order',
+                    'order' => 'ASC',
                 );
                 $loop_financier = new WP_Query( $args_financier );
                 if ($loop_financier->have_posts()) :
@@ -54,7 +56,7 @@ get_template_part('template-parts/header','page');
 
                         <!-- LOGO avec lien vers le site internet du partenaire -->
                         <?php if (!empty(get_post_meta($post->ID, 'metadata_251', true))) : ?>
-                            <div class="texte_center">
+                            <div class="texte_right">
                                 <img class='img_width max_width_250' src="<?php echo get_post_meta($post->ID, 'metadata_252', true); ?>" alt="Photo du partenaire">
                                 <a class='ubuntu_fin fontsize_10' href="<?php echo get_post_meta($post->ID, 'metadata_251', true) ?>" target="_blank" >Site internet</a>
                             </div>
@@ -89,7 +91,7 @@ get_template_part('template-parts/header','page');
             <h2 class='titre_chapitre_container marginb_20'>
                 <span class='titre_leger'>AUTRES</span>
                 <br>
-                <span class='titre_gras'>SOUTIEN</span>
+                <span class='titre_gras'>SOUTIENS</span>
             </h2>
         </div>
 
@@ -112,20 +114,17 @@ get_template_part('template-parts/header','page');
                             'taxonomy' => 'saison',
                             'field'    => 'slug',
                             'terms'    => array('2021-2022'))),
+                    'orderby' => 'menu_order',
+                    'order' => 'ASC',
                 );
                 $loop_autres = new WP_Query( $args_autres );
                 if ($loop_autres->have_posts()) :
                     while ($loop_autres->have_posts()) :
                         $loop_autres->the_post();?>
 
-                            <div class="">
-                                <img class='img_width max_width_250' src="<?php echo get_post_meta($post->ID, 'metadata_252', true); ?>" alt="Photo du partenaire">
-                            </div>
-
-
                             <!-- LOGO avec lien vers le site internet du partenaire -->
                             <?php if (!empty(get_post_meta($post->ID, 'metadata_251', true))) : ?>
-                                <div class="texte_center">
+                                <div class="texte_right">
                                     <img class='img_width max_width_250' src="<?php echo get_post_meta($post->ID, 'metadata_252', true); ?>" alt="Photo du partenaire">
                                     <a class='ubuntu_fin fontsize_10' href="<?php echo get_post_meta($post->ID, 'metadata_251', true) ?>" target="_blank" >Site internet</a>
                                 </div>
