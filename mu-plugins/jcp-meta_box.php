@@ -54,6 +54,8 @@ add_action( 'add_meta_boxes', 'jcp_declare_metabox_recrutement' );
 add_action( 'save_post', 'jcp_metabox_save_recrutement');
 add_action( 'add_meta_boxes', 'jcp_declare_metabox_actualite' );
 add_action( 'save_post', 'jcp_metabox_save_actualite');
+add_action( 'add_meta_boxes', 'jcp_declare_metabox_cultureaction' );
+add_action( 'save_post', 'jcp_metabox_save_cultureaction');
 
 add_action( 'add_meta_boxes', 'jcp_declare_metabox_page_agenda' );
 add_action( 'save_post', 'jcp_metabox_save_page_agenda');
@@ -87,6 +89,8 @@ add_action( 'add_meta_boxes', 'jcp_declare_metabox_page_medias_photos' );
 add_action( 'save_post', 'jcp_metabox_save_page_medias_photos');
 add_action( 'add_meta_boxes', 'jcp_declare_metabox_page_medias_videos' );
 add_action( 'save_post', 'jcp_metabox_save_page_medias_videos');
+add_action( 'add_meta_boxes', 'jcp_declare_metabox_page_eleves_enseignants' );
+add_action( 'save_post', 'jcp_metabox_save_page_eleves_enseignants');
 
 include 'jcp-meta_box/jcp-meta_box_concert.php';
 include 'jcp-meta_box/jcp-meta_box_salle.php';
@@ -95,6 +99,7 @@ include 'jcp-meta_box/jcp-meta_box_artiste_invite.php';
 include 'jcp-meta_box/jcp-meta_box_ochestre.php';
 include 'jcp-meta_box/jcp-meta_box_recrutement.php';
 include 'jcp-meta_box/jcp-meta_box_actualite.php';
+include 'jcp-meta_box/jcp-meta_box_cultureaction.php';
 
 include 'jcp-meta_box/jcp-meta_box_page_agenda.php';
 include 'jcp-meta_box/jcp-meta_box_page_artistes_invites.php';
@@ -112,6 +117,7 @@ include 'jcp-meta_box/jcp-meta_box_page_soutenez_particulier.php';
 include 'jcp-meta_box/jcp-meta_box_page_soutenez_picardissimo.php';
 include 'jcp-meta_box/jcp-meta_box_page_medias_photos.php';
 include 'jcp-meta_box/jcp-meta_box_page_medias_videos.php';
+include 'jcp-meta_box/jcp-meta_box_page_eleves_enseignants.php';
 
 ?>
 

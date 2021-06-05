@@ -11,8 +11,11 @@ function couleur() {
     if ( is_page(array('qui-sommes-nous', 'partenaires', 'notre-histoire', 'soutenez-nous-entreprise', 'soutenez-nous-particulier', 'soutenez-nous-picardissimo')) OR is_singular (array( 'orchestre' )) ) { 
       echo 'color_orchestre';
     }
-    if ( is_page(array('mediatheque_photos','mediatheque_videos','actualites')) ) { 
+    if ( is_page(array('mediatheque_photos','mediatheque_videos','actualites','mur_social')) ) { 
       echo 'color_medias';
+    }
+    if ( is_page(array('eleves_enseignants','dossiers_pedagogiques')) ) { 
+      echo 'color_culture_actions';
     }
 }
 
@@ -26,8 +29,11 @@ function logo_couleur() {
     if ( is_page(array('qui-sommes-nous', 'partenaires', 'notre-histoire', 'soutenez-nous-entreprise', 'soutenez-nous-particulier', 'soutenez-nous-picardissimo')) OR is_singular (array( 'orchestre' )) ) { 
       echo '/dist/assets/images/logos/logo_orchestre_bleu.png';
     }
-    if ( is_page(array('mediatheque_photos','mediatheque_videos','actualites')) ) { 
+    if ( is_page(array('mediatheque_photos','mediatheque_videos','actualites','mur_social')) ) { 
       echo '/dist/assets/images/logos/logo_orchestre_mauve.png';
+    }
+    if ( is_page(array('eleves_enseignants','dossiers_pedagogiques')) ) { 
+      echo '/dist/assets/images/logos/logo_orchestre_jaune.png';
     }
 }
 
@@ -41,8 +47,11 @@ function menu_pipe_couleur() {
   if ( is_page(array('qui-sommes-nous', 'partenaires', 'notre-histoire', 'soutenez-nous-entreprise', 'soutenez-nous-particulier', 'soutenez-nous-picardissimo')) OR is_singular (array( 'orchestre' )) ) { 
     echo 'orchestre';
   }
-  if ( is_page(array('mediatheque_photos','mediatheque_videos','actualites')) ) { 
+  if ( is_page(array('mediatheque_photos','mediatheque_videos','actualites','mur_social')) ) { 
     echo 'medias';
+  }
+  if ( is_page(array('eleves_enseignants','dossiers_pedagogiques')) ) { 
+    echo 'culture_actions';
   }
 }
 

@@ -41,6 +41,7 @@
 * L'ORCHESTRE
 * RECRUTEMENT
 * ACTUALITÉ
+* ACTION CULTURELLE
 *************************************************************************/
 
 
@@ -299,6 +300,55 @@ function jcp_create_cpt() {
         'publicly_queryable' => true
     ));
 
+    /************************************************************************
+    * ACTION CULTURELLE
+    *************************************************************************/
+
+    register_post_type( 'cultureaction', array(
+        'labels' => array(
+            'name' => __( 'Actions culturelles' ),
+            'singular_name' => __( 'Action culturelle' ),
+            'add_new' => __( 'Ajouter  une action culturelle' ),
+            'add_new_item' => __( 'Ajouter une action culturelle' ),
+            'edit_item' => __( 'Modifier une action culturelle' ),
+            'new_item' => __( 'Nouvelle action culturelle' ),
+            'view_item' => __( 'Voir une action culturelle' ),
+            'view_items' => __( 'Voir les actions culturelles' ),
+            'search_items' => __( 'Chercher une action culturelle' ),
+            'not_found_in_trash' => __( 'Action culturelle non trouvée dans la corbeille' ),
+            'parent_item_colon' => __( 'Retour' ),
+            'all_items' => __( 'Toutes les actions culturelles' ),
+            'archives' => __( 'Archive actions culturelles' ),
+            'attributes'  => __( 'Propriétés action culturelle' ),
+            'insert_into_item' => __( 'Ajouter' ),
+            'uploaded_to_this_item' => __( 'Télécharger' ),
+            'featured_image' => __( 'Image bannière action culturelle' ),
+            'set_featured_image' => __( 'Ajouter image bannière action culturelle' ),
+            'remove_featured_image' => __( 'Supprimer image bannière action culturelle' ),
+            'use_featured_image' => __( 'Utiliser image bannière action culturelle' ),
+            'menu_name' => __( 'Culture Action' ), //NOM dans le menu Backoffice
+            'filter_items_list' => __( 'action culturelle' ),
+            'items_list_navigation' => __( 'action culturelle' ),
+            'items_list' => __( 'action culturelle' ),
+            'name_admin_bar' => __( 'Ajouter une action culturelle' )
+        ),
+        'description' => 'Action culturelle',
+        'public' => true,
+        'has_archive' => true,
+        'rewrite' => array('slug' => 'action_culturelle'),
+        //The value of five puts it below Posts and 100 puts it below Settings. 
+        'show_in_menu' => true,
+        'menu_position'=> 3,
+        'menu_icon' => get_stylesheet_directory_uri() . '/dist/assets/images/icones/cpt_icone_education.png',
+        'show_in_rest' => true,
+        'supports' => array( 'title', 'editor', 'thumbnail', 'page-attributes' ),
+        'can_export' => true,
+        'delete_with_user' => false,
+        'show_in_admin_bar' => true,
+        'show_in_nav_menus' => true,
+        // supprimer les droits sur previeuw et permalien
+        'publicly_queryable' => true
+    ));
 
     /************************************************************************
     * L'ORCHESTRE
@@ -400,6 +450,8 @@ function jcp_create_cpt() {
         // supprimer les droits sur previeuw et permalien
         'publicly_queryable' => true
     ));
+
+
 
 
 }   

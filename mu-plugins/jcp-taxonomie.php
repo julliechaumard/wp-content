@@ -70,7 +70,7 @@ function jcp_create_taxonomies() {
         'query_var' => true,
         'rewrite' => array( 'slug' => 'saison' )
     );
-    register_taxonomy( 'saison', array('concert','partenaire','artiste_invite','actualite'), $args );
+    register_taxonomy( 'saison', array('concert','partenaire','artiste_invite','actualite','cultureaction'), $args );
 
     // PLACEMENT
     $labels = array(
@@ -157,7 +157,7 @@ function jcp_create_taxonomies() {
         'query_var' => true,
         'rewrite' => array( 'slug' => 'action_culturelle' )
     );
-    register_taxonomy( 'action_culturelle', array('concert'), $args );
+    register_taxonomy( 'action_culturelle', array('concert','cultureaction'), $args );
 
     // CATEGORIE PARTENAIRE
     $labels = array(

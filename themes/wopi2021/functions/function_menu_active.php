@@ -17,7 +17,12 @@ function menu_active_medias() {
   }
 }
 function menu_active_actus() {
-  if ( is_page(array('actualites')) ) { 
+  if ( is_page(array('actualites','mur_social')) ) { 
+    echo 'menu_active';
+  }
+}
+function menu_active_culture_actions() {
+  if ( is_page(array('eleves_enseignants','dossiers_pedagogiques')) ) { 
     echo 'menu_active';
   }
 }

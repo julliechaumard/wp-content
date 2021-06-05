@@ -72,6 +72,10 @@
 .height_250 {
     height: 250px;
 }
+.height_200 {
+    height: 200px;
+}
+
 .height_min_200 {
     min-height: 200px;
 }
@@ -107,6 +111,14 @@
         margin-left: -15px;
     }
 }
+
+.paddingrl_25_400 {
+    @media screen and (min-width:400px) {
+        padding-left: 25px !important;
+        padding-right: 25px !important;
+    }
+}
+
 
 .margint_-4{
     margin-top: -4px;
@@ -187,6 +199,11 @@
 }
 .marginb_20 {
     margin-bottom: 20px;
+}
+.marginb_20_mobile {
+    @include mobile {
+        margin-bottom: 20px;
+    }
 }
 .marginb_30 {
     margin-bottom: 30px;
@@ -325,6 +342,10 @@
 
 .paddingb_40 {
     padding-bottom: 40px;
+}
+
+.paddingl_8 {
+    padding-left: 8px;
 }
 .paddingl_10 {
     padding-left: 10px;

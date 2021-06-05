@@ -11,6 +11,10 @@
 .flex {
     display: flex;
 }
+.flex_inline {
+    display: inline-flex;
+}
+
 
 .flex_align_end {
     align-items: flex-end;
@@ -73,6 +77,12 @@
     @include nomobile {
         grid-column: 2;
         grid-row: 1;
+    }
+}
+.grid_area_12_mob {
+    @include mobile {
+        grid-column: 1;
+        grid-row: 2;
     }
 }
 /* INFORMATIONS PROCHAIN CONCERT*/
@@ -188,6 +198,11 @@
 .alignself_end {
     align-self: end;
 }
+.alignself_end_desktop {
+    @include nomobile {
+        align-self: end;
+    }
+}
 .justify_center {
     justify-items: center;
 }
@@ -209,6 +224,11 @@
 }
 .justify_end {
     justify-self: end;
+}
+.justifyself_end_desktop {
+    @include nomobile {
+        justify-self: end;
+    }
 }
 .justify_end_min500px {
     @media screen and (min-width:500px){

@@ -29,7 +29,9 @@ $color_violet: #646085;
 // ROSE
 $color_rose: #f24c8a;
 // JAUNE
-$color_jaune: #dce264;
+//$color_jaune: #dce264;
+$color_jaune: #cdd624;
+
 // VERT
 $color_vert: #158498;
 // MORDORE
@@ -70,6 +72,8 @@ $color_actus: $color_violet;
 $color_orchestre: $color_vert;
 // MEDIATHEQUE
 $color_medias: $color_violet;
+// ACTIONS CULTURELLES
+$color_culture_actions: $color_jaune;
 // NEWSLETTER
 $color_nl: $color_mordore;
 
@@ -99,6 +103,9 @@ $color_nl: $color_mordore;
 }
 .bg_color_medias {
     background-color: $color_medias;
+}
+.bg_color_culture_actions {
+    background-color: $color_culture_actions;
 }
 
 .bg_color_newsl {
@@ -167,4 +174,7 @@ $color_nl: $color_mordore;
 }
 .tx_color_medias {
     color: $color_medias;
+}
+.tx_color_culture_actions {
+    color: $color_culture_actions;
 }

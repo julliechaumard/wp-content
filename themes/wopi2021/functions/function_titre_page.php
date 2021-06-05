@@ -56,6 +56,15 @@ function titre_gras($post) {
     if ( is_page(array('actualites')) ) { 
       echo "NOS DERNIÈRES";
     }
+    if ( is_page(array('mur_social')) ) { 
+      echo "LES RÉSEAUX";
+    }
+    if ( is_page(array('eleves_enseignants')) ) { 
+      echo "ÉLÈVES ET";
+    }
+    if ( is_page(array('dossiers_pedagogiques')) ) { 
+      echo "DOSSIERS";
+    }
 }
 function titre_leger($post) {
   if ( is_front_page() ) { 
@@ -111,6 +120,15 @@ function titre_leger($post) {
   }
   if ( is_page(array('actualites')) ) { 
     echo "ACTUALITÉS";
+  }
+  if ( is_page(array('mur_social')) ) { 
+    echo "SOCIAUX";
+  }
+  if ( is_page(array('eleves_enseignants')) ) { 
+    echo "ENSEIGNANTS";
+  }
+  if ( is_page(array('dossiers_pedagogiques')) ) { 
+    echo "PÉDAGOGIQUES";
   }
 
 }

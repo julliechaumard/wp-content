@@ -123,15 +123,18 @@
     <!-- FICHE DE L'ARTISTE INVITE -->
     <?php 
     if ( is_singular (array( 'artiste_invite' )) ) : ?>
+        <!-- POSTES L'ARTISTE INVITE -->
         <div class='accroche_cell grid_1col1_1row align_center  bg_<?php couleur() ?>'>
             <div class=''>
-                <p class='accroche_cell_texte'>
-                    <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_120', true); ?></span>
-                    <br>
-                    <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_121', true); ?></span>
-                </p>
+            <?php for ($i = 1; $i <= 4; $i++) { ?>
+                <?php if(!empty(get_post_meta($post->ID, 'metadata_123_'.$i, true))) { ?>
+                    <p class='accroche_cell_texte'>
+                        <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_123_'.$i, true); ?></span>
+                    </p>
+                <?php } ?>
+            <?php } ?>
             </div>
-        </div> 
+        </div>
     <?php endif;?>
 
     <!-- COLLABORATIONS -->
@@ -221,15 +224,18 @@
     <!-- FICHE DE L'ARTISTE ORCHESTRE -->
     <?php 
     if ( is_singular (array( 'orchestre' )) ) : ?>
+        <!-- POSTES L'ARTISTE -->
         <div class='accroche_cell grid_1col1_1row align_center  bg_<?php couleur() ?>'>
             <div class=''>
-                <p class='accroche_cell_texte'>
-                    <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_601', true); ?></span>
-                    <br>
-                    <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_602', true); ?></span>
-                </p>
+            <?php for ($i = 1; $i <= 4; $i++) { ?>
+                <?php if(!empty(get_post_meta($post->ID, 'metadata_604_'.$i, true))) { ?>
+                    <p class='accroche_cell_texte'>
+                        <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_604_'.$i, true); ?></span>
+                    </p>
+                <?php } ?>
+            <?php } ?>
             </div>
-        </div> 
+        </div>
     <?php endif;?>
 
     <!-- PARTENAIRES-->
@@ -288,7 +294,47 @@
         </div>
     <?php endif; ?>
 
+    <!-- MUR SOCIAL-->
+    <?php
+    if ( is_page(array('mur_social')) ) : ?>
+        <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
+            <div class=''>
+                <p class='accroche_cell_texte'>
+                    <span class='accroche_cell_texte_gras'>INTERAGISSEZ AVEC</span>
+                    <br>
+                    <span class='accroche_cell_texte_leger'>NOUS SUR LES RÉSEAUX SOCIAUX</span>
+                </p>
+            </div>
+        </div>
+    <?php endif; ?>
 
+    <!-- ELEVES ET ENSEIGNANTS -->
+    <?php
+    if ( is_page(array('eleves_enseignants')) ) : ?>
+        <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
+            <div class=''>
+                <p class='accroche_cell_texte'>
+                    <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_480', true); ?></span>
+                    <br>
+                    <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_481', true); ?></span>
+                </p>
+            </div>
+        </div>
+    <?php endif; ?>
+
+    <!-- DOSSIERS PEDAGOGIQUES-->
+    <?php
+    if ( is_page(array('dossiers_pedagogiques')) ) : ?>
+        <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
+            <div class=''>
+                <p class='accroche_cell_texte'>
+                    <span class='accroche_cell_texte_gras'>UN OUTIL PÉDAGOGIQUE</span>
+                    <br>
+                    <span class='accroche_cell_texte_leger'>CLÉ EN MAIN À DESTINATION DES ÉLÈVES ET ENSEIGNANTS</span>
+                </p>
+            </div>
+        </div>
+    <?php endif; ?>
 
 
     <!-- ---------------- -->
@@ -451,18 +497,22 @@
     <?php endif; ?>
 
     <!-- FICHE DE L'ARTISTE INVITE -->
-    <?php 
+    <?php
     if ( is_singular (array( 'artiste_invite' )) ) : ?>
-        <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
+        <!-- POSTES L'ARTISTE INVITE -->
+        <div class='accroche_cell grid_1col1_1row align_center  bg_<?php couleur() ?>'>
             <div class=''>
-                <p class='accroche_cell_texte'>
-                    <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_120', true); ?></span>
-                    <br>
-                    <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_121', true); ?></span>
-                </p>
+            <?php for ($i = 1; $i <= 4; $i++) { ?>
+                <?php if(!empty(get_post_meta($post->ID, 'metadata_123_'.$i, true))) { ?>
+                    <p class='accroche_cell_texte'>
+                        <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_123_'.$i, true); ?></span>
+                    </p>
+                <?php } ?>
+            <?php } ?>
             </div>
-        </div> 
+        </div>
     <?php endif;?>
+
 
     <!-- COLLABORATIONS -->
     <?php
@@ -618,6 +668,47 @@
         </div>
     <?php endif; ?>
 
+    <!-- MUR SOCIAL-->
+    <?php
+    if ( is_page(array('mur_social')) ) : ?>
+        <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
+            <div class=''>
+                <p class='accroche_cell_texte'>
+                    <span class='accroche_cell_texte_gras'>INTERAGISSEZ AVEC</span>
+                    <br>
+                    <span class='accroche_cell_texte_leger'>NOUS SUR LES RÉSEAUX SOCIAUX</span>
+                </p>
+            </div>
+        </div>
+    <?php endif; ?>
+    
+    <!-- ELEVES ET ENSEIGNANTS -->
+    <?php
+    if ( is_page(array('eleves_enseignants')) ) : ?>
+        <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
+            <div class=''>
+                <p class='accroche_cell_texte'>
+                    <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_480', true); ?></span>
+                    <br>
+                    <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_481', true); ?></span>
+                </p>
+            </div>
+        </div>
+    <?php endif; ?>
+
+    <!-- DOSSIERS PEDAGOGIQUES-->
+    <?php
+    if ( is_page(array('dossiers_pedagogiques')) ) : ?>
+        <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
+            <div class=''>
+                <p class='accroche_cell_texte'>
+                    <span class='accroche_cell_texte_gras'>UN OUTIL PÉDAGOGIQUE</span>
+                    <br>
+                    <span class='accroche_cell_texte_leger'>CLÉ EN MAIN À DESTINATION DES ÉLÈVES ET ENSEIGNANTS</span>
+                </p>
+            </div>
+        </div>
+    <?php endif; ?>
 
     
     <!-- ---------------- -->

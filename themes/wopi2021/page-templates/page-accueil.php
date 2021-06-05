@@ -370,7 +370,7 @@ Template Name: page_accueil
         <!-- INFORMATIONS -->
         <div class="grid paddingr_30 paddingb_10 margint_20_mobile">
             <div>
-                <!-- TITRE DESKTOP-->
+                <!-- TITRE-->
                 <div class="">
                     <h2 class='titre_card_container_grand'>
                         <span class='titre_leger'>DÉCOUVREZ</span>
