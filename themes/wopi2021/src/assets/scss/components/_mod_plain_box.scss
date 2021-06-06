@@ -33,3 +33,18 @@
     }
     padding-bottom: 35px;
 }
+
+.plainbox_temoignage {
+    min-height: 200px;
+    margin-right: -35px;
+    margin-left: -35px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    @include mobile {
+        margin-right: -15px;
+        margin-left: -15px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}

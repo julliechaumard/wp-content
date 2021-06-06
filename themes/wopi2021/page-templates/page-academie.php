@@ -55,7 +55,7 @@ get_template_part('template-parts/header','page');
             <?php 
             $args_prochain_concert = array(
                 'post_type' => 'concert',
-                'posts_per_page' => 1,
+                'posts_per_page' => -1,
 
                 'tax_query' => array(
                     'relation' => 'AND',
@@ -66,8 +66,10 @@ get_template_part('template-parts/header','page');
                     array(
                         'taxonomy' => 'action_culturelle',
                         'field'    => 'slug',
-                        'terms'    => 'academie'))
-
+                        'terms'    => 'academie')),
+                'orderby' => 'meta_value',
+                'meta_key' => 'metadata_180_10',
+                'order'=> 'ASC'
                 );
             $loop_prochain_concert = new WP_Query( $args_prochain_concert );
             if ($loop_prochain_concert->have_posts()) :
@@ -76,7 +78,7 @@ get_template_part('template-parts/header','page');
                     ?>
 
                     <!-- ILLUSTRATION -->
-                    <div class="grid_2col12">
+                    <div class="grid_2col12 marginb_80">
                         <div class="concert_card nopagemarge_mob encoche_one_card grid_2col20px1fr grid_area_21_desk">
 
                             <!-- ILLUSTRATION -->

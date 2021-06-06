@@ -31,6 +31,11 @@
 @font-face {
   font-family: 'didot_regular_italic';src: url('../fonts/didot_regular_italic.otf') format('opentype');
 }
+
+@font-face {
+  font-family: 'parisienne';src: url('../fonts/parisienne_Regular.ttf') format('truetype');
+}
+
 // ///////////////////////////////////////////
 // CLASSES DES FONT
 // ///////////////////////////////////////////
@@ -48,4 +53,8 @@
 
 .ubuntu_moyen {
   font-family: ubuntu_moyen;
+}
+
+.parisienne {
+  font-family: parisienne;
 }

@@ -11,6 +11,9 @@
 .borderb {
     border-bottom: solid 1px $color_gris_fonce;
 }
+.borderb_white {
+    border-bottom: solid 2px white;
+}
 
 /*****************************************
 * TITRES */
@@ -247,6 +250,9 @@ ul, li {
 }
 .fontsize_20 {
     font-size: 20px;
+}
+.fontsize_25 {
+    font-size: 25px;
 }
 .fontsize_27 {
     font-size: 27px;

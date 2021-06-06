@@ -285,6 +285,12 @@ Template Name: page_accueil
 </section>
 
 <!-- ----------------------- -->
+<!-- TEMOIGNAGE  -->
+<!-- ----------------------- -->
+<?php  get_template_part('template-parts/temoignage'); ?>
+
+
+<!-- ----------------------- -->
 <!-- COTE SCENE COTE COULISSE  -->
 <!-- ----------------------- -->
 
