@@ -49,7 +49,7 @@ Template Name: page_accueil
                     <div class="concert_card nopagemarge_mob encoche_one_card grid_2col20px1fr grid_area_21_desk">
 
                         <!-- ILLUSTRATION -->
-                        <img class='img_ajust_liste grid_area_21' src="<?php the_post_thumbnail_url(); ?>" alt="Illustration du concert">
+                        <img class='img_ajust grid_area_21' src="<?php the_post_thumbnail_url(); ?>" alt="Illustration du concert">
                         
                         <!-- DATE CADRE -->
 
@@ -188,7 +188,7 @@ Template Name: page_accueil
                     <div class="concert_card nopagemarge_mob encoche_one_card grid_2col20px1fr grid_area_21_desk">
 
                         <!-- ILLUSTRATION -->
-                        <img class='img_ajust_liste grid_area_21' src="<?php the_post_thumbnail_url(); ?>" alt="Illustration du concert">
+                        <img class='img_ajust grid_area_21' src="<?php the_post_thumbnail_url(); ?>" alt="Illustration du concert">
                         
                         <!-- DATE CADRE -->
 

@@ -160,7 +160,7 @@ Template Name: page_concerts_jeunes
         <!-- AVERTISSEMENT -->
         <section class="margin_section_botton">
             <div>
-                <p class="content_wp">Cette programmation peut être à tout moment modifiée et complétée</p>
+                <p class="content_wp"><img class="width_20 relative top_4" src="<?php bloginfo('template_directory');?>/dist/assets/images/icones/icone_info_petite_noire.png" alt=""> Cette programmation peut être à tout moment modifiée et complétée</p>
             </div>
         </section>
 
