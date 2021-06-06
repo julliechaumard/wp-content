@@ -45,11 +45,14 @@ function metabox_cultureaction($post) {
     echo '<p class="identifiant"> Identifiant article : ', $post->ID, '</p>';
     ?>
 
+
     <!-- --------------------- -->
-    <!-- GROUPE TITRES -->
+    <!-- GROUPE PEDAGOGIQUE -->
     <section class='metagroup'>
-        <h2>LES TITRES</h2>
+        <h2>DOSSIER PEDAGOGIQUE</h2>
+
         <div class=''>
+            <h3>TITRE DU DOSSIER</h3>
             <div class='metagroup_sub_items grid_4fr_simple'>
                 <!-- TITRE DU DOSSIER LIGNE1 -->
                 <div class="pinput">
@@ -62,14 +65,6 @@ function metabox_cultureaction($post) {
                     <input type="text" name="metadata_425" id="metadata_425" placeholder='en MAJUSCULE' value="<?php echo $metadata_425; ?>"/>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- --------------------- -->
-    <!-- GROUPE ICONE ILLUSTRATION DOSSIER PEDAGOGIQUE -->
-    <section class='metagroup'>
-        <h2>DOSSIER PEDAGOGIQUE</h2>
-        <div class=''>
             <h3>ICONE ILLUSTRATION DOSSIER</h3>
             <div class='metagroup_sub_items grid_4fr_simple'>
                 <!-- ICONE ILLUSTRATION DOSSIER PEDAGOGIQUE -->
