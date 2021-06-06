@@ -34,7 +34,7 @@
             <li class='menu_item <?php menu_active_culture_actions() ?>'>Actions culturelles
                 <ul class='sub_menu'>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Eleves_enseignants')) ?>">Elèves et enseignants</a></li>
-                    <li class="sub_menu_item"><a href="#">Académie</a></li>
+                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Academie')) ?>">Académie</a></li>
                     <li class="sub_menu_item"><a href="#">Actions citoyennes et sociales</a></li>
                 </ul>
             </li>
@@ -108,7 +108,7 @@
             <li class='menu_item <?php menu_active_culture_actions() ?>'>Actions culturelles
                 <ul class='sub_menu'>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Eleves_enseignants')) ?>">Elèves et enseignants</a></li>
-                    <li class="sub_menu_item"><a href="#">Académie</a></li>
+                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Academie')) ?>">Académie</a></li>
                     <li class="sub_menu_item"><a href="#">Actions citoyennes et sociales</a></li>
                 </ul>
             </li>

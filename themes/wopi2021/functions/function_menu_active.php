@@ -22,7 +22,7 @@ function menu_active_actus() {
   }
 }
 function menu_active_culture_actions() {
-  if ( is_page(array('eleves_enseignants','dossiers_pedagogiques')) ) { 
+  if ( is_page(array('eleves_enseignants','dossiers_pedagogiques','academie')) ) { 
     echo 'menu_active';
   }
 }

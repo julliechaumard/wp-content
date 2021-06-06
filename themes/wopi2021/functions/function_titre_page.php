@@ -65,6 +65,9 @@ function titre_gras($post) {
     if ( is_page(array('dossiers_pedagogiques')) ) { 
       echo "DOSSIERS";
     }
+    if ( is_page(array('academie')) ) { 
+      echo "NOS PROJETS";
+    }
 }
 function titre_leger($post) {
   if ( is_front_page() ) { 
@@ -129,6 +132,9 @@ function titre_leger($post) {
   }
   if ( is_page(array('dossiers_pedagogiques')) ) { 
     echo "PÉDAGOGIQUES";
+  }
+  if ( is_page(array('academie')) ) { 
+    echo "ACADÉMIE";
   }
 
 }

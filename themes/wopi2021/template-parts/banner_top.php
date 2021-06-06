@@ -336,6 +336,20 @@
         </div>
     <?php endif; ?>
 
+    <!-- ACADEMIE-->
+    <?php
+    if ( is_page(array('academie')) ) : ?>
+        <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
+            <div class=''>
+                <p class='accroche_cell_texte'>
+                    <span class='accroche_cell_texte_gras'>VIVEZ L'EXPÉRIENCE</span>
+                    <br>
+                    <span class='accroche_cell_texte_leger'>L'ORCHESTRE</span>
+                </p>
+            </div>
+        </div>
+    <?php endif; ?>
+
 
     <!-- ---------------- -->
     <!-- ILLUSTRATION -->
@@ -705,6 +719,20 @@
                     <span class='accroche_cell_texte_gras'>UN OUTIL PÉDAGOGIQUE</span>
                     <br>
                     <span class='accroche_cell_texte_leger'>CLÉ EN MAIN À DESTINATION DES ÉLÈVES ET ENSEIGNANTS</span>
+                </p>
+            </div>
+        </div>
+    <?php endif; ?>
+
+    <!-- ACADEMIE-->
+    <?php
+    if ( is_page(array('academie')) ) : ?>
+        <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
+            <div class=''>
+                <p class='accroche_cell_texte'>
+                    <span class='accroche_cell_texte_gras'>VIVEZ L'EXPÉRIENCE</span>
+                    <br>
+                    <span class='accroche_cell_texte_leger'>L'ORCHESTRE</span>
                 </p>
             </div>
         </div>

@@ -14,7 +14,7 @@ function couleur() {
     if ( is_page(array('mediatheque_photos','mediatheque_videos','actualites','mur_social')) ) { 
       echo 'color_medias';
     }
-    if ( is_page(array('eleves_enseignants','dossiers_pedagogiques')) ) { 
+    if ( is_page(array('eleves_enseignants','dossiers_pedagogiques','academie')) ) { 
       echo 'color_culture_actions';
     }
 }
@@ -32,7 +32,7 @@ function logo_couleur() {
     if ( is_page(array('mediatheque_photos','mediatheque_videos','actualites','mur_social')) ) { 
       echo '/dist/assets/images/logos/logo_orchestre_mauve.png';
     }
-    if ( is_page(array('eleves_enseignants','dossiers_pedagogiques')) ) { 
+    if ( is_page(array('eleves_enseignants','dossiers_pedagogiques','academie')) ) { 
       echo '/dist/assets/images/logos/logo_orchestre_jaune.png';
     }
 }
@@ -50,7 +50,7 @@ function menu_pipe_couleur() {
   if ( is_page(array('mediatheque_photos','mediatheque_videos','actualites','mur_social')) ) { 
     echo 'medias';
   }
-  if ( is_page(array('eleves_enseignants','dossiers_pedagogiques')) ) { 
+  if ( is_page(array('eleves_enseignants','dossiers_pedagogiques','academie')) ) { 
     echo 'culture_actions';
   }
 }
