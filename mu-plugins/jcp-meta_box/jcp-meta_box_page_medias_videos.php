@@ -37,7 +37,7 @@ function metabox_page_medias_videos($post) {
         $metadata_764_[$i] = get_post_meta( $post->ID, 'metadata_764_'.$i.'', true );
     }
     for ($i = 1; $i <= 5; $i++) {
-        for ($j = 1; $j <= 10; $j++) {  
+        for ($j = 1; $j <= 15; $j++) {  
             ${"metadata_765_[$i]_$j"} = get_post_meta( $post->ID, 'metadata_765_'.$i.'_'.$j.'', true );  
         }
     }
@@ -104,7 +104,7 @@ function metabox_page_medias_videos($post) {
 
             <!-- 10 Vidéos -->
             <div class='metagroup_sub_items grid_4fr_simple'>
-                    <?php for ($j = 1; $j <= 10; $j++) { ?>
+                    <?php for ($j = 1; $j <= 15; $j++) { ?>
                         <div class="pinput">
                             <label for="metadata_765_<?php echo $i; ?>_<?php echo $j; ?>">Code vidéo YouTube <?php echo $j; ?></label>
                             <input type="text" name="metadata_765_<?php echo $i; ?>_<?php echo $j; ?>" id="metadata_765_<?php echo $i; ?>_<?php echo $j; ?>" value="<?php echo ${"metadata_765_[$i]_$j"}; ?>"/>
@@ -140,7 +140,7 @@ function jcp_metabox_save_page_medias_videos($post_id) {
         if ('page-templates/page-mediatheque_videos.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_764_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_764_'.$i.'', $_POST['metadata_764_'.$i.'']);};
     }
     for ($i = 1; $i <= 5; $i++) {
-        for ($j = 1; $j <=10; $j++) {
+        for ($j = 1; $j <=15; $j++) {
             if ('page-templates/page-mediatheque_videos.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_765_'.$i.'_'.$j.'', $_POST)) { update_post_meta( $post_id, 'metadata_765_'.$i.'_'.$j.'', $_POST['metadata_765_'.$i.'_'.$j.'']);};
         }
     }

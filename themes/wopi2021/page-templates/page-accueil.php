@@ -11,6 +11,46 @@ Template Name: page_accueil
 <main>
 
 <!-- ----------------------- -->
+<!-- PRÉSENTATION DE LA SAISON  -->
+<!-- ----------------------- -->
+
+<section class="margin_section_botton">
+    <!-- Titre -->
+    <div class="paddingt_desk_30 paddingt_mob_15">
+        <h2 class='titre_chapitre_container marginb_20'>
+            <span class='titre_leger'>PRÉSENTATION</span>
+            <br>
+            <span class='titre_gras'>DE LA SAISON</span>
+        </h2>
+    </div>
+
+    <!-- LES VIDEOS  -->
+    <div class="grid_2col_11 grid_column_gap24 grid_row_gap50">
+                <!-- 1 BLOC  -->
+                <div>
+                    <!-- VIDEO -->
+                    <div class="nopagemarge_mobxs">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?php echo get_post_meta($post->ID, 'metadata_016', true) ?>" allowfullscreen></iframe>
+                        </div>
+                    </div>                            
+                </div>
+
+                <!-- 2 BLOC  -->
+                <div>
+                    <!-- VIDEO -->
+                    <div class="nopagemarge_mobxs">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?php echo get_post_meta($post->ID, 'metadata_016', true) ?>" allowfullscreen></iframe>
+                        </div>
+                    </div>                            
+                </div>
+    </div>
+
+</section>
+
+
+<!-- ----------------------- -->
 <!-- PROCHAIN CONCERT        -->
 <!-- ----------------------- -->
 
@@ -49,7 +89,7 @@ Template Name: page_accueil
                     <div class="concert_card nopagemarge_mob encoche_one_card grid_2col20px1fr grid_area_21_desk">
 
                         <!-- ILLUSTRATION -->
-                        <img class='img_ajust grid_area_21' src="<?php the_post_thumbnail_url(); ?>" alt="Illustration du concert">
+                        <img class='img_ajust img_ajust_prochain_concert grid_area_21' src="<?php the_post_thumbnail_url(); ?>" alt="Illustration du concert">
                         
                         <!-- DATE CADRE -->
 
@@ -85,7 +125,7 @@ Template Name: page_accueil
                     </div>
                 
                 <!-- INFORMATION -->
-                <div class="grid paddingt_30 paddingr_8 paddingb_10 paddingl_15 prochain_concert_card_border_desk">
+                <div class="grid paddingt_30 paddingr_8 paddingb_10 paddingl_15 prochain_concert_card_border_desk prochain_concert_card_border_mob marginr_-15_mobile marginl_5_mobile">
                             <!-- TITRE -->
                             <div class="">
                                 <h2 class='titre_card_container'>
@@ -188,7 +228,7 @@ Template Name: page_accueil
                     <div class="concert_card nopagemarge_mob encoche_one_card grid_2col20px1fr grid_area_21_desk">
 
                         <!-- ILLUSTRATION -->
-                        <img class='img_ajust grid_area_21' src="<?php the_post_thumbnail_url(); ?>" alt="Illustration du concert">
+                        <img class='img_ajust img_ajust_prochain_concert grid_area_21' src="<?php the_post_thumbnail_url(); ?>" alt="Illustration du concert">
                         
                         <!-- DATE CADRE -->
 
@@ -221,7 +261,7 @@ Template Name: page_accueil
                     </div>
                 
                 <!-- INFORMATION -->
-                <div class="grid paddingt_30 paddingr_8 paddingb_10 paddingl_15 prochain_concert_card_border_desk">
+                <div class="grid paddingt_30 paddingr_8 paddingb_10 paddingl_15 prochain_concert_card_border_desk prochain_concert_card_border_mob marginr_-15_mobile marginl_5_mobile">
                             <!-- TITRE -->
                             <div class="">
                                 <h2 class='titre_card_container'>
@@ -294,9 +334,9 @@ Template Name: page_accueil
 <!-- COTE SCENE COTE COULISSE  -->
 <!-- ----------------------- -->
 
-<section class="margint_70 margin_section_botton">
+<section class="margin_section_botton">
     <!-- Titre -->
-    <div class="paddingt_30">
+    <div class="paddingt_desk_30">
         <h2 class='titre_chapitre_container marginb_20'>
             <span class='titre_leger'>CÔTÉ SCÈNE</span>
             <br>
@@ -362,7 +402,7 @@ Template Name: page_accueil
 <!-- MEDIATHEQUE  -->
 <!-- ----------------------- -->
 
-<section class="margint_90 margin_section_botton">
+<section class="margint_90_desk margint_15_mobile margin_section_botton">
 
 
     <div class="grid_2col12">
@@ -409,15 +449,15 @@ Template Name: page_accueil
 <!-- ----------------------- -->
 <!-- SOUTENEZ-NOUS  -->
 <!-- ----------------------- -->
-<section class='plainbox grid align_center justify_center bg_color_accueil margin_section_botton'>
-        <div class="texte_center marginr_100_nomobile marginl_100_nomobile marginr_50_mobile marginl_50_mobile marginr_15_mobilexs marginl_15_mobilexs">
+<section class='plainbox grid align_center justify_center bg_color_accueil margint_70_desk margint_15_mobile margin_section_botton'>
+        <div class="texte_center marginr_160_nomobile marginl_160_nomobile marginr_50_mobile marginl_50_mobile marginr_15_mobilexs marginl_15_mobilexs">
             <div>
                 <h2 class='titre_plainbox_container fontsize_27 margin_section_botton tx_color_blanc'>
                     <span class='titre_leger'>SOUTENEZ-NOUS</span>
                 </h2>
             </div>
             <div class='texte_plainbox_container fontsize_27 margin_section_botton tx_color_blanc'>
-                <p class='titre_gras'>« Oeuvrez pour que l’Orchestre et les instruments soient source de pédagogie et de lien social »</p>
+                <p class='titre_gras'><?php echo get_post_meta($post->ID, 'metadata_012', true); ?></p>
             </div>
             <div>
             <p class="marginb_6"><button class="button_petit button_accueil"><a href="<?php echo get_permalink(get_page_by_title('Soutenez-nous entreprise')) ?>">DÉCOUVREZ COMMENT NOUS SOUTENIR</a></button></p>
@@ -451,10 +491,11 @@ Template Name: page_accueil
     <div class="">
         <script src="https://assets.juicer.io/embed.js" type="text/javascript"></script>
         <link href="https://assets.juicer.io/embed.css" media="all" rel="stylesheet" type="text/css" />
-        <ul class="juicer-feed" data-feed-id="orchespicardie"
-            data-per="5" 
+        <ul class="juicer-feed paddingrl_25_400" data-feed-id="orchespicardie"
+            data-per="6" 
             data-pages="1" 
-            data-truncate="200" 
+            data-truncate="200"
+            data-columns="3"
             data-gutter="35"
             data-starting-at="2020-01-01"
             data-after="translateJuicer()">

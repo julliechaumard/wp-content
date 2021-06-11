@@ -25,4 +25,10 @@
         border-right: 0px;
     }
 }
+.prochain_concert_card_border_mob {
+    @include mobile {
+        border: solid 2px $color_gris_clair;
+        border-top: 0px;
+    }
+}
 

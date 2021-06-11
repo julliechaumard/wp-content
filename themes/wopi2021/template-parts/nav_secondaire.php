@@ -70,13 +70,13 @@ if ( is_page(array('mediatheque_photos','mediatheque_videos')) ) :?>
         <!-- Carré de couleur -->
         <div class='nav_second_carre bg_color_media_nomadplay grid_area_2 grid_area_1_4_max500px'></div>
         <!-- Label + Flèche -->
-        <div class="ubuntu_bold tx_color_noir_fonce alignself_center marginl_10"><a class='fontsize_16' href="">A VOUS DE JOUER !</a></div>
+        <div class="ubuntu_bold tx_color_noir_fonce alignself_center marginl_10"><a class='fontsize_16' href="">À VOUS DE JOUER ! NOMADPLAY</a></div>
 
         <!-- MENU ITEM 4 -->
         <!-- Carré de couleur -->
-        <div class='nav_second_carre bg_color_media_musiques grid_area_2 grid_area_1_4_max500px'></div>
+        <!-- <div class='nav_second_carre bg_color_media_musiques grid_area_2 grid_area_1_4_max500px'></div> -->
         <!-- Label + Flèche -->
-        <div class="ubuntu_bold tx_color_noir_fonce alignself_center marginl_10"><a class='fontsize_16' href="">MUSIQUES</a></div>
+        <!-- <div class="ubuntu_bold tx_color_noir_fonce alignself_center marginl_10"><a class='fontsize_16' href="">MUSIQUES</a></div> -->
 
         <!-- MENU ITEM 5 -->
         <!-- Carré de couleur -->

@@ -70,7 +70,7 @@ get_template_part('template-parts/header','page');
 
                             </div>
                             <div>
-                                <p class="fontsize_13 ubuntu_fin paddingt_7 paddingb_5"><?php echo get_post_meta($post->ID, 'metadata_254', true) ?></p>
+                                <p class="fontsize_13 ubuntu_leger paddingt_7 paddingb_5"><?php echo get_post_meta($post->ID, 'metadata_254', true) ?></p>
                             </div>
                         </div>
 

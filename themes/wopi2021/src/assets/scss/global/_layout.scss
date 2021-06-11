@@ -29,6 +29,9 @@
 .top_4 {
     top: 4px;
 }
+.top_moins30 {
+    top: -30px;
+}
 
 /*****************************************
 * IMAGE */
@@ -41,6 +44,10 @@
     height: 100%;
     object-fit: cover;
 }
+.img_ajust_prochain_concert {
+    max-height: 376px;
+}
+
 .img_ajust_liste {
     width: 100%;
 }
@@ -126,6 +133,11 @@
     }
 }
 
+.marginr_-15_mobile {
+    @include mobile {
+        margin-right: -15px;
+    }
+}
 
 .margint_-4{
     margin-top: -4px;
@@ -144,6 +156,21 @@
         margin-top: 20px;
     }
 }
+/* BUTTON PLAYER MOBILE BANNIERE*/
+.margint_20_500px {
+    @media screen and (max-width:500px) {
+        margin-top: 20px;
+    }
+}
+
+.margint_27_mobile {
+    @include mobile {
+        margin-top: 27px;
+    }
+}
+.margint_30 {
+    margin-top: 30px;
+}
 /* LISTE DES CONCERTS */
 .margint_40 {
     margin-top: 40px;
@@ -152,8 +179,18 @@
 .margint_70 {
     margin-top: 70px;
 }
+.margint_70_desk {
+    @include nomobile {
+        margin-top: 70px;
+    }
+}
 .margint_90 {
     margin-top: 90px;
+}
+.margint_90_desk {
+    @include nomobile {
+        margin-top: 90px;
+    }
 }
 
 .marginr_10 {
@@ -183,6 +220,11 @@
         margin-right: 100px;
     }
 }
+.marginr_160_nomobile {
+    @include nomobile {
+        margin-right: 160px;
+    }
+}
 
 /* LISTE DES CONCERTS */
 .marginb_3 {
@@ -209,6 +251,11 @@
 }
 .marginb_20_mobile {
     @include mobile {
+        margin-bottom: 20px;
+    }
+}
+.marginb_20_400px {
+    @media screen and (max-width:400px) {
         margin-bottom: 20px;
     }
 }
@@ -242,6 +289,11 @@
 .marginl_-3 {
     margin-left: -3px;
 }
+.marginl_5_mobile {
+    @include mobile {
+        margin-left: 5px;
+    }
+}
 .marginl_12_mobilexs {
     @include mobilexs {
         margin-left: 12px;
@@ -268,6 +320,11 @@
         margin-left: 100px;
     }
 }
+.marginl_160_nomobile {
+    @include nomobile {
+        margin-left: 160px;
+    }
+}
 
 /* INFORMATIONS FICHE CONCERT DATE / MENTIONS ANNULE*/
 .paddingt_3 {
@@ -290,6 +347,11 @@
 .paddingt_15 {
     padding-top: 15px;
 }
+.paddingt_mob_15 {
+    @include mobile {
+        padding-top: 15px;
+    }
+}
 /* FOOTER CONTACTS */
 .paddingt_20 {
     padding-top: 20px;
@@ -299,7 +361,11 @@
 .paddingt_30 {
     padding-top: 30px;
 }
-
+.paddingt_desk_30 {
+    @include nomobile {
+        padding-top: 30px;
+    }
+}
 
 /* LISTE ARTISTE FICHE CONCERT */
 /* LISTE OEUVRE FICHE CONCERT */

@@ -14,6 +14,9 @@ function titre_gras($post) {
     if ( is_singular (array( 'orchestre' )) ) { 
       echo get_post_meta($post->ID, 'metadata_603', true);
     }
+    if ( is_singular (array( 'actualite' )) ) { 
+      echo "L'ACTUALITÉ";
+    }
     if ( is_page(array('agenda')) ) { 
       echo "NOTRE AGENDA";
     }
@@ -68,6 +71,9 @@ function titre_gras($post) {
     if ( is_page(array('academie')) ) { 
       echo "NOS PROJETS";
     }
+    if ( is_page(array('actions_citoyennes')) ) { 
+      echo "ACTIONS";
+    }
 }
 function titre_leger($post) {
   if ( is_front_page() ) { 
@@ -81,6 +87,9 @@ function titre_leger($post) {
   }
   if ( is_singular (array( 'orchestre' )) ) { 
     echo get_post_meta($post->ID, 'metadata_605', true);
+  }
+  if ( is_singular (array( 'actualite' )) ) { 
+    echo "DE L'ORCHESTRE";
   }
   if ( is_page(array('agenda')) ) { 
     echo "2021-2022";
@@ -135,6 +144,9 @@ function titre_leger($post) {
   }
   if ( is_page(array('academie')) ) { 
     echo "ACADÉMIE";
+  }
+  if ( is_page(array('actions_citoyennes')) ) { 
+    echo "CITOYENNES ET SOCIALES";
   }
 
 }

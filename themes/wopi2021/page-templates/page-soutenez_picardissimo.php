@@ -98,13 +98,13 @@ Template Name: page_soutenez_picardissimo
         </div>
         
         <div>
-            <!-- DATABASE PAGE PICARDISSIMO NOMS  -->
+            <!-- NOMS  -->
             <?php for ($i = 1; $i <= 10; $i++) :
                 if (!empty(get_post_meta($post->ID, 'metadata_692_'.$i, true))) :?>
                     <div class="">
                         <div class="grid_2col24_46 grid_column_gap24 align_start marginb_6">
                             <!-- NOM DU MEMBRE -->
-                            <p class="texte_right texte_left_mob"><?php echo get_post_meta($post->ID, 'metadata_692_'.$i, true); ?></p>
+                            <p class="titre_gras texte_right texte_left_mob"><?php echo get_post_meta($post->ID, 'metadata_692_'.$i, true); ?></p>
                             <!-- POSTE -->
                             <?php if (!empty(get_post_meta($post->ID, 'metadata_693_'.$i, true))): ?>
                                 <p class="fontsize_13 ubuntu_fin"><?php echo get_post_meta($post->ID, 'metadata_693_'.$i, true); ?></p>

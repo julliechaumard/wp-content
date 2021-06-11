@@ -195,6 +195,11 @@ ul, li {
     @include button (8px, 15px, 7px, 15px, 14px)
 }
 
+/* BUTTON PLAYER BANNIERE*/
+.button_player_banniere {
+    @include button (6px, 10px, 5px, 2px, 14px)
+}
+
 /* BUTTON NEWSLETTER*/
 .button_grand {
     @include button (13px, 26px, 13px, 26px, 22px)
@@ -208,6 +213,10 @@ ul, li {
 .button_orchestre {
     color: white;
     background-color: $color_orchestre;
+}
+.button_culture_actions {
+    color: white;
+    background-color: $color_culture_actions;
 }
 .button_accueil {
     color: color_accueil;
@@ -236,6 +245,9 @@ ul, li {
 /* FONT SIZE ***********************/
 .fontsize_10 {
     font-size: 10px;
+}
+.fontsize_11 {
+    font-size: 11px;
 }
 .fontsize_13 {
     font-size: 13px;

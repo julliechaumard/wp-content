@@ -147,7 +147,7 @@ get_template_part('template-parts/header','page');
                         <div class="concert_card nopagemarge_mob encoche_one_card grid_2col20px1fr grid_area_21_desk">
 
                             <!-- ILLUSTRATION -->
-                            <img class='img_ajust grid_area_21' src="<?php the_post_thumbnail_url(); ?>" alt="Illustration du concert">
+                            <img class='img_ajust img_ajust_prochain_concert grid_area_21' src="<?php the_post_thumbnail_url(); ?>" alt="Illustration du concert">
                             
                             <!-- DATE CADRE -->
 
@@ -426,6 +426,36 @@ get_template_part('template-parts/header','page');
             <?php endwhile; 
         endif; 
         wp_reset_query(); ?>
+
+    </section>
+
+    <!-- --------------------------------- -->
+    <!-- INFORMATIONS PRATIQUES -->
+    <!-- --------------------------------- -->
+    <section class='grid_infos_pratiques grid_column_gap40 paddingb_50'>
+
+        <!-- TITRE -->
+        <div>
+            <h2 class='titre_chapitre_container marginb_20 tx_color_culture_actions'>
+                <span class='titre_gras'>INFORMATIONS</span>
+                <br>
+                <span class='titre_leger'>PRATIQUES</span>
+            </h2>
+        </div>
+        <!-- ICONE -->
+        <div class="marginb_12_mobilexs">
+            <img class='max_width_44_mobile' src="<?php bloginfo('template_directory');?>/dist/assets/images/icones/icones_informations_pratiques_jaune.png" alt="Icone Information pratique">
+        </div>
+        
+        <div class="grid_area_1_32_mob marginl_12_mobilexs">
+        
+            <!-- INFORMATION -->
+            <div class="content_wp">
+                <?php echo get_post_meta($post->ID, 'metadata_482', true); ?>
+                <p class="marginb_6"><button class="button_petit button_culture_actions"><a target="_blank" href="mailto:lullishop@icloud.com?subject=Contact MÉCÉNAT ENTREPRISE depuis le site internet de l'Orchestre">CONTACTEZ-NOUS</a></button></p>
+            </div>
+
+        </div>
 
     </section>
 

@@ -20,7 +20,7 @@
           <br>
           <span class='titre_gras'>À NOTRE LETTRE</span>
           <br>
-          <span class='titre_gras'>D'INFORMATIONS</span>
+          <span class='titre_gras'>D'INFORMATION</span>
           
       </p>
     </div>

@@ -13,7 +13,7 @@ Template Name: page_agenda
 
     <article>
         <!-- Titre -->
-        <div class="paddingt_30">
+        <div class="paddingt_desk_30">
             <h2 class='titre_chapitre_container marginb_20'>
                 <span class='titre_leger'>LES PROCHAINS</span>
                 <br>
@@ -84,7 +84,7 @@ Template Name: page_agenda
                             <?php } ?>
                             <!-- DISTRIBUTION -->
                             <div class='liste_art_comp paddingt_7'>
-                                <?php for ($i = 1; $i <= 3; $i++) { ?>
+                                <?php for ($i = 1; $i <= 5; $i++) { ?>
                                     <?php if(!empty(get_post_meta($post->ID, 'metadata_186_'.$i, true))) { ?>
                                         <div class="artiste">
                                             <div class="paddingr_8 ubuntu_bold">

@@ -123,13 +123,16 @@
     <!-- FICHE DE L'ARTISTE INVITE -->
     <?php 
     if ( is_singular (array( 'artiste_invite' )) ) : ?>
-        <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
+        <!-- POSTES L'ARTISTE INVITE -->
+        <div class='accroche_cell grid_1col1_1row align_center  bg_<?php couleur() ?>'>
             <div class=''>
-                <p class='accroche_cell_texte'>
-                    <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_120', true); ?></span>
-                    <br>
-                    <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_121', true); ?></span>
-                </p>
+            <?php for ($i = 1; $i <= 4; $i++) { ?>
+                <?php if(!empty(get_post_meta($post->ID, 'metadata_123_'.$i, true))) { ?>
+                    <p class='accroche_cell_texte'>
+                        <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_123_'.$i, true); ?></span>
+                    </p>
+                <?php } ?>
+            <?php } ?>
             </div>
         </div>
     <?php endif;?>
@@ -354,27 +357,13 @@
         <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
             <div class=''>
                 <p class='accroche_cell_texte'>
-                    <span class='accroche_cell_texte_gras'>ACCOMPAGNER</span>
+                    <span class='accroche_cell_texte_gras'>VIVEZ L'EXPÉRIENCE</span>
                     <br>
-                    <span class='accroche_cell_texte_leger'>LES DÉBUTS ET LA MISE EN SITUATION PROFESSIONNELLE DES TALENTS DE DEMAIN</span>
+                    <span class='accroche_cell_texte_leger'>L'ORCHESTRE</span>
                 </p>
             </div>
         </div>
     <?php endif; ?>
-
-    <!-- ACTIONS CITOYENNES-->
-    <?php
-    if ( is_page(array('actions_citoyennes')) ) : ?>
-        <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
-            <div class=''>
-                <p class='accroche_cell_texte'>
-                    <span class='accroche_cell_texte_gras'>APPORTER LA MUSIQUE</span>
-                    <br>
-                    <span class='accroche_cell_texte_leger'>VIVANTE ET SUSCITER L'ÉMOTION AUPRÈS DE TOUS, PARTOUT</span>
-                </p>
-            </div>
-        </div>
-    <?php endif; ?>   
 
 
     <!-- ---------------- -->
@@ -388,8 +377,7 @@
     <!-- ---------------- -->
     <!-- NAV RESEAUX SOCIAUX -->
     <!-- ---------------- -->
-
-    <nav class="nav_res_soc_cell">
+    <nav class="nav_res_soc_cell margint_27_mobile">
         <ul class='tx_<?php couleur() ?>'>
             <li class='menu_res_soc_item pipe_<?php menu_pipe_couleur() ?>'><a target="_blank" href="https://www.instagram.com/orchestredepicardie/">Instagram</a></li>
             <li class='menu_res_soc_item pipe_<?php menu_pipe_couleur() ?>'><a target="_blank" href="https://www.instagram.com/musicodpic/">Instajeunes</a></li>
@@ -398,7 +386,14 @@
             <li class='menu_res_soc_item pipe_<?php menu_pipe_couleur() ?>'><a  target="_blank"href="https://www.youtube.com/channel/UC0K2FgYMFDrYtjudbI-6Tjw/videos">Youtube</a></li>
         </ul>
     </nav>
+    <div>
 
+    <audio id="audioPlayer"> loop
+        <source src="<?php bloginfo('template_directory');?>/dist/assets/audios/flute_vous_voyez_tous_les_ans_julie.mp3"></source>
+        <source src="<?php bloginfo('template_directory');?>/dist/assets/audios/flute_vous_voyez_tous_les_ans_julie.mp3"></source>
+    </audio>
+
+    </div>
 
 </section>  
 
@@ -539,15 +534,18 @@
     <?php endif; ?>
 
     <!-- FICHE DE L'ARTISTE INVITE -->
-    <?php 
+    <?php
     if ( is_singular (array( 'artiste_invite' )) ) : ?>
-        <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
+        <!-- POSTES L'ARTISTE INVITE -->
+        <div class='accroche_cell grid_1col1_1row align_center  bg_<?php couleur() ?>'>
             <div class=''>
-                <p class='accroche_cell_texte'>
-                    <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_120', true); ?></span>
-                    <br>
-                    <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_121', true); ?></span>
-                </p>
+            <?php for ($i = 1; $i <= 4; $i++) { ?>
+                <?php if(!empty(get_post_meta($post->ID, 'metadata_123_'.$i, true))) { ?>
+                    <p class='accroche_cell_texte'>
+                        <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_123_'.$i, true); ?></span>
+                    </p>
+                <?php } ?>
+            <?php } ?>
             </div>
         </div>
     <?php endif;?>
@@ -770,33 +768,20 @@
         <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
             <div class=''>
                 <p class='accroche_cell_texte'>
-                    <span class='accroche_cell_texte_gras'>ACCOMPAGNER</span>
+                    <span class='accroche_cell_texte_gras'>VIVEZ L'EXPÉRIENCE</span>
                     <br>
-                    <span class='accroche_cell_texte_leger'>LES DÉBUTS ET LA MISE EN SITUATION PROFESSIONNELLE DES TALENTS DE DEMAIN</span>
+                    <span class='accroche_cell_texte_leger'>L'ORCHESTRE</span>
                 </p>
             </div>
         </div>
     <?php endif; ?>
 
-    <!-- ACTIONS CITOYENNES-->
-    <?php
-    if ( is_page(array('actions_citoyennes')) ) : ?>
-        <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
-            <div class=''>
-                <p class='accroche_cell_texte'>
-                    <span class='accroche_cell_texte_gras'>APPORTER LA MUSIQUE</span>
-                    <br>
-                    <span class='accroche_cell_texte_leger'>VIVANTE ET SUSCITER L'ÉMOTION AUPRÈS DE TOUS, PARTOUT</span>
-                </p>
-            </div>
-        </div>
-    <?php endif; ?>   
     
     <!-- ---------------- -->
     <!-- NAV RESEAUX SOCIAUX -->
     <!-- ---------------- -->
-    <div class="margint_30">
-        <nav class="nav_res_soc_cell grid_1col1_1row justify_center">
+    <div>
+        <nav class="nav_res_soc_cell margint_27_mobile grid_1col1_1row justify_center">
             <ul class='tx_<?php couleur() ?>'>
                 <li class='menu_res_soc_item pipe_<?php menu_pipe_couleur() ?>'><a target="_blank" href="https://www.instagram.com/orchestredepicardie/">Instagram</a></li>
                 <li class='menu_res_soc_item pipe_<?php menu_pipe_couleur() ?>'><a target="_blank" href="https://www.instagram.com/musicodpic/">Instajeunes</a></li>

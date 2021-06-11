@@ -50,7 +50,7 @@ Template Post Type: orchestre
 
             <!-- SITE INTERNET -->
             <?php if(!empty(get_post_meta($post->ID, 'metadata_612', true))) { ?>
-                <p class="margint_40"><button class="button_petit button_orchestre"><a target="_blank" href="<?php echo get_post_meta($post->ID, 'metadata_612', true);?>">SON SITE INTERNET</a></button></p>
+                <p class="margint_40"><button class="button_petit button_orchestre"><a target="_blank" href="<?php echo get_post_meta($post->ID, 'metadata_612', true);?>">SITE INTERNET DE L'ARTISTE</a></button></p>
             <?php } ?>
 
         </section>

@@ -55,7 +55,7 @@ Template Post Type: concert
                 <h2 class='titre_chapitre_container marginb_20'>
                     <span class='titre_gras'>DATES</span>
                     <br>
-                    <span class='titre_leger'>ET REPRÉSENTATIONS</span>
+                    <span class='titre_leger'>ET LIEUX</span>
                 </h2>
             </div>
 
@@ -273,7 +273,7 @@ Template Post Type: concert
         <!-- TITRE -->
         <div>
             <p class='titre_chapitre_container marginb_20'>
-                <span class='titre_gras'>PHOTO & VIDÉOS</span>
+                <span class='titre_gras'>PHOTOS & VIDÉOS</span>
                 <br>
                 <span class='titre_leger'>DU CONCERT</span>
             </p>

@@ -99,6 +99,149 @@ Template Name: page_actualites
             <?php endwhile; endif; wp_reset_query(); ?>
         </section>
 
+        <!-- --------------------------------- -->
+        <!-- LES COULISSES -->
+        <!-- --------------------------------- -->
+
+        <!-- LOOP LES COULISSES   -->
+        <?php 
+        $args_actu_coulisse = array(
+            'post_type' => 'actualite',
+            'posts_per_page' => -1,
+
+            'tax_query' => array(
+                'relation' => 'AND',
+                array(
+                    'taxonomy' => 'categorie_actu',
+                    'field'    => 'slug',
+                    'terms'    => 'coulisse'),
+                array(
+                    'taxonomy' => 'saison',
+                    'field'    => 'slug',
+                    'terms'    => array('2020-2021', '2021-2022'))),
+            'orderby' => 'meta_value',
+            'meta_key' => 'metadata_903',
+            'order'=> 'DESC'
+        );
+        $loop_actu_coulisse = new WP_Query( $args_actu_coulisse );
+        if ($loop_actu_coulisse->have_posts()) :?>
+
+            <section class="margin_section_botton">
+
+                <!-- Titre -->
+                <div class="paddingt_30">
+                    <h2 class='titre_chapitre_container marginb_20'>
+                        <span class='titre_leger'>LES COULISSES</span>
+                        <br>
+                        <span class='titre_gras'>DE L’ORCHESTRE</span>
+                    </h2>
+                </div>
+                <!-- LES ACTUS  -->
+                <div class="grid_3col_liste grid_column_gap24 grid_row_gap50 height_min_200">
+                    <?php while ($loop_actu_coulisse->have_posts()) :
+                        $loop_actu_coulisse->the_post();?>
+
+                            <!-- L'ACTU  -->
+                            <div class="encoche_list_card">
+                                <!-- ILLUSTRATION -->
+                                <div class="grid nopagemarge_mobxs">
+                                    <img class='img_ajust_liste grid_area_11' src="<?php echo get_post_meta($post->ID, 'metadata_907', true); ?>" alt="Photo de l'actu">
+                                    <div class="grid_area_11 encoche_blanc"></div>
+                                </div>                            
+                                <!-- INFORMATION -->
+                                <div class="margint_-4 paddingt_15 paddingb_15 paddingr_15 paddingl_15">
+                                    <div>
+                                        <div>
+                                            <!-- Titre -->
+                                            <p class="ubuntu_bold paddingb_5"><?php echo get_post_meta($post->ID, 'metadata_901', true); ?> <?php echo get_post_meta($post->ID, 'metadata_902', true); ?></p>
+                                            <!-- DESCRIPTION COURTE -->
+                                            <?php if (!empty(get_post_meta($post->ID, 'metadata_904', true))): ?>
+                                                <p class="fontsize_13 ubuntu_fin paddingt_7 paddingb_5"><?php echo get_post_meta($post->ID, 'metadata_904', true); ?></p>
+                                            <?php endif;?>
+                                        </div>
+                                        <div class="fleche fleche_accueil alignself_end paddingt_20 marginb_6 ubuntu_bold tx_color_accueil"><a href="<?php the_permalink(); ?>">EN SAVOIR PLUS <img src="<?php bloginfo('template_directory');?>/dist/assets/images/icones/lien_fleche_mauve.png" alt=""></a></div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                    <?php endwhile;?>
+                </div>
+            </section>
+        <?php endif; 
+        wp_reset_query(); ?>
+
+
+        <!-- --------------------------------- -->
+        <!-- ACTUS JEUNES -->
+        <!-- --------------------------------- -->
+
+        <!-- LOOP ACTUS JEUNES   -->
+        <?php 
+        $args_actu_jeunes = array(
+            'post_type' => 'actualite',
+            'posts_per_page' => -1,
+
+            'tax_query' => array(
+                'relation' => 'AND',
+                array(
+                    'taxonomy' => 'categorie_actu',
+                    'field'    => 'slug',
+                    'terms'    => 'jeune'),
+                array(
+                    'taxonomy' => 'saison',
+                    'field'    => 'slug',
+                    'terms'    => array('2020-2021', '2021-2022'))),
+            'orderby' => 'meta_value',
+            'meta_key' => 'metadata_903',
+            'order'=> 'DESC'
+        );
+        $loop_actu_jeunes = new WP_Query( $args_actu_jeunes );
+        if ($loop_actu_jeunes->have_posts()) :?>
+
+            <section class="margin_section_botton">
+
+                <!-- Titre -->
+                <div class="paddingt_30">
+                    <h2 class='titre_chapitre_container marginb_20'>
+                        <span class='titre_leger'>ACTUS</span>
+                        <br>
+                        <span class='titre_gras'>JEUNES PUBLICS</span>
+                    </h2>
+                </div>
+                <!-- LES ACTUS  -->
+                <div class="grid_3col_liste grid_column_gap24 grid_row_gap50 height_min_200">
+                    <?php while ($loop_actu_jeunes->have_posts()) :
+                        $loop_actu_jeunes->the_post();?>
+
+                            <!-- L'ACTU  -->
+                            <div class="encoche_list_card">
+                                <!-- ILLUSTRATION -->
+                                <div class="grid nopagemarge_mobxs">
+                                    <img class='img_ajust_liste grid_area_11' src="<?php echo get_post_meta($post->ID, 'metadata_907', true); ?>" alt="Photo de l'actu">
+                                    <div class="grid_area_11 encoche_blanc"></div>
+                                </div>                            
+                                <!-- INFORMATION -->
+                                <div class="margint_-4 paddingt_15 paddingb_15 paddingr_15 paddingl_15">
+                                    <div>
+                                        <div>
+                                            <!-- Titre -->
+                                            <p class="ubuntu_bold paddingb_5"><?php echo get_post_meta($post->ID, 'metadata_901', true); ?> <?php echo get_post_meta($post->ID, 'metadata_902', true); ?></p>
+                                            <!-- DESCRIPTION COURTE -->
+                                            <?php if (!empty(get_post_meta($post->ID, 'metadata_904', true))): ?>
+                                                <p class="fontsize_13 ubuntu_fin paddingt_7 paddingb_5"><?php echo get_post_meta($post->ID, 'metadata_904', true); ?></p>
+                                            <?php endif;?>
+                                        </div>
+                                        <div class="fleche fleche_accueil alignself_end paddingt_20 marginb_6 ubuntu_bold tx_color_accueil"><a href="<?php the_permalink(); ?>">EN SAVOIR PLUS <img src="<?php bloginfo('template_directory');?>/dist/assets/images/icones/lien_fleche_mauve.png" alt=""></a></div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                    <?php endwhile;?>
+                </div>
+            </section>
+        <?php endif; 
+        wp_reset_query(); ?>
+
 
         <!-- --------------------------------- -->
         <!-- EVENEMENTS -->
@@ -242,149 +385,6 @@ Template Name: page_actualites
         <?php endif; 
         wp_reset_query(); ?>
                 
-
-        <!-- --------------------------------- -->
-        <!-- LES COULISSES -->
-        <!-- --------------------------------- -->
-
-        <!-- LOOP LES COULISSES   -->
-        <?php 
-        $args_actu_coulisse = array(
-            'post_type' => 'actualite',
-            'posts_per_page' => -1,
-
-            'tax_query' => array(
-                'relation' => 'AND',
-                array(
-                    'taxonomy' => 'categorie_actu',
-                    'field'    => 'slug',
-                    'terms'    => 'coulisse'),
-                array(
-                    'taxonomy' => 'saison',
-                    'field'    => 'slug',
-                    'terms'    => array('2020-2021', '2021-2022'))),
-            'orderby' => 'meta_value',
-            'meta_key' => 'metadata_903',
-            'order'=> 'DESC'
-        );
-        $loop_actu_coulisse = new WP_Query( $args_actu_coulisse );
-        if ($loop_actu_coulisse->have_posts()) :?>
-
-            <section class="margin_section_botton">
-
-                <!-- Titre -->
-                <div class="paddingt_30">
-                    <h2 class='titre_chapitre_container marginb_20'>
-                        <span class='titre_leger'>LES COULISSES</span>
-                        <br>
-                        <span class='titre_gras'>DE L’ORCHESTRE</span>
-                    </h2>
-                </div>
-                <!-- LES ACTUS  -->
-                <div class="grid_3col_liste grid_column_gap24 grid_row_gap50 height_min_200">
-                    <?php while ($loop_actu_coulisse->have_posts()) :
-                        $loop_actu_coulisse->the_post();?>
-
-                            <!-- L'ACTU  -->
-                            <div class="encoche_list_card">
-                                <!-- ILLUSTRATION -->
-                                <div class="grid nopagemarge_mobxs">
-                                    <img class='img_ajust_liste grid_area_11' src="<?php echo get_post_meta($post->ID, 'metadata_907', true); ?>" alt="Photo de l'actu">
-                                    <div class="grid_area_11 encoche_blanc"></div>
-                                </div>                            
-                                <!-- INFORMATION -->
-                                <div class="margint_-4 paddingt_15 paddingb_15 paddingr_15 paddingl_15">
-                                    <div>
-                                        <div>
-                                            <!-- Titre -->
-                                            <p class="ubuntu_bold paddingb_5"><?php echo get_post_meta($post->ID, 'metadata_901', true); ?> <?php echo get_post_meta($post->ID, 'metadata_902', true); ?></p>
-                                            <!-- DESCRIPTION COURTE -->
-                                            <?php if (!empty(get_post_meta($post->ID, 'metadata_904', true))): ?>
-                                                <p class="fontsize_13 ubuntu_fin paddingt_7 paddingb_5"><?php echo get_post_meta($post->ID, 'metadata_904', true); ?></p>
-                                            <?php endif;?>
-                                        </div>
-                                        <div class="fleche fleche_accueil alignself_end paddingt_20 marginb_6 ubuntu_bold tx_color_accueil"><a href="<?php the_permalink(); ?>">EN SAVOIR PLUS <img src="<?php bloginfo('template_directory');?>/dist/assets/images/icones/lien_fleche_mauve.png" alt=""></a></div>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                    <?php endwhile;?>
-                </div>
-            </section>
-        <?php endif; 
-        wp_reset_query(); ?>
-
-
-        <!-- --------------------------------- -->
-        <!-- ACTUS JEUNES -->
-        <!-- --------------------------------- -->
-
-        <!-- LOOP ACTUS JEUNES   -->
-        <?php 
-        $args_actu_jeunes = array(
-            'post_type' => 'actualite',
-            'posts_per_page' => -1,
-
-            'tax_query' => array(
-                'relation' => 'AND',
-                array(
-                    'taxonomy' => 'categorie_actu',
-                    'field'    => 'slug',
-                    'terms'    => 'jeune'),
-                array(
-                    'taxonomy' => 'saison',
-                    'field'    => 'slug',
-                    'terms'    => array('2020-2021', '2021-2022'))),
-            'orderby' => 'meta_value',
-            'meta_key' => 'metadata_903',
-            'order'=> 'DESC'
-        );
-        $loop_actu_jeunes = new WP_Query( $args_actu_jeunes );
-        if ($loop_actu_jeunes->have_posts()) :?>
-
-            <section class="margin_section_botton">
-
-                <!-- Titre -->
-                <div class="paddingt_30">
-                    <h2 class='titre_chapitre_container marginb_20'>
-                        <span class='titre_leger'>ACTUS</span>
-                        <br>
-                        <span class='titre_gras'>JEUNES PUBLICS</span>
-                    </h2>
-                </div>
-                <!-- LES ACTUS  -->
-                <div class="grid_3col_liste grid_column_gap24 grid_row_gap50 height_min_200">
-                    <?php while ($loop_actu_jeunes->have_posts()) :
-                        $loop_actu_jeunes->the_post();?>
-
-                            <!-- L'ACTU  -->
-                            <div class="encoche_list_card">
-                                <!-- ILLUSTRATION -->
-                                <div class="grid nopagemarge_mobxs">
-                                    <img class='img_ajust_liste grid_area_11' src="<?php echo get_post_meta($post->ID, 'metadata_907', true); ?>" alt="Photo de l'actu">
-                                    <div class="grid_area_11 encoche_blanc"></div>
-                                </div>                            
-                                <!-- INFORMATION -->
-                                <div class="margint_-4 paddingt_15 paddingb_15 paddingr_15 paddingl_15">
-                                    <div>
-                                        <div>
-                                            <!-- Titre -->
-                                            <p class="ubuntu_bold paddingb_5"><?php echo get_post_meta($post->ID, 'metadata_901', true); ?> <?php echo get_post_meta($post->ID, 'metadata_902', true); ?></p>
-                                            <!-- DESCRIPTION COURTE -->
-                                            <?php if (!empty(get_post_meta($post->ID, 'metadata_904', true))): ?>
-                                                <p class="fontsize_13 ubuntu_fin paddingt_7 paddingb_5"><?php echo get_post_meta($post->ID, 'metadata_904', true); ?></p>
-                                            <?php endif;?>
-                                        </div>
-                                        <div class="fleche fleche_accueil alignself_end paddingt_20 marginb_6 ubuntu_bold tx_color_accueil"><a href="<?php the_permalink(); ?>">EN SAVOIR PLUS <img src="<?php bloginfo('template_directory');?>/dist/assets/images/icones/lien_fleche_mauve.png" alt=""></a></div>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                    <?php endwhile;?>
-                </div>
-            </section>
-        <?php endif; 
-        wp_reset_query(); ?>
 
 
 

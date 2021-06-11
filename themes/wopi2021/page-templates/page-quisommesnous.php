@@ -13,25 +13,24 @@ Template Name: page_accueil
 <article>
 
     <!-- --------------------------------- -->
-    <!-- DIRECTEUR GENERAL -->
+    <!-- DIRECTION -->
     <!-- --------------------------------- -->
     <section class="margin_section_botton">
 
         <!-- Titre -->
         <div class="paddingt_30">
             <h2 class='titre_chapitre_container marginb_20'>
-                <span class='titre_leger'>DIRECTEUR</span>
+                <span class='titre_leger'>LA DIRECTION</span>
                 <br>
-                <span class='titre_gras'>GÉNÉRAL</span>
+                <span class='titre_gras'>DE L'ORCHESTRE</span>
             </h2>
         </div>
 
-        <!-- DIRECTEUR GENERAL -->
-        
+        <div class="grid_2col1fr_400 grid_column_gap24">
+            <!-- DIRECTEUR GENERAL -->
+            <div class="grid_2col_45_55 marginb_20_400px">
 
-            <div class="grid_2col_45_55">
-
-                <!-- LOOP MUSICIEN directeur  -->
+                <!-- LOOP directeur  -->
                 <?php 
                 $args_directeur_general = array(
                     'post_type' => 'orchestre',
@@ -71,27 +70,6 @@ Template Name: page_accueil
                 wp_reset_query(); ?>
             </div>
 
-        
-    </section>
-
-
-    <!-- --------------------------------- -->
-    <!-- DIRECTEUR MUSICAL -->
-    <!-- --------------------------------- -->
-    <section class="margin_section_botton">
-
-        <!-- Titre -->
-        <div class="paddingt_30">
-            <h2 class='titre_chapitre_container marginb_20'>
-                <span class='titre_leger'>DIRECTEUR</span>
-                <br>
-                <span class='titre_gras'>MUSICAL</span>
-            </h2>
-        </div>
-
-        <!-- DIRECTEUR GENERAL -->
-
-
             <!-- DIRECTEUR MUSICAL -->
             <div class="grid_2col_45_55">
 
@@ -123,7 +101,7 @@ Template Name: page_accueil
                         <div class="flex flex_align_end paddingt_15 paddingb_15 paddingr_15 paddingl_15 bg_color_orchestre tx_color_blanc">
                             <div>
                                 <div class="titre_card_container">
-                                    <p class="titre_gra paddingb_5"><?php echo get_post_meta($post->ID, 'metadata_603', true); ?></p>
+                                    <p class="titre_gras paddingb_5"><?php echo get_post_meta($post->ID, 'metadata_603', true); ?></p>
                                     <p class="titre_leger"><?php echo get_post_meta($post->ID, 'metadata_605', true); ?></p>
                                 </div>
                                 <div class="fleche fleche_blanc alignself_end paddingt_20 marginb_6 ubuntu_bold tx_color_blanc"><a href="<?php the_permalink(); ?>">EN SAVOIR PLUS <img src="<?php bloginfo('template_directory');?>/dist/assets/images/icones/lien_fleche_blanc.png" alt=""></a></div>
@@ -135,10 +113,9 @@ Template Name: page_accueil
                 endif; 
                 wp_reset_query(); ?>
             </div>
+        </div>
 
     </section>
-
-
 
     <!-- --------------------------------- -->
     <!-- LISTE DES MUSICIENS -->
@@ -169,6 +146,8 @@ Template Name: page_accueil
                         'field'    => 'slug',
                         'terms'    => 'musicien')
                     ),
+                    'orderby' => 'menu_order',
+                    'order' => 'ASC',
                 );
                 $loop_musicien = new WP_Query( $args_musicien );
                 if ($loop_musicien->have_posts()) :
@@ -240,6 +219,8 @@ Template Name: page_accueil
                         'field'    => 'slug',
                         'terms'    => 'administratif')
                     ),
+                    'orderby' => 'menu_order',
+                    'order' => 'ASC',
                 );
                 $loop_administratif = new WP_Query( $args_administratif );
                 if ($loop_administratif->have_posts()) :
@@ -312,6 +293,8 @@ Template Name: page_accueil
                         'field'    => 'slug',
                         'terms'    => 'bureau')
                     ),
+                    'orderby' => 'menu_order',
+                    'order' => 'ASC',
                 );
                 $loop_bureau = new WP_Query( $args_bureau );
                 if ($loop_bureau->have_posts()) :
@@ -322,7 +305,7 @@ Template Name: page_accueil
                             <!-- INFORMATION -->
                             <div class="grid_2col24_46 grid_column_gap24 align_start marginb_20 ">
                                 <!-- NOM DU ASSOCIATION -->
-                                <p class="texte_right texte_left_mob"><?php echo get_post_meta($post->ID, 'metadata_603', true); ?></p>
+                                <p class="titre_gras texte_right texte_left_mob"><?php echo get_post_meta($post->ID, 'metadata_603', true); ?></p>
                                 <!-- DESCRIPTION COURTE -->
                                 <?php if (!empty(get_post_meta($post->ID, 'metadata_606', true))): ?>
                                     <p class="fontsize_13 ubuntu_fin"><?php echo get_post_meta($post->ID, 'metadata_606', true); ?></p>

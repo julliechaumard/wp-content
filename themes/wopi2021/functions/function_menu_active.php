@@ -17,12 +17,12 @@ function menu_active_medias() {
   }
 }
 function menu_active_actus() {
-  if ( is_page(array('actualites','mur_social')) ) { 
+  if ( is_page(array('actualites','mur_social')) OR is_singular (array( 'actualite' ))) { 
     echo 'menu_active';
   }
 }
 function menu_active_culture_actions() {
-  if ( is_page(array('eleves_enseignants','dossiers_pedagogiques','academie')) ) { 
+  if ( is_page(array('eleves_enseignants','dossiers_pedagogiques','academie','actions_citoyennes')) ) { 
     echo 'menu_active';
   }
 }

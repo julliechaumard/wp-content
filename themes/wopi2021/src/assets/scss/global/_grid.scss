@@ -250,6 +250,9 @@
 .grid_column_gap40 {
     column-gap: 40px;
 }
+.grid_column_gap75 {
+    column-gap: 75px;
+}
 
 .grid_row_gap10 {
     row-gap: 10px;
@@ -544,4 +547,24 @@
     @include mobilexs {
         grid-template-columns: 1fr;
     }
+}
+.grid_2col1fr_400 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @media screen and (max-width:400px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* PLAYER BANNIERE */
+.grid_player_banniere {
+    display: grid;
+    grid-template-columns: auto auto;
+    @media screen and (max-width:500px){
+        grid-template-columns: auto;
+    }
+}
+.grid_button_play_banniere {
+    display: grid;
+    grid-template-columns: 100px 10px;
 }

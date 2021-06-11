@@ -35,7 +35,7 @@
                 <ul class='sub_menu'>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Eleves_enseignants')) ?>">Elèves et enseignants</a></li>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Academie')) ?>">Académie</a></li>
-                    <li class="sub_menu_item"><a href="#">Actions citoyennes et sociales</a></li>
+                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Actions citoyennes')) ?>">Actions citoyennes et sociales</a></li>
                 </ul>
             </li>
             <li class='menu_item <?php menu_active_actus() ?>'>Actualités
@@ -50,7 +50,7 @@
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Notre histoire')) ?>">Notre histoire Nos missions</a></li>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Partenaires')) ?>">Partenaires</a></li>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Soutenez-nous entreprise')) ?>">Soutenez-nous</a></li>
-                    <li class="sub_menu_item"><a href="#">Recrutements</a></li>
+                    <!-- <li class="sub_menu_item"><a href="#">Recrutements</a></li> -->
                 </ul>
             </li>
             <li class='menu_item <?php menu_active_medias() ?>'>Médiathèque
@@ -59,7 +59,7 @@
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Mediatheque_videos')) ?>">Vidéos</a></li>
                     <li class="sub_menu_item"><a href="#">A Vous de Jouer</a></li>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Mediatheque_photos')) ?>">Photos</a></li>
-                    <li class="sub_menu_item"><a href="#">Musiques</a></li>
+                    <!-- <li class="sub_menu_item"><a href="#">Musiques</a></li> -->
                     <li class="sub_menu_item"><a href="#">Discographie</a></li>
                 </ul>
             </li>
@@ -110,7 +110,7 @@
                 <ul class='sub_menu'>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Eleves_enseignants')) ?>">Elèves et enseignants</a></li>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Academie')) ?>">Académie</a></li>
-                    <li class="sub_menu_item"><a href="#">Actions citoyennes et sociales</a></li>
+                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Actions citoyennes')) ?>">Actions citoyennes et sociales</a></li>
                 </ul>
             </li>
             <li class='menu_item <?php menu_active_actus() ?>'>Actualités
@@ -125,7 +125,7 @@
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Notre histoire')) ?>">Notre histoire Nos missions</a></li>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Partenaires')) ?>">Partenaires</a></li>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Soutenez-nous entreprise')) ?>">Soutenez-nous</a></li>
-                    <li class="sub_menu_item"><a href="#">Recrutements</a></li>
+                    <!-- <li class="sub_menu_item"><a href="#">Recrutements</a></li> -->
                 </ul>
             </li>
             <li class='menu_item <?php menu_active_medias() ?>'>Médiathèque
@@ -134,7 +134,7 @@
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Mediatheque_videos')) ?>">Vidéos</a></li>
                     <li class="sub_menu_item"><a href="#">A Vous de Jouer</a></li>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Mediatheque_photos')) ?>">Photos</a></li>
-                    <li class="sub_menu_item"><a href="#">Musiques</a></li>
+                    <!-- <li class="sub_menu_item"><a href="#">Musiques</a></li> -->
                     <li class="sub_menu_item"><a href="#">Discographie</a></li>
                 </ul>
             </li>

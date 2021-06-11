@@ -28,7 +28,7 @@ Template Name: page_soutenez_entreprise
                 <div style="margin:8px 0px 4px;">
                     <p class='ubuntu_leger'>Consulter la Brochure en ligne</p>
                 </div>
-                <iframe src="//v.calameo.com/?bkcode=0066403713ce07ad7a70b" width="180" height="194" frameborder="0" scrolling="no" allowtransparency="" allowfullscreen="" style="margin:0 auto;"></iframe>
+                <iframe src="//v.calameo.com/?bkcode=006746126bd3f00e43100" width="180" height="194" frameborder="0" scrolling="no" allowtransparency="" allowfullscreen="" style="margin:0 auto;"></iframe>
  
             </div>
         </div>
@@ -105,7 +105,7 @@ Template Name: page_soutenez_entreprise
                 </h2>
             </div>
         </div>
-        <iframe src="//v.calameo.com/?bkcode=0066403713ce07ad7a70b" width="180" height="194" frameborder="0" scrolling="no" allowtransparency="" allowfullscreen="" style="margin:0 auto;"></iframe>
+        <iframe src="//v.calameo.com/?bkcode=006746126bd3f00e43100" width="180" height="194" frameborder="0" scrolling="no" allowtransparency="" allowfullscreen="" style="margin:0 auto;"></iframe>
 
     </div>
 </section>

@@ -37,7 +37,7 @@ get_template_part('template-parts/header','page');
                    'terms'    => array('2021-2022'))
                ),
                'orderby' => 'meta_value',
-               'meta_key' => 'metadata_180_1',
+               'meta_key' => 'metadata_180_10',
                'order'=> 'ASC'
                );
            $loop_liste_concert = new WP_Query( $args_liste_concert );
@@ -76,7 +76,7 @@ get_template_part('template-parts/header','page');
                            <?php } ?>
                            <!-- DISTRIBUTION -->
                            <div class='liste_art_comp paddingt_7'>
-                               <?php for ($i = 1; $i <= 3; $i++) { ?>
+                               <?php for ($i = 1; $i <= 5; $i++) { ?>
                                    <?php if(!empty(get_post_meta($post->ID, 'metadata_186_'.$i, true))) { ?>
                                        <div class="artiste">
                                            <div class="paddingr_8 ubuntu_bold">
