@@ -16,7 +16,7 @@ get_template_part('template-parts/header','page');
     <!-- --------------------------------- -->
     <!-- SOUTIEN FINANCIER -->
     <!-- --------------------------------- -->
-    <section class="paddingt_30 borderb paddingb_40">
+    <section class="paddingt_30 paddingb_40">
 
         <!-- TITRE -->
         <div class="marginb_50">
@@ -27,7 +27,7 @@ get_template_part('template-parts/header','page');
             </h2>
         </div>
 
-        <div class="grid_autocolmax_autorow_220 align_center marginl_20 marginl_0_mob">
+        <div class="grid_autocolmax_autorow_250 align_center marginl_20 marginl_0_mob">
 
             <!--  LOOP SOUTIEN FINANCIER -->
 
@@ -56,15 +56,21 @@ get_template_part('template-parts/header','page');
 
                         <!-- LOGO avec lien vers le site internet du partenaire -->
                         <?php if (!empty(get_post_meta($post->ID, 'metadata_251', true))) : ?>
-                            <div class="texte_right">
-                                <img class='img_width max_width_250' src="<?php echo get_post_meta($post->ID, 'metadata_252', true); ?>" alt="Photo du partenaire">
-                                <a class='ubuntu_fin fontsize_10' href="<?php echo get_post_meta($post->ID, 'metadata_251', true) ?>" target="_blank" >Site internet</a>
+                            <div class="grid_1col_2row">
+                                <div class="alignself_center justifys_center"><img class='max_width_250 max_width_210_mobile' src="<?php echo get_post_meta($post->ID, 'metadata_252', true); ?>" alt="Photo du partenaire"></div>
+                                <div class="bordert">
+                                    <p class="paddingt_5 ubuntu_leger fontsize_13"><?php echo get_post_meta($post->ID, 'metadata_250', true) ?></p>
+                                    <a class='ubuntu_fin fontsize_10' href="<?php echo get_post_meta($post->ID, 'metadata_251', true) ?>" target="_blank" >Site internet</a>
+                                </div>
                             </div>
                         <?php endif; ?>
                         <!-- LOGO sans lien vers le site internet du partenaire -->
                         <?php if (empty(get_post_meta($post->ID, 'metadata_251', true))) : ?>
-                            <div>
-                                <img class='img_width max_width_250' src="<?php echo get_post_meta($post->ID, 'metadata_252', true); ?>" alt="Photo du partenaire">
+                            <div class="grid_1col_2row">
+                                <div class="alignself_center justifys_center"><img class='max_width_250 max_width_210_mobile' src="<?php echo get_post_meta($post->ID, 'metadata_252', true); ?>" alt="Photo du partenaire"></div>
+                                <div class="bordert">
+                                    <p class="paddingt_5    ubuntu_leger fontsize_13"><?php echo get_post_meta($post->ID, 'metadata_250', true) ?></p>
+                                </div>
                             </div>
                         <?php endif; ?>
 
@@ -122,19 +128,25 @@ get_template_part('template-parts/header','page');
                     while ($loop_autres->have_posts()) :
                         $loop_autres->the_post();?>
 
-                            <!-- LOGO avec lien vers le site internet du partenaire -->
-                            <?php if (!empty(get_post_meta($post->ID, 'metadata_251', true))) : ?>
-                                <div class="texte_right">
-                                    <img class='img_width max_width_250' src="<?php echo get_post_meta($post->ID, 'metadata_252', true); ?>" alt="Photo du partenaire">
+                        <!-- LOGO avec lien vers le site internet du partenaire -->
+                        <?php if (!empty(get_post_meta($post->ID, 'metadata_251', true))) : ?>
+                            <div class="grid_1col_2row">
+                                <div class="alignself_center justifys_center"><img class='max_width_250 max_width_210_mobile' src="<?php echo get_post_meta($post->ID, 'metadata_252', true); ?>" alt="Photo du partenaire"></div>
+                                <div class="bordert">
+                                    <p class="paddingt_5 ubuntu_leger fontsize_13"><?php echo get_post_meta($post->ID, 'metadata_250', true) ?></p>
                                     <a class='ubuntu_fin fontsize_10' href="<?php echo get_post_meta($post->ID, 'metadata_251', true) ?>" target="_blank" >Site internet</a>
                                 </div>
-                            <?php endif; ?>
-                            <!-- LOGO sans lien vers le site internet du partenaire -->
-                            <?php if (empty(get_post_meta($post->ID, 'metadata_251', true))) : ?>
-                                <div>
-                                    <img class='img_width max_width_250' src="<?php echo get_post_meta($post->ID, 'metadata_252', true); ?>" alt="Photo du partenaire">
+                            </div>
+                        <?php endif; ?>
+                        <!-- LOGO sans lien vers le site internet du partenaire -->
+                        <?php if (empty(get_post_meta($post->ID, 'metadata_251', true))) : ?>
+                            <div class="grid_1col_2row">
+                                <div class="alignself_center justifys_center"><img class='max_width_250 max_width_210_mobile' src="<?php echo get_post_meta($post->ID, 'metadata_252', true); ?>" alt="Photo du partenaire"></div>
+                                <div class="bordert">
+                                    <p class="paddingt_5    ubuntu_leger fontsize_13"><?php echo get_post_meta($post->ID, 'metadata_250', true) ?></p>
                                 </div>
-                            <?php endif; ?>
+                            </div>
+                        <?php endif; ?>
             
                     <?php endwhile; 
                 endif; 

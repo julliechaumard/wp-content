@@ -26,7 +26,7 @@ Template Name: page_soutenez_entreprise
         <div class='marginr_10'>
             <div style="text-align:center;">
                 <div style="margin:8px 0px 4px;">
-                    <p class='ubuntu_leger'>Consulter la Brochure en ligne</p>
+                    <p class='ubuntu_leger'>Consulter la brochure en ligne</p>
                 </div>
                 <iframe src="//v.calameo.com/?bkcode=006746126bd3f00e43100" width="180" height="194" frameborder="0" scrolling="no" allowtransparency="" allowfullscreen="" style="margin:0 auto;"></iframe>
  
@@ -73,7 +73,7 @@ Template Name: page_soutenez_entreprise
         </div>
         <!-- ICONE -->
         <div class="marginb_12_mobilexs">
-            <img class='max_width_44_mobile' src="<?php bloginfo('template_directory');?>/dist/assets/images/icones/icones_informations_pratiques_bleu.png" alt="Icone Information pratique">
+            <img class='width_50_desk max_width_44_mobile' src="<?php bloginfo('template_directory');?>/dist/assets/images/icones/icones_informations_pratiques_bleu.png" alt="Icone Information pratique">
         </div>
         
         <div class="grid_area_1_32_mob marginl_12_mobilexs">

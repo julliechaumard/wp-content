@@ -69,7 +69,7 @@ function titre_gras($post) {
       echo "DOSSIERS";
     }
     if ( is_page(array('academie')) ) { 
-      echo "NOS PROJETS";
+      echo "ACCOMPAGNER";
     }
     if ( is_page(array('actions_citoyennes')) ) { 
       echo "ACTIONS";
@@ -143,7 +143,7 @@ function titre_leger($post) {
     echo "PÉDAGOGIQUES";
   }
   if ( is_page(array('academie')) ) { 
-    echo "ACADÉMIE";
+    echo "LES JEUNES TALENTS";
   }
   if ( is_page(array('actions_citoyennes')) ) { 
     echo "CITOYENNES ET SOCIALES";

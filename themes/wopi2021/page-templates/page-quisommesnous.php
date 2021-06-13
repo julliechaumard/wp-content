@@ -27,7 +27,7 @@ Template Name: page_accueil
         </div>
 
         <div class="grid_2col1fr_400 grid_column_gap24">
-            <!-- DIRECTEUR GENERAL -->
+            <!-- DIRECTEURS -->
             <div class="grid_2col_45_55 marginb_20_400px">
 
                 <!-- LOOP directeur  -->
@@ -276,12 +276,53 @@ Template Name: page_accueil
         <!-- LES ASSOCIATIONS -->
         <div class="grid_2colmax_20_110 grid_row_gap20_mob marginr_40 marginl_20">
 
+            <!-- ICONE -->
             <div>
                 <img class='' src="<?php bloginfo('template_directory');?>/dist/assets/images/icones/association_icone.png" alt="Logo Orchestre de Picardie">
             </div>
             
+            <!-- LES MEMBRES -->
             <div>
-                <!-- LOOP ASSOCIATIONS  -->
+                <!-- PRESIDENT  -->
+                <?php 
+                $args_president = array(
+                    'post_type' => 'orchestre',
+                    'posts_per_page' => -1,
+
+                    'tax_query' => array(
+                        array(
+                        'taxonomy' => 'categorie_orchestre',
+                        'field'    => 'slug',
+                        'terms'    => 'president')
+                    ),
+                    'orderby' => 'menu_order',
+                    'order' => 'ASC',
+                );
+                $loop_president = new WP_Query( $args_president );
+                if ($loop_president->have_posts()) :
+                    while ($loop_president->have_posts()) :
+                        $loop_president->the_post();?>
+                        <div class="">
+                        
+                            <!-- INFORMATION -->
+                            <div class="grid_2col24_46 grid_column_gap24 align_start marginb_20 ">
+                                <!-- NOM DU PRESIDENT -->
+                                <div>
+                                    <p class="paddingb_5 titre_gras texte_right texte_left_mob"><?php echo get_post_meta($post->ID, 'metadata_603', true); ?></p>
+                                    <img class='img_ajust border_gris_clair' src="<?php echo get_post_meta($post->ID, 'metadata_611', true); ?>" alt="Photo du directeur">
+                                </div>
+                                <!-- DESCRIPTION COURTE -->
+                                <?php if (!empty(get_post_meta($post->ID, 'metadata_606', true))): ?>
+                                    <p class="fontsize_13 ubuntu_fin"><?php echo get_post_meta($post->ID, 'metadata_606', true); ?></p>
+                                <?php endif;?>
+                            </div>
+                        </div>
+                    <?php endwhile; 
+                endif; 
+                wp_reset_query(); ?>
+
+
+                <!-- MEMBRES  -->
                 <?php 
                 $args_bureau = array(
                     'post_type' => 'orchestre',
@@ -315,6 +356,7 @@ Template Name: page_accueil
                     <?php endwhile; 
                 endif; 
                 wp_reset_query(); ?>
+
             </div>
             
         </div>

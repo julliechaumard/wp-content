@@ -75,7 +75,7 @@ get_template_part('template-parts/header','page');
                             <div class='liste_art_comp paddingt_12 marginr_20 alignself_end_desktop justifyself_end_desktop'>
                                 <!-- ICONE -->
                                 <div class="marginb_12_mobilexs">
-                                    <img class='max_width_44_mobile' src="<?php echo get_post_meta($post->ID, 'metadata_420', true); ?>" alt="Icone dossier pédagogique">
+                                    <img class='width_60_desk max_width_44_mobile' src="<?php echo get_post_meta($post->ID, 'metadata_420', true); ?>" alt="Icone dossier pédagogique">
                                 </div>
                             </div>
                         </div>

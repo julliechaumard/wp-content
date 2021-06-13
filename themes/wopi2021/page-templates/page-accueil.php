@@ -351,10 +351,15 @@ Template Name: page_accueil
         'posts_per_page' => 6,
 
         'tax_query' => array(
+            'relation' => 'AND',
             array(
                 'taxonomy' => 'saison',
                 'field'    => 'slug',
-                'terms'    => array('2020-2021', '2021-2022'))),
+                'terms'    => array('2020-2021', '2021-2022')),
+            array(
+                'taxonomy' => 'placement',
+                'field'    => 'slug',
+                'terms'    => 'accueil_actu_scene_coulisse')),
         'orderby' => 'meta_value',
         'meta_key' => 'metadata_903',
         'order'=> 'DESC'

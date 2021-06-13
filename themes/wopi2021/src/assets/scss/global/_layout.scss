@@ -71,6 +71,11 @@
 /*************************************/
 /* ****** WIDTH & HEIGHT *********/
 
+.max_width_210_mobile {
+    @include mobilexs {
+        max-width: 210px !important;
+    }
+}
 .max_width_250 {
     max-width: 250px;
 }
@@ -99,6 +104,16 @@
 
 .width_20 {
     width: 20px;
+}
+.width_50_desk {
+    @include nomobile {
+        width: 50px;
+    }
+}
+.width_60_desk {
+    @include nomobile {
+        width: 60px;
+    }
 }
 
 /*************************************/

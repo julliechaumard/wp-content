@@ -58,7 +58,7 @@ Template Name: page_soutenez_picardissimo
         </div>
         <!-- ICONE -->
         <div class="marginb_12_mobilexs">
-            <img class='max_width_44_mobile' src="<?php bloginfo('template_directory');?>/dist/assets/images/icones/icones_informations_pratiques_bleu.png" alt="Logo Orchestre de Picardie">
+            <img class='width_50_desk max_width_44_mobile' src="<?php bloginfo('template_directory');?>/dist/assets/images/icones/icones_informations_pratiques_bleu.png" alt="Logo Orchestre de Picardie">
         </div>
         
         <div class="grid_area_1_32_mob marginl_12_mobilexs">

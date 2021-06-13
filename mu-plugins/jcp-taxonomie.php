@@ -99,7 +99,7 @@ function jcp_create_taxonomies() {
         'query_var' => true,
         'rewrite' => array( 'slug' => 'placement' )
     );
-    register_taxonomy( 'placement', array('concert'), $args );
+    register_taxonomy( 'placement', array('concert','actualite'), $args );
 
     // Genre
     $labels = array(

@@ -36,7 +36,7 @@ get_template_part('template-parts/header','page');
                         <h2 class='titre_card_container_grand'>
                             <span class='titre_leger'>LES CONCERTS</span>
                             <br>
-                            <span class='titre_gras'>DES ACADÉMIES</span>
+                            <span class='titre_gras'>DES JEUNES TALENTS</span>
                         </h2>
                     </div>
                 </div>

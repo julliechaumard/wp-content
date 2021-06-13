@@ -11,9 +11,17 @@
 .borderb {
     border-bottom: solid 1px $color_gris_fonce;
 }
+.bordert {
+    border-top: solid 1px $color_gris_ultra_clair;
+}
 .borderb_white {
     border-bottom: solid 2px white;
 }
+.border_gris_clair {
+    border: solid 2px $color_gris_clair;
+}
+
+
 
 /*****************************************
 * TITRES */
@@ -112,14 +120,12 @@ ul, li {
     font-size: 14px;
     @include topbar_hamburger {
         color: white;
-        text-transform: uppercase;
     }
 }
 .sub_menu {
     background-color: $color_blanc_transparent;
     @include topbar_hamburger {
         color: $color_noir_fonce;
-        text-transform: capitalize;
     }
     
 }
@@ -252,6 +258,9 @@ ul, li {
 .fontsize_13 {
     font-size: 13px;
 }
+.fontsize_14 {
+    font-size: 14px;
+}
 .fontsize_15_mob {
     @include mobile {
         font-size: 15px !important;
@@ -293,7 +302,7 @@ ul, li {
 }
 /* DATES du concert */
 .liste_date {
-    font-size: 15px;
+    font-size: 14px;
 }
 
 /* Texte divers simple */

@@ -33,8 +33,8 @@
             </li>
             <li class='menu_item <?php menu_active_culture_actions() ?>'>Actions culturelles
                 <ul class='sub_menu'>
-                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Eleves_enseignants')) ?>">Elèves et enseignants</a></li>
-                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Academie')) ?>">Académie</a></li>
+                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Eleves_enseignants')) ?>">Élèves et enseignants</a></li>
+                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Academie')) ?>">Accompagnement des jeunes talents</a></li>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Actions citoyennes')) ?>">Actions citoyennes et sociales</a></li>
                 </ul>
             </li>
@@ -108,9 +108,9 @@
             </li>
             <li class='menu_item <?php menu_active_culture_actions() ?>'>Actions culturelles
                 <ul class='sub_menu'>
-                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Eleves_enseignants')) ?>">Elèves et enseignants</a></li>
-                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Academie')) ?>">Académie</a></li>
-                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Actions citoyennes')) ?>">Actions citoyennes et sociales</a></li>
+                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Eleves_enseignants')) ?>">Élèves et enseignants</a></li>
+                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Academie')) ?>">Jeunes talents</a></li>
+                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Actions citoyennes')) ?>">Actions citoyennes</a></li>
                 </ul>
             </li>
             <li class='menu_item <?php menu_active_actus() ?>'>Actualités
@@ -122,7 +122,7 @@
             <li class='menu_item <?php menu_active_orchestre() ?>'>L'Orchestre
                 <ul class='sub_menu'>
                     <li class="sub_menu_item"><a href="<?php bloginfo( 'url' ) ?>/qui-sommes-nous/">Qui sommes nous ?</a></li>
-                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Notre histoire')) ?>">Notre histoire Nos missions</a></li>
+                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Notre histoire')) ?>">Notre histoire</a></li>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Partenaires')) ?>">Partenaires</a></li>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Soutenez-nous entreprise')) ?>">Soutenez-nous</a></li>
                     <!-- <li class="sub_menu_item"><a href="#">Recrutements</a></li> -->
