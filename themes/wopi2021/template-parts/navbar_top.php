@@ -25,7 +25,7 @@
             <li class='menu_item <?php menu_active_saison() ?>'>Saison
                 <ul class='sub_menu'>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('agenda')) ?>">Agenda</a></li>
-                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Concerts jeunes publics')) ?>">Jeune public</a></li>
+                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Concerts jeunes publics')) ?>">Concerts découverte</a></li>
                     <li class="sub_menu_item"><a href="<?php bloginfo( 'url' ) ?>/artistes-invites/">Artistes invités</a></li>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Collaborations')) ?>">Collaborations</a></li>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('saison')) ?>">Saison 2021-2022</a></li>
@@ -35,7 +35,7 @@
                 <ul class='sub_menu'>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Eleves_enseignants')) ?>">Élèves et enseignants</a></li>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Academie')) ?>">Accompagnement des jeunes talents</a></li>
-                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Actions citoyennes')) ?>">Actions citoyennes et sociales</a></li>
+                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Actions citoyennes')) ?>">Actions citoyennes et solidaires</a></li>
                 </ul>
             </li>
             <li class='menu_item <?php menu_active_actus() ?>'>Actualités
@@ -57,7 +57,7 @@
                 <ul class='sub_menu'>
                     <li class="sub_menu_item"><a href="#">Concerts en ligne</a></li>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Mediatheque_videos')) ?>">Vidéos</a></li>
-                    <li class="sub_menu_item"><a href="#">A Vous de Jouer</a></li>
+                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('A vous de jouer')) ?>">A Vous de Jouer</a></li>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Mediatheque_photos')) ?>">Photos</a></li>
                     <!-- <li class="sub_menu_item"><a href="#">Musiques</a></li> -->
                     <li class="sub_menu_item"><a href="#">Discographie</a></li>
@@ -100,7 +100,7 @@
             <li class='menu_item <?php menu_active_saison() ?>'>Saison
                 <ul class='sub_menu'>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('agenda')) ?>">Agenda</a></li>
-                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Concerts jeunes publics')) ?>">Jeune public</a></li>
+                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Concerts jeunes publics')) ?>">Concerts découverte</a></li>
                     <li class="sub_menu_item"><a href="<?php bloginfo( 'url' ) ?>/artistes-invites/">Artistes invités</a></li>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Collaborations')) ?>">Collaborations</a></li>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('saison')) ?>">Saison 2021-2022</a></li>
@@ -132,7 +132,7 @@
                 <ul class='sub_menu'>
                     <li class="sub_menu_item"><a href="#">Concerts en ligne</a></li>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Mediatheque_videos')) ?>">Vidéos</a></li>
-                    <li class="sub_menu_item"><a href="#">A Vous de Jouer</a></li>
+                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('A vous de jouer')) ?>">A Vous de Jouer</a></li>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Mediatheque_photos')) ?>">Photos</a></li>
                     <!-- <li class="sub_menu_item"><a href="#">Musiques</a></li> -->
                     <li class="sub_menu_item"><a href="#">Discographie</a></li>

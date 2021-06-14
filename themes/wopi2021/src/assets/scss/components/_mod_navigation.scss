@@ -177,6 +177,11 @@
         border-bottom: $color_accueil 2px solid;
     }
 }
+.fleche_medias {
+    a {
+        border-bottom: $color_medias 2px solid;
+    }
+}
 .fleche_cultureactions {
     a {
         border-bottom: $color_culture_actions 2px solid;

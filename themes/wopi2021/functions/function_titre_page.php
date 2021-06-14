@@ -56,6 +56,9 @@ function titre_gras($post) {
     if ( is_page(array('mediatheque_videos')) ) { 
       echo "MÉDIATHÈQUE";
     }
+    if ( is_page(array('a_vous_de_jouer')) ) { 
+      echo "À VOUS";
+    }
     if ( is_page(array('actualites')) ) { 
       echo "NOS DERNIÈRES";
     }
@@ -92,10 +95,10 @@ function titre_leger($post) {
     echo "DE L'ORCHESTRE";
   }
   if ( is_page(array('agenda')) ) { 
-    echo "2021-2022";
+    echo "DES CONCERTS";
   }
   if ( is_page(array('concerts-jeunes-publics')) ) { 
-    echo "FAMILLE 2021-2022";
+    echo "CONCERTS DÉCOUVERTE";
   }
   if ( is_page(array('Saison')) ) { 
     echo "2021-2022";
@@ -129,6 +132,9 @@ function titre_leger($post) {
   }
   if ( is_page(array('mediatheque_videos')) ) { 
     echo "VIDÉOS";
+  }
+  if ( is_page(array('a_vous_de_jouer')) ) { 
+    echo "DE JOUER !";
   }
   if ( is_page(array('actualites')) ) { 
     echo "ACTUALITÉS";

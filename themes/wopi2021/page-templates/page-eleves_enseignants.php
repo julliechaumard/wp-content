@@ -14,6 +14,61 @@ get_template_part('template-parts/header','page');
 <article>
 
     <!-- ----------------------- -->
+    <!-- DYNAMIQUE RESEAUX  -->
+    <!-- ----------------------- -->
+    <section class="margint_90 margin_section_botton">
+        <div class="grid_2col12">
+            <!-- INFORMATION -->
+            <!-- LOOP POUR RECUPERER LE CONTENU WP-CONTENT DU POST ACTION CULTURELLE "LA RENTREE EN MUSIQUE" -->
+            <?php 
+            $args_rentree = array(
+                'post_type' => 'cultureaction',
+                'posts_per_page' => 1,
+
+                'tax_query' => array(
+                    'relation' => 'AND',
+                    array(
+                        'taxonomy' => 'action_culturelle',
+                        'field'    => 'slug',
+                        'terms'    => 'dynamique_reseaux'),
+                    array(
+                        'taxonomy' => 'saison',
+                        'field'    => 'slug',
+                        'terms'    => array('2021-2022'))),
+            );
+            $loop_rentree = new WP_Query( $args_rentree );
+            if ($loop_rentree->have_posts()) :
+                while ($loop_rentree->have_posts()) :
+                    $loop_rentree->the_post();?>
+
+                    <div class="concert_card grid grid_area_21_desk grid_area_12_mob">
+                        <div class="content_wp">
+                            <?php the_content(); ?>
+                        </div>
+                    </div>
+                
+                <?php endwhile; 
+            endif; 
+            wp_reset_query(); ?>
+
+            <!-- TITRE -->
+            <div class="grid paddingr_30 marginb_20_mobile">
+                <div class="grid">
+                    <!-- TITRE-->
+                    <div class="">
+                        <h2 class='titre_card_container_grand'>
+                            <span class='titre_leger'>DYNAMIQUE RÉSEAUX</span>
+                            <br>
+                            <span class='titre_gras'>POUR L'ACTION CULTURELLE</span>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ----------------------- -->
     <!-- ENCART DOSSIER PEDAGOGIQUE  -->
     <!-- ----------------------- -->
 

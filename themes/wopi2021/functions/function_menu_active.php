@@ -12,7 +12,7 @@ function menu_active_orchestre() {
   }
 }
 function menu_active_medias() {
-  if ( is_page(array('mediatheque_photos','mediatheque_videos')) ) { 
+  if ( is_page(array('mediatheque_photos','mediatheque_videos','a_vous_de_jouer')) ) { 
     echo 'menu_active';
   }
 }

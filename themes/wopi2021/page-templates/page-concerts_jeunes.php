@@ -17,7 +17,7 @@ Template Name: page_concerts_jeunes
             <h2 class='titre_chapitre_container marginb_20'>
                 <span class='titre_leger'>LES PROCHAINS</span>
                 <br>
-                <span class='titre_gras'>CONCERTS JEUNES PUBLICS</span>
+                <span class='titre_gras'>CONCERTS DÉCOUVERTE</span>
             </h2>
         </div>
 

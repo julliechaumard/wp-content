@@ -515,16 +515,6 @@
     }
 }
 
-
-/* CARD LISTES */
-.grid_2col_45_55 {
-    display: grid;
-    grid-template-columns: 45% 55%;
-    @include mobile {
-        grid-template-columns: 1fr;
-    }
-}
-
 /* MENU SECONDAIRE */
 .grid_3col35_32_a {
     display: grid;
