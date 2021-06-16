@@ -109,15 +109,10 @@ Template Name: page_accueil
                     $datefin = '';
                     if (!empty(get_post_meta($post->ID, 'metadata_180_1', true))) : 
                         $datedebut = get_post_meta($post->ID, 'metadata_180_1', true);
-                    endif;
-                    if (!empty(get_post_meta($post->ID, 'metadata_180_10', true))) : 
-                        $datefin = get_post_meta($post->ID, 'metadata_180_10', true);
-                    endif;
-                    if (empty(get_post_meta($post->ID, 'metadata_180_1', true))) : 
-                        $datedebut = get_post_meta($post->ID, 'metadata_180_10', true);
-                        $datefin = '';
                     endif;?>
-
+                    <?php if (!empty(get_post_meta($post->ID, 'metadata_180_10', true))) : 
+                        $datefin = get_post_meta($post->ID, 'metadata_180_10', true);
+                    endif;?>
                     <!-- AFFICHER LES DATES -->
                     <div class="grid_area_21 date_cadre_container">
                         <div class="date_cadre_border date_cadre_1"></div>
@@ -127,7 +122,7 @@ Template Name: page_accueil
                     </div>
 
                     <!-- RESET VARIABLES -->
-                    <?php unset($datedebut); unset($datefin); ?>
+                    <?php unset($datedebut); unset($datefin) ?>
 
                     <!-- GENRE -->
                     <div class="text_vertical grid_area_11 alignself_end marginb_4">
@@ -265,13 +260,9 @@ Template Name: page_accueil
                         $datefin = '';
                         if (!empty(get_post_meta($post->ID, 'metadata_180_1', true))) : 
                             $datedebut = get_post_meta($post->ID, 'metadata_180_1', true);
-                        endif;
-                        if (!empty(get_post_meta($post->ID, 'metadata_180_10', true))) : 
+                        endif;?>
+                        <?php if (!empty(get_post_meta($post->ID, 'metadata_180_10', true))) : 
                             $datefin = get_post_meta($post->ID, 'metadata_180_10', true);
-                        endif;
-                        if (empty(get_post_meta($post->ID, 'metadata_180_1', true))) : 
-                            $datedebut = get_post_meta($post->ID, 'metadata_180_10', true);
-                            $datefin = '';
                         endif;?>
                         <!-- AFFICHER LES DATES -->
                         <div class="grid_area_21 date_cadre_container">

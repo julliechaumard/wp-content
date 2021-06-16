@@ -6,26 +6,50 @@ Template Name: page_avousdejouer
 <?php
  get_header();
  get_template_part('template-parts/header','page');
+ get_template_part('template-parts/nav_secondaire');
 ?>
 
 <main>
 
 <article>
 
+    <!-- ----------------------- -->
+    <!-- TITRE + DESCRIPTION  -->
+    <!-- ----------------------- -->
+    <section class="margint_90 margin_section_botton">
+        <div class="grid_2col12">
+                    <div class="concert_card grid grid_area_21_desk grid_area_12_mob">
+                        <div class="content_wp">
+                            <?php while(have_posts())  : the_post(); ?>
+                            <?php the_content(); ?>
+                            <?php endwhile; ?>
+                        </div>
+                    </div>
+                
+            <!-- TITRE -->
+            <div class="grid paddingr_30 marginb_20_mobile">
+                <div class="grid">
+                    <!-- TITRE-->
+                    <div class="">
+                        <h2 class='titre_card_container_grand'>
+                            <span class='titre_leger'>LES OEUVRES</span>
+                            <br>
+                            <span class='titre_gras'>QUE VOUS POUVEZ JOUER</span>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
         <!-- --------------------------------- -->
         <!-- LES CAPSULES NOMADPLAY -->
         <!-- --------------------------------- -->
 
             <section class="margint_70 margin_section_botton">
-
-                <!-- Titre -->
-                <div class="">
-                    <h2 class='titre_chapitre_container marginb_20'>
-                        <span class='titre_leger'>LES PIECES</span>
-                        <br>
-                        <span class='titre_gras'>QUE VOUS POUVEZ JOUER</span>
-                    </h2>
-                </div>
                 <!-- LES CAPSULES  -->
                 <div class="grid_3col_liste grid_column_gap24 grid_row_gap50 height_min_200 margint_40">
 

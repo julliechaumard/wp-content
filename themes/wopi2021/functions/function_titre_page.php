@@ -18,10 +18,10 @@ function titre_gras($post) {
       echo "L'ACTUALITÉ";
     }
     if ( is_page(array('agenda')) ) { 
-      echo "NOTRE AGENDA";
+      echo "AGENDA";
     }
     if ( is_page(array('concerts-jeunes-publics')) ) { 
-      echo "NOTRE AGENDA";
+      echo "AGENDA";
     }
     if ( is_page(array('Saison')) ) { 
       echo "LA SAISON";
@@ -98,7 +98,7 @@ function titre_leger($post) {
     echo "DES CONCERTS";
   }
   if ( is_page(array('concerts-jeunes-publics')) ) { 
-    echo "CONCERTS DÉCOUVERTE";
+    echo "POUR PETITS & GRANDS";
   }
   if ( is_page(array('Saison')) ) { 
     echo "2021-2022";

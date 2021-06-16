@@ -175,7 +175,6 @@ Template Name: page_accueil
                                     <p class="titre_gras paddingb_5"><?php echo get_post_meta($post->ID, 'metadata_603', true); ?></p>
                                     <p class="titre_leger"><?php echo get_post_meta($post->ID, 'metadata_605', true); ?></p>
                                 </div>
-                                <div class="fleche fleche_blanc alignself_end paddingt_20 marginb_6 ubuntu_bold tx_color_blanc"><a href="<?php the_permalink(); ?>">EN SAVOIR PLUS <img src="<?php bloginfo('template_directory');?>/dist/assets/images/icones/lien_fleche_blanc.png" alt=""></a></div>
                             </div>
                             
                         </div>

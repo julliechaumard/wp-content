@@ -395,9 +395,31 @@
     <!-- ILLUSTRATION -->
     <!-- ---------------- -->
 
-    <div class='illustration_cell'>
-        <img class='img_ajust' src="<?php the_post_thumbnail_url(); ?>" alt="Illustration du concert">
-    </div>
+    <!-- ACCUEIL -->
+    <?php
+    if ( is_front_page() ) : ?>
+        <div class='illustration_cell grid'>
+            <div class="grid_area_11">
+                <a class="ubuntu_bold tx_color_blanc fontsize_33" href="<?php echo get_post_meta($post->ID, 'metadata_007_1', true); ?>"><img class='img_ajust' src="<?php echo get_post_meta($post->ID, 'metadata_005_1', true); ?>" alt="Illustration du concert"></a>
+            </div>
+            <div class="grid_area_11 alignself_center justifys_center">
+                <p class="ubuntu_bold tx_color_blanc fontsize_33"><?php echo get_post_meta($post->ID, 'metadata_006_1', true); ?></p>
+            </div>
+
+        </div>
+
+        <?php else : ?>
+
+            <div class='illustration_cell'>
+                <img class='img_ajust' src="<?php the_post_thumbnail_url(); ?>" alt="Illustration du concert">
+            </div>
+
+
+    <?php endif; ?>
+
+
+
+
 
     <!-- ---------------- -->
     <!-- NAV RESEAUX SOCIAUX -->

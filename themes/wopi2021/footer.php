@@ -90,7 +90,7 @@
       <!-- LES RESEAUX SOCIAUX -->
       <div>
         <div class="paddingb_20">
-          <p>Rejoingnez-nous sur :</p>
+          <p>Rejoignez-nous sur :</p>
         </div>
         <div class="grid_10col">
           <div>

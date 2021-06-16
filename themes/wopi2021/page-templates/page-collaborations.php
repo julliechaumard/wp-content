@@ -38,6 +38,8 @@ get_template_part('template-parts/header','page');
                         'taxonomy' => 'saison',
                         'field'    => 'slug',
                         'terms'    => array('2021-2022'))),
+                    'orderby' => 'menu_order',
+                    'order' => 'ASC',
             );
             $loop_collaboration = new WP_Query( $args_collaboration );
             if ($loop_collaboration->have_posts()) :
@@ -113,6 +115,8 @@ get_template_part('template-parts/header','page');
                         'taxonomy' => 'saison',
                         'field'    => 'slug',
                         'terms'    => array('2021-2022'))),
+                    'orderby' => 'menu_order',
+                    'order' => 'ASC',
             );
             $loop_collaboration = new WP_Query( $args_collaboration );
             if ($loop_collaboration->have_posts()) :

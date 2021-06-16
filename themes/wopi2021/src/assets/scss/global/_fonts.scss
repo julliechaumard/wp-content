@@ -36,6 +36,10 @@
   font-family: 'parisienne';src: url('../fonts/parisienne_Regular.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'courgette_regular';src: url('../fonts/courgette_regular.ttf') format('truetype');
+}
+
 // ///////////////////////////////////////////
 // CLASSES DES FONT
 // ///////////////////////////////////////////
@@ -47,6 +51,7 @@
   font-family: ubuntu_fin;
 }
 
+
 .ubuntu_bold {
   font-family: ubuntu_bold;
 }
@@ -57,4 +62,7 @@
 
 .parisienne {
   font-family: parisienne;
+}
+.courgette {
+  font-family: courgette_regular;
 }

@@ -25,7 +25,7 @@
             <li class='menu_item <?php menu_active_saison() ?>'>Saison
                 <ul class='sub_menu'>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('agenda')) ?>">Agenda</a></li>
-                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Concerts jeunes publics')) ?>">Concerts découverte</a></li>
+                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Concerts jeunes publics')) ?>">Concerts pour petits et grands</a></li>
                     <li class="sub_menu_item"><a href="<?php bloginfo( 'url' ) ?>/artistes-invites/">Artistes invités</a></li>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Collaborations')) ?>">Collaborations</a></li>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('saison')) ?>">Saison 2021-2022</a></li>
@@ -46,8 +46,8 @@
             </li>
             <li class='menu_item <?php menu_active_orchestre() ?>'>L'Orchestre
                 <ul class='sub_menu'>
-                    <li class="sub_menu_item"><a href="<?php bloginfo( 'url' ) ?>/qui-sommes-nous/">Qui sommes nous ?</a></li>
-                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Notre histoire')) ?>">Notre histoire Nos missions</a></li>
+                    <li class="sub_menu_item"><a href="<?php bloginfo( 'url' ) ?>/qui-sommes-nous/">Qui sommes-nous ?</a></li>
+                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Notre histoire')) ?>">Notre histoire, nos missions</a></li>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Partenaires')) ?>">Partenaires</a></li>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Soutenez-nous entreprise')) ?>">Soutenez-nous</a></li>
                     <!-- <li class="sub_menu_item"><a href="#">Recrutements</a></li> -->
@@ -55,12 +55,12 @@
             </li>
             <li class='menu_item <?php menu_active_medias() ?>'>Médiathèque
                 <ul class='sub_menu'>
-                    <li class="sub_menu_item"><a href="#">Concerts en ligne</a></li>
+                    <!-- <li class="sub_menu_item"><a href="#">Concerts en ligne</a></li> -->
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Mediatheque_videos')) ?>">Vidéos</a></li>
-                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('A vous de jouer')) ?>">A Vous de Jouer</a></li>
+                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('A vous de jouer')) ?>">A vous de jouer</a></li>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Mediatheque_photos')) ?>">Photos</a></li>
                     <!-- <li class="sub_menu_item"><a href="#">Musiques</a></li> -->
-                    <li class="sub_menu_item"><a href="#">Discographie</a></li>
+                    <!-- <li class="sub_menu_item"><a href="#">Discographie</a></li> -->
                 </ul>
             </li>
         </ul>
@@ -100,7 +100,7 @@
             <li class='menu_item <?php menu_active_saison() ?>'>Saison
                 <ul class='sub_menu'>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('agenda')) ?>">Agenda</a></li>
-                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Concerts jeunes publics')) ?>">Concerts découverte</a></li>
+                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Concerts jeunes publics')) ?>">Pour petis & grands</a></li>
                     <li class="sub_menu_item"><a href="<?php bloginfo( 'url' ) ?>/artistes-invites/">Artistes invités</a></li>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Collaborations')) ?>">Collaborations</a></li>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('saison')) ?>">Saison 2021-2022</a></li>
@@ -121,7 +121,7 @@
             </li>
             <li class='menu_item <?php menu_active_orchestre() ?>'>L'Orchestre
                 <ul class='sub_menu'>
-                    <li class="sub_menu_item"><a href="<?php bloginfo( 'url' ) ?>/qui-sommes-nous/">Qui sommes nous ?</a></li>
+                    <li class="sub_menu_item"><a href="<?php bloginfo( 'url' ) ?>/qui-sommes-nous/">Qui sommes-nous ?</a></li>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Notre histoire')) ?>">Notre histoire</a></li>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Partenaires')) ?>">Partenaires</a></li>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Soutenez-nous entreprise')) ?>">Soutenez-nous</a></li>
@@ -130,12 +130,12 @@
             </li>
             <li class='menu_item <?php menu_active_medias() ?>'>Médiathèque
                 <ul class='sub_menu'>
-                    <li class="sub_menu_item"><a href="#">Concerts en ligne</a></li>
+                    <!-- <li class="sub_menu_item"><a href="#">Concerts en ligne</a></li> -->
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Mediatheque_videos')) ?>">Vidéos</a></li>
-                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('A vous de jouer')) ?>">A Vous de Jouer</a></li>
+                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('A vous de jouer')) ?>">A vous de jouer</a></li>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Mediatheque_photos')) ?>">Photos</a></li>
                     <!-- <li class="sub_menu_item"><a href="#">Musiques</a></li> -->
-                    <li class="sub_menu_item"><a href="#">Discographie</a></li>
+                    <!-- <li class="sub_menu_item"><a href="#">Discographie</a></li> -->
                 </ul>
             </li>
         </ul>

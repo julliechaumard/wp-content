@@ -254,7 +254,7 @@ function metabox_concert($post) {
         <h2>LES ARTISTES ou ENTITÉS</h2>
 
             <div class=''>
-                <h3>LES 3 PREMIERS SONT DANS LA PAGE AGENDA / ACCUEIL</h3>
+                <h3>LES 3 PREMIERS SONT DANS LA PAGE ACCUEIL prochain concert <br> LES 5 PREMIERS SONT DANS LA PAGE AGENDA</h3>
                 <div class='metagroup_sub_items grid_4fr_simple'>
                 <?php for ($i = 1; $i <= 30; $i++) { ?>
                     <!-- NOM de L'ARTISTE -->

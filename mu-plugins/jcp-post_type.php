@@ -196,8 +196,8 @@ function jcp_create_cpt() {
         'delete_with_user' => false,
         'show_in_admin_bar' => true,
         'show_in_nav_menus' => true,
-        // supprimer les droits sur previeuw et permalien
-        'publicly_queryable' => true
+        // supprimer les droits sur previeuw et permalien, ne pas afficher les pages de ces posts
+        'publicly_queryable' => false
     ));
 
     /************************************************************************
@@ -246,8 +246,8 @@ function jcp_create_cpt() {
         'delete_with_user' => false,
         'show_in_admin_bar' => true,
         'show_in_nav_menus' => true,
-        // supprimer les droits sur previeuw et permalien
-        'publicly_queryable' => true
+        // supprimer les droits sur previeuw et permalien, ne pas afficher les pages de ces posts
+        'publicly_queryable' => false
     ));
 
     /************************************************************************
@@ -346,8 +346,8 @@ function jcp_create_cpt() {
         'delete_with_user' => false,
         'show_in_admin_bar' => true,
         'show_in_nav_menus' => true,
-        // supprimer les droits sur previeuw et permalien
-        'publicly_queryable' => true
+        // supprimer les droits sur previeuw et permalien, ne pas afficher les pages de ces posts
+        'publicly_queryable' => false
     ));
 
     /************************************************************************

@@ -8,9 +8,10 @@
 <html <?php language_attributes(); ?>>
 <!-- 
 Vous regardez dans mon code ;) N'hésitez pas à communiquer avec moi
-et me demander mon avis et comment je code ou je gère les sites ;)
-Mais aussi vos commentaires ;)
-A bientôt ! juliechaumard at icloud dot com
+et discuter du codage, webdesign... ;)
+Et aussi vos commentaires ;)
+A bientôt ! contact at juliechaumard dot paris
+ou juliechaumard sur Linkedin
 -->
 <!-- Testé sur les navigrateurs
 Firefox
@@ -60,7 +61,7 @@ Chrome
   <meta name="generator" content="Visual Studio code" />
 
   <!-- Géolocalisation -->
-  <meta name="DC.title" content="Tatiana Julien spectacle" />
+  <meta name="DC.title" content="Orchestre de Picardie" />
   <meta name="geo.region" content="FR-80" />
   <meta name="geo.placename" content="Amiens" />
   <meta name="geo.position" content="49.894067;2.295753" />
@@ -69,10 +70,10 @@ Chrome
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_FR">
-  <meta property="og:title" content="Tatiana Julien">
-  <meta property="og:description" content="Les concert de l'Orchestre de Picardie">
-  <meta property="og:url" content="http://localhost:8888/">
-  <meta property="og:image" content="">
+  <meta property="og:title" content="Orchestre de Picardie">
+  <meta property="og:description" content="Les concerts de l'Orchestre de Picardie">
+  <meta property="og:url" content="https://www.orchestredepicardie.fr/">
+  <meta property="og:image" content="<?php bloginfo('template_directory');?>/dist/assets/images/illustration_partage_reseaux_sociaux.jpg">
   <meta property="og:image:alt" content="Illustration du site">
 
   <!-- CSS -->

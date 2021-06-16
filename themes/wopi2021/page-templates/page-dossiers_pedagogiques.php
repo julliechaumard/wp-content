@@ -13,6 +13,41 @@ get_template_part('template-parts/header','page');
 
 <article>
 
+
+    <!-- ----------------------- -->
+    <!-- TITRE + DESCRIPTION  -->
+    <!-- ----------------------- -->
+    <section class="margint_90 margin_section_botton">
+        <div class="grid_2col12">
+                    <div class="concert_card grid grid_area_21_desk grid_area_12_mob">
+                        <div class="content_wp">
+                            <?php while(have_posts())  : the_post(); ?>
+                            <?php the_content(); ?>
+                            <?php endwhile; ?>
+                        </div>
+                    </div>
+                
+            <!-- TITRE -->
+            <div class="grid paddingr_30 marginb_20_mobile">
+                <div class="grid">
+                    <!-- TITRE-->
+                    <div class="">
+                        <h2 class='titre_card_container_grand'>
+                            <span class='titre_leger'>PRÉSENTATION</span>
+                            <br>
+                            <span class='titre_gras'>DES DOSSIERS PÉDAGOGIQUES</span>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
     <!-- ----------------------- -->
     <!-- 1 DOSSIER  -->
     <!-- ----------------------- -->
