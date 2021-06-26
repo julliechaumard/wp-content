@@ -84,11 +84,18 @@ get_template_part('template-parts/header','page');
 
 
                 <?php endwhile; 
-            endif; 
+            endif;
+            wp_reset_query();    
         ?>
 
 
     </section>
+
+    <!-- ----------------------- -->
+    <!-- TEMOIGNAGE  -->
+    <!-- ----------------------- -->
+    <?php  get_template_part('template-parts/temoignage_slider'); ?>
+
 
     <!-- ------------------------------ -->
     <!-- COLLABORATION SANS DESCRIPTION -->
@@ -137,13 +144,21 @@ get_template_part('template-parts/header','page');
 
 
                 <?php endwhile; 
-            endif; 
+            endif;
+            wp_reset_query();
         ?>
 
 
     </section>
 
 </article>
+
+<!-- ----------------------- -->
+<!-- REVUE DE PRESSE  -->
+<!-- ----------------------- -->
+<?php  get_template_part('template-parts/revuepresse_slider'); ?>
+
+
 
 </main>
 

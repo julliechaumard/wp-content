@@ -100,7 +100,7 @@
             <li class='menu_item <?php menu_active_saison() ?>'>Saison
                 <ul class='sub_menu'>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('agenda')) ?>">Agenda</a></li>
-                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Concerts jeunes publics')) ?>">Pour petis & grands</a></li>
+                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Concerts jeunes publics')) ?>">Pour petits & grands</a></li>
                     <li class="sub_menu_item"><a href="<?php bloginfo( 'url' ) ?>/artistes-invites/">Artistes invités</a></li>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Collaborations')) ?>">Collaborations</a></li>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('saison')) ?>">Saison 2021-2022</a></li>

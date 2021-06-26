@@ -358,7 +358,7 @@ Template Name: page_accueil
 <!-- ----------------------- -->
 <!-- TEMOIGNAGE  -->
 <!-- ----------------------- -->
-<?php  get_template_part('template-parts/temoignage'); ?>
+<?php  get_template_part('template-parts/temoignage_slider'); ?>
 
 <!-- ----------------------- -->
 <!-- COTE SCENE COTE COULISSE  -->
@@ -432,6 +432,11 @@ Template Name: page_accueil
 
 
 </section>
+
+<!-- ----------------------- -->
+<!-- REVUE DE PRESSE  -->
+<!-- ----------------------- -->
+<?php  get_template_part('template-parts/revuepresse_slider'); ?>
 
 <!-- ----------------------- -->
 <!-- MEDIATHEQUE  -->

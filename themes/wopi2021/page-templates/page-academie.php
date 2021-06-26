@@ -43,6 +43,12 @@ get_template_part('template-parts/header','page');
             </div>
         </div>
 
+
+        <!-- ----------------------- -->
+        <!-- TEMOIGNAGE  -->
+        <!-- ----------------------- -->
+        <?php  get_template_part('template-parts/temoignage_slider'); ?>
+
         <!-- LE CONCERT "LA RENTREE EN MUSIQUE -->
         <div class="margint_70 margin_section_botton">
 
@@ -190,6 +196,10 @@ get_template_part('template-parts/header','page');
 
 </article>
 
+<!-- ----------------------- -->
+<!-- REVUE DE PRESSE  -->
+<!-- ----------------------- -->
+<?php  get_template_part('template-parts/revuepresse_slider'); ?>
 
 
 </main>

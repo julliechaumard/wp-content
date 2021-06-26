@@ -77,7 +77,7 @@ gulp.task('cleanvendors', function () {
 gulp.task('build', ['cleandist', 'css', 'copyfonts', 'copyimages', 'copyvendors']);
 
 //Watch task
-gulp.task('watch',['serve'], function() {
+gulp.task('watch', function() {
     gulp.watch(paths.srcSCSSapp,['css']);
     gulp.watch(paths.srcSCSS,['css']);
     gulp.watch(paths.srcFonts,['copyfonts']);

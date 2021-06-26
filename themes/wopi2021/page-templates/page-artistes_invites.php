@@ -124,6 +124,8 @@ Template Name: page_accueil
                             'taxonomy' => 'saison',
                             'field'    => 'slug',
                             'terms'    => array('2021-2022'))),
+                        'orderby' => 'menu_order',
+                        'order' => 'ASC',
                 );
                 $loop_chef_invite = new WP_Query( $args_chef_invite );
                 if ($loop_chef_invite->have_posts()) :
@@ -198,6 +200,8 @@ Template Name: page_accueil
                             'taxonomy' => 'saison',
                             'field'    => 'slug',
                             'terms'    => array('2021-2022'))),
+                    'orderby' => 'menu_order',
+                    'order' => 'ASC',
                 );
                 $loop_soliste = new WP_Query( $args_soliste );
                 if ($loop_soliste->have_posts()) :
@@ -257,6 +261,8 @@ Template Name: page_accueil
                     'taxonomy' => 'saison',
                     'field'    => 'slug',
                     'terms'    => array('2021-2022'))),
+            'orderby' => 'menu_order',
+            'order' => 'ASC',
         );
         $loop_chef_invite = new WP_Query( $args_chef_invite );
         if ($loop_chef_invite->have_posts()) :?>
@@ -332,6 +338,8 @@ Template Name: page_accueil
                     'taxonomy' => 'saison',
                     'field'    => 'slug',
                     'terms'    => array('2021-2022'))),
+            'orderby' => 'menu_order',
+            'order' => 'ASC',
         );
         $loop_chef_invite = new WP_Query( $args_chef_invite );
         if ($loop_chef_invite->have_posts()) :?>
@@ -407,6 +415,8 @@ Template Name: page_accueil
                     'taxonomy' => 'saison',
                     'field'    => 'slug',
                     'terms'    => array('2021-2022'))),
+            'orderby' => 'menu_order',
+            'order' => 'ASC',
         );
         $loop_autre = new WP_Query( $args_autre );
         if ($loop_autre->have_posts()) :?>

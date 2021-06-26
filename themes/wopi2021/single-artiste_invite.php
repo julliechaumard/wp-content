@@ -62,6 +62,10 @@ Template Post Type: artiste_invite
     </article>
 
 
+    <!-- ----------------------- -->
+    <!-- TEMOIGNAGE  -->
+    <!-- ----------------------- -->
+    <?php  get_template_part('template-parts/temoignage_slider'); ?>
 
 
 
@@ -319,6 +323,10 @@ Template Post Type: artiste_invite
 
     </section>
 
+    <!-- ----------------------- -->
+    <!-- REVUE DE PRESSE  -->
+    <!-- ----------------------- -->
+    <?php  get_template_part('template-parts/revuepresse_slider'); ?>
 
 </main>
 

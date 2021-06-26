@@ -93,6 +93,8 @@ add_action( 'add_meta_boxes', 'jcp_declare_metabox_page_eleves_enseignants' );
 add_action( 'save_post', 'jcp_metabox_save_page_eleves_enseignants');
 add_action( 'add_meta_boxes', 'jcp_declare_metabox_page_avousdejouer' );
 add_action( 'save_post', 'jcp_metabox_save_page_avousdejouer');
+add_action( 'add_meta_boxes', 'jcp_declare_metabox_page_academie' );
+add_action( 'save_post', 'jcp_metabox_save_page_academie');
 
 include 'jcp-meta_box/jcp-meta_box_concert.php';
 include 'jcp-meta_box/jcp-meta_box_salle.php';
@@ -121,6 +123,7 @@ include 'jcp-meta_box/jcp-meta_box_page_medias_photos.php';
 include 'jcp-meta_box/jcp-meta_box_page_medias_videos.php';
 include 'jcp-meta_box/jcp-meta_box_page_eleves_enseignants.php';
 include 'jcp-meta_box/jcp-meta_box_page_avousdejouer.php';
+include 'jcp-meta_box/jcp-meta_box_page_academie.php';
 
 ?>
 

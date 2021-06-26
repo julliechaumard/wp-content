@@ -35,15 +35,7 @@ Template Post Type: concert
                     <?php if(!empty(get_post_meta($post->ID, 'metadata_186_'.$i, true))) { ?>
                         <div class="artiste paddingb_5">
                             <div class="paddingr_8 ubuntu_bold">
-                                <?php 
-                                    if( !empty(get_page_by_title(get_post_meta($post->ID, 'metadata_186_'.$i, true),OBJECT,array('orchestre','artiste_invite'))) ) :
-                                        $distribution_lien = get_page_by_title(get_post_meta($post->ID, 'metadata_186_'.$i, true),OBJECT,array('orchestre','artiste_invite'));
-                                        $distribution_lien = get_permalink($distribution_lien->ID);?>
-                                        <a href="<?php echo $distribution_lien ?>"><?php echo get_post_meta($post->ID, 'metadata_186_'.$i, true); ?></a>
-                                        <?php else :
-                                            echo get_post_meta($post->ID, 'metadata_186_'.$i, true);
-                                        endif;
-                                ?>
+                                <?php echo get_post_meta($post->ID, 'metadata_186_'.$i, true); ?>
                             </div>
                             <div class="ubuntu_fin">
                                 <?php echo get_post_meta($post->ID, 'metadata_187_'.$i, true); ?>
@@ -317,10 +309,7 @@ Template Post Type: concert
 
     </section>
 
-    <!-- ----------------------- -->
-    <!-- REVUE DE PRESSE  -->
-    <!-- ----------------------- -->
-    <?php  get_template_part('template-parts/revuepresse_slider'); ?>
+
 
 </main>
 

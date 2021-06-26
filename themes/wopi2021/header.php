@@ -73,7 +73,7 @@ Chrome
   <meta property="og:title" content="Orchestre de Picardie">
   <meta property="og:description" content="Les concerts de l'Orchestre de Picardie">
   <meta property="og:url" content="https://www.orchestredepicardie.fr/">
-  <meta property="og:image" content="<?php bloginfo('template_directory');?>/dist/assets/images/illustration_partage_reseaux_sociaux.jpg">
+  <meta property="og:image" content="https://www.orchestredepicardie.fr/wp-content/uploads/2021/06/illustration_partage_reseaux_sociaux.jpg">
   <meta property="og:image:alt" content="Illustration du site">
 
   <!-- CSS -->

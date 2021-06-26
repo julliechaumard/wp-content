@@ -171,6 +171,11 @@
         margin-top: 20px;
     }
 }
+.margint_20_mobilexs {
+    @include mobilexs {
+        margin-top: 20px;
+    }
+}
 /* BUTTON PLAYER MOBILE BANNIERE*/
 .margint_20_500px {
     @media screen and (max-width:500px) {
@@ -266,6 +271,11 @@
 }
 .marginb_20_mobile {
     @include mobile {
+        margin-bottom: 20px;
+    }
+}
+.marginb_20_mobilexs {
+    @include mobilexs {
         margin-bottom: 20px;
     }
 }
