@@ -6,11 +6,11 @@
 
 function jcp_declare_metabox_page_academie() {
     global $post;
-    if ( 'page-templates/page-avousdejouer.php' == get_post_meta( $post->ID, '_wp_page_template', true ) ) {
+    if ( 'page-templates/page-academie.php' == get_post_meta( $post->ID, '_wp_page_template', true ) ) {
         add_meta_box(
-            'metabox_page_avousdejouer',
-            'Informations page à vous de jouer',
-            'metabox_page_avousdejouer',
+            'metabox_page_academie',
+            'Informations page Accompagnement Jeunes Talents',
+            'metabox_page_academie',
             'page',
             'normal',
             'default'
@@ -23,26 +23,35 @@ function jcp_declare_metabox_page_academie() {
 *************************************************************************/
 
 
-function metabox_page_avousdejouer($post) {
+function metabox_page_academie($post) {
     /************************************************************************
     //Variables pour récupérer les valeurs existantes (s'il y en a)
     *************************************************************************/
 
-    $metadata_771 = get_post_meta( $post->ID, 'metadata_771', true );
-    $metadata_772 = get_post_meta( $post->ID, 'metadata_772', true );
-    for ($i = 1; $i <= 20; $i++) {
-        $metadata_773_[$i] = get_post_meta( $post->ID, 'metadata_773_'.$i.'', true );
+    $metadata_401 = get_post_meta( $post->ID, 'metadata_401', true );
+    $metadata_402 = get_post_meta( $post->ID, 'metadata_402', true );
+   
+    for ($i = 1; $i <= 3; $i++) {
+        $metadata_403_[$i] = get_post_meta( $post->ID, 'metadata_403_'.$i.'', true );
     }
-    for ($i = 1; $i <= 20; $i++) {
-        $metadata_774_[$i] = get_post_meta( $post->ID, 'metadata_774_'.$i.'', true );
+    for ($i = 1; $i <= 10; $i++) {
+        $metadata_404_[$i] = get_post_meta( $post->ID, 'metadata_404_'.$i.'', true );
     }
-    for ($i = 1; $i <= 20; $i++) {
-        $metadata_775_[$i] = get_post_meta( $post->ID, 'metadata_775_'.$i.'', true );
+    for ($i = 1; $i <= 3; $i++) {
+        $metadata_405_[$i] = get_post_meta( $post->ID, 'metadata_405_'.$i.'', true );
     }
-    for ($i = 1; $i <= 20; $i++) {
-        $metadata_776_[$i] = get_post_meta( $post->ID, 'metadata_776_'.$i.'', true );
+    for ($i = 1; $i <= 3; $i++) {
+        $metadata_406_[$i] = get_post_meta( $post->ID, 'metadata_406_'.$i.'', true );
     }
-
+    for ($i = 1; $i <= 3; $i++) {
+        $metadata_407_[$i] = get_post_meta( $post->ID, 'metadata_407_'.$i.'', true );
+    }
+    for ($i = 1; $i <= 3; $i++) {
+        $metadata_408_[$i] = get_post_meta( $post->ID, 'metadata_408_'.$i.'', true );
+    }
+    for ($i = 1; $i <= 3; $i++) {
+        $metadata_409_[$i] = get_post_meta( $post->ID, 'metadata_409_'.$i.'', true );
+    }
     /************************************************************************
     // SAISIE DES INFORMATIONS
     *************************************************************************/
@@ -51,9 +60,6 @@ function metabox_page_avousdejouer($post) {
     echo '<p class="identifiant"> Identifiant article : ', $post->ID, '</p>';
     ?>
     
-
-
-
         <!-- --------------------- -->
         <!-- GROUPE ACCROCHE -->
         <section class='metagroup'>
@@ -62,42 +68,54 @@ function metabox_page_avousdejouer($post) {
             <div class='metagroup_sub'>
                 <div class='metagroup_sub_items grid_3fr_simple'>
                         <div class="pinput">
-                            <label for="metadata_771">Accroche - Mots ligne1</label>
-                            <input type="text" name="metadata_771" id="metadata_771" placeholder='1 à 3 mots en MAJUSCULE' value="<?php echo $metadata_771; ?>"/>
+                            <label for="metadata_401">Accroche - Mots ligne1</label>
+                            <input type="text" name="metadata_401" id="metadata_401" placeholder='1 à 3 mots en MAJUSCULE' value="<?php echo $metadata_401; ?>"/>
                         </div>     
                 </div>
                 <div class='metagroup_sub_items grid_3fr_simple'>
                         <div class="pinput">
-                            <label for="metadata_772">Accroche - Mots ligne2+</label>
-                            <textarea name="metadata_772" id="metadata_772" cols="50" rows="4" placeholder="276 caractères MAX avec espaces en tout  en MAJUSCULE"><?php echo $metadata_772; ?></textarea>
+                            <label for="metadata_402">Accroche - Mots ligne2+</label>
+                            <textarea name="metadata_402" id="metadata_402" cols="50" rows="4" placeholder="276 caractères MAX avec espaces en tout  en MAJUSCULE"><?php echo $metadata_402; ?></textarea>
                         </div>     
                 </div>
             </div>
         </section>
 
-
     <!-- --------------------- -->
-    <!-- DONNEES POUR LES 20 CAPSULES -->
-    <?php for ($i = 1; $i <= 20; $i++) : ?>
-        <section class='metagroup'>
-            
-            <h2>CAPSULE <?php echo $i ?></h2>
+    <!-- GROUPE PHOTOS ET VIDEOS -->
+    <section class='metagroup'>
 
-            <!-- --------------------- -->
-            <!-- GROUPE IMAGE VIGNETTE -->
+        <h2>PHOTOS & VIDÉOS</h2>
 
-                <h3>IMAGE VIGNETTE <?php echo $i ?></h3>
-                <div class=''>
-                    <div class='metagroup_sub_items grid_4fr_simple'>
-                        <!-- IMAGE VIGNETTE -->
+            <div class=''>
+                <h3>VIDÉOS</h3>
+                <div class='metagroup_sub_items grid_3fr_simple'>
+                <?php for ($i = 1; $i <= 3; $i++) { ?>
+                    <!-- CODE YOUTUBE -->
+                    <div class="pinput">
+                        <label for="metadata_403_<?php echo $i; ?>">Code vidéo YouTube <?php echo $i; ?></label>
+                        <input type="text" name="metadata_403_<?php echo $i; ?>" id="metadata_403_<?php echo $i; ?>" value="<?php echo $metadata_403_[$i]; ?>"/>
+                    </div>
 
+                <?php } ?>
+                </div>
+            </div>
+
+            <div class=''>
+
+                <h3>PHOTOS</h3>
+                <p>Grouper les photos portraits ensemble et les paysables ensemble</p>
+
+                <div class='metagroup_sub_items grid_4fr_simple'>
+                    <?php for ($i = 1; $i <= 10; $i++) { ?>
+                        <!-- PHOTO -->
                         <div class="pinput">
-                            <label for="metadata_773_<?php echo $i; ?>">Illustration capsule</label>
-                            <input type="text" name="metadata_773_<?php echo $i; ?>" id="metadata_773_<?php echo $i; ?>" class="photo-url_<?php echo $i; ?>" value="<?php echo $metadata_773_[$i]; ?>"/>
+                            <label for="metadata_404_<?php echo $i; ?>">Photo <?php echo $i; ?></label>
+                            <input type="text" name="metadata_404_<?php echo $i; ?>" id="metadata_404_<?php echo $i; ?>" class="photo-url_<?php echo $i; ?>" value="<?php echo $metadata_404_[$i]; ?>"/>
                             <input type="button" class="photo-uploader_<?php echo $i; ?>" value="Sélectionner une image">
                         </div>
                         <div class="photo-preview_<?php echo $i; ?>">
-                            <img src="<?php echo get_post_meta($post->ID, 'metadata_773_'.$i.'', true); ?>" style="max-width: 150px;">
+                            <img src="<?php echo get_post_meta($post->ID, 'metadata_404_'.$i.'', true); ?>" style="max-width: 150px;">
                         </div>
 
                         <!-- SCRIPT POUR SÉLECTIONNER MÉDIA DANS LA BIBLIOTHÈQUE -->
@@ -133,54 +151,68 @@ function metabox_page_avousdejouer($post) {
                             });
                         </script>
 
-
-
-                    </div>
-                </div>
-
-            <!-- --------------------- -->
-            <!-- GROUPE TITRE -->
-                <h3>TITRE <?php echo $i ?></h3>
-                <div class=''>
-                    <div class='metagroup_sub_items grid_4fr_simple'>
-                        <!-- TITRE DE L'ACTU LIGNE1 -->
-                        <div class="pinput">
-                            <label for="metadata_774_<?php echo $i ?>">Titre de la capsule</label>
-                            <input type="text" name="metadata_774_<?php echo $i ?>" id="metadata_774_<?php echo $i ?>" placeholder='en MAJUSCULE' value="<?php echo $metadata_774_[$i]; ?>"/>
-                        </div>
-                    </div>
-                </div>
-
-            <!-- --------------------- -->
-            <!-- GROUPE DESCRIPTION COURTE -->
-            <h3>DESCRIPTION <?php echo $i ?> POUR LISTE DES CAPSULES</h3>
-            <div class='metagroup_sub'>
-                <div class='metagroup_sub_items grid_3fr_simple'>
-                        <div class="pinput">
-                            <label for="metadata_775_<?php echo $i ?>">Description courte</label>
-                            <textarea name="metadata_775_<?php echo $i ?>" id="metadata_775_<?php echo $i ?>" cols="50" rows="4" placeholder="276 caractères MAX avec espaces"><?php echo $metadata_775_[$i]; ?></textarea>
-                        </div>     
+                    <?php } ?>
                 </div>
             </div>
+        
+    </section>
 
-            <!-- --------------------- -->
-            <!-- GROUPE LIEN NOMAD PLAY -->
-            <h3>LIEN URL <?php echo $i ?> VERS LA PAGE NOMADPLAY</h3>
-            <div class='metagroup_sub'>
-                <div class='metagroup_sub_items grid_3fr_simple'>
+
+    <!-- --------------------- -->
+    <!-- GROUPE REVUE DE PRESSE -->
+    <section class='metagroup'>
+        <h2>LA REVUE DE PRESSE</h2>
+
+            <div class=''>
+            
+                <div class='metagroup_sub_items grid_revue_presse'>
+                <?php for ($i = 1; $i <= 3; $i++) { ?>
+                    <!-- NOM du JOURNAL -->
                     <div class="pinput">
-                        <label for="metadata_776_<?php echo $i ?>">URL vers capsule Nomadplay</label>
-                        <input type="url" name="metadata_776_<?php echo $i ?>" id="metadata_776" value="<?php echo $metadata_776_[$i] ?>"/>
-                    </div>  
+                        <label for="metadata_405_<?php echo $i; ?>">Nom du journal <?php echo $i; ?></label>
+                        <input type="text" name="metadata_405_<?php echo $i; ?>" id="metadata_405_<?php echo $i; ?>" placeholder="EN MAJUSCULE" value="<?php echo $metadata_405_[$i]; ?>"/>
+                    </div>
+
+                    <!-- URL DU JOURNAL -->
+                    <div class="pinput">
+                        <label for="metadata_407_<?php echo $i; ?>">URL de l'article <?php echo $i; ?></label>
+                        <input type="url" name="metadata_407_<?php echo $i; ?>" id="metadata_407_<?php echo $i; ?>" value="<?php echo $metadata_407_[$i]; ?>"/>
+                    </div>
+
+                    <!-- TEXTE DE LA REVUE -->
+                    <div class="pinput">
+                        <label for="metadata_406_<?php echo $i; ?>">Extrait de l'article <?php echo $i; ?></label>
+                        <textarea name="metadata_406_<?php echo $i; ?>" id="metadata_406_<?php echo $i; ?>" cols="50" rows="4" placeholder="425 caractères MAX avec espaces"><?php echo $metadata_406_[$i]; ?></textarea>
+                    </div>
+                <?php } ?>
                 </div>
+            
             </div>
+        
+    </section>
 
-        </section>
-    <?php endfor; ?>
+    <!-- --------------------- -->
+    <!-- GROUPE TEMOIGNAGE -->
+    <section class='metagroup'>
+        <h2>TÉMOIGNAGE</h2>
+            
+                <div class='metagroup_sub_items grid_2fr'>
+                <?php for ($i = 1; $i <= 3; $i++) { ?>
+                    <!-- NOM du TEMOIN -->
+                    <div class="pinput">
+                        <label for="metadata_408_<?php echo $i; ?>">Nom du témoin <?php echo $i; ?></label>
+                        <input type="text" name="metadata_408_<?php echo $i; ?>" id="metadata_408_<?php echo $i; ?>" placeholder="EN MAJUSCULE" value="<?php echo $metadata_408_[$i]; ?>"/>
+                    </div>
 
-
-
-
+                    <!-- TEXTE Du TEMOIGNAGE-->
+                    <div class="pinput">
+                        <label for="metadata_409_<?php echo $i; ?>">Texte du témoignage <?php echo $i; ?></label>
+                        <textarea name="metadata_409_<?php echo $i; ?>" id="metadata_409_<?php echo $i; ?>" cols="50" rows="4" placeholder="425 caractères MAX avec espaces"><?php echo $metadata_409_[$i]; ?></textarea>
+                    </div>
+                <?php } ?>
+                </div>
+        
+    </section>
 
     <?php
 }
@@ -193,19 +225,29 @@ function metabox_page_avousdejouer($post) {
 
 function jcp_metabox_save_page_academie($post_id) {
 
-    if ('page-templates/page-avousdejouer.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_771', $_POST)) { update_post_meta( $post_id, 'metadata_771', $_POST['metadata_771']);};
-    if ('page-templates/page-avousdejouer.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_772', $_POST)) { update_post_meta( $post_id, 'metadata_772', $_POST['metadata_772']);};
-    for ($i = 1; $i <= 20; $i++) {
-        if ('page-templates/page-avousdejouer.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_773_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_773_'.$i.'', $_POST['metadata_773_'.$i.'']);};
+    if ('page-templates/page-academie.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_401', $_POST)) { update_post_meta( $post_id, 'metadata_401', $_POST['metadata_401']);};
+    if ('page-templates/page-academie.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_402', $_POST)) { update_post_meta( $post_id, 'metadata_402', $_POST['metadata_402']);};
+    
+    for ($i = 1; $i <= 3; $i++) {
+        if ('page-templates/page-academie.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_403_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_403_'.$i.'', $_POST['metadata_403_'.$i.'']);};
     }
-    for ($i = 1; $i <= 20; $i++) {
-        if ('page-templates/page-avousdejouer.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_774_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_774_'.$i.'', $_POST['metadata_774_'.$i.'']);};
+    for ($i = 1; $i <= 10; $i++) {
+        if ('page-templates/page-academie.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_404_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_404_'.$i.'', $_POST['metadata_404_'.$i.'']);};
     }
-    for ($i = 1; $i <= 20; $i++) {
-        if ('page-templates/page-avousdejouer.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_775_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_775_'.$i.'', $_POST['metadata_775_'.$i.'']);};
+    for ($i = 1; $i <= 3; $i++) {
+        if ('page-templates/page-academie.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_405_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_405_'.$i.'', $_POST['metadata_405_'.$i.'']);};
     }
-    for ($i = 1; $i <= 20; $i++) {
-        if ('page-templates/page-avousdejouer.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_776_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_776_'.$i.'', $_POST['metadata_776_'.$i.'']);};
+    for ($i = 1; $i <= 3; $i++) {
+        if ('page-templates/page-academie.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_406_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_406_'.$i.'', $_POST['metadata_406_'.$i.'']);};
+    }
+    for ($i = 1; $i <= 3; $i++) {
+        if ('page-templates/page-academie.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_407_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_407_'.$i.'', $_POST['metadata_407_'.$i.'']);};
+    }
+    for ($i = 1; $i <= 3; $i++) {
+        if ('page-templates/page-academie.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_408_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_408_'.$i.'', $_POST['metadata_408_'.$i.'']);};
+    }
+    for ($i = 1; $i <= 3; $i++) {
+        if ('page-templates/page-academie.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_409_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_409_'.$i.'', $_POST['metadata_409_'.$i.'']);};
     }
 
 }

@@ -44,6 +44,9 @@ function titre_gras($post) {
     if ( is_page(array('soutenez-nous-picardissimo')) ) { 
       echo "SOUTENEZ-NOUS";
     }
+    if ( is_page(array('recrutements')) ) { 
+      echo "RECRUTEMENT";
+    }
     if ( is_page(array('partenaires')) ) { 
       echo "LES PARTENAIRES";
     }
@@ -120,6 +123,9 @@ function titre_leger($post) {
   }
   if ( is_page(array('soutenez-nous-picardissimo')) ) { 
     echo "PICARDISSIMO";
+  }
+  if ( is_page(array('recrutements')) ) { 
+    echo "DE L’ORCHESTRE";
   }
   if ( is_page(array('partenaires')) ) { 
     echo "DE L’ORCHESTRE";

@@ -275,6 +275,7 @@ function metabox_page_accueil($post) {
                 </div>
         
     </section>
+    
     <?php
 }
 

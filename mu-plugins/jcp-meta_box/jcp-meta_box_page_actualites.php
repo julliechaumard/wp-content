@@ -28,7 +28,7 @@ function metabox_page_actualites($post) {
     //Variables pour récupérer les valeurs existantes (s'il y en a)
     *************************************************************************/
 
-    $metadata_907 = get_post_meta( $post->ID, 'metadata_907', true );
+    $metadata_909 = get_post_meta( $post->ID, 'metadata_909', true );
     $metadata_908 = get_post_meta( $post->ID, 'metadata_908', true );
 
     /************************************************************************
@@ -47,8 +47,8 @@ function metabox_page_actualites($post) {
         <div class='metagroup_sub'>
             <div class='metagroup_sub_items grid_3fr_simple'>
                     <div class="pinput">
-                        <label for="metadata_907">Accroche - Mots ligne1</label>
-                        <input type="text" name="metadata_907" id="metadata_907" placeholder='1 à 3 mots en MAJUSCULE' value="<?php echo $metadata_907; ?>"/>
+                        <label for="metadata_909">Accroche - Mots ligne1</label>
+                        <input type="text" name="metadata_909" id="metadata_909" placeholder='1 à 3 mots en MAJUSCULE' value="<?php echo $metadata_909; ?>"/>
                     </div>     
             </div>
             <div class='metagroup_sub_items grid_3fr_simple'>
@@ -72,7 +72,7 @@ function metabox_page_actualites($post) {
 
 function jcp_metabox_save_page_actualites($post_id) {
     
-    if ('page-templates/page-actualites.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_907', $_POST)) { update_post_meta( $post_id, 'metadata_907', $_POST['metadata_907']);};
+    if ('page-templates/page-actualites.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_909', $_POST)) { update_post_meta( $post_id, 'metadata_909', $_POST['metadata_909']);};
     if ('page-templates/page-actualites.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_908', $_POST)) { update_post_meta( $post_id, 'metadata_908', $_POST['metadata_908']);};
 
 }

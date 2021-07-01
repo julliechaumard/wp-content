@@ -42,6 +42,14 @@ Template Post Type: actualite
                     </div>
                 </div>
 
+
+                <!-- ----------------------- -->
+                <!-- REVUE DE PRESSE  -->
+                <!-- ----------------------- -->
+                <?php  get_template_part('template-parts/revuepresse_slider'); ?>
+
+
+
                 <!-- --------------------------------- -->
                 <!-- LES PHOTOS ET VIDEOS -->
                 <!-- --------------------------------- -->
@@ -87,7 +95,9 @@ Template Post Type: actualite
                 </div>
                 
 
+
     </section>
+
 
 </article>
 

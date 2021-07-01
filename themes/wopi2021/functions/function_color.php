@@ -8,7 +8,7 @@ function couleur() {
     if ( is_front_page() ) { 
       echo 'color_accueil';
     }
-    if ( is_page(array('qui-sommes-nous', 'partenaires', 'notre-histoire', 'soutenez-nous-entreprise', 'soutenez-nous-particulier', 'soutenez-nous-picardissimo')) OR is_singular (array( 'orchestre' )) ) { 
+    if ( is_page(array('qui-sommes-nous', 'partenaires', 'notre-histoire', 'soutenez-nous-entreprise', 'soutenez-nous-particulier', 'soutenez-nous-picardissimo','recrutements')) OR is_singular (array( 'orchestre' )) ) { 
       echo 'color_orchestre';
     }
     if ( is_page(array('mediatheque_photos','mediatheque_videos','a_vous_de_jouer','actualites','mur_social')) OR is_singular (array( 'actualite' ))) { 
@@ -26,7 +26,7 @@ function logo_couleur() {
     if ( is_front_page() ) { 
       echo '/dist/assets/images/logos/logo_orchestre_mauve.jpg';
     }
-    if ( is_page(array('qui-sommes-nous', 'partenaires', 'notre-histoire', 'soutenez-nous-entreprise', 'soutenez-nous-particulier', 'soutenez-nous-picardissimo')) OR is_singular (array( 'orchestre' )) ) { 
+    if ( is_page(array('qui-sommes-nous', 'partenaires', 'notre-histoire', 'soutenez-nous-entreprise', 'soutenez-nous-particulier', 'soutenez-nous-picardissimo','recrutements')) OR is_singular (array( 'orchestre' )) ) { 
       echo '/dist/assets/images/logos/logo_orchestre_bleu.jpg';
     }
     if ( is_page(array('mediatheque_photos','mediatheque_videos','a_vous_de_jouer','actualites','mur_social')) OR is_singular (array( 'actualite' ))) { 
@@ -44,7 +44,7 @@ function menu_pipe_couleur() {
   if ( is_front_page() ) { 
     echo 'accueil';
   }
-  if ( is_page(array('qui-sommes-nous', 'partenaires', 'notre-histoire', 'soutenez-nous-entreprise', 'soutenez-nous-particulier', 'soutenez-nous-picardissimo')) OR is_singular (array( 'orchestre' )) ) { 
+  if ( is_page(array('qui-sommes-nous', 'partenaires', 'notre-histoire', 'soutenez-nous-entreprise', 'soutenez-nous-particulier', 'soutenez-nous-picardissimo','recrutements')) OR is_singular (array( 'orchestre' )) ) { 
     echo 'orchestre';
   }
   if ( is_page(array('mediatheque_photos','mediatheque_videos','a_vous_de_jouer','actualites','mur_social')) OR is_singular (array( 'actualite' ))) { 

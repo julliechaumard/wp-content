@@ -7,7 +7,7 @@ function menu_active_saison() {
       }
 }
 function menu_active_orchestre() {
-  if ( is_page(array('qui-sommes-nous', 'partenaires', 'notre-histoire','soutenez-nous-entreprise', 'soutenez-nous-particulier', 'soutenez-nous-picardissimo')) OR is_singular (array( 'orchestre' )) ) { 
+  if ( is_page(array('qui-sommes-nous', 'partenaires', 'notre-histoire','soutenez-nous-entreprise', 'soutenez-nous-particulier', 'soutenez-nous-picardissimo','recrutements')) OR is_singular (array( 'orchestre' )) ) { 
     echo 'menu_active';
   }
 }

@@ -2,6 +2,7 @@
 
 /************************************************************************
 * Déclarer les box Metadata
+* FICHE ACTU
 *************************************************************************/
 
 function jcp_declare_metabox_actualite() {
@@ -37,6 +38,15 @@ function metabox_actualite($post) {
     }
     for ($i = 1; $i <= 10; $i++) {
         $metadata_906_[$i] = get_post_meta( $post->ID, 'metadata_906_'.$i.'', true );
+    }
+    for ($i = 1; $i <= 3; $i++) {
+        $metadata_910_[$i] = get_post_meta( $post->ID, 'metadata_910_'.$i.'', true );
+    }
+    for ($i = 1; $i <= 3; $i++) {
+        $metadata_911_[$i] = get_post_meta( $post->ID, 'metadata_911_'.$i.'', true );
+    }
+    for ($i = 1; $i <= 3; $i++) {
+        $metadata_912_[$i] = get_post_meta( $post->ID, 'metadata_912_'.$i.'', true );
     }
 
 
@@ -229,6 +239,41 @@ function metabox_actualite($post) {
         
     </section>
 
+    <!-- --------------------- -->
+    <!-- GROUPE REVUE DE PRESSE -->
+    <section class='metagroup'>
+        <h2>LA REVUE DE PRESSE</h2>
+
+            <div class=''>
+            
+                <div class='metagroup_sub_items grid_revue_presse'>
+                <?php for ($i = 1; $i <= 3; $i++) { ?>
+                    <!-- NOM du JOURNAL -->
+                    <div class="pinput">
+                        <label for="metadata_910_<?php echo $i; ?>">Nom du journal <?php echo $i; ?></label>
+                        <input type="text" name="metadata_910_<?php echo $i; ?>" id="metadata_910_<?php echo $i; ?>" placeholder="EN MAJUSCULE" value="<?php echo $metadata_910_[$i]; ?>"/>
+                    </div>
+
+                    <!-- URL DU JOURNAL -->
+                    <div class="pinput">
+                        <label for="metadata_912_<?php echo $i; ?>">URL de l'article <?php echo $i; ?></label>
+                        <input type="url" name="metadata_912_<?php echo $i; ?>" id="metadata_912_<?php echo $i; ?>" value="<?php echo $metadata_912_[$i]; ?>"/>
+                    </div>
+
+                    <!-- TEXTE DE LA REVUE -->
+                    <div class="pinput">
+                        <label for="metadata_911_<?php echo $i; ?>">Extrait de l'article <?php echo $i; ?></label>
+                        <textarea name="metadata_911_<?php echo $i; ?>" id="metadata_911_<?php echo $i; ?>" cols="50" rows="4" placeholder="425 caractères MAX avec espaces"><?php echo $metadata_911_[$i]; ?></textarea>
+                    </div>
+                <?php } ?>
+                </div>
+            
+            </div>
+        
+    </section>
+
+
+
     <?php
 }
 
@@ -251,6 +296,15 @@ function jcp_metabox_save_actualite($post_id) {
     }
     for ($i = 1; $i <= 10; $i++) {
         if (get_post_type($post_id) == 'actualite' && array_key_exists('metadata_906_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_906_'.$i.'', $_POST['metadata_906_'.$i.'']);};
+    }
+    for ($i = 1; $i <= 3; $i++) {
+        if (get_post_type($post_id) == 'actualite' && array_key_exists('metadata_910_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_910_'.$i.'', $_POST['metadata_910_'.$i.'']);};
+    }
+    for ($i = 1; $i <= 3; $i++) {
+        if (get_post_type($post_id) == 'actualite' && array_key_exists('metadata_911_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_911_'.$i.'', $_POST['metadata_911_'.$i.'']);};
+    }
+    for ($i = 1; $i <= 3; $i++) {
+        if (get_post_type($post_id) == 'actualite' && array_key_exists('metadata_912_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_912_'.$i.'', $_POST['metadata_912_'.$i.'']);};
     }
 
 

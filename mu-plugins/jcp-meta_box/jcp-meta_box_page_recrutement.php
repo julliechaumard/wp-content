@@ -6,7 +6,7 @@
 
 function jcp_declare_metabox_page_recrutement() {
     global $post;
-    if ( 'page-templates/page-recrutement.php' == get_post_meta( $post->ID, '_wp_page_template', true ) ) {
+    if ( 'page-templates/page-recrutements.php' == get_post_meta( $post->ID, '_wp_page_template', true ) ) {
         add_meta_box(
             'metabox_page_recrutement',
             'Informations page recrutement',
@@ -72,8 +72,8 @@ function metabox_page_recrutement($post) {
 
 function jcp_metabox_save_page_recrutement($post_id) {
 
-    if ('page-templates/page-recrutement.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_660', $_POST)) { update_post_meta( $post_id, 'metadata_660', $_POST['metadata_660']);};
-    if ('page-templates/page-recrutement.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_661', $_POST)) { update_post_meta( $post_id, 'metadata_661', $_POST['metadata_661']);};
+    if ('page-templates/page-recrutements.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_660', $_POST)) { update_post_meta( $post_id, 'metadata_660', $_POST['metadata_660']);};
+    if ('page-templates/page-recrutements.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_661', $_POST)) { update_post_meta( $post_id, 'metadata_661', $_POST['metadata_661']);};
 
 }
 

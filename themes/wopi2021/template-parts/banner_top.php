@@ -204,7 +204,7 @@
         </div>
     <?php endif; ?>
 
-    <!-- HISTOIRE ? -->
+    <!-- HISTOIRE -->
     <?php
     if ( is_page(array('notre-histoire')) ) : ?>
         <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
@@ -213,6 +213,20 @@
                     <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_630', true); ?></span>
                     <br>
                     <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_631', true); ?></span>
+                </p>
+            </div>
+        </div>
+    <?php endif; ?>
+
+    <!-- RECRUTEMENT -->
+    <?php
+    if ( is_page(array('recrutements')) ) : ?>
+        <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
+            <div class=''>
+                <p class='accroche_cell_texte'>
+                    <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_660', true); ?></span>
+                    <br>
+                    <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_661', true); ?></span>
                 </p>
             </div>
         </div>
@@ -297,7 +311,7 @@
         <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
             <div class=''>
                 <p class='accroche_cell_texte'>
-                    <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_907', true); ?></span>
+                    <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_909', true); ?></span>
                     <br>
                     <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_908', true); ?></span>
                 </p>
@@ -368,9 +382,9 @@
         <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
             <div class=''>
                 <p class='accroche_cell_texte'>
-                    <span class='accroche_cell_texte_gras'>ACCOMPAGNER</span>
+                    <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_401', true); ?></span>
                     <br>
-                    <span class='accroche_cell_texte_leger'>LES DÉBUTS ET LA MISE EN SITUATION PROFESSIONNELLE DES TALENTS DE DEMAIN</span>
+                    <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_402', true); ?></span>
                 </p>
             </div>
         </div>
@@ -631,7 +645,7 @@
         </div>
     <?php endif; ?>
 
-    <!-- HISTOIRE ? -->
+    <!-- HISTOIRE -->
     <?php
     if ( is_page(array('notre-histoire')) ) : ?>
         <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
@@ -682,6 +696,20 @@
                     <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_690', true); ?></span>
                     <br>
                     <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_691', true); ?></span>
+                </p>
+            </div>
+        </div>
+    <?php endif; ?>
+
+    <!-- RECRUTEMENT -->
+    <?php
+    if ( is_page(array('recrutements')) ) : ?>
+        <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
+            <div class=''>
+                <p class='accroche_cell_texte'>
+                    <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_660', true); ?></span>
+                    <br>
+                    <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_661', true); ?></span>
                 </p>
             </div>
         </div>
@@ -749,7 +777,7 @@
         <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
             <div class=''>
                 <p class='accroche_cell_texte'>
-                    <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_907', true); ?></span>
+                    <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_909', true); ?></span>
                     <br>
                     <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_908', true); ?></span>
                 </p>
@@ -820,9 +848,9 @@
         <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
             <div class=''>
                 <p class='accroche_cell_texte'>
-                    <span class='accroche_cell_texte_gras'>ACCOMPAGNER</span>
+                    <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_401', true); ?></span>
                     <br>
-                    <span class='accroche_cell_texte_leger'>LES DÉBUTS ET LA MISE EN SITUATION PROFESSIONNELLE DES TALENTS DE DEMAIN</span>
+                    <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_402', true); ?></span>
                 </p>
             </div>
         </div>

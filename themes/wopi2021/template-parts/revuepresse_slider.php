@@ -58,6 +58,19 @@ if ( is_page(array('collaborations')) ) :
     $compteur_revuepresse = 0;
 endif; 
 
+if ( is_singular (array('actualite' )) ) :
+    $revuepresse_texte1 = get_post_meta($post->ID, 'metadata_911_1', true); 
+    $revuepresse_nom1 = get_post_meta($post->ID, 'metadata_910_1', true);
+    $revuepresse_url1 = get_post_meta($post->ID, 'metadata_912_1', true);
+    $revuepresse_texte2 = get_post_meta($post->ID, 'metadata_911_2', true); 
+    $revuepresse_nom2 = get_post_meta($post->ID, 'metadata_910_2', true);
+    $revuepresse_url2 = get_post_meta($post->ID, 'metadata_912_2', true);
+    $revuepresse_texte3 = get_post_meta($post->ID, 'metadata_911_3', true); 
+    $revuepresse_nom3 = get_post_meta($post->ID, 'metadata_910_3', true);
+    $revuepresse_url3 = get_post_meta($post->ID, 'metadata_912_3', true);
+    $compteur_revuepresse = 0;
+endif;
+
 ?>
 
 <?php if (!empty($revuepresse_texte1)) :?>

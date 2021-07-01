@@ -362,6 +362,7 @@ Template Name: page_accueil
 
 <!-- ----------------------- -->
 <!-- COTE SCENE COTE COULISSE  -->
+<!-- + RECRUTEMENT  -->
 <!-- ----------------------- -->
 
 <section class="margin_section_botton">
@@ -428,7 +429,6 @@ Template Name: page_accueil
         </div>
     <?php endif; 
     wp_reset_query(); ?>
-
 
 
 </section>

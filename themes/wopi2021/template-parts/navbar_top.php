@@ -50,7 +50,7 @@
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Notre histoire')) ?>">Notre histoire, nos missions</a></li>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Partenaires')) ?>">Partenaires</a></li>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Soutenez-nous entreprise')) ?>">Soutenez-nous</a></li>
-                    <!-- <li class="sub_menu_item"><a href="#">Recrutements</a></li> -->
+                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Recrutements')) ?>">Recrutements</a></li>
                 </ul>
             </li>
             <li class='menu_item <?php menu_active_medias() ?>'>Médiathèque
@@ -125,7 +125,7 @@
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Notre histoire')) ?>">Notre histoire</a></li>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Partenaires')) ?>">Partenaires</a></li>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Soutenez-nous entreprise')) ?>">Soutenez-nous</a></li>
-                    <!-- <li class="sub_menu_item"><a href="#">Recrutements</a></li> -->
+                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Recrutements')) ?>">Recrutements</a></li>
                 </ul>
             </li>
             <li class='menu_item <?php menu_active_medias() ?>'>Médiathèque
