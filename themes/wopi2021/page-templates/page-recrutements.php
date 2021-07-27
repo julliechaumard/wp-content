@@ -23,7 +23,7 @@ get_template_part('template-parts/header','page');
             <?php 
             $args_recrutement = array(
                 'post_type' => 'recrutement',
-                'posts_per_page' => 1,
+                'posts_per_page' => -1,
             );
             $loop_recrutement = new WP_Query( $args_recrutement );
             if ($loop_recrutement->have_posts()) :
@@ -56,7 +56,7 @@ get_template_part('template-parts/header','page');
                                         <div class="content_wp">
                                             <?php echo get_post_meta($post->ID, 'metadata_663', true); ?>
                                             <?php if (!empty(get_post_meta($post->ID, 'metadata_662', true))): ?>
-                                                <p class="marginb_6"><button class="button_petit button_orchestre"><a download target="_blank" href="<?php echo get_post_meta($post->ID, 'metadata_662', true); ?>">DOSSIER DE CANDIDATURE</a></button></p>
+                                                <p class="marginb_6"><button class="button_petit button_orchestre"><a download target="_blank" href="<?php echo get_post_meta($post->ID, 'metadata_662', true); ?>">ANNONCE</a></button></p>
                                             <?php endif;?>
                                         </div>
 

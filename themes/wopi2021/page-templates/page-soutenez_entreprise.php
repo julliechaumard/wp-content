@@ -81,7 +81,7 @@ Template Name: page_soutenez_entreprise
             <!-- INFORMATION -->
             <div class="content_wp">
                 <?php echo get_post_meta($post->ID, 'metadata_672', true); ?>
-                <p class="marginb_6"><button class="button_petit button_orchestre"><a target="_blank" href="mailto:lullishop@icloud.com?subject=Contact MÉCÉNAT ENTREPRISE depuis le site internet de l'Orchestre">CONTACTEZ-NOUS</a></button></p>
+                <p class="marginb_6"><button class="button_petit button_orchestre"><a target="_blank" href="mailto:communication@orchestredepicardie.fr?subject=Contact MÉCÉNAT ENTREPRISE depuis le site internet de l'Orchestre">CONTACTEZ-NOUS</a></button></p>
             </div>
 
         </div>

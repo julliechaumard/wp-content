@@ -5,7 +5,7 @@
 */
 ?>
 
-<body>
+<body onload="changeDiapo();">
     <div class="body_wrapper">
 
             <header>

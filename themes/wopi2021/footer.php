@@ -83,9 +83,8 @@
       </div>
       <!-- Button MAIL ORCHESTRE -->
       <div class="paddingb_36">
-        <!-- <button class="button_petit button_newsl"><a target="_blank" href="mailto:contact@orchestredepicardie.fr?subject=Contact Informations depuis le site internet de l'Orchestre">SITE INTERNET</a></button></p> -->
-        <!-- Button MAIL TEST -->  
-        <button class="button_grand button_newsl"><a target="_blank" href="mailto:lullishop@icloud.com?subject=Contact Informations depuis le site internet de l'Orchestre">ENVOYER UN MESSAGE</a></button></p>
+        <!-- Button MAIL -->  
+        <button class="button_grand button_newsl"><a target="_blank" href="mailto:communication@orchestredepicardie.fr?subject=Contact Informations depuis le site internet de l'Orchestre">ENVOYER UN MESSAGE</a></button></p>
       </div>
       <!-- LES RESEAUX SOCIAUX -->
       <div>

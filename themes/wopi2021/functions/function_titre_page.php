@@ -1,8 +1,9 @@
 <?php 
 // TITRE GRAS ET LEGER
+// DANS LE BANNER
 // DE LA PAGE
 function titre_gras($post) {
-    if ( is_front_page() ) { 
+    if ( is_front_page() ) {
       echo get_post_meta($post->ID, 'metadata_001', true);
     }
     if ( is_singular (array( 'concert' )) ) { 

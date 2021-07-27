@@ -96,6 +96,10 @@
     min-height: 200px;
 }
 
+.height_min_150 {
+    min-height: 150px;
+}
+
 .max_width_44_mobile {
     @include mobile {
         max-width: 44px;
@@ -157,11 +161,13 @@
 .margint_-4{
     margin-top: -4px;
 }
+
 .margint_15_mobile {
     @include mobile {
        margin-top: 15px;
     }
 }
+
 /* BANNER ACCROCHE FICHE CONCERT */
 .margint_20 {
     margin-top: 20px;
@@ -284,9 +290,21 @@
         margin-bottom: 20px;
     }
 }
+
 .marginb_30 {
     margin-bottom: 30px;
 }
+.marginb_30_890px {
+    @media screen and (min-width:890px) {
+        margin-bottom: 30px;
+    }
+}
+.marginb_30_889px {
+    @media screen and (max-width:889px) {
+        margin-bottom: 50px;
+    }
+}
+
 
 .marginb_35 {
     margin-bottom: 35px;
@@ -355,6 +373,7 @@
     }
 }
 
+
 /* INFORMATIONS FICHE CONCERT DATE / MENTIONS ANNULE*/
 .paddingt_3 {
     padding-top: 3px;
@@ -410,6 +429,9 @@
 .paddingr_30 {
     padding-right: 30px;
 }
+.paddingr_40 {
+    padding-right: 40px;
+}
 .paddingb_1 {
     padding-bottom: 1px;
 }
@@ -455,6 +477,20 @@
 .paddingl_15 {
     padding-left: 15px;
 }
+.paddingl_30 {
+    padding-left: 30px;
+}
+.paddingl_20_mobile {
+    @include mobile {
+        padding-left: 20px;
+    }
+}
+.paddingl_40_nomobile {
+    @include nomobile {
+        padding-left: 40px;
+    }
+}
+
 /* FOOTER CONTACTS */
 .paddingl_100 {
     padding-left: 100px;

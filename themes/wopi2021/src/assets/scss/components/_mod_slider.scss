@@ -5,6 +5,7 @@
 ** SLIDER
 ** TÉMOIGNAGE
 ** REVUE DE PRESSE
+** ACCUEIL
 ****************************************************** */
 
 .slide_hidden {
@@ -19,5 +20,19 @@
     display: none;
 }
 .slide_active_revuepresse {
+    visibility: visible;
+}
+.slide_hidden_diapo {
+    /* visibility: hidden; */
+    display: none;
+}
+.slide_hidden_diapo_mob {
+    /* visibility: hidden; */
+    display: none;
+}
+.slide_active_diapo {
+    visibility: visible;
+}
+.slide_active_diapo_mob {
     visibility: visible;
 }
