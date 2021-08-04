@@ -249,6 +249,10 @@ get_template_part('template-parts/header','page');
 
         </div>
 
+    <!-- ----------------------- -->
+    <!-- TEMOIGNAGE  -->
+    <!-- ----------------------- -->
+    <?php  get_template_part('template-parts/temoignage_slider'); ?>
 
 
     <!-- ----------------------- -->
@@ -487,6 +491,10 @@ get_template_part('template-parts/header','page');
 
         </div>
 
+    <!-- ----------------------- -->
+    <!-- REVUE DE PRESSE  -->
+    <!-- ----------------------- -->
+    <?php  get_template_part('template-parts/revuepresse_slider'); ?>
 
 
 

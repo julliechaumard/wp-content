@@ -31,6 +31,7 @@ function metabox_recrutement($post) {
     $metadata_664 = get_post_meta( $post->ID, 'metadata_664', true );
     $metadata_665 = get_post_meta( $post->ID, 'metadata_665', true );
     $metadata_666 = get_post_meta( $post->ID, 'metadata_666', true );
+    $metadata_667 = get_post_meta( $post->ID, 'metadata_667', true );
 
     /************************************************************************
     // SAISIE DES INFORMATIONS
@@ -117,6 +118,11 @@ function metabox_recrutement($post) {
         <h2>Annonce en PDF</h2>
         <div class='metagroup_sub'>
             <div class='metagroup_sub_items grid_3fr_simple'>
+                <!-- LIBELLÉ DU BOUTON CALL-TO-ACTION -->
+                <div class="pinput">
+                    <label for="metadata_667">Libellé du bouton Call-to-action</label>
+                    <input type="text" name="metadata_667" id="metadata_667" placeholder='En MAJUSCULE' value="<?php echo $metadata_667; ?>"/>
+                </div>    
                 <!-- URL DU PDF -->
                 <div class="pinput">
                     <label for="metadata_662">Fichier PDF</label>
@@ -189,6 +195,7 @@ function jcp_metabox_save_recrutement($post_id) {
     if (get_post_type($post_id) == 'recrutement' && array_key_exists('metadata_664', $_POST)) { update_post_meta( $post_id, 'metadata_664', $_POST['metadata_664']);};
     if (get_post_type($post_id) == 'recrutement' && array_key_exists('metadata_665', $_POST)) { update_post_meta( $post_id, 'metadata_665', $_POST['metadata_665']);};
     if (get_post_type($post_id) == 'recrutement' && array_key_exists('metadata_666', $_POST)) { update_post_meta( $post_id, 'metadata_666', $_POST['metadata_666']);};
+    if (get_post_type($post_id) == 'recrutement' && array_key_exists('metadata_667', $_POST)) { update_post_meta( $post_id, 'metadata_667', $_POST['metadata_667']);};
 
 }
 

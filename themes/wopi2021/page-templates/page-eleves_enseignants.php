@@ -112,6 +112,13 @@ get_template_part('template-parts/header','page');
 
     </section>
 
+
+    <!-- ----------------------- -->
+    <!-- TEMOIGNAGE  -->
+    <!-- ----------------------- -->
+    <?php  get_template_part('template-parts/temoignage_slider'); ?>
+
+
     <!-- ----------------------- -->
     <!-- LA RENTREE EN MUSIQUE  -->
     <!-- ----------------------- -->
@@ -307,6 +314,12 @@ get_template_part('template-parts/header','page');
         </div>
 
     </section>
+
+    <!-- ----------------------- -->
+    <!-- REVUE DE PRESSE  -->
+    <!-- ----------------------- -->
+    <?php  get_template_part('template-parts/revuepresse_slider'); ?>
+
 
     <!-- ----------------------- -->
     <!-- ACCUEIL DES ELEVES AUX REPETITIONS  -->

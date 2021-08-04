@@ -75,7 +75,7 @@ Template Post Type: artiste_invite
 
         <!-- TITRE PROCHAIN CONCERT -->
         <div>
-            <p class="texte_right nopagemarge_mob ubuntu_moyen tx_color_gris_clair">PROCHAIN CONCERTS</p>                        
+            <p class="texte_right nopagemarge_mob ubuntu_moyen tx_color_gris_clair">PROCHAINS CONCERTS</p>                        
         </div>
 
         <!-- LOOP CONCERT accueil_prochain_concert -->

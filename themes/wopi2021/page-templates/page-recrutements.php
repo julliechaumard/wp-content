@@ -56,7 +56,7 @@ get_template_part('template-parts/header','page');
                                         <div class="content_wp">
                                             <?php echo get_post_meta($post->ID, 'metadata_663', true); ?>
                                             <?php if (!empty(get_post_meta($post->ID, 'metadata_662', true))): ?>
-                                                <p class="marginb_6"><button class="button_petit button_orchestre"><a download target="_blank" href="<?php echo get_post_meta($post->ID, 'metadata_662', true); ?>">ANNONCE</a></button></p>
+                                                <p class="margint_20"><button class="button_petit button_orchestre"><a download target="_blank" href="<?php echo get_post_meta($post->ID, 'metadata_662', true); ?>"><?php echo get_post_meta($post->ID, 'metadata_667', true); ?></a></button></p>
                                             <?php endif;?>
                                         </div>
 

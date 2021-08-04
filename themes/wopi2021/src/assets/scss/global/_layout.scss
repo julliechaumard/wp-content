@@ -324,6 +324,11 @@
 .marginb_60 {
     margin-bottom: 60px;
 }
+.marginb_60_mobile {
+    @include mobile {
+        margin-bottom: 60px;
+    }
+}
 .marginb_80 {
     margin-bottom: 80px;
 }

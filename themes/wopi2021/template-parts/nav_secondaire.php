@@ -47,7 +47,7 @@ if ( is_page(array('soutenez-nous-entreprise', 'soutenez-nous-particulier', 'sou
 
 <?php 
 
-if ( is_page(array('mediatheque_photos','mediatheque_videos','a_vous_de_jouer')) ) :?>
+if ( is_page(array('mediatheque_photos','mediatheque_videos','mediatheque_concertsenligne','a_vous_de_jouer')) ) :?>
     
     <nav class="grid_3col35_32_b grid_row_gap16 margint_70 marginb_60">
 
@@ -56,9 +56,9 @@ if ( is_page(array('mediatheque_photos','mediatheque_videos','a_vous_de_jouer'))
         
         <!-- MENU ITEM 1 -->
         <!-- Carré de couleur -->
-        <!-- <div class='nav_second_carre bg_color_media_ligne grid_area_1_2_max500px'></div> -->
+        <div class='nav_second_carre bg_color_media_ligne grid_area_1_2_max500px'></div>
         <!-- Label + Flèche -->
-        <!-- <div class="ubuntu_bold tx_color_noir_fonce alignself_center marginl_10 grid_area_2_2_max500px"><a class='fontsize_16' href="">CONCERTS EN LIGNE</a></div> -->
+        <div class="ubuntu_bold tx_color_noir_fonce alignself_center marginl_10 grid_area_2_2_max500px"><a class='fontsize_16' href="<?php echo get_permalink(get_page_by_title('Mediatheque_concertsenligne')) ?>">CONCERTS EN LIGNE</a></div>
 
         <!-- MENU ITEM 2 -->
         <!-- Carré de couleur -->

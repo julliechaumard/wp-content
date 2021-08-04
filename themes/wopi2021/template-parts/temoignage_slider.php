@@ -18,6 +18,9 @@ endif;
 if ( is_singular (array( 'artiste_invite')) ) :
     $temoignage_texte1 = get_post_meta($post->ID, 'metadata_129', true); 
 endif;
+if ( is_singular (array( 'orchestre')) ) :
+    $temoignage_texte1 = get_post_meta($post->ID, 'metadata_610', true); 
+endif;
 if ( is_page(array('collaborations')) ) :
     $temoignage_texte1 = get_post_meta($post->ID, 'metadata_166_1', true); 
     $temoignage_nom1 = get_post_meta($post->ID, 'metadata_165_1', true);
@@ -36,14 +39,37 @@ if ( is_page(array('academie')) ) :
     $temoignage_nom3 = get_post_meta($post->ID, 'metadata_408_3', true);
     $compteur_temoignage = 0;
 endif;
+if ( is_page(array('eleves_enseignants')) ) :
+    $temoignage_texte1 = get_post_meta($post->ID, 'metadata_487_1', true); 
+    $temoignage_nom1 = get_post_meta($post->ID, 'metadata_486_1', true);
+    $temoignage_texte2 = get_post_meta($post->ID, 'metadata_487_2', true); 
+    $temoignage_nom2 = get_post_meta($post->ID, 'metadata_486_2', true);
+    $temoignage_texte3 = get_post_meta($post->ID, 'metadata_487_3', true); 
+    $temoignage_nom3 = get_post_meta($post->ID, 'metadata_486_3', true);
+    $compteur_temoignage = 0;
+endif;
+if ( is_page(array('actions_citoyennes')) ) :
+    $temoignage_texte1 = get_post_meta($post->ID, 'metadata_443_1', true); 
+    $temoignage_nom1 = get_post_meta($post->ID, 'metadata_442_1', true);
+    $temoignage_texte2 = get_post_meta($post->ID, 'metadata_443_2', true); 
+    $temoignage_nom2 = get_post_meta($post->ID, 'metadata_442_2', true);
+    $temoignage_texte3 = get_post_meta($post->ID, 'metadata_443_3', true); 
+    $temoignage_nom3 = get_post_meta($post->ID, 'metadata_442_3', true);
+    $compteur_temoignage = 0;
+endif;
+
 ?>
 
 <!-- --------------------------------- -->
+<!-- 3 SLIDES MAX -->
 <!-- SLIDER POUR PAGE D'ACCUEIL -->
 <!-- SLIDER POUR PAGE COLLABORATION -->
+<!-- SLIDER POUR PAGE ACADÉMIE -->
+<!-- SLIDER POUR PAGE ÉLÈVES ET ENSEIGNANTS -->
+<!-- SLIDER POUR PAGE ACTIONS CITOYENNES -->
 <!-- --------------------------------- -->
 <?php 
-if ( is_front_page() OR is_page(array('collaborations')) ) :
+if ( is_front_page() OR is_page(array('collaborations','academie','eleves_enseignants','actions_citoyennes')) ) :
     if (!empty($temoignage_texte1)) :?>
         <section class='plainbox_temoignage grid justify_center bg_<?php couleur() ?> margint_70_desk margint_15_mobile margin_section_botton'>
 
@@ -118,10 +144,12 @@ endif;
 ?>
 
 <!-- --------------------------------- -->
-<!-- SLIDER POUR FICHE ARTISTE-->
+<!-- SLIDE UNIQUE -->
+<!-- SLIDER POUR FICHE ARTISTE INVITÉ -->
+<!-- SLIDER POUR FICHE ARTISTE DE L'ORCHESTRE -->
 <!-- --------------------------------- -->
 <?php 
-if ( is_singular (array( 'artiste_invite')) ) :
+if ( is_singular (array( 'artiste_invite','orchestre')) ) :
     if (!empty($temoignage_texte1)) :?>
         <section class='plainbox_temoignage grid justify_center bg_<?php couleur() ?> margint_70_desk margint_15_mobile margin_section_botton'>
 

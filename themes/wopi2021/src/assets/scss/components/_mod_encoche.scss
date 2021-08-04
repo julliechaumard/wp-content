@@ -5,7 +5,6 @@
 ** LES ENCOCHES (PETITS CARRES)
 ****************************************************** */
 
-/* PROCHAIN CONCERT */
 .encoche_one_card {
     .encoche_blanc {
             width: 32px;
@@ -27,6 +26,11 @@
     width: 22px;
     height: 22px;
     background-color: $color_saison;
+}
+.encoche_violet {
+    width: 22px;
+    height: 22px;
+    background-color: $color_medias;
 }
 
 /* DATE CADRE */

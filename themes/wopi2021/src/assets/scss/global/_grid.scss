@@ -433,6 +433,14 @@
     }
 }
 
+.grid_media_ligne {
+    display: grid;
+    grid-template-columns: 25% 45%;
+    @include mobile {
+        display: block;
+    }
+}
+
 
 /* GRID FOOTER RESEAUX SOCIAUX */
 .grid_10col {

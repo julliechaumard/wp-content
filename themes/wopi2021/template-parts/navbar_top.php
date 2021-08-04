@@ -55,7 +55,7 @@
             </li>
             <li class='menu_item <?php menu_active_medias() ?>'>Médiathèque
                 <ul class='sub_menu'>
-                    <!-- <li class="sub_menu_item"><a href="#">Concerts en ligne</a></li> -->
+                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Mediatheque_concertsenligne')) ?>">Concerts en ligne</a></li>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Mediatheque_videos')) ?>">Vidéos</a></li>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('A vous de jouer')) ?>">A vous de jouer</a></li>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Mediatheque_photos')) ?>">Photos</a></li>
@@ -130,7 +130,7 @@
             </li>
             <li class='menu_item <?php menu_active_medias() ?>'>Médiathèque
                 <ul class='sub_menu'>
-                    <!-- <li class="sub_menu_item"><a href="#">Concerts en ligne</a></li> -->
+                    <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Mediatheque_concertsenligne')) ?>">Concerts en ligne</a></li>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Mediatheque_videos')) ?>">Vidéos</a></li>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('A vous de jouer')) ?>">A vous de jouer</a></li>
                     <li class="sub_menu_item"><a href="<?php echo get_permalink(get_page_by_title('Mediatheque_photos')) ?>">Photos</a></li>

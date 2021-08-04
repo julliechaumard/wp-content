@@ -102,7 +102,7 @@
             <img class='img_ajust' src="<?php bloginfo('template_directory')?>/dist/assets/images/icones/insta_icone.png" alt="icone instagram">
           </div>
           <div>
-            <a target="_blank" href="https://www.instagram.com/musicodpic/">Instajeunes</a>
+            <a target="_blank" href="https://www.instagram.com/musicodpic/">@musicodpic</a>
           </div>
           <div>
            <img class='img_ajust' src="<?php bloginfo('template_directory')?>/dist/assets/images/icones/facebook_icone.png" alt="icone facebook">

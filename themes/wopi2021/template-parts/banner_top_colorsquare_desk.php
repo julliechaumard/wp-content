@@ -274,15 +274,29 @@
         </div>
     <?php endif; ?>
 
+    <!-- MEDIATHEQUE CONCERTS EN LIGNE-->
+    <?php
+    if ( is_page(array('mediatheque_concertsenligne')) ) : ?>
+        <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
+            <div class=''>
+                <p class='accroche_cell_texte'>
+                    <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_720', true); ?></span>
+                    <br>
+                    <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_721', true); ?></span>
+                </p>
+            </div>
+        </div>
+    <?php endif; ?>
+
     <!-- A VOUS DE JOUER -->
     <?php
     if ( is_page(array('a_vous_de_jouer')) ) : ?>
         <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
             <div class=''>
                 <p class='accroche_cell_texte'>
-                    <span class='accroche_cell_texte_gras'>AVEC NOMADPLAY</span>
+                    <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_771', true); ?></span>
                     <br>
-                    <span class='accroche_cell_texte_leger'>JOUER EN LIGNE AVEC LES MUSICIENS DE L'ORCHESTRE.</span>
+                    <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_772', true); ?></span>
                 </p>
             </div>
         </div>
@@ -323,9 +337,9 @@
         <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
             <div class=''>
                 <p class='accroche_cell_texte'>
-                    <span class='accroche_cell_texte_gras'>INTERAGISSEZ AVEC</span>
+                    <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_913', true); ?></span>
                     <br>
-                    <span class='accroche_cell_texte_leger'>NOUS SUR LES RÉSEAUX SOCIAUX</span>
+                    <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_914', true); ?></span>
                 </p>
             </div>
         </div>
@@ -351,9 +365,9 @@
         <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
             <div class=''>
                 <p class='accroche_cell_texte'>
-                    <span class='accroche_cell_texte_gras'>UN OUTIL PÉDAGOGIQUE</span>
+                    <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_488', true); ?></span>
                     <br>
-                    <span class='accroche_cell_texte_leger'>CLÉ EN MAIN À DESTINATION DES ÉLÈVES ET ENSEIGNANTS</span>
+                    <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_489', true); ?></span>
                 </p>
             </div>
         </div>
@@ -379,9 +393,9 @@
         <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
             <div class=''>
                 <p class='accroche_cell_texte'>
-                    <span class='accroche_cell_texte_gras'>APPORTER LA MUSIQUE</span>
+                    <span class='accroche_cell_texte_gras'><?php echo get_post_meta($post->ID, 'metadata_440', true); ?></span>
                     <br>
-                    <span class='accroche_cell_texte_leger'>VIVANTE ET SUSCITER L'ÉMOTION AUPRÈS DE TOUS, PARTOUT</span>
+                    <span class='accroche_cell_texte_leger'><?php echo get_post_meta($post->ID, 'metadata_441', true); ?></span>
                 </p>
             </div>
         </div>

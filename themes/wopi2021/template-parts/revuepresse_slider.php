@@ -45,6 +45,19 @@ if ( is_singular (array('artiste_invite' )) ) :
     $compteur_revuepresse = 0;
 endif;
 
+if ( is_singular (array('orchestre' )) ) :
+    $revuepresse_texte1 = get_post_meta($post->ID, 'metadata_608_1', true); 
+    $revuepresse_nom1 = get_post_meta($post->ID, 'metadata_607_1', true);
+    $revuepresse_url1 = get_post_meta($post->ID, 'metadata_609_1', true);
+    $revuepresse_texte2 = get_post_meta($post->ID, 'metadata_608_2', true); 
+    $revuepresse_nom2 = get_post_meta($post->ID, 'metadata_607_2', true);
+    $revuepresse_url2 = get_post_meta($post->ID, 'metadata_609_2', true);
+    $revuepresse_texte3 = get_post_meta($post->ID, 'metadata_608_3', true); 
+    $revuepresse_nom3 = get_post_meta($post->ID, 'metadata_607_3', true);
+    $revuepresse_url3 = get_post_meta($post->ID, 'metadata_609_3', true);
+    $compteur_revuepresse = 0;
+endif;
+
 if ( is_page(array('collaborations')) ) :
     $revuepresse_texte1 = get_post_meta($post->ID, 'metadata_163_1', true); 
     $revuepresse_nom1 = get_post_meta($post->ID, 'metadata_162_1', true);
@@ -68,6 +81,45 @@ if ( is_singular (array('actualite' )) ) :
     $revuepresse_texte3 = get_post_meta($post->ID, 'metadata_911_3', true); 
     $revuepresse_nom3 = get_post_meta($post->ID, 'metadata_910_3', true);
     $revuepresse_url3 = get_post_meta($post->ID, 'metadata_912_3', true);
+    $compteur_revuepresse = 0;
+endif;
+
+if ( is_page(array('academie' )) ) :
+    $revuepresse_texte1 = get_post_meta($post->ID, 'metadata_406_1', true); 
+    $revuepresse_nom1 = get_post_meta($post->ID, 'metadata_405_1', true);
+    $revuepresse_url1 = get_post_meta($post->ID, 'metadata_407_1', true);
+    $revuepresse_texte2 = get_post_meta($post->ID, 'metadata_406_2', true); 
+    $revuepresse_nom2 = get_post_meta($post->ID, 'metadata_405_2', true);
+    $revuepresse_url2 = get_post_meta($post->ID, 'metadata_407_2', true);
+    $revuepresse_texte3 = get_post_meta($post->ID, 'metadata_406_3', true); 
+    $revuepresse_nom3 = get_post_meta($post->ID, 'metadata_405_3', true);
+    $revuepresse_url3 = get_post_meta($post->ID, 'metadata_407_3', true);
+    $compteur_revuepresse = 0;
+endif;
+
+if ( is_page(array('eleves_enseignants' )) ) :
+    $revuepresse_texte1 = get_post_meta($post->ID, 'metadata_484_1', true); 
+    $revuepresse_nom1 = get_post_meta($post->ID, 'metadata_483_1', true);
+    $revuepresse_url1 = get_post_meta($post->ID, 'metadata_485_1', true);
+    $revuepresse_texte2 = get_post_meta($post->ID, 'metadata_484_2', true); 
+    $revuepresse_nom2 = get_post_meta($post->ID, 'metadata_483_2', true);
+    $revuepresse_url2 = get_post_meta($post->ID, 'metadata_485_2', true);
+    $revuepresse_texte3 = get_post_meta($post->ID, 'metadata_484_3', true); 
+    $revuepresse_nom3 = get_post_meta($post->ID, 'metadata_483_3', true);
+    $revuepresse_url3 = get_post_meta($post->ID, 'metadata_485_3', true);
+    $compteur_revuepresse = 0;
+endif;
+
+if ( is_page(array('actions_citoyennes' )) ) :
+    $revuepresse_texte1 = get_post_meta($post->ID, 'metadata_445_1', true); 
+    $revuepresse_nom1 = get_post_meta($post->ID, 'metadata_444_1', true);
+    $revuepresse_url1 = get_post_meta($post->ID, 'metadata_446_1', true);
+    $revuepresse_texte2 = get_post_meta($post->ID, 'metadata_445_2', true); 
+    $revuepresse_nom2 = get_post_meta($post->ID, 'metadata_444_2', true);
+    $revuepresse_url2 = get_post_meta($post->ID, 'metadata_446_2', true);
+    $revuepresse_texte3 = get_post_meta($post->ID, 'metadata_445_3', true); 
+    $revuepresse_nom3 = get_post_meta($post->ID, 'metadata_444_3', true);
+    $revuepresse_url3 = get_post_meta($post->ID, 'metadata_446_3', true);
     $compteur_revuepresse = 0;
 endif;
 
