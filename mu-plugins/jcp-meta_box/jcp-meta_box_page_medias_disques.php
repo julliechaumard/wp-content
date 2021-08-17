@@ -48,6 +48,9 @@ function metabox_page_medias_disques($post) {
     for ($i = 1; $i <= 15; $i++) {
         $metadata_787_[$i] = get_post_meta( $post->ID, 'metadata_787_'.$i.'', true );
     }
+    for ($i = 1; $i <= 15; $i++) {
+        $metadata_788_[$i] = get_post_meta( $post->ID, 'metadata_788_'.$i.'', true );
+    }
 
 
 
@@ -169,12 +172,6 @@ function metabox_page_medias_disques($post) {
                                 </script>
 
 
-
-
-
-
-
-
                                 <!-- INFORMATIONS DIVERSES -->
                                 <div>
                                     <div class="pinput">
@@ -185,53 +182,55 @@ function metabox_page_medias_disques($post) {
 
                                 <!-- POCHETTE -->
                                 <div>
-  
-                                    
-                                <div class="pinput">
-                                    <label for="metadata_787_<?php echo $i; ?>">IMAGE POCHETTE (disque <?php echo $i; ?>)</label>
-                                    <input type="text" name="metadata_787_<?php echo $i; ?>" id="metadata_787_<?php echo $i; ?>" class="pochette-url_<?php echo $i; ?>" value="<?php echo $metadata_787_[$i]; ?>"/>
-                                    <input type="button" class="pochette-uploader_<?php echo $i; ?>" value="Sélectionner une image">
-                                </div>
-                                <div class="pochette-preview_<?php echo $i; ?>">
-                                    <img src="<?php echo get_post_meta($post->ID, 'metadata_787_'.$i.'', true); ?>" style="max-width: 150px;">
-                                </div>
+                                    <div class="pinput">
+                                        <label for="metadata_787_<?php echo $i; ?>">IMAGE POCHETTE (disque <?php echo $i; ?>)</label>
+                                        <input type="text" name="metadata_787_<?php echo $i; ?>" id="metadata_787_<?php echo $i; ?>" class="pochette-url_<?php echo $i; ?>" value="<?php echo $metadata_787_[$i]; ?>"/>
+                                        <input type="button" class="pochette-uploader_<?php echo $i; ?>" value="Sélectionner une image">
+                                    </div>
+                                    <div class="pochette-preview_<?php echo $i; ?>">
+                                        <img src="<?php echo get_post_meta($post->ID, 'metadata_787_'.$i.'', true); ?>" style="max-width: 150px;">
+                                    </div>
 
-                                <!-- SCRIPT POUR SÉLECTIONNER MÉDIA DANS LA BIBLIOTHÈQUE -->
-                                <script>
-                                    jQuery(document).ready(function ($) {
-                                        // Instantiates the variable that holds the media library frame.
-                                        var meta_image_frame;
-                                        // Runs when the image button is clicked.
-                                        $('.pochette-uploader_<?php echo $i; ?>').click(function (e) {
-                                            // Get preview pane
-                                            var meta_image_preview = $(this).parent().parent().children('.pochette-preview_<?php echo $i; ?>');
-                                            // Prevents the default action from occuring.
-                                            e.preventDefault();
-                                            var meta_image = $(this).parent().children('.pochette-url_<?php echo $i; ?>');
-                                            // If the frame already exists, re-open it.
-                                            if (meta_image_frame) {meta_image_frame.open(); return;}
-                                            // Sets up the media library frame
-                                            meta_image_frame = wp.media.frames.meta_image_frame = wp.media({
-                                                title: meta_image.title,
-                                                button: {text: meta_image.button}
+                                    <!-- SCRIPT POUR SÉLECTIONNER MÉDIA DANS LA BIBLIOTHÈQUE -->
+                                    <script>
+                                        jQuery(document).ready(function ($) {
+                                            // Instantiates the variable that holds the media library frame.
+                                            var meta_image_frame;
+                                            // Runs when the image button is clicked.
+                                            $('.pochette-uploader_<?php echo $i; ?>').click(function (e) {
+                                                // Get preview pane
+                                                var meta_image_preview = $(this).parent().parent().children('.pochette-preview_<?php echo $i; ?>');
+                                                // Prevents the default action from occuring.
+                                                e.preventDefault();
+                                                var meta_image = $(this).parent().children('.pochette-url_<?php echo $i; ?>');
+                                                // If the frame already exists, re-open it.
+                                                if (meta_image_frame) {meta_image_frame.open(); return;}
+                                                // Sets up the media library frame
+                                                meta_image_frame = wp.media.frames.meta_image_frame = wp.media({
+                                                    title: meta_image.title,
+                                                    button: {text: meta_image.button}
+                                                });
+                                                // Runs when an image is selected.
+                                                meta_image_frame.on('select', function () {
+                                                    // Grabs the attachment selection and creates a JSON representation of the model.
+                                                    var media_attachment = meta_image_frame.state().get('selection').first().toJSON();
+                                                    // Sends the attachment URL to our custom image input field.
+                                                    meta_image.val(media_attachment.url);
+                                                    meta_image_preview.children('img').attr('src', media_attachment.url);
+                                                });
+                                                // Opens the media library frame.
+                                                meta_image_frame.open();
                                             });
-                                            // Runs when an image is selected.
-                                            meta_image_frame.on('select', function () {
-                                                // Grabs the attachment selection and creates a JSON representation of the model.
-                                                var media_attachment = meta_image_frame.state().get('selection').first().toJSON();
-                                                // Sends the attachment URL to our custom image input field.
-                                                meta_image.val(media_attachment.url);
-                                                meta_image_preview.children('img').attr('src', media_attachment.url);
-                                            });
-                                            // Opens the media library frame.
-                                            meta_image_frame.open();
                                         });
-                                    });
-                                </script>
-
-
-
+                                    </script>
                                 </div>
+
+                                <!-- LIEN VERS ACHAT DISQUE -->
+                                <div class="pinput">
+                                    <label for="metadata_788_<?php echo $i; ?>">LIEN POUR ACHAT (disque <?php echo $i; ?>)</label>
+                                    <input type="text" name="metadata_788_<?php echo $i; ?>" id="metadata_788_<?php echo $i; ?>" placeholder='URL' value="<?php echo $metadata_788_[$i]; ?>"/>
+                                </div>
+
 
 
 
@@ -278,6 +277,9 @@ function jcp_metabox_save_page_medias_disques($post_id) {
     }
     for ($i = 1; $i <= 15; $i++) {
         if ('page-templates/page-mediatheque_disques.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_787_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_787_'.$i.'', $_POST['metadata_787_'.$i.'']);};
+    }
+    for ($i = 1; $i <= 15; $i++) {
+        if ('page-templates/page-mediatheque_disques.php' == get_post_meta( $post_id, '_wp_page_template', true ) && array_key_exists('metadata_788_'.$i.'', $_POST)) { update_post_meta( $post_id, 'metadata_788_'.$i.'', $_POST['metadata_788_'.$i.'']);};
     }
 
 

@@ -253,6 +253,9 @@
 .justify_center {
     justify-items: center;
 }
+.justifyc_center {
+    justify-content: center;
+}
 .justify_start_max400px {
     @media screen and (max-width:400px){
         justify-self: start !important;

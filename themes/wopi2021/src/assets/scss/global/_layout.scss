@@ -219,6 +219,10 @@
     }
 }
 
+.margint_125 {
+    margin-top: 125px;
+}
+
 .marginr_10 {
     margin-right: 10px;
 }
@@ -333,6 +337,7 @@
     margin-bottom: 80px;
 }
 
+
 .marginl_0_mob {
     @include mobilexs {
         margin-left: 0px !important;
@@ -405,12 +410,11 @@
         padding-top: 15px;
     }
 }
-/* FOOTER CONTACTS */
+
 .paddingt_20 {
     padding-top: 20px;
 }
 
-/* AGENDA TITRE */
 .paddingt_30 {
     padding-top: 30px;
 }
@@ -420,8 +424,9 @@
     }
 }
 
-/* LISTE ARTISTE FICHE CONCERT */
-/* LISTE OEUVRE FICHE CONCERT */
+.paddingr_5 {
+    padding-right: 5px;
+}
 .paddingr_8 {
     padding-right: 8px;
 }
@@ -436,6 +441,9 @@
 }
 .paddingr_40 {
     padding-right: 40px;
+}
+.paddingr_50 {
+    padding-right: 50px;
 }
 .paddingb_1 {
     padding-bottom: 1px;

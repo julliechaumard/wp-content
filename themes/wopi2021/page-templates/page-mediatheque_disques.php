@@ -21,13 +21,13 @@ Template Name: page_medias_disques
         if(!empty(get_post_meta($post->ID, 'metadata_782_'.$i, true))) :?>
 
 
-            <section class="margint_90 margin_section_botton">
-                <div class="grid_disques">
+            <section class="margint_125">
+                <div class="grid_disques justifyc_center">
 
                     <!-- POCHETTE DISQUE -->
                     <div class="concert_card grid grid_area_21_desk grid_area_12_mob">
                         <div class="">
-                            <img class='img_ajust_liste grid_area_11' src="<?php echo get_post_meta($post->ID, 'metadata_787_'.$i.'', true); ?>" alt="Illustration du concert">
+                            <img class='img_ajust_liste grid_area_11' src="<?php echo get_post_meta($post->ID, 'metadata_787_'.$i.'', true); ?>" alt="Pochette">
                         </div>
                     </div>
                         
@@ -36,7 +36,7 @@ Template Name: page_medias_disques
                     <!-- INFORMATION DISQUE -->
 
 
-                    <div class="grid paddingt_30 paddingr_30 marginb_20_mobile">
+                    <div class="grid paddingt_30 paddingr_50 marginb_20_mobile">
                         <div class="content_wp">
                             <div class="paddingb_20">
                                 <!-- TITRE -->
@@ -56,18 +56,26 @@ Template Name: page_medias_disques
                                     <!-- INFORMATIONS DIVERSES -->
                                     <span class='ubuntu_fin'><?php echo get_post_meta($post->ID, 'metadata_785_'.$i.'', true); ?></span>
                                 </p>
-                            
                             </div>
+
+                            <!-- ACHETER -->
+                            <?php if(!empty(get_post_meta($post->ID, 'metadata_788_'.$i, true))) : ?>
+                                <div>
+                                    <span class="icone paddingr_5"><img class='img_ajust' src="<?php bloginfo('template_directory')?>/dist/assets/images/icones/icone_gift.png" alt="icone acheter"></span><span><a class="ubuntu_fin tx_color_medias" target="_blank" href="<?php echo get_post_meta($post->ID, 'metadata_788_'.$i.'', true); ?>">Acheter</a></span>
+                                </div>
+                            <?php endif;?>
+                            
 
                         </div>
 
                         <!-- EXTRAIT AUDIO -->
-                        <div class="justify_end">
-                            <p>Écouter un extrait</p>
-                            <audio controls>
-                                <source src="<?php echo get_post_meta($post->ID, 'metadata_786_'.$i.'', true); ?>" type="audio/mpeg">
-                            </audio>
-                        </div>
+                        <?php if(!empty(get_post_meta($post->ID, 'metadata_786_'.$i, true))) : ?>
+                            <div class="justify_end">
+                                <audio controls controlsList="nodownload">
+                                    <source src="<?php echo get_post_meta($post->ID, 'metadata_786_'.$i.'', true); ?>" type="audio/mpeg">
+                                </audio>
+                            </div>
+                        <?php endif;?>
 
                     </div>
 
