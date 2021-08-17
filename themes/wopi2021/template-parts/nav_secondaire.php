@@ -47,7 +47,7 @@ if ( is_page(array('soutenez-nous-entreprise', 'soutenez-nous-particulier', 'sou
 
 <?php 
 
-if ( is_page(array('mediatheque_photos','mediatheque_videos','mediatheque_concertsenligne','a_vous_de_jouer')) ) :?>
+if ( is_page(array('mediatheque_photos','mediatheque_videos','Mediatheque_disques','mediatheque_concertsenligne','a_vous_de_jouer')) ) :?>
     
     <nav class="grid_3col35_32_b grid_row_gap16 margint_70 marginb_60">
 
@@ -84,11 +84,11 @@ if ( is_page(array('mediatheque_photos','mediatheque_videos','mediatheque_concer
         <!-- Label + Flèche -->
         <div class="ubuntu_bold tx_color_noir_fonce alignself_center marginl_10"><a class='fontsize_16' href="<?php echo get_permalink(get_page_by_title('Mediatheque_photos')) ?>">PHOTOS</a></div>
 
-            <!-- MENU ITEM 6 -->
+        <!-- MENU ITEM 6 -->
         <!-- Carré de couleur -->
-        <!-- <div class='nav_second_carre bg_color_media_disco grid_area_2 grid_area_1_6_max500px'></div> -->
+        <div class='nav_second_carre bg_color_media_disco grid_area_2 grid_area_1_6_max500px'></div>
         <!-- Label + Flèche -->
-        <!-- <div class="ubuntu_bold tx_color_noir_fonce alignself_center marginl_10"><a class='fontsize_16' href="">DISCOGRAPHIE</a></div> -->
+        <div class="ubuntu_bold tx_color_noir_fonce alignself_center marginl_10"><a class='fontsize_16' href="<?php echo get_permalink(get_page_by_title('Mediatheque_disques')) ?>">DISCOGRAPHIE</a></div>
 
     </nav>
 

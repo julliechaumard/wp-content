@@ -60,6 +60,9 @@ function titre_gras($post) {
     if ( is_page(array('mediatheque_videos')) ) { 
       echo "MÉDIATHÈQUE";
     }
+    if ( is_page(array('Mediatheque_disques')) ) { 
+      echo "MÉDIATHÈQUE";
+    }
     if ( is_page(array('mediatheque_concertsenligne')) ) { 
       echo "CONCERTS";
     }
@@ -142,6 +145,9 @@ function titre_leger($post) {
   }
   if ( is_page(array('mediatheque_videos')) ) { 
     echo "VIDÉOS";
+  }
+  if ( is_page(array('Mediatheque_disques')) ) { 
+    echo "DISQUES";
   }
   if ( is_page(array('mediatheque_concertsenligne')) ) { 
     echo "EN LIGNE";

@@ -642,3 +642,12 @@
         grid-template-rows: auto 45px 3fr 45px;
     }
 }
+
+/* GRID DISQUE */
+.grid_disques {
+    display: grid;
+    grid-template-columns: 46% 40%;
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
+}

@@ -4,8 +4,12 @@
 <!-- ---------------- -->
 
 <!-- ---------------- -->
-<!-- MODE DESKTOP -->
+<!-- MODE MOBILE -->
 <!-- ---------------- -->
+
+<!-- POUR PAGE ACCUEIL => UN CARROUSSEL -->
+<!-- POUR LES AUTRES PAGES => UNE COMMANDE UNIQUE POUR TOUTES LES PAGES -->
+
 
 <?php
 // PAGE D'ACCUEIL

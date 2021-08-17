@@ -92,7 +92,7 @@ Template Name: page_medias_concertsenligne
                     </div>
 
                     <div class="marginb_60_mobile">
-                        <div class="fb-post" data-width="250" data-href="<?php echo get_post_meta($post->ID, 'metadata_723_'.$j.'', true) ?>"></div>
+                        <div class="fb-post" data-width="" data-href="<?php echo get_post_meta($post->ID, 'metadata_723_'.$j.'', true) ?>"></div>
                     </div>
                 <?php }; ?>
             <?php }; ?>

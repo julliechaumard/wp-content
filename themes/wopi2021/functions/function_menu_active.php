@@ -12,7 +12,7 @@ function menu_active_orchestre() {
   }
 }
 function menu_active_medias() {
-  if ( is_page(array('mediatheque_photos','mediatheque_videos','mediatheque_concertsenligne','a_vous_de_jouer')) ) { 
+  if ( is_page(array('mediatheque_photos','mediatheque_videos','Mediatheque_disques','mediatheque_concertsenligne','a_vous_de_jouer')) ) { 
     echo 'menu_active';
   }
 }
