@@ -36,6 +36,9 @@ function titre_gras($post) {
     if ( is_page(array('notre-histoire')) ) { 
       echo "NOTRE HISTOIRE";
     }
+    if ( is_page(array('mentions-legales')) ) { 
+      echo "LES MENTIONS";
+    }
     if ( is_page(array('soutenez-nous-entreprise')) ) { 
       echo "SOUTENEZ-NOUS";
     }
@@ -121,6 +124,9 @@ function titre_leger($post) {
   }
   if ( is_page(array('notre-histoire')) ) { 
     echo "NOS MISSIONS";
+  }
+  if ( is_page(array('mentions-legales')) ) { 
+    echo "LÉGALES";
   }
   if ( is_page(array('soutenez-nous-entreprise')) ) { 
     echo "ENTREPRISE";

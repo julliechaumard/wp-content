@@ -38,11 +38,9 @@
   <section class="grid_2col1111_2row align_center mod_footer_logos margin_section_botton">
 
     <div class="footer_logos_1 justifys_center">
-      <img class='height_max_84' src="<?php bloginfo('template_directory');?>/dist/assets/images/logos/logo_aisne_100.jpeg" alt="Logo Aisne">
-      <img class='height_max_84' src="<?php bloginfo('template_directory');?>/dist/assets/images/logos/logo_somme.jpg" alt="Logo Somme">
-      <img class='height_max_84' src="<?php bloginfo('template_directory');?>/dist/assets/images/logos/logo_amiens_metropole_100.jpg" alt="Logo Amiens Metropole">
+      <img class='img_width max_width_600' src="<?php bloginfo('template_directory');?>/dist/assets/images/logos/logo_odp.png" alt="Logo Orchestre de Picardie">
     </div>
-    <div class="footer_logos_2 justify_end justifyself_start_mobilexs">
+    <div class="footer_logos_2 justify_end">
       <img class='img_svg max_width_300' src="<?php bloginfo('template_directory');?>/dist/assets/images/logos/logo_prefet_hdf.svg" alt="Logo partenaire">
     </div>
     <div class="footer_logos_3 justifys_start">
@@ -55,7 +53,7 @@
 
 
   <!-- --------------------------------- -->
-  <!-- CONTACTS + RÉSEAUX SOCIAUX -->
+  <!-- CONTACTS -->
   <!-- --------------------------------- -->
   <section class="plainbox_footer grid_2col12 bg_color_footer tx_color_blanc ubuntu_fin">
 
@@ -130,25 +128,6 @@
     </div>
 
   </section>
-
-  <!-- --------------------------------- -->
-  <!-- MENU FOOTER -->
-  <!-- --------------------------------- -->
-  <section class="margint_20 paddingb_15 nopagemarge_desk nopagemarge_mob bg_color_footer tx_color_blanc ubuntu_fin">
-
-    <nav class="paddingt_15 paddingb_10">
-      <ul class="flex marginl_35">
-          <li class="block_inline encoche_white"></li>
-          <li class='menu_res_soc_item marginr_10'><a href="<?php echo get_permalink(get_page_by_title('Mentions légales')) ?>">mentions légales</a></li>
-          <li class="block_inline encoche_white"></li>
-          <li class="menu_res_soc_item"><a href="#">espace presse</a></li>
-      </ul>
-    </nav>
-
-
-  </section>
-
-
 
 </footer>
 

@@ -13,6 +13,9 @@
 @font-face {
   font-family: 'ubuntu_fin';src: url('../fonts/ubuntu_fin.ttf') format('truetype');
 }
+@font-face {
+  font-family: 'ubuntu_fin_italic';src: url('../fonts/ubuntu_leger_italic.ttf') format('truetype');
+}
 
 @font-face {
   font-family: 'ubuntu_leger';src: url('../fonts/ubuntu_leger.ttf') format('truetype');
@@ -50,16 +53,15 @@
 .ubuntu_fin {
   font-family: ubuntu_fin;
 }
-
-
+.ubuntu_fin_italic {
+  font-family: ubuntu_fin_italic;
+}
 .ubuntu_bold {
   font-family: ubuntu_bold;
 }
-
 .ubuntu_moyen {
   font-family: ubuntu_moyen;
 }
-
 .parisienne {
   font-family: parisienne;
 }

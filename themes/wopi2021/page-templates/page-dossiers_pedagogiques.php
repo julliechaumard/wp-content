@@ -26,30 +26,13 @@ get_template_part('template-parts/header','page');
                             <?php endwhile; ?>
                         </div>
                     </div>
-                
-            <!-- TITRE -->
-            <div class="grid paddingr_30 marginb_20_mobile">
-                <div class="grid">
-                    <!-- TITRE-->
-                    <div class="">
-                        <h2 class='titre_card_container_grand'>
-                            <span class='titre_leger'>PRÉSENTATION</span>
-                            <br>
-                            <span class='titre_gras'>DES DOSSIERS PÉDAGOGIQUES</span>
-                        </h2>
-                    </div>
-                </div>
-            </div>
         </div>
 
     </section>
 
 
-
-
-
     <!-- ----------------------- -->
-    <!-- 1 DOSSIER  -->
+    <!-- LES DOSSIERS  -->
     <!-- ----------------------- -->
 
     <!-- LOOP DOSSIER  -->

@@ -20,6 +20,19 @@
     }
 }
 
+.plainbox_ss_padding {
+    min-height: 200px;
+    margin-right: -35px;
+    margin-left: -35px;
+    text-align: center;
+    @include mobile {
+        margin-right: -15px;
+        margin-left: -15px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+
 .plainbox_footer {
     min-height: 250px;
     margin-right: -35px;

@@ -158,6 +158,20 @@
         </div>
     <?php endif; ?>
 
+    <!-- MENTIONS LÉGALES -->
+    <?php
+    if ( is_page(array('mentions-legales')) ) : ?>
+        <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
+            <div class=''>
+                <p class='accroche_cell_texte'>
+                    <span class='accroche_cell_texte_gras'>UN SITE</span>
+                    <br>
+                    <span class='accroche_cell_texte_leger'>ETHIQUE QUI RESPECTE LES AUTEURS ET LES VISITEURS</span>
+                </p>
+            </div>
+        </div>
+    <?php endif; ?>
+
     <!-- HISTOIRE -->
     <?php
     if ( is_page(array('notre-histoire')) ) : ?>

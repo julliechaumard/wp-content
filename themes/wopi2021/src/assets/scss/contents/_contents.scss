@@ -185,6 +185,12 @@ ul, li {
         border-right: solid 0px !important;
     }
 }
+.pipe_blanc {
+    border-right: solid 1px $color_blanc !important;
+    &:last-child {
+        border-right: solid 0px !important;
+    }
+}
 
 
 /*****************************************
@@ -236,12 +242,16 @@ ul, li {
     color: white;
     background-color: $color_noir_clair;
 }
+.button_blanc {
+    color: $color_noir_tres_fonce;
+    background-color: $color_blanc;
+}
 
 /* BUTTON NEWSLETTER*/
 .button_newsl {
     color: $color_noir_fonce;
     background-color: white;
-    font-size: 18px;
+    font-size: 15px;
     @include mobile { 
         font-size: 14px;
     }

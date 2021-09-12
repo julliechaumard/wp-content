@@ -8,6 +8,10 @@
 .block {
     display: block;
 }
+.block_inline {
+    display: inline-block;
+}
+
 .relative {
     position: relative;
 }
@@ -76,6 +80,7 @@
         max-width: 210px !important;
     }
 }
+
 .max_width_250 {
     max-width: 250px;
 }
@@ -90,6 +95,10 @@
 }
 .height_200 {
     height: 200px;
+}
+
+.height_max_84 {
+    max-height: 84px;
 }
 
 .height_min_200 {
@@ -117,6 +126,12 @@
 .width_60_desk {
     @include nomobile {
         width: 60px;
+    }
+}
+
+.width_145_mobile {
+    @media screen and (max-width:350px) {
+        width: 145px !important;
     }
 }
 
@@ -162,13 +177,18 @@
     margin-top: -4px;
 }
 
+.margint_10_mobile {
+    @include mobile {
+       margin-top: 10px;
+    }
+}
+
 .margint_15_mobile {
     @include mobile {
        margin-top: 15px;
     }
 }
 
-/* BANNER ACCROCHE FICHE CONCERT */
 .margint_20 {
     margin-top: 20px;
 }
@@ -197,7 +217,7 @@
 .margint_30 {
     margin-top: 30px;
 }
-/* LISTE DES CONCERTS */
+
 .margint_40 {
     margin-top: 40px;
 }
@@ -226,6 +246,13 @@
 .marginr_10 {
     margin-right: 10px;
 }
+
+.marginr_10_350px {
+    @media screen and (max-width:350px) {
+        margin-right: 10px;
+    }
+}
+
 .marginr_15_mobilexs {
     @include mobilexs {
         margin-right: 15px !important;
@@ -237,6 +264,12 @@
 .marginr_40 {
     margin-right: 40px;
 }
+.marginr_40_mobile {
+    @include mobile {
+        margin-right: 40px;
+    }
+}
+
 .marginr_50_mobile {
     @include mobile {
         margin-right: 50px;
@@ -256,11 +289,10 @@
     }
 }
 
-/* LISTE DES CONCERTS */
 .marginb_3 {
     margin-bottom: 3px;
 }
-/* PROCHAIN CONCERT */
+
 .marginb_4 {
     margin-bottom: 4px;
 }
@@ -289,6 +321,7 @@
         margin-bottom: 20px;
     }
 }
+
 .marginb_20_400px {
     @media screen and (max-width:400px) {
         margin-bottom: 20px;
@@ -351,6 +384,13 @@
         margin-left: 5px;
     }
 }
+
+.marginl_10_350px {
+    @media screen and (max-width:350px) {
+        margin-left: 10px;
+    }
+}
+
 .marginl_12_mobilexs {
     @include mobilexs {
         margin-left: 12px;
@@ -367,6 +407,16 @@
 .marginl_20 {
     margin-left: 20px;
 }
+.marginl_35 {
+    margin-left: 35px;
+}
+
+.marginl_40_mobile {
+    @include mobile {
+        margin-left: 40px;
+    }
+}
+
 .marginl_50_mobile {
     @include mobile {
         margin-left: 50px;

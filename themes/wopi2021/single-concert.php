@@ -272,6 +272,29 @@ Template Post Type: concert
 
     </article>
 
+    <!-- --------------------------------- -->
+    <!-- PROGRAMME DE SALLE -->
+    <!-- --------------------------------- -->
+    <?php if (!empty(get_post_meta($post->ID, 'metadata_193', true))): ?>
+        <section class='plainbox_ss_padding grid align_center justify_center bg_color_noir_moyen margin_section_botton'>
+            <div style="text-align:center;">
+                <div style="margin:8px 0px 4px;">
+                    <div>
+                        <h2 class='titre_chapitre_container marginb_20 tx_color_blanc'>
+                            <span class='ubuntu_fin'>TÉLÉCHARGER</span>
+                            <br>
+                            <span class='ubuntu_moyen'>LE PROGRAMME</span>
+                        </h2>
+                    </div>
+                </div>
+                
+                <p class="margint_20"><button class="button_petit button_blanc"><a download target="_blank" href="<?php echo get_post_meta($post->ID, 'metadata_193', true); ?>">TÉLÉCHARGER PDF</a></button></p>
+                                                
+            </div>
+        </section>
+    <?php endif;?>
+
+
 
     <!-- --------------------------------- -->
     <!-- LES PHOTOS ET VIDEOS -->

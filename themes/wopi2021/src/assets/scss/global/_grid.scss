@@ -286,6 +286,13 @@
     }        
 }
 
+.justifyself_start_mobilexs {
+    @include mobilexs {
+        justify-self: start;
+    }
+}
+
+
 /* ******************************************************
 ** GAP */
 
@@ -305,6 +312,9 @@
 }
 .grid_column_gap40 {
     column-gap: 40px;
+}
+.grid_column_gap50 {
+    column-gap: 50px;
 }
 .grid_column_gap75 {
     column-gap: 75px;
@@ -522,6 +532,9 @@
     @include mobile {
         column-gap: 25px;
     }
+    @include mobilexs {
+        grid-template-columns: 1fr;
+    }
     row-gap: 40px;
 }
 
@@ -650,7 +663,7 @@
 .grid_disques {
     display: grid;
     grid-template-columns: 46% 40%;
-    @include mobile {
+    @media screen and (max-width:780px) {
         grid-template-columns: 1fr;
     }
 }

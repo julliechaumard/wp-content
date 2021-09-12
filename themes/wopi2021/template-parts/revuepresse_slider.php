@@ -3,7 +3,7 @@
 
 ?>
 
-
+<!-- RÉCUPÉRER LES DONNÈES -->
 <!-- SELON PAGE -->
 <?php
 if ( is_front_page() ) :
@@ -134,7 +134,7 @@ endif;
             <!-- TITRE -->
             <div class="grid_area_21 grid_area_1_1_mobxs">
                 <h2 class='titre_plainbox_container fontsize_27 marginb_30 tx_color_blanc'>
-                    <span class='titre_leger'>REVUE DE PRESSE</span>
+                    <span class='ubuntu_fin tx_color_blanc'>REVUE DE PRESSE</span>
                 </h2>
             </div>
 

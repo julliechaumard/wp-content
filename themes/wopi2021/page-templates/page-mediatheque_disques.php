@@ -11,7 +11,7 @@ Template Name: page_medias_disques
 
 <main>
 
-<article>
+<article class="marginb_80">
 
     <!-- --------------------------------- -->
     <!-- DISQUES (15 max.) -->
@@ -22,12 +22,12 @@ Template Name: page_medias_disques
 
 
             <section class="margint_125">
-                <div class="grid_disques justifyc_center">
+                <div class="grid_disques grid_column_gap50 justifyc_center marginr_40_mobile marginl_40_mobile marginr_10_350px marginl_10_350px">
 
                     <!-- POCHETTE DISQUE -->
-                    <div class="concert_card grid grid_area_21_desk grid_area_12_mob">
+                    <div class="grid_area_21_desk">
                         <div class="">
-                            <img class='img_ajust_liste grid_area_11' src="<?php echo get_post_meta($post->ID, 'metadata_787_'.$i.'', true); ?>" alt="Pochette">
+                            <img class='img_ajust_liste grid_area_11 width_200_mobile' src="<?php echo get_post_meta($post->ID, 'metadata_787_'.$i.'', true); ?>" alt="Pochette">
                         </div>
                     </div>
                         
@@ -36,7 +36,7 @@ Template Name: page_medias_disques
                     <!-- INFORMATION DISQUE -->
 
 
-                    <div class="grid paddingt_30 paddingr_50 marginb_20_mobile">
+                    <div class="grid margint_10_mobile marginb_20_mobile">
                         <div class="content_wp">
                             <div class="paddingb_20">
                                 <!-- TITRE -->
@@ -60,7 +60,7 @@ Template Name: page_medias_disques
 
                             <!-- ACHETER -->
                             <?php if(!empty(get_post_meta($post->ID, 'metadata_788_'.$i, true))) : ?>
-                                <div>
+                                <div class="marginb_20">
                                     <span class="icone paddingr_5"><img class='img_ajust' src="<?php bloginfo('template_directory')?>/dist/assets/images/icones/icone_gift.png" alt="icone acheter"></span><span><a class="ubuntu_fin tx_color_medias" target="_blank" href="<?php echo get_post_meta($post->ID, 'metadata_788_'.$i.'', true); ?>">Acheter</a></span>
                                 </div>
                             <?php endif;?>
@@ -71,7 +71,7 @@ Template Name: page_medias_disques
                         <!-- EXTRAIT AUDIO -->
                         <?php if(!empty(get_post_meta($post->ID, 'metadata_786_'.$i, true))) : ?>
                             <div class="justify_end">
-                                <audio controls controlsList="nodownload">
+                                <audio class="width_145_mobile" controls controlsList="nodownload">
                                     <source src="<?php echo get_post_meta($post->ID, 'metadata_786_'.$i.'', true); ?>" type="audio/mpeg">
                                 </audio>
                             </div>

@@ -135,7 +135,7 @@ Template Name: page_medias_concertsenligne
                     </div>
 
                     <div class="marginb_60_mobile">
-                        <div class="fleche fleche_accueil alignself_end marginb_6 ubuntu_bold tx_color_accueil"><a href="<?php echo get_post_meta($post->ID, 'metadata_724_'.$j.'', true) ?>">ACCÉDER AU CONCERT <img src="<?php bloginfo('template_directory');?>/dist/assets/images/icones/lien_fleche_mauve.png" alt=""></a></div>
+                        <div class="fleche fleche_accueil alignself_end marginb_6 ubuntu_bold tx_color_accueil"><a target="_blank" href="<?php echo get_post_meta($post->ID, 'metadata_724_'.$j.'', true) ?>">ACCÉDER AU CONCERT <img src="<?php bloginfo('template_directory');?>/dist/assets/images/icones/lien_fleche_mauve.png" alt=""></a></div>
                     </div>
                 <?php }; ?>
             <?php }; ?>

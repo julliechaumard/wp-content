@@ -493,11 +493,11 @@ Template Name: page_accueil
         <div class="texte_center marginr_160_nomobile marginl_160_nomobile marginr_50_mobile marginl_50_mobile marginr_15_mobilexs marginl_15_mobilexs">
             <div>
                 <h2 class='titre_plainbox_container fontsize_27 margin_section_botton tx_color_blanc'>
-                    <span class='titre_leger'>SOUTENEZ-NOUS</span>
+                    <span class='ubuntu_fin tx_color_blanc'>SOUTENEZ-NOUS</span>
                 </h2>
             </div>
             <div class='texte_plainbox_container fontsize_27 margin_section_botton tx_color_blanc'>
-                <p class='titre_gras'><?php echo get_post_meta($post->ID, 'metadata_012', true); ?></p>
+                <p class='ubuntu_moyen tx_color_blanc'><?php echo get_post_meta($post->ID, 'metadata_012', true); ?></p>
             </div>
             <div>
             <p class="marginb_6"><button class="button_petit button_accueil"><a href="<?php echo get_permalink(get_page_by_title('Soutenez-nous entreprise')) ?>">DÉCOUVREZ COMMENT NOUS SOUTENIR</a></button></p>

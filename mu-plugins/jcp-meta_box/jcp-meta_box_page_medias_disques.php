@@ -183,7 +183,7 @@ function metabox_page_medias_disques($post) {
                                 <!-- POCHETTE -->
                                 <div>
                                     <div class="pinput">
-                                        <label for="metadata_787_<?php echo $i; ?>">IMAGE POCHETTE (disque <?php echo $i; ?>)</label>
+                                        <label for="metadata_787_<?php echo $i; ?>">IMAGE POCHETTE format 1:1 (disque <?php echo $i; ?>)</label>
                                         <input type="text" name="metadata_787_<?php echo $i; ?>" id="metadata_787_<?php echo $i; ?>" class="pochette-url_<?php echo $i; ?>" value="<?php echo $metadata_787_[$i]; ?>"/>
                                         <input type="button" class="pochette-uploader_<?php echo $i; ?>" value="Sélectionner une image">
                                     </div>

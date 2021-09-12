@@ -3,7 +3,7 @@
 
 ?>
 
-
+<!-- RÉCUPÉRER LES DONNÈES -->
 <!-- SELON PAGE -->
 <?php
 if ( is_front_page() ) :
@@ -79,7 +79,7 @@ if ( is_front_page() OR is_page(array('collaborations','academie','eleves_enseig
                 <!-- TITRE -->
                 <div class="grid_area_21 grid_area_1_1_mobxs">
                     <h2 class='titre_plainbox_container fontsize_27 marginb_30 tx_color_blanc'>
-                        <span class='titre_leger'>TÉMOIGNAGE</span>
+                        <span class='ubuntu_fin tx_color_blanc'>TÉMOIGNAGES</span>
                     </h2>
                 </div>
 
@@ -159,7 +159,7 @@ if ( is_singular (array( 'artiste_invite','orchestre')) ) :
                 <!-- TITRE -->
                 <div class="grid_area_21 grid_area_1_1_mobxs">
                     <h2 class='titre_plainbox_container fontsize_27 marginb_30 tx_color_blanc'>
-                        <span class='titre_leger'>TÉMOIGNAGE DE L'ARTISTE</span>
+                        <span class='ubuntu_fin tx_color_blanc'>TÉMOIGNAGE DE L'ARTISTE</span>
                     </h2>
                 </div>
 
