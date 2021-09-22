@@ -152,6 +152,29 @@
 
 </footer>
 
+<!-- script Xiti -->
+<?php $slug = basename(get_permalink());?>
+
+  <a href="http://www.xiti.com/xiti.asp?s=602095" title="WebAnalytics" target="_top">
+  <script type="text/javascript">
+  <!--
+  Xt_param = 's=602095&p=<?php echo $slug; ?>';
+  try {Xt_r = top.document.referrer;}
+  catch(e) {Xt_r = document.referrer; }
+  Xt_h = new Date();
+  Xt_i = '<img width="0" height="0" border="0" alt="" ';
+  Xt_i += 'src="http://logv2.xiti.com/oco.xiti?'+Xt_param;
+  Xt_i += '&hl='+Xt_h.getHours()+'x'+Xt_h.getMinutes()+'x'+Xt_h.getSeconds();
+  if(parseFloat(navigator.appVersion)>=4)
+  {Xt_s=screen;Xt_i+='&r='+Xt_s.width+'x'+Xt_s.height+'x'+Xt_s.pixelDepth+'x'+Xt_s.colorDepth;}
+  document.write(Xt_i+'&ref='+Xt_r.replace(/[<>"]/g, '').replace(/&/g, '$')+'" title="Internet Audience">');
+  //-->
+  </script>
+  <noscript>
+  Mesure d'audience ROI statistique webanalytics par <img width="80" height="15" src="http://logv2.xiti.com/oco.xiti?s=602095&p=" alt="WebAnalytics" />
+  </noscript></a>
+<!-- FIN script Xiti -->
+
 <!-- JS -->
 <!-- JS bootstrap dans cet ordre -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

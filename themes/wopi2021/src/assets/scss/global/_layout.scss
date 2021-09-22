@@ -55,13 +55,22 @@
 .img_ajust_liste {
     width: 100%;
 }
+.img_width_80_mq401 {
+    @media screen and (min-width:401px) {
+        width: 80%;
+    }
+}
+.img_width_100_mq400 {
+    @media screen and (max-width:400px) {
+        width: 100%;
+    }
+}
 
-/* LOGO FOOTER */
-/* L'image est ajusté à la largeur */
+
 .img_width {
     width: 100%;
 }
-/* TOP BAR MOBILE */
+
 .img_width_auto {
     width: auto;
 }
@@ -131,7 +140,13 @@
 
 .width_145_mobile {
     @media screen and (max-width:350px) {
-        width: 145px !important;
+        max-width: 145px !important;
+    }
+}
+
+.width_220_nomobile {
+    @media screen and (min-width:351px) {
+        max-width: 220px !important;
     }
 }
 
@@ -249,7 +264,7 @@
 
 .marginr_10_350px {
     @media screen and (max-width:350px) {
-        margin-right: 10px;
+        margin-right: 10px !important;
     }
 }
 
@@ -387,7 +402,7 @@
 
 .marginl_10_350px {
     @media screen and (max-width:350px) {
-        margin-left: 10px;
+        margin-left: 10px !important;
     }
 }
 

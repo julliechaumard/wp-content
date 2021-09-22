@@ -662,8 +662,8 @@
 /* GRID DISQUE */
 .grid_disques {
     display: grid;
-    grid-template-columns: 46% 40%;
-    @media screen and (max-width:780px) {
+    grid-template-columns: 40% 50%;
+    @media screen and (max-width:701px) {
         grid-template-columns: 1fr;
     }
 }

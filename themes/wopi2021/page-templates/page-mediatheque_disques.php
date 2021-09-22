@@ -22,12 +22,12 @@ Template Name: page_medias_disques
 
 
             <section class="margint_125">
-                <div class="grid_disques grid_column_gap50 justifyc_center marginr_40_mobile marginl_40_mobile marginr_10_350px marginl_10_350px">
+                <div class="grid_disques grid_column_gap40 justifyc_center marginr_40_mobile marginl_40_mobile marginr_10_350px marginl_10_350px">
 
                     <!-- POCHETTE DISQUE -->
                     <div class="grid_area_21_desk">
                         <div class="">
-                            <img class='img_ajust_liste grid_area_11 width_200_mobile' src="<?php echo get_post_meta($post->ID, 'metadata_787_'.$i.'', true); ?>" alt="Pochette">
+                            <img class='img_width_80_mq401 img_width_100_mq400 grid_area_11 width_200_mobile' src="<?php echo get_post_meta($post->ID, 'metadata_787_'.$i.'', true); ?>" alt="Pochette">
                         </div>
                     </div>
                         
@@ -70,8 +70,8 @@ Template Name: page_medias_disques
 
                         <!-- EXTRAIT AUDIO -->
                         <?php if(!empty(get_post_meta($post->ID, 'metadata_786_'.$i, true))) : ?>
-                            <div class="justify_end">
-                                <audio class="width_145_mobile" controls controlsList="nodownload">
+                            <div class="">
+                                <audio class="width_145_mobile width_220_nomobile" controls controlsList="nodownload">
                                     <source src="<?php echo get_post_meta($post->ID, 'metadata_786_'.$i.'', true); ?>" type="audio/mpeg">
                                 </audio>
                             </div>
