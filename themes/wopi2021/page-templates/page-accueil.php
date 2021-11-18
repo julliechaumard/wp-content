@@ -11,16 +11,16 @@ Template Name: page_accueil
 <main>
 
 <!-- ----------------------- -->
-<!-- PRÉSENTATION DE LA SAISON  -->
+<!-- NOS DERNIÈRES VIDÈOS  -->
 <!-- ----------------------- -->
 
 <section class="margin_section_botton">
     <!-- Titre -->
     <div class="paddingt_desk_30 paddingt_mob_15">
         <h2 class='titre_chapitre_container marginb_20'>
-            <span class='titre_leger'>PRÉSENTATION</span>
+            <span class='titre_leger'>NOS DERNIÈRES</span>
             <br>
-            <span class='titre_gras'>DE LA SAISON</span>
+            <span class='titre_gras'>VIDÈOS</span>
         </h2>
     </div>
 
@@ -31,7 +31,7 @@ Template Name: page_accueil
                     <!-- VIDEO -->
                     <div class="nopagemarge_mobxs">
                         <div class="embed-responsive embed-responsive-16by9">
-                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/vszdaOWoz_Q" allowfullscreen></iframe>
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/98udZfIRFKg" allowfullscreen></iframe>
                         </div>
                     </div>                            
                 </div>
@@ -41,12 +41,11 @@ Template Name: page_accueil
                     <!-- VIDEO -->
                     <div class="nopagemarge_mobxs">
                         <div class="embed-responsive embed-responsive-16by9">
-                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/UXANiAhpUlI" allowfullscreen></iframe>
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v5TegdmBNoA" allowfullscreen></iframe>
                         </div>
                     </div>                            
                 </div>
     </div>
-
 </section>
 
 

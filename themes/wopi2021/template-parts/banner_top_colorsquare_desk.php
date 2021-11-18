@@ -288,6 +288,20 @@
         </div>
     <?php endif; ?>
 
+    <!-- MEDIATHEQUE VIALMA-->
+    <?php
+    if ( is_page(array('mediatheque_vialma')) ) : ?>
+        <div class='accroche_cell grid_1col1_1row align_center bg_<?php couleur() ?>'>
+            <div class=''>
+                <p class='accroche_cell_texte'>
+                    <span class='accroche_cell_texte_gras'>OFFRE D’ABONNEMENT</span>
+                    <br>
+                    <span class='accroche_cell_texte_leger'>PROFITEZ DE 30 JOURS GRATUITS</span>
+                </p>
+            </div>
+        </div>
+    <?php endif; ?>
+
     <!-- MEDIATHEQUE DISQUE -->
     <?php
     if ( is_page(array('Mediatheque_disques')) ) : ?>

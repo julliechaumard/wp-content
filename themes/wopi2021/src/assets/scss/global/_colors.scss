@@ -41,6 +41,9 @@ $color_mordore: #aa8936;
 //ORANGE
 $color_orange: #FA6400;
 
+//VIALMA
+$color_vialma: #EB5757;
+
 // ///////////////////////////////////////////
 // VARIABLES DES AFFECTATIONS DES COULEURS
 // ///////////////////////////////////////////
@@ -79,6 +82,7 @@ $color_medias: $color_violet;
 $color_culture_actions: $color_jaune;
 // NEWSLETTER
 $color_nl: $color_mordore;
+
 
 
 // ///////////////////////////////////////////
@@ -140,7 +144,9 @@ $color_nl: $color_mordore;
 .bg_color_media_nomadplay {
     background-color: #73b9e0;
 }
-
+.bg_color_media_vialma {
+    background-color: $color_vialma;
+}
 
 
 // ///////////////////////////////////////////
@@ -185,4 +191,7 @@ $color_nl: $color_mordore;
 }
 .tx_color_culture_actions {
     color: $color_culture_actions;
+}
+.tx_color_vialma {
+    color: $color_vialma;
 }

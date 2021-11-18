@@ -63,6 +63,9 @@ function titre_gras($post) {
     if ( is_page(array('mediatheque_videos')) ) { 
       echo "MÉDIATHÈQUE";
     }
+    if ( is_page(array('mediatheque_vialma')) ) { 
+      echo "MÉDIATHÈQUE";
+    }
     if ( is_page(array('Mediatheque_disques')) ) { 
       echo "MÉDIATHÈQUE";
     }
@@ -151,6 +154,9 @@ function titre_leger($post) {
   }
   if ( is_page(array('mediatheque_videos')) ) { 
     echo "VIDÉOS";
+  }
+  if ( is_page(array('mediatheque_vialma')) ) { 
+    echo "DÉCOUVREZ VIALMA";
   }
   if ( is_page(array('Mediatheque_disques')) ) { 
     echo "DISQUES";

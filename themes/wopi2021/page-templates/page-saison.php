@@ -12,6 +12,63 @@ get_template_part('template-parts/header','page');
 <main>
 
    <article>
+
+
+
+    <!-- ----------------------- -->
+    <!-- PRÉSENTATION DE LA SAISON  -->
+    <!-- ----------------------- -->
+
+    <section class="margin_section_botton">
+        <!-- Titre -->
+        <div class="paddingt_desk_30 paddingt_mob_15">
+            <h2 class='titre_chapitre_container marginb_20'>
+                <span class='titre_leger'>PRÉSENTATION</span>
+                <br>
+                <span class='titre_gras'>DE LA SAISON</span>
+            </h2>
+        </div>
+
+        <!-- LES VIDEOS  -->
+        <div class="grid_2col_11 grid_column_gap24 grid_row_gap50">
+                    <!-- 1 BLOC  -->
+                    <div>
+                        <!-- VIDEO -->
+                        <div class="nopagemarge_mobxs">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/vszdaOWoz_Q" allowfullscreen></iframe>
+                            </div>
+                        </div>                            
+                    </div>
+
+                    <!-- 2 BLOC  -->
+                    <div>
+                        <!-- VIDEO -->
+                        <div class="nopagemarge_mobxs">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/UXANiAhpUlI" allowfullscreen></iframe>
+                            </div>
+                        </div>                            
+                    </div>
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
        <!-- Titre -->
        <div class="paddingt_30">
            <h2 class='titre_chapitre_container marginb_20'>

@@ -7,13 +7,13 @@
 
 <body>
 
-<div class='page'>
+    <div class='page'>
 
-<header>
-<?php
- get_template_part('template-parts/annonce_urgente');
- get_template_part('template-parts/navbar_top');
- get_template_part('template-parts/banner_top');
-?>
+        <header>
+        <?php
+        get_template_part('template-parts/annonce_urgente');
+        get_template_part('template-parts/navbar_top');
+        get_template_part('template-parts/banner_top');
+        ?>
 
-</header>
+        </header>

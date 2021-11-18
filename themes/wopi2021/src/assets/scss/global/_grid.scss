@@ -188,6 +188,12 @@
         grid-row: 6;
     }
 }
+.grid_area_1_7_max500px {
+    @media screen and (max-width:500px){
+        grid-column: 1;
+        grid-row: 7;
+    }
+}
 
 .grid_area_1_14 {
     grid-column: 1;
@@ -309,6 +315,9 @@
 }
 .grid_column_gap24 {
     column-gap: 24px;
+}
+.grid_column_gap30 {
+    column-gap: 30px;
 }
 .grid_column_gap40 {
     column-gap: 40px;
@@ -454,6 +463,19 @@
     }
 }
 
+.grid_media_vialma_avantages {
+    display: grid;
+    @media screen and (min-width:700px) {
+    grid-template-columns: 180px 180px 180px;
+    }
+    @media screen and (max-width:699px) {
+        grid-template-columns: 180px 180px;
+    }
+    @media screen and (max-width:400px) {
+        grid-template-columns: 150px;
+    }
+}
+
 
 /* GRID FOOTER RESEAUX SOCIAUX */
 .grid_10col {
@@ -586,14 +608,14 @@
 }
 
 /* MENU SECONDAIRE */
-.grid_3col35_32_a {
+.grid_menu_sub_mecene {
     display: grid;
     grid-template-columns: 35% 32px auto;
     @media screen and (max-width:400px){
         grid-template-columns: 32px auto;
     }
 }
-.grid_3col35_32_b {
+.grid_menu_sub_mediat {
     display: grid;
     grid-template-columns: 35% 32px auto;
     @media screen and (max-width:500px){

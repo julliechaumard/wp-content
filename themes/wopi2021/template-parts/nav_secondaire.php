@@ -13,7 +13,7 @@
 
 if ( is_page(array('soutenez-nous-entreprise', 'soutenez-nous-particulier', 'soutenez-nous-picardissimo')) ) :?>
     
-    <nav class="grid_3col35_32_a grid_row_gap16 margint_70 marginb_80">
+    <nav class="grid_menu_sub_mecene grid_row_gap16 margint_70 marginb_80">
 
         <!-- TITRE -->
         <div class='grid_area_13_1_max400px justify_end justify_start_max400px marginr_20 ubuntu_leger tx_color_noir_fonce fontsize_20'>MÉCÉNAT</div>
@@ -47,48 +47,54 @@ if ( is_page(array('soutenez-nous-entreprise', 'soutenez-nous-particulier', 'sou
 
 <?php 
 
-if ( is_page(array('mediatheque_photos','mediatheque_videos','Mediatheque_disques','mediatheque_concertsenligne','a_vous_de_jouer')) ) :?>
+if ( is_page(array('mediatheque_photos','mediatheque_videos','Mediatheque_disques','mediatheque_concertsenligne','a_vous_de_jouer','mediatheque_vialma')) ) :?>
     
-    <nav class="grid_3col35_32_b grid_row_gap16 margint_70 marginb_60">
+    <nav class="grid_menu_sub_mediat grid_row_gap16 margint_70 marginb_60">
 
-        <!-- TITRE -->
-        <div class='grid_area_13_1_max500px justify_end justify_start_max500px marginr_20 ubuntu_leger tx_color_noir_fonce fontsize_20'>MÉDIATHÈQUE</div>
+        <!-- MENU_SUB TITRE -->
+        <div class='grid_area_13_1_max500px justify_end justify_start_max500px alignself_center marginr_20 ubuntu_fin tx_color_noir_fonce fontsize_20'>MÉDIATHÈQUE</div>
         
-        <!-- MENU ITEM 1 -->
+        <!-- MENU_SUB ITEM 1 -->
         <!-- Carré de couleur -->
         <div class='nav_second_carre bg_color_media_ligne grid_area_1_2_max500px'></div>
-        <!-- Label + Flèche -->
-        <div class="ubuntu_bold tx_color_noir_fonce alignself_center marginl_10 grid_area_2_2_max500px"><a class='fontsize_16' href="<?php echo get_permalink(get_page_by_title('Mediatheque_concertsenligne')) ?>">CONCERTS EN LIGNE</a></div>
+        <!-- Label -->
+        <div class="ubuntu_moyen tx_color_noir_fonce alignself_center marginl_10"><a class='fontsize_16' href="<?php echo get_permalink(get_page_by_title('Mediatheque_concertsenligne')) ?>">CONCERTS EN LIGNE</a></div>
 
-        <!-- MENU ITEM 2 -->
+        <!-- MENU_SUB ITEM 2 -->
         <!-- Carré de couleur -->
         <div class='nav_second_carre bg_color_media_videos grid_area_2 grid_area_1_3_max500px'></div>
-        <!-- Label + Flèche -->
-        <div class="ubuntu_bold tx_color_noir_fonce alignself_center marginl_10"><a class='fontsize_16' href="<?php echo get_permalink(get_page_by_title('Mediatheque_videos')) ?>">VIDÉOS</a></div>
+        <!-- Label -->
+        <div class="ubuntu_moyen tx_color_noir_fonce alignself_center marginl_10"><a class='fontsize_16' href="<?php echo get_permalink(get_page_by_title('Mediatheque_videos')) ?>">VIDÉOS</a></div>
         
-        <!-- MENU ITEM 3 -->
+        <!-- MENU_SUB ITEM 3 -->
         <!-- Carré de couleur -->
         <div class='nav_second_carre bg_color_media_nomadplay grid_area_2 grid_area_1_4_max500px'></div>
-        <!-- Label + Flèche -->
-        <div class="ubuntu_bold tx_color_noir_fonce alignself_center marginl_10"><a class='fontsize_16' href="<?php echo get_permalink(get_page_by_title('A vous de jouer')) ?>">À VOUS DE JOUER ! NOMADPLAY</a></div>
+        <!-- Label -->
+        <div class="ubuntu_moyen tx_color_noir_fonce alignself_center marginl_10"><a class='fontsize_16' href="<?php echo get_permalink(get_page_by_title('A vous de jouer')) ?>">À VOUS DE JOUER ! NOMADPLAY</a></div>
 
-        <!-- MENU ITEM 4 -->
+        <!-- MENU_SUB ITEM 4 -->
         <!-- Carré de couleur -->
         <!-- <div class='nav_second_carre bg_color_media_musiques grid_area_2 grid_area_1_4_max500px'></div> -->
-        <!-- Label + Flèche -->
-        <!-- <div class="ubuntu_bold tx_color_noir_fonce alignself_center marginl_10"><a class='fontsize_16' href="">MUSIQUES</a></div> -->
+        <!-- Label -->
+        <!-- <div class="ubuntu_moyen tx_color_noir_fonce alignself_center marginl_10"><a class='fontsize_16' href="">MUSIQUES</a></div> -->
 
-        <!-- MENU ITEM 5 -->
+        <!-- MENU_SUB ITEM 5 -->
         <!-- Carré de couleur -->
         <div class='nav_second_carre bg_color_media_photos grid_area_2 grid_area_1_5_max500px'></div>
-        <!-- Label + Flèche -->
-        <div class="ubuntu_bold tx_color_noir_fonce alignself_center marginl_10"><a class='fontsize_16' href="<?php echo get_permalink(get_page_by_title('Mediatheque_photos')) ?>">PHOTOS</a></div>
+        <!-- Label -->
+        <div class="ubuntu_moyen tx_color_noir_fonce alignself_center marginl_10"><a class='fontsize_16' href="<?php echo get_permalink(get_page_by_title('Mediatheque_photos')) ?>">PHOTOS</a></div>
 
-        <!-- MENU ITEM 6 -->
+        <!-- MENU_SUB ITEM 6 -->
         <!-- Carré de couleur -->
         <div class='nav_second_carre bg_color_media_disco grid_area_2 grid_area_1_6_max500px'></div>
-        <!-- Label + Flèche -->
-        <div class="ubuntu_bold tx_color_noir_fonce alignself_center marginl_10"><a class='fontsize_16' href="<?php echo get_permalink(get_page_by_title('Mediatheque_disques')) ?>">DISCOGRAPHIE</a></div>
+        <!-- Label -->
+        <div class="ubuntu_moyen tx_color_noir_fonce alignself_center marginl_10"><a class='fontsize_16' href="<?php echo get_permalink(get_page_by_title('Mediatheque_disques')) ?>">DISCOGRAPHIE</a></div>
+
+        <!-- MENU_SUB ITEM 7 -->
+        <!-- Carré de couleur -->
+        <!-- <div class='nav_second_carre bg_color_media_vialma grid_area_2 grid_area_1_7_max500px'></div> -->
+        <!-- Label -->
+        <!-- <div class="ubuntu_moyen tx_color_noir_fonce alignself_center marginl_10"><a class='fontsize_16' href="<?php echo get_permalink(get_page_by_title('mediatheque_vialma')) ?>">DÉCOUVREZ <span class="tx_color_vialma">VIALMA</span></a></div> -->
 
     </nav>
 

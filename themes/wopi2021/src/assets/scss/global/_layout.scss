@@ -8,6 +8,9 @@
 .block {
     display: block;
 }
+.display_none {
+    display: none !important;
+}
 .block_inline {
     display: inline-block;
 }
@@ -138,6 +141,10 @@
     }
 }
 
+.max_width_120 {
+    max-width: 120px;
+}
+
 .width_145_mobile {
     @media screen and (max-width:350px) {
         max-width: 145px !important;
@@ -190,6 +197,10 @@
 
 .margint_-4{
     margin-top: -4px;
+}
+
+.margint_6 {
+    margin-top: 6px;
 }
 
 .margint_10_mobile {
@@ -384,7 +395,9 @@
 .marginb_80 {
     margin-bottom: 80px;
 }
-
+.marginb_90 {
+    margin-bottom: 90px;
+}
 
 .marginl_0_mob {
     @include mobilexs {

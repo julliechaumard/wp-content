@@ -345,6 +345,11 @@ Template Post Type: concert
     <!-- ----------------------- -->
     <?php  get_template_part('template-parts/revuepresse_slider'); ?>
 
+    <!-- ----------------------- -->
+    <!-- VIALMA  -->
+    <!-- ----------------------- -->
+    <?php  get_template_part('template-parts/bloc_vialma'); ?>
+
 </main>
 
 <?php

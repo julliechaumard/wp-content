@@ -68,6 +68,7 @@ get_template_part('template-parts/header','page');
 
     </section>
 
+
     <!-- ----------------------- -->
     <!-- ENCART DOSSIER PEDAGOGIQUE  -->
     <!-- ----------------------- -->
@@ -112,12 +113,231 @@ get_template_part('template-parts/header','page');
 
     </section>
 
+    <!-- ----------------------- -->
+    <!-- VIALMA  -->
+    <!-- ----------------------- -->
+    <?php  get_template_part('template-parts/bloc_vialma'); ?>
+
+    <!-- ----------------------- -->
+    <!-- BANDE DÉSSINÉE À L'UNISSON  -->
+    <!-- ----------------------- -->
+
+    <section class="margint_90 marginb_90">
+
+
+        <div class="grid_2col12">
+    
+            <!-- INFORMATIONS -->
+            <div class="grid paddingr_30 paddingb_10 margint_20_mobile">
+                <div>
+                    <!-- TITRE-->
+                    <div class="">
+                        <h2 class='titre_card_container_grand'>
+                            <span class='titre_leger'>À L'UNISSON</span>
+                            <br>
+                            <span class='titre_gras'>COFFRET DVD</span>
+                        </h2>
+                    </div>
+                </div>
+             </div>
+
+            <!-- ILLUSTRATION -->
+            <div class="concert_card grid grid_area_21_desk">
+                <img class="img_ajust_liste" src="<?php bloginfo('template_directory');?>/dist/assets/images/illustration_alunisson.jpg" alt="Icone dossier pédagogique">
+            </div>
+        </div>
+
+    </section>
 
     <!-- ----------------------- -->
     <!-- TEMOIGNAGE  -->
     <!-- ----------------------- -->
     <?php  get_template_part('template-parts/temoignage_slider'); ?>
 
+    <!-- ----------------------- -->
+    <!-- ACCUEIL DES ELEVES AUX REPETITIONS  -->
+    <!-- ----------------------- -->
+    <section class="margint_90 margin_section_botton">
+
+        <!-- LOOP POUR RECUPERER LE CONTENU WP-CONTENT DU POST ACTION CULTURELLE "ACCUEIL DES ELEVES AUX REPETITIONS" -->
+        <?php 
+        $args_accueil_repetitions = array(
+            'post_type' => 'cultureaction',
+            'posts_per_page' => 1,
+
+            'tax_query' => array(
+                'relation' => 'AND',
+                array(
+                    'taxonomy' => 'action_culturelle',
+                    'field'    => 'slug',
+                    'terms'    => 'accueil_repetitions'),
+                array(
+                    'taxonomy' => 'saison',
+                    'field'    => 'slug',
+                    'terms'    => array('2021-2022'))),
+        );
+        $loop_accueil_repetitions = new WP_Query( $args_accueil_repetitions );
+        if ($loop_accueil_repetitions->have_posts()) :
+            while ($loop_accueil_repetitions->have_posts()) :
+                $loop_accueil_repetitions->the_post();?>
+                <div class="grid_2col12">
+                    <div class="concert_card grid grid_area_21_desk grid_area_12_mob marginb_20">
+                        <div class="content_wp">
+                            <?php the_content(); ?>
+                        </div>
+                    </div>
+
+                    <!-- TITRE -->
+                    <div class="grid paddingr_30 marginb_20_mobile">
+                        <div class="grid">
+                            <!-- TITRE-->
+                            <div class="">
+                                <h2 class='titre_card_container_grand'>
+                                    <span class='titre_leger'>ACCUEIL DES ÉLÈVES</span>
+                                    <br>
+                                    <span class='titre_gras'>AUX RÉPÉTITIONS</span>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- --------------------------------- -->
+                <!-- LES PHOTOS ET VIDEOS -->
+                <!-- --------------------------------- -->
+
+                <div class="margin_section_botton">
+
+                    <!-- VIDEOS -->
+                    <div class="photos_container grid_3col grid_column_gap10 grid_row_gap10 align_center">
+                        <!-- Boucle pour les 3 VIDEOS -->
+                        <?php for ($i = 1; $i <= 3; $i++) {?>
+                            <?php if(!empty(get_post_meta($post->ID, 'metadata_422_'.$i, true))) { ?>
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?php echo get_post_meta($post->ID, 'metadata_422_'.$i, true); ?>" allowfullscreen></iframe>
+                                </div>
+                            <?php }; ?>
+                        <?php }; ?>
+                        <div></div>
+                    </div>
+
+                    <!-- PHOTOS -->
+                    <div class="photos_container grid_photos">
+
+                        <!-- Boucle pour les 10 PHOTOS -->
+                        <?php for ($i = 1; $i <= 10; $i++) {?>
+                            <?php if(!empty(get_post_meta($post->ID, 'metadata_423_'.$i, true))) { ?>
+                                <div>
+                                    <img class="img_ajust" src="<?php echo get_post_meta($post->ID, 'metadata_423_'.$i, true); ?>" alt="Photo Accueil aux répétitions">
+                                </div>
+                            <?php }; ?>
+                        <?php }; ?>
+                        <div></div>
+
+                    </div>
+
+                </div>
+                
+            <?php endwhile; 
+        endif; 
+        wp_reset_query(); ?>
+
+    </section>
+
+    <!-- ----------------------- -->
+    <!-- REVUE DE PRESSE  -->
+    <!-- ----------------------- -->
+    <?php  get_template_part('template-parts/revuepresse_slider'); ?>
+
+    <!-- ----------------------- -->
+    <!-- RENCONTRE AVEC L'ORCHESTRE  -->
+    <!-- ----------------------- -->
+    <section class="margint_90 margin_section_botton">
+
+        <!-- LOOP POUR RECUPERER LE CONTENU WP-CONTENT DU POST ACTION CULTURELLE "RENCONTRE AVEC L'ORCHESTRE" -->
+        <?php 
+        $args_rencontre = array(
+            'post_type' => 'cultureaction',
+            'posts_per_page' => 1,
+
+            'tax_query' => array(
+                'relation' => 'AND',
+                array(
+                    'taxonomy' => 'action_culturelle',
+                    'field'    => 'slug',
+                    'terms'    => 'rencontre_orchestre'),
+                array(
+                    'taxonomy' => 'saison',
+                    'field'    => 'slug',
+                    'terms'    => array('2021-2022'))),
+        );
+        $loop_accueil_rencontre = new WP_Query( $args_rencontre );
+        if ($loop_accueil_rencontre->have_posts()) :
+            while ($loop_accueil_rencontre->have_posts()) :
+                $loop_accueil_rencontre->the_post();?>
+                <div class="grid_2col12">
+                    <div class="concert_card grid grid_area_21_desk grid_area_12_mob marginb_20">
+                        <div class="content_wp">
+                            <?php the_content(); ?>
+                        </div>
+                    </div>
+
+                    <!-- TITRE -->
+                    <div class="grid paddingr_30 marginb_20_mobile">
+                        <div class="grid">
+                            <!-- TITRE-->
+                            <div class="">
+                                <h2 class='titre_card_container_grand'>
+                                    <span class='titre_leger'>RENCONTRE</span>
+                                    <br>
+                                    <span class='titre_gras'>AVEC L'ORCHESTRE</span>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- --------------------------------- -->
+                <!-- LES PHOTOS ET VIDEOS -->
+                <!-- --------------------------------- -->
+
+                <div class="margin_section_botton">
+
+                    <!-- VIDEOS -->
+                    <div class="photos_container grid_3col grid_column_gap10 grid_row_gap10 align_center">
+                        <!-- Boucle pour les 3 VIDEOS -->
+                        <?php for ($i = 1; $i <= 3; $i++) {?>
+                            <?php if(!empty(get_post_meta($post->ID, 'metadata_422_'.$i, true))) { ?>
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?php echo get_post_meta($post->ID, 'metadata_422_'.$i, true); ?>" allowfullscreen></iframe>
+                                </div>
+                            <?php }; ?>
+                        <?php }; ?>
+                        <div></div>
+                    </div>
+
+                    <!-- PHOTOS -->
+                    <div class="photos_container grid_photos">
+
+                        <!-- Boucle pour les 10 PHOTOS -->
+                        <?php for ($i = 1; $i <= 10; $i++) {?>
+                            <?php if(!empty(get_post_meta($post->ID, 'metadata_423_'.$i, true))) { ?>
+                                <div>
+                                    <img class="img_ajust" src="<?php echo get_post_meta($post->ID, 'metadata_423_'.$i, true); ?>" alt="Photo Accueil aux répétitions">
+                                </div>
+                            <?php }; ?>
+                        <?php }; ?>
+                        <div></div>
+
+                    </div>
+
+                </div>
+                
+            <?php endwhile; 
+        endif; 
+        wp_reset_query(); ?>
+
+    </section>
 
     <!-- ----------------------- -->
     <!-- LA RENTREE EN MUSIQUE  -->
@@ -312,192 +532,6 @@ get_template_part('template-parts/header','page');
             endif; wp_reset_query(); ?>
 
         </div>
-
-    </section>
-
-    <!-- ----------------------- -->
-    <!-- REVUE DE PRESSE  -->
-    <!-- ----------------------- -->
-    <?php  get_template_part('template-parts/revuepresse_slider'); ?>
-
-
-    <!-- ----------------------- -->
-    <!-- ACCUEIL DES ELEVES AUX REPETITIONS  -->
-    <!-- ----------------------- -->
-    <section class="margint_90 margin_section_botton">
-
-        <!-- LOOP POUR RECUPERER LE CONTENU WP-CONTENT DU POST ACTION CULTURELLE "ACCUEIL DES ELEVES AUX REPETITIONS" -->
-        <?php 
-        $args_accueil_repetitions = array(
-            'post_type' => 'cultureaction',
-            'posts_per_page' => 1,
-
-            'tax_query' => array(
-                'relation' => 'AND',
-                array(
-                    'taxonomy' => 'action_culturelle',
-                    'field'    => 'slug',
-                    'terms'    => 'accueil_repetitions'),
-                array(
-                    'taxonomy' => 'saison',
-                    'field'    => 'slug',
-                    'terms'    => array('2021-2022'))),
-        );
-        $loop_accueil_repetitions = new WP_Query( $args_accueil_repetitions );
-        if ($loop_accueil_repetitions->have_posts()) :
-            while ($loop_accueil_repetitions->have_posts()) :
-                $loop_accueil_repetitions->the_post();?>
-                <div class="grid_2col12">
-                    <div class="concert_card grid grid_area_21_desk grid_area_12_mob marginb_20">
-                        <div class="content_wp">
-                            <?php the_content(); ?>
-                        </div>
-                    </div>
-
-                    <!-- TITRE -->
-                    <div class="grid paddingr_30 marginb_20_mobile">
-                        <div class="grid">
-                            <!-- TITRE-->
-                            <div class="">
-                                <h2 class='titre_card_container_grand'>
-                                    <span class='titre_leger'>ACCUEIL DES ÉLÈVES</span>
-                                    <br>
-                                    <span class='titre_gras'>AUX RÉPÉTITIONS</span>
-                                </h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- --------------------------------- -->
-                <!-- LES PHOTOS ET VIDEOS -->
-                <!-- --------------------------------- -->
-
-                <div class="margin_section_botton">
-
-                    <!-- VIDEOS -->
-                    <div class="photos_container grid_3col grid_column_gap10 grid_row_gap10 align_center">
-                        <!-- Boucle pour les 3 VIDEOS -->
-                        <?php for ($i = 1; $i <= 3; $i++) {?>
-                            <?php if(!empty(get_post_meta($post->ID, 'metadata_422_'.$i, true))) { ?>
-                                <div class="embed-responsive embed-responsive-16by9">
-                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?php echo get_post_meta($post->ID, 'metadata_422_'.$i, true); ?>" allowfullscreen></iframe>
-                                </div>
-                            <?php }; ?>
-                        <?php }; ?>
-                        <div></div>
-                    </div>
-
-                    <!-- PHOTOS -->
-                    <div class="photos_container grid_photos">
-
-                        <!-- Boucle pour les 10 PHOTOS -->
-                        <?php for ($i = 1; $i <= 10; $i++) {?>
-                            <?php if(!empty(get_post_meta($post->ID, 'metadata_423_'.$i, true))) { ?>
-                                <div>
-                                    <img class="img_ajust" src="<?php echo get_post_meta($post->ID, 'metadata_423_'.$i, true); ?>" alt="Photo Accueil aux répétitions">
-                                </div>
-                            <?php }; ?>
-                        <?php }; ?>
-                        <div></div>
-
-                    </div>
-
-                </div>
-                
-            <?php endwhile; 
-        endif; 
-        wp_reset_query(); ?>
-
-    </section>
-
-    <!-- ----------------------- -->
-    <!-- RENCONTRE AVEC L'ORCHESTRE  -->
-    <!-- ----------------------- -->
-    <section class="margint_90 margin_section_botton">
-
-        <!-- LOOP POUR RECUPERER LE CONTENU WP-CONTENT DU POST ACTION CULTURELLE "RENCONTRE AVEC L'ORCHESTRE" -->
-        <?php 
-        $args_rencontre = array(
-            'post_type' => 'cultureaction',
-            'posts_per_page' => 1,
-
-            'tax_query' => array(
-                'relation' => 'AND',
-                array(
-                    'taxonomy' => 'action_culturelle',
-                    'field'    => 'slug',
-                    'terms'    => 'rencontre_orchestre'),
-                array(
-                    'taxonomy' => 'saison',
-                    'field'    => 'slug',
-                    'terms'    => array('2021-2022'))),
-        );
-        $loop_accueil_rencontre = new WP_Query( $args_rencontre );
-        if ($loop_accueil_rencontre->have_posts()) :
-            while ($loop_accueil_rencontre->have_posts()) :
-                $loop_accueil_rencontre->the_post();?>
-                <div class="grid_2col12">
-                    <div class="concert_card grid grid_area_21_desk grid_area_12_mob marginb_20">
-                        <div class="content_wp">
-                            <?php the_content(); ?>
-                        </div>
-                    </div>
-
-                    <!-- TITRE -->
-                    <div class="grid paddingr_30 marginb_20_mobile">
-                        <div class="grid">
-                            <!-- TITRE-->
-                            <div class="">
-                                <h2 class='titre_card_container_grand'>
-                                    <span class='titre_leger'>RENCONTRE</span>
-                                    <br>
-                                    <span class='titre_gras'>AVEC L'ORCHESTRE</span>
-                                </h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- --------------------------------- -->
-                <!-- LES PHOTOS ET VIDEOS -->
-                <!-- --------------------------------- -->
-
-                <div class="margin_section_botton">
-
-                    <!-- VIDEOS -->
-                    <div class="photos_container grid_3col grid_column_gap10 grid_row_gap10 align_center">
-                        <!-- Boucle pour les 3 VIDEOS -->
-                        <?php for ($i = 1; $i <= 3; $i++) {?>
-                            <?php if(!empty(get_post_meta($post->ID, 'metadata_422_'.$i, true))) { ?>
-                                <div class="embed-responsive embed-responsive-16by9">
-                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?php echo get_post_meta($post->ID, 'metadata_422_'.$i, true); ?>" allowfullscreen></iframe>
-                                </div>
-                            <?php }; ?>
-                        <?php }; ?>
-                        <div></div>
-                    </div>
-
-                    <!-- PHOTOS -->
-                    <div class="photos_container grid_photos">
-
-                        <!-- Boucle pour les 10 PHOTOS -->
-                        <?php for ($i = 1; $i <= 10; $i++) {?>
-                            <?php if(!empty(get_post_meta($post->ID, 'metadata_423_'.$i, true))) { ?>
-                                <div>
-                                    <img class="img_ajust" src="<?php echo get_post_meta($post->ID, 'metadata_423_'.$i, true); ?>" alt="Photo Accueil aux répétitions">
-                                </div>
-                            <?php }; ?>
-                        <?php }; ?>
-                        <div></div>
-
-                    </div>
-
-                </div>
-                
-            <?php endwhile; 
-        endif; 
-        wp_reset_query(); ?>
 
     </section>
 

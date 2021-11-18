@@ -27,7 +27,7 @@ Chrome
   <meta charset="<?php bloginfo( 'charset' ); ?>">
 
   <!-- Moteur de recherche indexation -->
-  <meta name="robots" content="all" />
+  <meta name="robots" content="all">
   
   <!-- Taille écran étalonnage -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -47,7 +47,7 @@ Chrome
   <?php endif; ?>
 
   <!-- mots-clés -->
-  <meta name="keywords" content="orchestre, amiens, spectacle, picardie, concert" />
+  <meta name="keywords" content="orchestre, amiens, spectacle, picardie, concert">
 
   <!-- Auteur / Créateur / Publication -->
   <link rel="author" href="mailto:juliechaumard@icloud.com" title="JulieChaumard.paris" />
@@ -58,23 +58,48 @@ Chrome
   <link rel="start" href="http://localhost:8888/" />
 
   <!-- Logiciel utilisé pour créer la page -->
-  <meta name="generator" content="Visual Studio code" />
+  <meta name="generator" content="Visual Studio code">
 
   <!-- Géolocalisation -->
-  <meta name="DC.title" content="Orchestre de Picardie" />
-  <meta name="geo.region" content="FR-80" />
-  <meta name="geo.placename" content="Amiens" />
-  <meta name="geo.position" content="49.894067;2.295753" />
-  <meta name="ICBM" content="49.894067, 2.295753" />
+  <meta name="DC.title" content="Orchestre de Picardie">
+  <meta name="geo.region" content="FR-80">
+  <meta name="geo.placename" content="Amiens">
+  <meta name="geo.position" content="49.894067;2.295753">
+  <meta name="ICBM" content="49.894067, 2.295753">
 
   <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="fr_FR">
-  <meta property="og:title" content="Orchestre de Picardie">
-  <meta property="og:description" content="Les concerts de l'Orchestre de Picardie">
-  <meta property="og:url" content="https://www.orchestredepicardie.fr/">
-  <meta property="og:image" content="https://www.orchestredepicardie.fr/wp-content/uploads/2021/06/illustration_partage_reseaux_sociaux.jpg">
-  <meta property="og:image:alt" content="Illustration du site">
+  <!-- TOUTES PAGES SAUF FICHE CONCERT -->
+  <?php if(!is_singular (array( 'concert' ))): ?>
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:title" content="Orchestre de Picardie">
+    <meta property="og:description" content="Les concerts de l'Orchestre de Picardie">
+    <meta property="og:url" content="https://www.orchestredepicardie.fr/">
+    <meta property="og:image" content="https://www.orchestredepicardie.fr/wp-content/uploads/2021/06/illustration_partage_reseaux_sociaux.jpg">
+    <meta property="og:image:alt" content="Illustration du site">
+    <meta name=”twitter:card” content=”summary_large_image”>
+    <meta name=”twitter:site” content=”@orchespicardie”>
+    <meta name=”twitter:title” content="Orchestre de Picardie">
+    <meta name=”twitter:description” content="Les concerts de l'Orchestre de Picardie">
+    <meta name=”twitter:image” content="https://www.orchestredepicardie.fr/wp-content/uploads/2021/06/illustration_partage_reseaux_sociaux.jpg">
+  <?php endif; ?>
+  <!-- FICHE CONCERT -->
+  <?php if(is_singular (array( 'concert' ))): ?>
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:title" content="<?php echo get_post_meta($post->ID, 'metadata_199', true);?> <?php echo get_post_meta($post->ID, 'metadata_200', true);?>">
+    <meta property="og:description" content="Concert de l'Orchestre de Picardie">
+    <meta property="og:url" content="<?php the_permalink(); ?>">
+    <meta property="og:image" content="<?php the_post_thumbnail_url(); ?>">
+    <meta property="og:image:alt" content="Illustration du concert">
+    <meta name=”twitter:card” content=”summary_large_image”>
+    <meta name=”twitter:site” content=”@orchespicardie”>
+    <meta name=”twitter:title” content=”<?php echo get_post_meta($post->ID, 'metadata_199', true);?> <?php echo get_post_meta($post->ID, 'metadata_200', true);?>”>
+    <meta name=”twitter:description” content=”<?php echo get_post_meta($post->ID, 'metadata_199', true);?> <?php echo get_post_meta($post->ID, 'metadata_200', true);?>”>
+    <meta name=”twitter:image” content=”<?php the_post_thumbnail_url(); ?>”>
+
+  <?php endif; ?>
+
 
   <!-- CSS -->
   <link href="<?php bloginfo('template_directory');?>/dist/assets/css/app.css" rel="stylesheet">
@@ -89,6 +114,7 @@ Chrome
 	    commonly used to create interactive effects within web browsers.</p>
 	  <p><a href="https://goo.gl/koeeaJ">How to enable JavaScript?</a></p>
 	</noscript>
+
 
   <!-- Head généré par WP -->
   <!-- title -->
