@@ -92,9 +92,9 @@ if ( is_page(array('mediatheque_photos','mediatheque_videos','Mediatheque_disque
 
         <!-- MENU_SUB ITEM 7 -->
         <!-- Carré de couleur -->
-        <!-- <div class='nav_second_carre bg_color_media_vialma grid_area_2 grid_area_1_7_max500px'></div> -->
+        <div class='nav_second_carre bg_color_media_vialma grid_area_2 grid_area_1_7_max500px'></div>
         <!-- Label -->
-        <!-- <div class="ubuntu_moyen tx_color_noir_fonce alignself_center marginl_10"><a class='fontsize_16' href="<?php echo get_permalink(get_page_by_title('mediatheque_vialma')) ?>">DÉCOUVREZ <span class="tx_color_vialma">VIALMA</span></a></div> -->
+        <div class="ubuntu_moyen tx_color_noir_fonce alignself_center marginl_10"><a class='fontsize_16' href="<?php echo get_permalink(get_page_by_title('mediatheque_vialma')) ?>">DÉCOUVREZ <span class="tx_color_vialma">VIALMA</span></a></div>
 
     </nav>
 

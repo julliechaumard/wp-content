@@ -24,17 +24,16 @@ id_slide_diapo / id_slide_diapo_mob = substring du numéro de slide du nom de l'
 sens_diapo = pour savoir si l'utilisateur a cliqué sur la flèche "suivante" ou "précedente"
 compteur_diapo = Nombre de slides (Slides comptées en PHP au moment de l'écriture des balises HTML).
 
-
 */
 
     // Compteur de slide récupéré par le dataset
     var compteur = document.getElementById('precedent');
     compteur = compteur.dataset.compteur
 
-    // LANCEMENT DU CHANGEMENT DE DIAPO AUTOMATIQUE TOUTES LES 5 MINUTES
+    // LANCEMENT DU CHANGEMENT DE DIAPO AUTOMATIQUE TOUTES LES 5 secondes
     changeDiapoauto();
     function changeDiapoauto() {
-        nIntervId = setInterval(ChangeSlidediapoauto, 5000);
+        nIntervId = setInterval(ChangeSlidediapoauto, 3000);
     }
 
     // FONCTION DEFILEMENT AVEC LES FLÈCHES

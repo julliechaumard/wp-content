@@ -41,7 +41,7 @@ Template Name: page_accueil
                     <!-- VIDEO -->
                     <div class="nopagemarge_mobxs">
                         <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v5TegdmBNoA" allowfullscreen></iframe>
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/FK8EPyk_xto" allowfullscreen></iframe>
                         </div>
                     </div>                            
                 </div>

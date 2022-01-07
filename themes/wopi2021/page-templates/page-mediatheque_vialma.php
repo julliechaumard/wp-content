@@ -15,7 +15,7 @@ Template Name: page_medias_vialma
 
         <div class='margint_30'><img class="img_ajust_liste max_width_120" src="<?php bloginfo('template_directory');?>/dist/assets/images/logos/logo_vialma.jpg" alt="illustration Vialma"></div>
 
-        <div class="justifys_center ubuntu_bold tx_color_vialma"><a target='_blank' href="https://www.vialma.com/fr"><span class="paddingr_10 fontsize_18">Pour profitez de 30 jours gratuits c'est par ici</span><img class='width_20' src="<?php bloginfo('template_directory');?>/dist/assets/images/icones/ouvrir_vialma.png" alt=""></a></div>
+        <div class="justifys_center ubuntu_bold tx_color_vialma"><a target='_blank' href="https://email.vialma.com/fr-orchestre-de-picardie/?utm_source=Picardie&utm_medium=website&utm_campaign=lancement"><span class="paddingr_10 fontsize_18">Pour profitez de 30 jours gratuits c'est par ici</span><img class='width_20' src="<?php bloginfo('template_directory');?>/dist/assets/images/icones/ouvrir_vialma.png" alt=""></a></div>
 
         <div>
             <img class="img_ajust justifys_center" src="<?php bloginfo('template_directory');?>/dist/assets/images/illustration_vialma.jpg" alt="illustration Vialma">
@@ -43,7 +43,7 @@ Template Name: page_medias_vialma
             <div><p><i class="fas fa-check"></i> Profitez <span class='ubuntu_leger'>d'avantages et privilèges</span> obtenus juste pour vous : places de concert, cours de musique, livres, CD, voyages, et plus encore...</p></div>
         </div>
 
-        <div class="justifys_center ubuntu_bold tx_color_vialma"><a target='_blank' href="https://www.vialma.com/fr"><span class="paddingr_10 fontsize_18">Pour profitez de 30 jours gratuits c'est par ici</span><img class='width_20' src="<?php bloginfo('template_directory');?>/dist/assets/images/icones/ouvrir_vialma.png" alt=""></a></div>
+        <div class="justifys_center ubuntu_bold tx_color_vialma"><a target='_blank' href="https://email.vialma.com/fr-orchestre-de-picardie/?utm_source=Picardie&utm_medium=website&utm_campaign=lancement"><span class="paddingr_10 fontsize_18">Pour profitez de 30 jours gratuits c'est par ici</span><img class='width_20' src="<?php bloginfo('template_directory');?>/dist/assets/images/icones/ouvrir_vialma.png" alt=""></a></div>
 
         <div class="justifys_center max_width_600">
             <video class="img_ajust_liste" controls>

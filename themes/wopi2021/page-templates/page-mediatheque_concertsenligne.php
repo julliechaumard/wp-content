@@ -20,15 +20,15 @@ Template Name: page_medias_concertsenligne
     <section class="marginb_80">
 
         <!-- TITRE -->
-        <?php if(!empty(get_post_meta($post->ID, 'metadata_722_1', true))) { ?>
-            <div>
+        <?php // if(!empty(get_post_meta($post->ID, 'metadata_722_1', true))) { ?>
+            <!-- <div>
                 <p class='titre_chapitre_container marginb_60'>
                     <span class='titre_gras'>CONCERTS</span>
                     <br>
                     <span class='titre_leger'>SUR YOUTUBE</span>
                 </p>
-            </div>
-        <?php }; ?>
+            </div> -->
+        <?php // }; ?>
 
         <!-- VIDEOS -->
         <div class="photos_container grid_media_ligne grid_column_gap10 grid_row_gap50">

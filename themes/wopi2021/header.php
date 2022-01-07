@@ -55,7 +55,7 @@ Chrome
   <meta name="publisher" content="Orchestre de Picardie">
 
   <!-- Page accueil -->
-  <link rel="start" href="http://localhost:8888/" />
+  <link rel="start" href="https://www.orchestredepicardie.fr/" />
 
   <!-- Logiciel utilisé pour créer la page -->
   <meta name="generator" content="Visual Studio code">

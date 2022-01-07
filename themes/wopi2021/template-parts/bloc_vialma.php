@@ -2,9 +2,11 @@
 <!-- BLOC VIALMA -->
 <!-- Présent dans les pages concerts -->
 <!-- et la page élèves et enseignants -->
+<!-- via get_template_part('template-parts/bloc_vialma'); -->
 <!-- ---------------- -->
 
-<section class="display_none grid_2col12 grid_column_gap10">
+
+<section class="grid_2col12 grid_column_gap10">
 
     <div class='grid margint_6 marginb_6 marginr_20'>
         <div class=''><img class="img_ajust_liste max_width_120" src="<?php bloginfo('template_directory');?>/dist/assets/images/logos/logo_vialma.jpg" alt="illustration Vialma"></div>
@@ -15,7 +17,7 @@
                 <p class='ubuntu_leger fontsize_14'>Vialma vous donne accès à un catalogue inépuisable d’1.5 million de titres de musique classique et de jazz en haute qualité audio, mais pas seulement ! Vidéos de concert en HD et événements en livestream, playlists personnalisées, articles de fond, jeux, podcasts et beaucoup d’autres surprises vous attendent. Vous pourrez aussi suivre notre orchestre sur Vialma et découvrir nos playlists, vidéos et articles</p>
         </div>
 
-        <div class="alignself_end ubuntu_bold tx_color_vialma"><a target='_blank' href="https://www.vialma.com/fr"><span class="paddingr_10 fontsize_18">Pour profitez de 30 jours gratuits c'est par ici</span><img class='width_20' src="<?php bloginfo('template_directory');?>/dist/assets/images/icones/ouvrir_vialma.png" alt=""></a></div>
+        <div class="alignself_end ubuntu_bold tx_color_vialma"><a target='_blank' href="https://email.vialma.com/fr-orchestre-de-picardie/?utm_source=Picardie&utm_medium=website&utm_campaign=lancement"><span class="paddingr_10 fontsize_18">Pour profitez de 30 jours gratuits c'est par ici</span><img class='width_20' src="<?php bloginfo('template_directory');?>/dist/assets/images/icones/ouvrir_vialma.png" alt=""></a></div>
     </div>
 
     <div class="alignself_end_desktop">
